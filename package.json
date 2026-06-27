@@ -1,0 +1,12 @@
+{
+  "name": "yabin-travel-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "丫斌哥 World Journey — 资料驱动旅行网站。content/*.md 是永久原稿，dist/ 是 build 产出的发布品。",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "deploy": "node scripts/build.js && surge dist shanxi-yabin.surge.sh"
+  },
+  "comment": "刻意零依赖：build.js 不用任何 npm 套件，确保十年后 node scripts/build.js 仍能跑。"
+}

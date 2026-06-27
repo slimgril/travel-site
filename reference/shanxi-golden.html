@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山西漫遊 15 日 — 丫斌哥的深度文化之旅</title>
+
+<!-- SEO & 社群分享預覽 -->
+<meta name="description" content="丫斌哥的山西 15 日深度文化歷史之旅，從雲岡石窟、五台山、平遙古城到壺口瀑布與晉祠，用腳步閱讀山西。">
+
+<!-- Open Graph（LINE、Facebook、微信） -->
+<meta property="og:title"       content="山西漫遊 15 日｜丫斌哥的深度文化歷史之旅">
+<meta property="og:description" content="退休不是句點，是另一段旅程的起點。一起走進山西古建築、黃河、晉商與千年歷史。">
+<meta property="og:image"       content="https://yabin-shanxi.surge.sh/yabin-wuxi.jpg">
+<meta property="og:url"         content="https://yabin-shanxi.surge.sh">
+<meta property="og:type"        content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="山西漫遊 15 日｜丫斌哥的深度文化歷史之旅">
+<meta name="twitter:description" content="用餘生走遍天下，用雙腳丈量世界。">
+<meta name="twitter:image"       content="https://yabin-shanxi.surge.sh/yabin-wuxi.jpg">
+<style>
+  :root {
+    --green-dark: #1B4332;
+    --green-mid: #2D6A4F;
+    --green-light: #40916C;
+    --gold: #D4A843;
+    --gold-light: #F0CC7A;
+    --bg: #F5F0E8;
+    --card-bg: #FFFFFF;
+    --text: #2C2C2C;
+    --text-light: #666;
+    --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'PingFang TC','Noto Sans TC','微軟正黑體',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height:100vh;
+    background: linear-gradient(160deg, #0D2B1F 0%, #1B4332 40%, #2D6A4F 70%, #40916C 100%);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:60px 20px; position:relative; overflow:hidden;
+  }
+  .hero::before {
+    content:''; position:absolute; inset:0;
+    background: radial-gradient(ellipse at 30% 60%, rgba(212,168,67,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+  }
+  .hero-badge {
+    background:rgba(212,168,67,0.2); border:1px solid rgba(212,168,67,0.5);
+    color:var(--gold-light); padding:6px 20px; border-radius:30px;
+    font-size:0.85rem; letter-spacing:3px; margin-bottom:24px;
+    position:relative;
+  }
+  .hero h1 {
+    font-size:clamp(2.5rem,8vw,5rem); color:#fff; font-weight:700;
+    letter-spacing:0.1em; position:relative; text-shadow:0 2px 20px rgba(0,0,0,0.3);
+  }
+  .hero h1 span { color:var(--gold); }
+  .hero-sub {
+    color:rgba(255,255,255,0.75); font-size:1.1rem; margin-top:16px;
+    letter-spacing:2px; position:relative;
+  }
+  .hero-stats {
+    display:flex; gap:40px; margin-top:50px; position:relative;
+    flex-wrap:wrap; justify-content:center;
+  }
+  .stat { text-align:center; }
+  .stat-num { font-size:2.2rem; font-weight:700; color:var(--gold); }
+  .stat-label { font-size:0.8rem; color:rgba(255,255,255,0.6); letter-spacing:2px; }
+  .scroll-hint {
+    position:absolute; bottom:30px; left:50%; transform:translateX(-50%);
+    color:rgba(255,255,255,0.4); font-size:0.8rem; letter-spacing:2px;
+    animation:bounce 2s infinite;
+  }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+  /* ── ROUTE MAP ── */
+  .map-section {
+    background:var(--green-dark); padding:60px 20px; text-align:center;
+  }
+  .section-title {
+    color:var(--gold); font-size:1rem; letter-spacing:4px; margin-bottom:8px;
+    text-transform:uppercase;
+  }
+  .section-heading {
+    font-size:1.8rem; font-weight:700; margin-bottom:40px;
+  }
+  .map-section .section-heading { color:#fff; }
+  .map-container {
+    max-width:700px; margin:0 auto; position:relative;
+  }
+  .route-svg { width:100%; height:auto; }
+
+  /* ── DAYS NAV ── */
+  .days-nav {
+    background:var(--green-dark); padding:0 20px 20px;
+    display:flex; gap:8px; overflow-x:auto; justify-content:center;
+    flex-wrap:wrap;
+  }
+  .days-nav a {
+    display:inline-block; padding:8px 14px; border-radius:8px;
+    background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.6);
+    text-decoration:none; font-size:0.82rem; white-space:nowrap;
+    transition:all 0.2s; border:1px solid transparent;
+  }
+  .days-nav a:hover {
+    background:rgba(212,168,67,0.2); color:var(--gold);
+    border-color:rgba(212,168,67,0.4);
+  }
+
+  /* ── DAY SECTION ── */
+  .day-section { padding:60px 20px; max-width:1100px; margin:0 auto; }
+  .day-section:nth-child(even) { }
+
+  .day-header {
+    display:flex; align-items:flex-start; gap:24px; margin-bottom:36px;
+    padding-bottom:24px; border-bottom:2px solid rgba(27,67,50,0.12);
+    flex-wrap:wrap;
+  }
+  .day-badge {
+    background:linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    color:#fff; border-radius:16px; padding:16px 22px; text-align:center;
+    min-width:90px; box-shadow:var(--shadow);
+    flex-shrink:0;
+  }
+  .day-badge .num { font-size:2rem; font-weight:700; line-height:1; }
+  .day-badge .label { font-size:0.7rem; letter-spacing:2px; color:var(--gold-light); }
+  .day-info h2 { font-size:1.5rem; font-weight:700; color:var(--green-dark); }
+  .day-info .date { color:var(--text-light); font-size:0.9rem; margin-bottom:6px; }
+  .day-info .route {
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(27,67,50,0.07); border-radius:8px; padding:6px 14px;
+    font-size:0.88rem; color:var(--green-mid); font-weight:500;
+    flex-wrap:wrap;
+  }
+  .route-arrow { color:var(--gold); }
+  .accommodation {
+    margin-left:auto; text-align:right; flex-shrink:0;
+  }
+  .accommodation .acc-label { font-size:0.75rem; color:var(--text-light); letter-spacing:1px; }
+  .accommodation .acc-name { font-size:0.9rem; color:var(--green-dark); font-weight:600; }
+
+  /* ── SITE CARDS GRID ── */
+  .sites-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px; margin-bottom:36px;
+  }
+  .site-card {
+    border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
+    background:var(--card-bg); transition:transform 0.2s;
+  }
+  .site-card:hover { transform:translateY(-4px); }
+  .site-img {
+    height:180px; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; position:relative; overflow:hidden;
+  }
+  .site-img .icon { font-size:3rem; margin-bottom:8px; }
+  .site-img .img-label {
+    color:rgba(255,255,255,0.9); font-size:0.85rem; letter-spacing:2px;
+    background:rgba(0,0,0,0.25); padding:4px 12px; border-radius:20px;
+  }
+  .site-img.photo {
+    background-size:cover; background-position:center;
+  }
+  .site-img.photo::after {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.12) 60%, transparent 100%);
+  }
+  .site-img.photo .icon { display:none; }
+  .site-img.photo .img-label { position:absolute; bottom:14px; z-index:2; }
+  .site-body { padding:18px 20px; }
+  .site-name { font-size:1.1rem; font-weight:700; color:var(--green-dark); margin-bottom:6px; }
+  .site-desc { font-size:0.88rem; color:var(--text-light); line-height:1.65; }
+
+  /* gradient themes — multi-stop layered depth */
+  .g-temple  { background:linear-gradient(160deg,#1a0530 0%,#4a1060 35%,#9b3268 65%,#d4765e 88%,#f0a87a 100%); }
+  .g-cave    { background:linear-gradient(160deg,#04080f 0%,#0a1a27 28%,#0f3040 55%,#1a6060 80%,#2c8a70 100%); }
+  .g-tower   { background:linear-gradient(160deg,#05051a 0%,#10206a 32%,#2a4aaa 62%,#5080d0 84%,#80aae8 100%); }
+  .g-city    { background:linear-gradient(160deg,#1a0800 0%,#4a1f00 28%,#8a4a00 55%,#c08020 78%,#e8b840 100%); }
+  .g-river   { background:linear-gradient(160deg,#0f0000 0%,#3a0808 28%,#8a1a1a 55%,#c84040 78%,#e87858 100%); }
+  .g-mountain{ background:linear-gradient(160deg,#020d08 0%,#082818 28%,#0f4a30 55%,#1a7050 78%,#50a870 100%); }
+  .g-ice     { background:linear-gradient(160deg,#020810 0%,#083060 28%,#1060b0 58%,#40a0e0 80%,#90d8f8 100%); }
+  .g-shrine  { background:linear-gradient(160deg,#0a0318 0%,#2a0850 32%,#6030b8 62%,#9860e0 84%,#c0a0f0 100%); }
+  .g-gorge   { background:linear-gradient(160deg,#020208 0%,#080820 28%,#101840 55%,#1a3060 78%,#2a5090 100%); }
+  .g-museum  { background:linear-gradient(160deg,#050510 0%,#101028 28%,#1a2060 58%,#3060c0 80%,#60a0f8 100%); }
+  .g-grass   { background:linear-gradient(160deg,#020802 0%,#082808 28%,#185018 55%,#2a8a2a 78%,#50c050 100%); }
+  .g-gate    { background:linear-gradient(160deg,#050002 0%,#1a0010 28%,#500020 55%,#a00030 80%,#e00040 100%); }
+  .g-arch    { background:linear-gradient(160deg,#0f0800 0%,#3a2000 28%,#7a5000 55%,#c08000 80%,#f0c000 100%); }
+
+  /* subtle diagonal texture on gradient cards */
+  .site-img:not(.photo)::before {
+    content:''; position:absolute; inset:0; z-index:0;
+    background:repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px,
+      transparent 1px, transparent 14px
+    );
+  }
+  .site-img:not(.photo) .icon, .site-img:not(.photo) .img-label { position:relative; z-index:1; }
+
+  /* Day section background themes */
+  .theme-temple  { background:linear-gradient(175deg,#fdf8f2 0%,#f5ecdc 100%); }
+  .theme-nature  { background:linear-gradient(175deg,#f3f8f4 0%,#e6f2e9 100%); }
+  .theme-culture { background:linear-gradient(175deg,#f6f4f0 0%,#eae6dc 100%); }
+  .theme-river   { background:linear-gradient(175deg,#fdf5f3 0%,#f5e6e0 100%); }
+  .theme-gorge   { background:linear-gradient(175deg,#f3f4f8 0%,#e6e8f5 100%); }
+
+  /* Per-day badge accent colors */
+  #d2 .day-badge { background:linear-gradient(135deg,#2d1b69,#7b2d8b); }
+  #d3 .day-badge { background:linear-gradient(135deg,#3a0a0a,#8b2020); }
+  #d4 .day-badge { background:linear-gradient(135deg,#071525,#1a3a5c); }
+  #d5 .day-badge { background:linear-gradient(135deg,#071c0a,#1a5c2e); }
+  #d6 .day-badge, #d7 .day-badge { background:linear-gradient(135deg,#3d1c00,#8b6000); }
+  #d8 .day-badge { background:linear-gradient(135deg,#4a0808,#9b2020); }
+  #d9 .day-badge { background:linear-gradient(135deg,#1a0a1a,#4a1a6a); }
+  #d10 .day-badge, #d11 .day-badge, #d12 .day-badge { background:linear-gradient(135deg,#071525,#1a4a5c); }
+  #d13 .day-badge { background:linear-gradient(135deg,#120828,#3a1a5c); }
+  #d14 .day-badge { background:linear-gradient(135deg,#080828,#1a1a5c); }
+  #d15 .day-badge { background:linear-gradient(135deg,#1a1a1a,#444); }
+
+  /* ── HISTORY PANEL ── */
+  .history-panel {
+    background:linear-gradient(135deg,rgba(27,67,50,0.05) 0%,rgba(212,168,67,0.05) 100%);
+    border:1px solid rgba(27,67,50,0.12);
+    border-left:4px solid var(--gold);
+    border-radius:12px; padding:28px 32px; margin-bottom:20px;
+  }
+  .history-panel h3 {
+    color:var(--green-dark); font-size:1rem; font-weight:700;
+    letter-spacing:2px; margin-bottom:16px; display:flex; align-items:center; gap:10px;
+  }
+  .history-panel h3::before {
+    content:'📜'; font-size:1.1rem;
+  }
+  .history-panel p { font-size:0.9rem; color:#3a3a3a; margin-bottom:12px; line-height:1.8; }
+  .history-panel p:last-child { margin-bottom:0; }
+  .history-panel strong { color:var(--green-dark); }
+
+  .extra-tip {
+    background:rgba(212,168,67,0.1); border:1px dashed rgba(212,168,67,0.5);
+    border-radius:10px; padding:16px 20px; margin-top:16px;
+    font-size:0.88rem; color:#5a4a00;
+  }
+  .extra-tip::before { content:'✦ 額外推薦 '; font-weight:700; color:var(--gold); }
+
+  /* ── LIVE DISPATCH (旅人即時遊記) ── */
+  .live-dispatch {
+    margin-top:28px; padding-top:24px;
+    border-top:2px dashed rgba(212,168,67,0.4);
+  }
+  .live-header {
+    display:flex; align-items:center; gap:12px; margin-bottom:18px; flex-wrap:wrap;
+  }
+  .live-badge {
+    display:inline-block; background:linear-gradient(135deg,#c0392b,#e74c3c);
+    color:#fff; font-size:0.78rem; font-weight:700; letter-spacing:2px;
+    padding:5px 16px; border-radius:20px;
+  }
+  .live-date { font-size:0.85rem; color:var(--text-light); }
+  .live-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:18px;
+  }
+  .live-card {
+    border-radius:14px; overflow:hidden; box-shadow:var(--shadow);
+    background:var(--card-bg);
+  }
+  .live-img { width:100%; height:auto; display:block; }
+  .live-body { padding:14px 18px; }
+  .live-time {
+    color:var(--gold); font-weight:700; font-size:0.78rem; letter-spacing:1px;
+    margin-bottom:6px;
+  }
+  .live-tag {
+    background:var(--gold); color:#fff; font-size:0.7rem; padding:2px 10px;
+    border-radius:20px; letter-spacing:1px; vertical-align:middle;
+  }
+  .live-desc { font-size:0.85rem; color:var(--text-light); line-height:1.7; }
+  .live-desc + .live-desc { margin-top:8px; }
+  .lv-label { font-weight:700; color:var(--green-mid); }
+  .live-feature { grid-column:1 / -1; }
+  .live-feature .live-img { max-width:480px; margin:0 auto; }
+  .live-card blockquote {
+    border-left:4px solid var(--gold-light); background:#FBF6EC; padding:10px 14px;
+    margin:8px 0; font-size:0.85rem; color:var(--text-light); font-style:italic;
+  }
+
+  /* ── DIVIDER ── */
+  .day-divider {
+    height:4px;
+    background:linear-gradient(90deg, transparent, var(--green-light), var(--gold), var(--green-light), transparent);
+    margin:0;
+  }
+
+  /* ── TIMELINE ROW (for route summary) ── */
+  .timeline {
+    display:flex; gap:0; overflow-x:auto; padding:20px 0;
+    align-items:center;
+  }
+  .tl-item {
+    display:flex; flex-direction:column; align-items:center;
+    flex-shrink:0;
+  }
+  .tl-dot {
+    width:42px; height:42px; border-radius:50%;
+    background:var(--green-dark); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.75rem; font-weight:700; border:3px solid var(--gold);
+    position:relative; z-index:1;
+    flex-shrink:0;
+  }
+  .tl-label {
+    font-size:0.72rem; color:var(--green-dark); font-weight:600;
+    margin-top:6px; text-align:center; max-width:60px;
+    white-space:nowrap;
+  }
+  .tl-date {
+    font-size:0.65rem; color:var(--text-light); text-align:center;
+  }
+  .tl-line {
+    height:3px; width:40px; flex-shrink:0;
+    background:linear-gradient(90deg, var(--green-mid), var(--gold));
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background:var(--green-dark); color:rgba(255,255,255,0.5);
+    text-align:center; padding:40px 20px; font-size:0.85rem;
+  }
+  footer strong { color:var(--gold); }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:600px){
+    .accommodation { text-align:left; margin-left:0; width:100%; }
+    .day-header { flex-direction:column; gap:16px; }
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    .days-nav { display:none; }
+    .day-section { break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-badge">深度文化歷史之旅</div>
+  <h1>山西漫遊 <span>15</span> 日</h1>
+  <p class="hero-sub">2026年6月10日 — 6月24日</p>
+  <p style="color:var(--gold-light);font-size:1.1rem;margin-top:10px;letter-spacing:3px;position:relative;">旅人：丫斌哥</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">15</div><div class="stat-label">天</div></div>
+    <div class="stat"><div class="stat-num">12</div><div class="stat-label">座城市</div></div>
+    <div class="stat"><div class="stat-num">30+</div><div class="stat-label">歷史古蹟</div></div>
+    <div class="stat"><div class="stat-num">2700</div><div class="stat-label">年文明縱深</div></div>
+  </div>
+  <div class="scroll-hint">▼ 向下展開旅程</div>
+</section>
+
+<!-- ═══════════════════════════════ TRAVELER ═══════════════════════════════ -->
+<section style="background:linear-gradient(135deg,#0D2B1F 0%,#1B4332 60%,#2D4A22 100%); padding:80px 20px; text-align:center; position:relative; overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%, rgba(212,168,67,0.08) 0%, transparent 70%);"></div>
+
+  <div style="max-width:720px;margin:0 auto;position:relative;">
+
+    <!-- 旅人照片 + 名片 -->
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:44px;align-items:flex-end;">
+
+      <!-- 照片 1：無錫 -->
+      <div style="position:relative;flex-shrink:0;">
+        <div style="width:200px;height:260px;border-radius:20px;overflow:hidden;border:3px solid rgba(212,168,67,0.5);box-shadow:0 16px 48px rgba(0,0,0,0.5);">
+          <img src="yabin-wuxi.jpg" alt="丫斌哥 無錫" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        </div>
+        <div style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.75);color:rgba(255,255,255,0.7);font-size:0.7rem;padding:4px 12px;border-radius:20px;white-space:nowrap;border:1px solid rgba(255,255,255,0.15);">
+          📍 無錫・2026.03
+        </div>
+      </div>
+
+      <!-- 中間文字 -->
+      <div style="flex:1;min-width:220px;max-width:320px;text-align:center;padding:0 8px;">
+        <div style="font-size:4rem;color:rgba(212,168,67,0.2);line-height:0.8;margin-bottom:12px;font-family:Georgia,serif;">"</div>
+        <div style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border:1px solid rgba(212,168,67,0.35);border-radius:40px;padding:8px 22px;margin-bottom:20px;">
+          <span style="color:var(--gold-light);letter-spacing:3px;font-size:0.82rem;font-weight:600;">旅　人</span>
+          <span style="color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:2px;">丫斌哥</span>
+        </div>
+        <p style="color:#fff;font-size:clamp(1.1rem,3vw,1.5rem);font-weight:300;line-height:1.9;letter-spacing:0.05em;">
+          退休，不是句點——<br>是另一段旅程的<br><strong style="color:var(--gold);font-weight:700;">起點</strong>。
+        </p>
+      </div>
+
+      <!-- 照片 2：大叻 -->
+      <div style="position:relative;flex-shrink:0;">
+        <div style="width:200px;height:260px;border-radius:20px;overflow:hidden;border:3px solid rgba(212,168,67,0.5);box-shadow:0 16px 48px rgba(0,0,0,0.5);">
+          <img src="yabin-dalat.jpg" alt="丫斌哥 大叻" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        </div>
+        <div style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.75);color:rgba(255,255,255,0.7);font-size:0.7rem;padding:4px 12px;border-radius:20px;white-space:nowrap;border:1px solid rgba(255,255,255,0.15);">
+          📍 越南大叻・2026.05
+        </div>
+      </div>
+    </div>
+
+    <div style="width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 32px;"></div>
+
+    <p style="color:rgba(255,255,255,0.78);font-size:1.05rem;line-height:2;letter-spacing:0.03em;margin-bottom:28px;">
+      帥氣、有個性，骨子裡藏著一股不安分的靈魂。<br>
+      在人生最自由的時刻，他立下誓言：<br>
+      <strong style="color:var(--gold-light);">用餘生走遍天下，用雙腳丈量世界，用心去感受每一片土地的呼吸。</strong>
+    </p>
+
+    <p style="color:rgba(255,255,255,0.6);font-size:0.98rem;line-height:2;letter-spacing:0.03em;margin-bottom:36px;">
+      不是走馬看花，不是打卡留念。<br>
+      他要的是真正的相遇——與古城相遇，與歷史相遇，<br>
+      與陌生的人情風土，面對面地相遇。
+    </p>
+
+    <p style="color:rgba(255,255,255,0.78);font-size:1.05rem;line-height:2;letter-spacing:0.03em;margin-bottom:48px;">
+      這本旅誌，是他送給自己的禮物，<br>
+      也是他向每一位讀者發出的邀請：<br>
+      <strong style="color:#fff;">翻開每一頁，你不只是讀者，你是他的旅伴。</strong>
+    </p>
+
+    <!-- 旅途足跡 -->
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:0;">
+
+      <div style="background:rgba(212,168,67,0.18);border:1px solid rgba(212,168,67,0.6);border-radius:16px;padding:20px 32px;text-align:center;">
+        <p style="color:rgba(255,255,255,0.45);font-size:0.72rem;letter-spacing:3px;margin:0 0 6px;">現在・第一站</p>
+        <p style="color:var(--gold);font-size:1.15rem;font-weight:700;letter-spacing:3px;margin:0;">🏯 山　西</p>
+        <p style="color:rgba(255,255,255,0.4);font-size:0.75rem;letter-spacing:1px;margin:6px 0 0;">2026年6月10日 出發</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.04);border:1px dashed rgba(255,255,255,0.2);border-radius:16px;padding:20px 32px;text-align:center;">
+        <p style="color:rgba(255,255,255,0.35);font-size:0.72rem;letter-spacing:3px;margin:0 0 6px;">未來・等待中</p>
+        <p style="color:rgba(255,255,255,0.6);font-size:1rem;font-weight:600;letter-spacing:2px;margin:0;">🌊 波羅的海三小國</p>
+        <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;letter-spacing:1px;margin:6px 0 0;">愛沙尼亞・拉脫維亞・立陶宛</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.04);border:1px dashed rgba(255,255,255,0.2);border-radius:16px;padding:20px 32px;text-align:center;">
+        <p style="color:rgba(255,255,255,0.35);font-size:0.72rem;letter-spacing:3px;margin:0 0 6px;">未來・等待中</p>
+        <p style="color:rgba(255,255,255,0.6);font-size:1rem;font-weight:600;letter-spacing:2px;margin:0;">🌌 貝加爾湖</p>
+        <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;letter-spacing:1px;margin:6px 0 0;">世界最深淡水湖・西伯利亞明珠</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ ROUTE MAP ═══════════════════════════════ -->
+<section class="map-section">
+  <div class="section-title">ROUTE MAP</div>
+  <h2 class="section-heading">山西足跡總覽</h2>
+
+  <div class="map-container">
+    <svg class="route-svg" viewBox="0 0 440 560" xmlns="http://www.w3.org/2000/svg">
+      <!-- Province background -->
+      <defs>
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M1,1 L7,4 L1,7 Z" fill="#D4A843" opacity="0.8"/>
+        </marker>
+      </defs>
+
+      <!-- Simplified Shanxi Province Outline -->
+      <path d="M 120,30 L 190,25 L 260,35 L 310,55 L 340,90 L 360,140 L 370,200 L 360,260 L 350,320 L 330,380 L 310,430 L 270,470 L 220,490 L 170,480 L 130,450 L 100,400 L 80,350 L 70,290 L 65,230 L 70,170 L 80,110 L 100,65 Z"
+        fill="rgba(45,106,79,0.15)" stroke="rgba(64,145,108,0.4)" stroke-width="1.5"/>
+
+      <!-- Yellow River (西側) -->
+      <path d="M 80,110 Q 65,200 70,290 Q 72,340 80,380 Q 90,410 100,430"
+        fill="none" stroke="rgba(180,130,30,0.3)" stroke-width="4" stroke-dasharray="6,4"/>
+
+      <!-- Route Lines -->
+      <!-- D1: 太原 start -->
+      <!-- D2: 太原→五台山 -->
+      <path d="M 220,215 L 295,125" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+      <!-- D3: 五台山→渾源→大同 -->
+      <path d="M 295,125 L 230,105 L 195,65" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+      <!-- D4: 大同→朔州 -->
+      <path d="M 195,65 L 130,90" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+      <!-- D5: 朔州→寧武→太原 -->
+      <path d="M 130,90 L 100,165 L 220,215" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+      <!-- D6: 太原→平遙 -->
+      <path d="M 220,215 L 210,285" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+      <!-- D8: 平遙→隰縣→吉縣 -->
+      <path d="M 210,285 L 140,330 L 95,390" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+      <!-- D9: 吉縣→臨汾→長治 -->
+      <path d="M 95,390 L 195,365 L 310,385" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+      <!-- D10: 長治→壺關 -->
+      <path d="M 310,385 L 335,340" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+      <!-- D12: 壺關→長治 -->
+      <path d="M 335,340 L 310,385" fill="none" stroke="#40916C" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
+      <!-- D13: 長治→太原 -->
+      <path d="M 310,385 L 220,215" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" opacity="0.8"/>
+
+      <!-- City Dots & Labels -->
+      <!-- 太原 (center, start/end) -->
+      <circle cx="220" cy="215" r="14" fill="#D4A843" stroke="#fff" stroke-width="2.5" filter="url(#glow)"/>
+      <text x="220" y="220" text-anchor="middle" fill="#1B4332" font-size="9" font-weight="bold">太原</text>
+      <text x="248" y="208" fill="rgba(255,255,255,0.7)" font-size="8">起/終點</text>
+
+      <!-- 五台山 -->
+      <circle cx="295" cy="125" r="10" fill="#40916C" stroke="#D4A843" stroke-width="2"/>
+      <text x="295" y="129" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">五台</text>
+      <text x="318" y="120" fill="rgba(255,255,255,0.7)" font-size="8">D2</text>
+
+      <!-- 渾源 -->
+      <circle cx="230" cy="105" r="7" fill="#2D6A4F" stroke="#D4A843" stroke-width="1.5"/>
+      <text x="230" y="109" text-anchor="middle" fill="#fff" font-size="7">渾源</text>
+
+      <!-- 大同 -->
+      <circle cx="195" cy="65" r="10" fill="#40916C" stroke="#D4A843" stroke-width="2"/>
+      <text x="195" y="69" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">大同</text>
+      <text x="172" y="60" fill="rgba(255,255,255,0.7)" font-size="8">D3</text>
+
+      <!-- 朔州/應縣 -->
+      <circle cx="130" cy="90" r="9" fill="#40916C" stroke="#D4A843" stroke-width="2"/>
+      <text x="130" y="94" text-anchor="middle" fill="#fff" font-size="8">朔州</text>
+      <text x="108" y="84" fill="rgba(255,255,255,0.7)" font-size="8">D4</text>
+
+      <!-- 寧武 -->
+      <circle cx="100" cy="165" r="7" fill="#2D6A4F" stroke="#D4A843" stroke-width="1.5"/>
+      <text x="100" y="169" text-anchor="middle" fill="#fff" font-size="7">寧武</text>
+      <text x="78" y="160" fill="rgba(255,255,255,0.7)" font-size="7">D5</text>
+
+      <!-- 平遙 -->
+      <circle cx="210" cy="285" r="11" fill="#40916C" stroke="#D4A843" stroke-width="2"/>
+      <text x="210" y="290" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">平遙</text>
+      <text x="234" y="280" fill="rgba(255,255,255,0.7)" font-size="8">D6-7</text>
+
+      <!-- 隰縣 -->
+      <circle cx="140" cy="330" r="7" fill="#2D6A4F" stroke="#D4A843" stroke-width="1.5"/>
+      <text x="140" y="334" text-anchor="middle" fill="#fff" font-size="7">隰縣</text>
+
+      <!-- 吉縣/壺口 -->
+      <circle cx="95" cy="390" r="9" fill="#40916C" stroke="#D4A843" stroke-width="2"/>
+      <text x="95" y="394" text-anchor="middle" fill="#fff" font-size="8">壺口</text>
+      <text x="73" y="385" fill="rgba(255,255,255,0.7)" font-size="7">D8</text>
+
+      <!-- 臨汾 -->
+      <circle cx="195" cy="365" r="7" fill="#2D6A4F" stroke="#D4A843" stroke-width="1.5"/>
+      <text x="195" y="369" text-anchor="middle" fill="#fff" font-size="7">臨汾</text>
+
+      <!-- 長治 -->
+      <circle cx="310" cy="385" r="9" fill="#40916C" stroke="#D4A843" stroke-width="2"/>
+      <text x="310" y="389" text-anchor="middle" fill="#fff" font-size="8">長治</text>
+      <text x="330" y="377" fill="rgba(255,255,255,0.7)" font-size="7">D9</text>
+
+      <!-- 壺關 -->
+      <circle cx="335" cy="340" r="8" fill="#2D6A4F" stroke="#D4A843" stroke-width="1.5"/>
+      <text x="335" y="344" text-anchor="middle" fill="#fff" font-size="7.5">壺關</text>
+      <text x="355" y="335" fill="rgba(255,255,255,0.7)" font-size="7">D10-12</text>
+
+      <!-- 黃河標示 -->
+      <text x="52" y="290" fill="rgba(180,130,30,0.6)" font-size="8" transform="rotate(-70,52,290)">黃 河</text>
+
+      <!-- 方位 -->
+      <text x="220" y="520" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9">南</text>
+      <text x="220" y="46" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9">北</text>
+      <text x="52" y="280" fill="rgba(255,255,255,0.3)" font-size="9">西</text>
+      <text x="388" y="280" fill="rgba(255,255,255,0.3)" font-size="9">東</text>
+    </svg>
+  </div>
+
+  <!-- Timeline -->
+  <div style="max-width:900px;margin:30px auto 0;overflow-x:auto;">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot">D1</div><div class="tl-label">太原</div><div class="tl-date">6/10</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D2</div><div class="tl-label">五台山</div><div class="tl-date">6/11</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D3</div><div class="tl-label">大同</div><div class="tl-date">6/12</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D4</div><div class="tl-label">朔州</div><div class="tl-date">6/13</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D5</div><div class="tl-label">太原</div><div class="tl-date">6/14</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D6</div><div class="tl-label">平遙</div><div class="tl-date">6/15</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D7</div><div class="tl-label">平遙</div><div class="tl-date">6/16</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D8</div><div class="tl-label">壺口</div><div class="tl-date">6/17</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D9</div><div class="tl-label">長治</div><div class="tl-date">6/18</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D10</div><div class="tl-label">八泉峽</div><div class="tl-date">6/19</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D11</div><div class="tl-label">紅豆峽</div><div class="tl-date">6/20</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D12</div><div class="tl-label">青龍峽</div><div class="tl-date">6/21</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D13</div><div class="tl-label">晉祠</div><div class="tl-date">6/22</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D14</div><div class="tl-label">博物院</div><div class="tl-date">6/23</div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-dot">D15</div><div class="tl-label">返程</div><div class="tl-date">6/24</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAYS NAV ═══════════════════════════════ -->
+<nav class="days-nav">
+  <a href="#d1">D1 抵達</a><a href="#d2">D2 五台山</a><a href="#d3">D3 懸空寺</a>
+  <a href="#d4">D4 雲岡</a><a href="#d5">D5 冰洞</a><a href="#d6">D6 平遙</a>
+  <a href="#d7">D7 平遙自由</a><a href="#d8">D8 壺口</a><a href="#d9">D9 華門</a>
+  <a href="#d10">D10 八泉峽</a><a href="#d11">D11 紅豆峽</a><a href="#d12">D12 青龍峽</a>
+  <a href="#d13">D13 晉祠</a><a href="#d14">D14 博物院</a><a href="#d15">D15 返程</a>
+</nav>
+
+<!-- ═══════════════════════════════ DAY 1 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-culture" id="d1">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">1</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月10日（三）</div>
+      <h2>啟程・抵達太原</h2>
+      <div class="route">桃園 <span class="route-arrow">✈</span> 上海浦東 <span class="route-arrow">✈</span> 太原</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+  <div class="history-panel">
+    <h3>你降落的這片土地，曾經改變了整個中國</h3>
+    <p>西元617年，隋朝天下大亂，烽火遍地。</p>
+    <p>就在你此刻降落的太原——那時叫作<strong>晉陽</strong>——一個叫<strong>李淵</strong>的太原留守正在焦慮地盤算。隋煬帝已失天下人心，各路反王紛紛揭竿，李淵夾在忠義與時機之間，左右為難。</p>
+    <p>是他十八歲的次子<strong>李世民</strong>，替父親下了這個決心。</p>
+    <p style="padding:12px 20px;border-left:3px solid var(--gold);background:rgba(212,168,67,0.08);border-radius:0 8px 8px 0;font-style:italic;color:#4a3800;">「關中豪傑，今已響應。若守小節，不如早決大計。」</p>
+    <p>617年7月，李淵在晉陽起兵。僅僅五個月後攻入長安，次年618年正式建唐，定都長安，以晉陽為<strong>北都</strong>，稱「龍興之地」。</p>
+    <p>此後三百年，大唐成為中國歷史上最開放、最強盛、最令世界仰望的王朝——而它的根，就在太原這片黃土之下。</p>
+    <p><strong>飛機降落的那一刻，你腳下踩的，是一千四百年前帝國的起點。</strong></p>
+    <div class="extra-tip">班機：桃園 → 浦東 → 太原，預計22:00抵達太原。山西是中國保存古建築最多的省份，全國現存元代以前木構建築約有80%在此。</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 2 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-temple" id="d2">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">2</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月11日（四）</div>
+      <h2>五台山——佛教聖地的千年積澱</h2>
+      <div class="route">太原 <span class="route-arrow">→</span> 五台山景區</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-pusanding.jpg')"><div class="img-label">菩薩頂</div></div>
+      <div class="site-body">
+        <div class="site-name">菩薩頂</div>
+        <div class="site-desc">位於靈鷲峰頂，清朝藏傳佛教核心。康熙、乾隆各朝拜多次，黃琉璃瓦屋頂是山中唯一皇家規格建築。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-tayuan.jpg')"><div class="img-label">塔院寺・大白塔</div></div>
+      <div class="site-body">
+        <div class="site-name">塔院寺・大白塔</div>
+        <div class="site-desc">高50米，塔頂懸掛200餘個銅鈴，相傳塔內藏有文殊菩薩金髮，又稱「文殊發塔」。風起時鈴聲傳遍台懷鎮。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-xiantong.jpg')"><div class="img-label">顯通寺</div></div>
+      <div class="site-body">
+        <div class="site-name">顯通寺</div>
+        <div class="site-desc">東漢永平年間創建（約西元68年），與洛陽白馬寺並稱中國最早寺廟。銅殿外壁鑄萬尊小佛，金光閃耀。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-luohou.jpg')"><div class="img-label">羅睺寺</div></div>
+      <div class="site-body">
+        <div class="site-name">羅睺寺</div>
+        <div class="site-desc">唐代創建，門前石獅為唐代遺物，是五台山最古老石雕。寺內「開花現佛」木製機關裝置為明代工藝代表。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>五台山——漢藏佛教的交匯點</h3>
+    <p>五台山是中國四大佛教名山之首，文殊菩薩（智慧象徵）的道場。它的特殊性在於：這裡是<strong>漢傳佛教與藏傳佛教的罕見交匯點</strong>。清朝順治年間，達賴喇嘛入京朝覲，途經五台山駐錫，此後菩薩頂成為藏傳佛教核心，康熙帝一生六度朝台。</p>
+    <p>顯通寺的起源有一個美麗傳說：漢明帝夜夢金人（佛祖），遣使西行求法。迦葉摩騰與竺法蘭攜佛經以白馬馱至洛陽，建白馬寺；後輾轉至此，建五台第一寺。</p>
+    <div class="extra-tip">黛螺頂（自費）：步行1080級「大智路」，俯瞰台懷鎮全景。乾隆帝因冬雪無法登遍五台，命工匠在此集中五方文殊像，登此一頂等同「小朝台」。黎明前登頂看日出，是五台山最難忘的體驗。</div>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/11　太原 → 五台山　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/02_太原晨景.jpg" alt="02_太原晨景">
+        <div class="live-body">
+          <div class="live-time">08:05　太原市・清晨</div>
+          <div class="live-desc">天剛亮就被一房間的光線叫醒，推開窗，汾河兩岸的橋樑和樓群還籠罩在薄霧裡，整座太原城像才剛睡醒。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/03_太原街景.jpg" alt="03_太原街景">
+        <div class="live-body">
+          <div class="live-time">08:18　太原市・出發前</div>
+          <div class="live-desc">簡單收拾後下樓，藍色玻璃帷幕的高樓在晨光裡反著光。今天的目的地是五台山，心裡其實有點期待。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/04_五台山入口.jpg" alt="04_五台山入口">
+        <div class="live-body">
+          <div class="live-time">12:10　忻州市・五台山入口</div>
+          <div class="live-desc">車子開了將近四個小時，總算看到「佛教聖地・五臺山」這塊大石頭，下車拍張照——感覺正式進了這座山。</div>
+          <blockquote><span class="lv-label">小典故：</span>五台山因五座頂峰平坦如台而得名，相傳是文殊菩薩演教的道場，自北魏起即為歷代皇室禮佛聖地，2009年列入聯合國教科文組織世界遺產。</blockquote>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/05_俯瞰台懷鎮.jpg" alt="05_俯瞰台懷鎮">
+        <div class="live-body">
+          <div class="live-time">13:37　忻州市・俯瞰台懷鎮</div>
+          <div class="live-desc">登上一處高點，台懷鎮整個攤在眼前，群山環抱中錯落著幾座古塔，遠遠那座應該就是著名的大白塔——五台山最具代表性的地標。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/06_菩薩頂匾額.jpg" alt="06_菩薩頂匾額">
+        <div class="live-body">
+          <div class="live-time">13:43　忻州市・菩薩頂</div>
+          <div class="live-desc">走到菩薩頂，抬頭就看見這塊匾額，金黃琉璃瓦在陽光下特別搶眼——後來才知道，這種規格在整座五台山只有這裡有，因為清代達賴、班禪都曾駐錫於此。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/07_文殊足印碑.jpg" alt="07_文殊足印碑">
+        <div class="live-body">
+          <div class="live-time">13:56　忻州市・文殊足印碑　<span class="live-tag">丫斌哥隨筆</span></div>
+          <div class="live-desc">站在碑前，我仰頭望著那方斑駁的石面——傳說文殊菩薩曾在此留下足印，千百年風吹雨打，痕跡依然清晰，朝聖者都說這是殊勝之兆。松枝在頭頂搖曳，藍天與石碑上的雲龍紋飾相映，腳下就是菩薩頂金黃的廡殿屋頂。看著這道歷盡風霜卻從未模糊的印記，忽然覺得自己和千百年來無數仰望同一塊石碑的香客，好像站在了同一個時空的交會點上。也難怪，這趟五台山之行，最讓我停下腳步、提筆寫下這段感觸的，就是這方足印。</div>
+          <div class="live-desc">碑首雕著雲龍紋飾，背景的黃瓦廡殿就是菩薩頂主殿一帶。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/08_顯通寺無量殿.jpg" alt="08_顯通寺無量殿">
+        <div class="live-body">
+          <div class="live-time">14:51　忻州市・顯通寺・無量殿</div>
+          <div class="live-desc">下山後轉進顯通寺，無量殿是一整座白磚砌成的拱券建築，殿內看不到一根木樑，據說是明代磚石建築的代表作，因此才叫「無量殿」。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/09_顯通寺銅殿.jpg" alt="09_顯通寺銅殿">
+        <div class="live-body">
+          <div class="live-time">14:56　忻州市・顯通寺・銅殿</div>
+          <div class="live-desc">再往裡走是銅殿，整座殿宇連同旁邊的銅塔都是金光閃閃，掩映在綠樹之間，是顯通寺最珍貴的寶物之一，也是中國現存少數的明代銅殿。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/10_顯通寺山門.jpg" alt="10_顯通寺山門">
+        <div class="live-body">
+          <div class="live-time">16:01　忻州市・大顯通寺山門</div>
+          <div class="live-desc">走到傍晚，在「大顯通寺」山門前的台階坐下休息順便拍張照。這座寺相傳創建於東漢年間（西元68年），和洛陽白馬寺一樣是中國最早期的佛教寺院之一，也是五台山歷史最久、規模最大的一座。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 3 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-temple" id="d3">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">3</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月12日（五）</div>
+      <h2>北嶽恒山・懸空寺——中原與游牧的邊界</h2>
+      <div class="route">五台山 <span class="route-arrow">→</span> 渾源 <span class="route-arrow">→</span> 大同</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-hengshan.jpg')"><div class="img-label">北嶽恒山</div></div>
+      <div class="site-body">
+        <div class="site-name">北嶽恒山（纜車上下）</div>
+        <div class="site-desc">五嶽之一，主峰天峰嶺海拔2016米。歷代皇帝登基後必遣使祭祀五嶽，是中原農耕文明與北方游牧民族的分界線。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-xuankong.jpg')"><div class="img-label">懸空寺</div></div>
+      <div class="site-body">
+        <div class="site-name">懸空寺</div>
+        <div class="site-desc">北魏晚期建（約西元491年），距今1400年以上。中國唯一佛・道・儒三教合一寺廟。懸於金龍峽絕壁，半天高、三根馬尾空中吊。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>懸空寺——建築力學的千年奧秘</h3>
+    <p>全寺40間殿堂看似僅靠幾根木柱支撐，實際工法是：<strong>橫梁深插入岩石，利用槓桿原理，木柱只是輔助承重</strong>。這個設計讓它歷經1400年地震、山洪而不倒。正因建於高處，峽谷洪水多次氾濫卻從未波及。</p>
+    <p>李白遊此，留下「壯觀」二字石刻（傳說）。徐霞客記載：「天下巨觀。」懸空寺之所以能三教合一，源於北魏晚期政治上的融合需求——鮮卑族統治者試圖同時取悅境內的漢族儒道信仰與佛教信徒。</p>
+    <div class="extra-tip">大同古城內：善化寺（遼金木構，中國保存最完整遼金寺廟）、九龍壁（明代，比北京故宮九龍壁早130年且更大）。大同是北魏首都「平城」，鮮卑族漢化的起點，隋唐盛世的制度基礎從這裡萌芽。</div>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/12　恒山 → 懸空寺 → 大同　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/12_北嶽恒山牌樓.jpg" alt="12_北嶽恒山牌樓">
+        <div class="live-body">
+          <div class="live-time">12:56　大同市・北嶽恒山牌樓</div>
+          <div class="live-desc">「北嶽恒山」牌樓，準備搭纜車上山。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/13_恒山登山道.jpg" alt="13_恒山登山道">
+        <div class="live-body">
+          <div class="live-time">13:10　大同市・恒山登山道</div>
+          <div class="live-desc">登山步道一景，古松與殿閣。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/14_恒山觀景台.jpg" alt="14_恒山觀景台">
+        <div class="live-body">
+          <div class="live-time">13:36　大同市・恒山觀景台</div>
+          <div class="live-desc">登高回望，群山層疊。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/15_金龍口.jpg" alt="15_金龍口">
+        <div class="live-body">
+          <div class="live-time">大同市・金龍口</div>
+          <div class="live-desc">「金龍口」摩崖石刻，恒山十八景之一。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/16_虎風口.jpg" alt="16_虎風口">
+        <div class="live-body">
+          <div class="live-time">14:16　大同市・虎風口</div>
+          <div class="live-desc">「虎風口」摩崖石刻。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/17_恒山崖刻.jpg" alt="17_恒山崖刻">
+        <div class="live-body">
+          <div class="live-time">大同市・恒山崖刻</div>
+          <div class="live-desc">崖壁上的紅字題刻，年代已久，字跡模糊。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/18_懸空寺遠景.jpg" alt="18_懸空寺遠景">
+        <div class="live-body">
+          <div class="live-time">16:02　大同市・懸空寺遠景</div>
+          <div class="live-desc">懸空寺遠景，殿閣懸於崖壁。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/19_懸空寺特寫.jpg" alt="19_懸空寺特寫">
+        <div class="live-body">
+          <div class="live-time">16:03　大同市・懸空寺特寫</div>
+          <div class="live-desc">懸空寺特寫，三層樓閣層疊。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/20_懸空寺碑.jpg" alt="20_懸空寺碑">
+        <div class="live-body">
+          <div class="live-time">大同市・懸空寺碑</div>
+          <div class="live-desc">「懸空寺」石碑留影。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/21_懸空寺牌匾.jpg" alt="21_懸空寺牌匾">
+        <div class="live-body">
+          <div class="live-time">大同市・懸空寺牌匾</div>
+          <div class="live-desc">寺前牌匾與古樹。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/22_懸空寺迴廊.jpg" alt="22_懸空寺迴廊">
+        <div class="live-body">
+          <div class="live-time">16:22　大同市・懸空寺迴廊　<span class="live-tag">丫斌哥隨筆</span></div>
+          <div class="live-desc">仰望懸崖，懸空寺宛如飛瓊嵌入絕壁，僅憑幾根木柱便撐起千年的驚心動魄。踏上廊道，每一步都伴隨木板細微的吱呀聲。登臨三教殿，釋迦牟尼、孔子與老子同殿共祀，佛、道、儒的信仰在這塞外邊關交融並存。這裡藏著古人力學的傲骨，也以三教合一的超然，包容了千年的紅塵風雨。驚嘆之餘，只剩滿心震撼。</div>
+          <div class="live-desc">迴廊外即是金龍峽，層層疊疊嵌在崖壁上的殿閣群，從這個角度看格外震撼。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/23_霞客遺蹤.jpg" alt="23_霞客遺蹤">
+        <div class="live-body">
+          <div class="live-time">16:59　大同市・霞客遺蹤</div>
+          <div class="live-desc">「霞客遺蹤」亭，懸空寺全景在後。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 4 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-culture" id="d4">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">4</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月13日（六）</div>
+      <h2>雲岡石窟・應縣木塔——北魏的石刻史書</h2>
+      <div class="route">大同 <span class="route-arrow">→</span> 應縣 <span class="route-arrow">→</span> 朔州</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-yungang.jpg')"><div class="img-label">雲岡石窟</div></div>
+      <div class="site-body">
+        <div class="site-name">雲岡石窟</div>
+        <div class="site-desc">開鑿於西元460年，現存主要洞窟45個，石雕造像51000餘軀。最初五窟的五尊大佛臉型刻意模仿北魏五位皇帝容貌——「皇帝即佛」的政治神學。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-yingxian.jpg')"><div class="img-label">應縣木塔</div></div>
+      <div class="site-body">
+        <div class="site-name">應縣木塔（釋迦塔）</div>
+        <div class="site-desc">建於1056年，高67.31米，全木結構無一鐵釘，使用54種斗拱。與義大利比薩斜塔、巴黎埃菲爾鐵塔並稱「世界三大奇塔」。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>雲岡石窟——絲路藝術在東方的結晶</h3>
+    <p>第20窟的露天大佛（高13.7米）是雲岡標誌。仔細觀察石窟中的<strong>西域文化痕跡</strong>：犍陀羅藝術風格的立體衣褶、希臘化的面部輪廓——這是絲路貿易在藝術上留下的印記，佛教從印度沿絲路傳入，藝術風格也隨之融合演變。</p>
+    <p>北魏孝文帝494年遷都洛陽，工匠隨之南下，洛陽龍門石窟繼承了雲岡藝術，但風格明顯更加漢化秀麗——兩地石窟放在一起看，可清楚看見北魏漢化的過程。</p>
+    <p><strong>應縣木塔的奇蹟</strong>：1926年軍閥混戰，木塔中彈200餘發，塔體傾斜但未倒。工程師後來研究發現，木結構的彈性和斗拱的消震功能，比鋼筋混凝土更能吸收衝擊——現代高層建築的「柔性結構」概念，在970年前的山西工匠手中早已實踐。</p>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/13　大同・雲岡石窟 → 應縣木塔 → 朔州　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/24_雲岡石窟外觀.jpg" alt="24_雲岡石窟外觀">
+        <div class="live-body">
+          <div class="live-time">09:54　大同市・雲岡石窟外觀</div>
+          <div class="live-desc">石窟群外觀，崖壁鑿滿大小洞窟，遊客已排起長龍。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/25_雲岡寺飛簷.jpg" alt="25_雲岡寺飛簷">
+        <div class="live-body">
+          <div class="live-time">10:09　大同市・雲岡寺飛簷</div>
+          <div class="live-desc">寺前木構建築飛簷層疊，鳥群掠過藍天。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/26_雲岡彩繪菩薩.jpg" alt="26_雲岡彩繪菩薩">
+        <div class="live-body">
+          <div class="live-time">10:42　大同市・彩繪菩薩像</div>
+          <div class="live-desc">洞窟內彩繪菩薩像，色彩歷經千年仍可見輪廓。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/27_雲岡龕像佛坐像.jpg" alt="27_雲岡龕像佛坐像">
+        <div class="live-body">
+          <div class="live-time">10:16　大同市・龕像佛坐像</div>
+          <div class="live-desc">佛龕內主佛端坐，龕楣雕滿成排小坐佛，色彩保存完整。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/28_雲岡立佛雙菩薩.jpg" alt="28_雲岡立佛雙菩薩">
+        <div class="live-body">
+          <div class="live-time">10:54　大同市・立姿雙菩薩</div>
+          <div class="live-desc">並立的兩尊菩薩石像，神情靜穆。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/30_雲岡大佛祈福.jpg" alt="30_雲岡大佛祈福">
+        <div class="live-body">
+          <div class="live-time">11:30　大同市・第20窟露天大佛　<span class="live-tag">丫斌哥隨筆</span></div>
+          <div class="live-desc">站在第20窟露天大佛前，仰頭望著那雙微閉千年的眼，雙手不自覺合十。風化的石面下，似乎還留著北魏工匠鑿刻時的呼吸；佛像的臉型刻意模仿帝王容貌，皇權與信仰就這樣凝結在這片石壁上。千五百年後站在這裡，忽然懂了什麼叫「以石為史」。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/29_雲岡大佛合影.jpg" alt="29_雲岡大佛合影">
+        <div class="live-body">
+          <div class="live-time">11:30　大同市・大佛前留影</div>
+          <div class="live-desc">在第20窟露天大佛前留影，比例懸殊更顯石像氣勢。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/31_應縣木塔內佛像.jpg" alt="31_應縣木塔內佛像">
+        <div class="live-body">
+          <div class="live-time">15:08　朔州市・應縣木塔內佛像</div>
+          <div class="live-desc">釋迦塔底層，巨大金身佛像端坐塔心，香客絡繹於前。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/32_應縣木塔飛簷.jpg" alt="32_應縣木塔飛簷">
+        <div class="live-body">
+          <div class="live-time">15:40　朔州市・木塔飛簷「天宮高聳」</div>
+          <div class="live-desc">仰拍木塔斗拱飛簷，「天宮高聳」匾額高懸其上。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/33_應縣木塔全景.jpg" alt="33_應縣木塔全景">
+        <div class="live-body">
+          <div class="live-time">15:43　朔州市・應縣木塔全景</div>
+          <div class="live-desc">釋迦塔全景，五層六簷的木構塔身矗立於藍天下。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/34_應縣木塔合影.jpg" alt="34_應縣木塔合影">
+        <div class="live-body">
+          <div class="live-time">16:02　朔州市・木塔前留影</div>
+          <div class="live-desc">倚柱遠望木塔，970年的「柔性結構」就矗立在眼前。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 5 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-culture" id="d5">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">5</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月14日（日）</div>
+      <h2>雁門關——意外改道的長城之旅</h2>
+      <div class="route">朔州 <span class="route-arrow">→</span> 代縣・雁門關 <span class="route-arrow">→</span> 太原</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">太原希爾頓花園酒店</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('丫斌哥山西遊記/photos/38_雁門關城樓匾額.jpg')"><div class="img-label">雁門關</div></div>
+      <div class="site-body">
+        <div class="site-name">雁門關（中華第一關）</div>
+        <div class="site-desc">明代長城重要關隘，自古列為「天下九塞之首」，因「雁飛出入於其間」得名，是中原農耕文明與塞北游牧民族之間最重要的軍事屏障。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('丫斌哥山西遊記/photos/40_雁門關內長城敵樓遠眺.jpg')"><div class="img-label">內長城・李牧祠</div></div>
+      <div class="site-body">
+        <div class="site-name">內長城・李牧祠・楊兵部祠</div>
+        <div class="site-desc">內城保留李牧祠與楊兵部祠，分別紀念戰國名將李牧「示弱誘敵」大破匈奴的戰術，與北宋楊家將鎮守邊關、陳家谷一役的悲壯歷史。沿內長城敵樓登頂，可俯瞰長城蜿蜒於山脊之間。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>雁門關——鐵血與和親交織的邊關</h3>
+    <p>雁門關自古為「中華九塞」之首，因「雁飛出入於其間」而得名，是<strong>中原農耕文明與塞北游牧民族</strong>之間最重要的軍事關隘。戰國時期趙國名將李牧曾在此「示弱誘敵」，大破匈奴。</p>
+    <p>北宋年間，楊家將鎮守雁門關一帶，楊業在陳家谷一役壯烈殉國，悲壯故事流傳至今，內城的楊兵部祠即為紀念。</p>
+    <p>地利門外，相傳是<strong>王昭君出塞</strong>的必經之地——一邊是金戈鐵馬的戰鼓，一邊是懷抱琵琶遠嫁塞外的幽怨樂音，鐵血與和親在此交織，讓這座冰冷的軍事要塞多了一層人文溫度。</p>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/14　臨時改道：代縣・雁門關長城　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/35_雁門關天險門仰望.jpg" alt="35_雁門關天險門仰望">
+        <div class="live-body">
+          <div class="live-time">13:26　忻州市・代縣・雁門關</div>
+          <div class="live-desc">原訂行程是萬年冰洞，半路卻因事故封路臨時改道，車隊折返朔州，轉進代縣雁門關。沿陡直馬道往上攀，勾注山的險峻輪廓在晴空下漸漸清晰——背包裡那套為冰洞準備的禦寒裝備，今天注定派不上用場。</div>
+          <blockquote><span class="lv-label">小典故：</span>雁門關因「雁飛出入於其間」得名，自古列為「天下九塞之首」。</blockquote>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/36_雁門關箭窗遠眺.jpg" alt="36_雁門關箭窗遠眺">
+        <div class="live-body">
+          <div class="live-time">14:02　忻州市・代縣・雁門關</div>
+          <div class="live-desc">穿過拱形箭窗向外望，山風拂面，遠處白塔隱約立於群峰之間。地利門外曾是昭君出塞必經之地——一邊金戈鐵馬，一邊懷抱琵琶遠嫁塞外，鐵血與和親在此交織。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/37_雁門關內城紅旗飛簷.jpg" alt="37_雁門關內城紅旗飛簷">
+        <div class="live-body">
+          <div class="live-time">14:25　忻州市・代縣・雁門關內城</div>
+          <div class="live-desc">內城青石古道凹凸不平，相傳是千年戰馬鐵蹄磨出的痕跡。紅色軍旗在飛簷下翻飛，不遠處便是李牧祠與楊兵部祠——一邊是「示弱誘敵」的伏擊戰場，一邊是楊家將鎮守邊關、陳家谷一役的悲壯往事。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/38_雁門關城樓匾額.jpg" alt="38_雁門關城樓匾額">
+        <div class="live-body">
+          <div class="live-time">14:35　忻州市・代縣・雁門關</div>
+          <div class="live-desc">走到城樓正面，「雁門關」三個大字高懸飛簷之下，磚牆斑駁，訴說數百年風霜。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/39_長城雁門關段石碑.jpg" alt="39_長城雁門關段石碑">
+        <div class="live-body">
+          <div class="live-time">14:40　忻州市・代縣・雁門關</div>
+          <div class="live-desc">在「長城—雁門關段」世界文化遺產石碑前留影，為這段意外插曲正式留下紀錄。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/40_雁門關內長城敵樓遠眺.jpg" alt="40_雁門關內長城敵樓遠眺">
+        <div class="live-body">
+          <div class="live-time">15:00　忻州市・代縣・內長城敵樓　<span class="live-tag">丫斌哥隨筆</span></div>
+          <div class="live-desc">沿著陡峭的內長城敵樓一路往上爬，風在耳邊呼嘯，長城順著山脊蜿蜒沒入遠方墨綠。站上烽火台，指尖撫過明代條石，冰涼中似乎還殘留數百年前守軍的體溫。如今硝煙散盡，公路上大貨車川流不息，古老關城成了靜默的博物館——人類築起關隘是為了抵禦與隔絕，歷史卻用時間把它熔成交流與融合的橋樑。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/41_太原暮色空拍.jpg" alt="41_太原暮色空拍">
+        <div class="live-body">
+          <div class="live-time">19:25　太原市</div>
+          <div class="live-desc">傍晚返抵太原，空拍鏡頭下汾河大橋與環狀立交在夕陽中泛著金光。一場封路，把今天從「萬年冰洞」改寫成「雁門關」——禦寒裝備全程沒用上，這段計畫外的長城之行，倒成了整趟旅程最深刻的一段。今晚再次入住太原希爾頓花園酒店。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 6 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-culture" id="d6">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">6</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月15日（一）</div>
+      <h2>平遙古城——中國金融帝國的心臟</h2>
+      <div class="route">太原 <span class="route-arrow">→</span> 平遙古城・明清街</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('丫斌哥山西遊記/photos/52_城牆俯瞰古城.jpg')"><div class="img-label">平遙古城</div></div>
+      <div class="site-body">
+        <div class="site-name">平遙古城（UNESCO世界文化遺產）</div>
+        <div class="site-desc">始建於西周宣王時期，現存城牆為明洪武三年（1370年）重建，周長6.4公里，72座堞樓象徵孔子72賢徒，3000垛口象徵3000弟子。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('丫斌哥山西遊記/photos/48_日昇昌票號.jpg')"><div class="img-label">日升昌票號</div></div>
+      <div class="site-body">
+        <div class="site-name">日升昌票號（強烈推薦入內）</div>
+        <div class="site-desc">道光三年（1823年）創立，中國第一家匯兌金融機構，比歐洲現代銀行早數十年。鼎盛時全國35個分號，業務覆蓋日本、東南亞、俄羅斯。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('丫斌哥山西遊記/photos/42_平遙觀風樓.jpg')"><div class="img-label">明清街</div></div>
+      <div class="site-body">
+        <div class="site-name">明清街（南大街）</div>
+        <div class="site-desc">平遙古城南大街，完整保存明清時期票號、錢莊、當舖、藥鋪遺跡。緊密串連著晉商鼎盛時代的商業脈絡。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>晉商的崛起——中國最早的金融帝國</h3>
+    <p>明代「開中法」是晉商發跡關鍵。政府規定：商人向邊境輸送糧草，換取「鹽引」（販鹽許可證）。山西商人地近邊境，迅速壟斷鹽業，積累龐大資本，鼎盛時期控制中國<strong>70%以上的金融流通</strong>。</p>
+    <p><strong>日升昌的匯兌發明</strong>：商人攜帶大量現銀風險極高，日升昌發明「匯票」——在平遙存入現銀，持密碼匯票到全國各分號取錢。防偽系統以詩句為密碼本，每年更換，外人無法破解。</p>
+    <div class="extra-tip">雙林寺（距古城6公里）：宋代彩塑2052尊，「千手觀音」的神情細膩程度是全中國古代雕塑史罕見水準。梁思成1930年代考察後稱之「無上國寶」。計程車15分鐘可達，強烈推薦。</div>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/15　平遙古城全日深探　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/42_平遙觀風樓.jpg" alt="42_平遙觀風樓">
+        <div class="live-body">
+          <div class="live-time">11:49　晉中市・平遙古城</div>
+          <div class="live-desc">踏進城門，觀風樓石拱橫亙頭頂，磚縫裡蹦出幾株小草，紅燈籠在無風的晴空懸著一動不動。城牆內側的青石板路往深處延伸——整座活著的明清古城，就這樣把人直接吸了進去。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/43_平遙炒碗托.jpg" alt="43_平遙炒碗托">
+        <div class="live-body">
+          <div class="live-time">12:07　晉中市・平遙・董記炒碗托</div>
+          <div class="live-desc">在董記炒碗托解決午餐。碗托是平遙名物，蕎麥粉蒸製後切條，入鍋與大腸、辣椒同炒，鹹香帶辣，口感Q彈扎實——這一碗，是古城最接地氣的滋味。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/44_縣衙親民堂.jpg" alt="44_縣衙親民堂">
+        <div class="live-body">
+          <div class="live-time">12:37　晉中市・平遙縣衙</div>
+          <div class="live-desc">平遙縣衙是全中國保存最完整的縣級衙門之一，從元代到清末持續運作六百年。走進「親民堂」正門，大明萬曆年間的匾額端正懸於頭頂，氣氛一下子就對了。</div>
+          <blockquote><span class="lv-label">小典故：</span>「親民」取自《大學》，是知縣彰顯愛民理念的正式宣示，掛在正堂最顯眼處。</blockquote>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/45_縣衙明鏡高懸.jpg" alt="45_縣衙明鏡高懸">
+        <div class="live-body">
+          <div class="live-time">12:38　晉中市・平遙縣衙・公堂</div>
+          <div class="live-desc">知縣審案的公堂，頭頂懸著「明鏡高懸」。藻井彩繪鶴紋對稱，公案前令旗整齊排列——那個年代的「正義」，就坐在這把椅子上發號施令。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/46_縣衙木枷.jpg" alt="46_縣衙木枷">
+        <div class="live-body">
+          <div class="live-time">13:04　晉中市・平遙縣衙・軍獄</div>
+          <div class="live-desc">衙門深處的軍獄院牆上，掛著兩塊木枷，鐵鏈鏽蝕成深棕色。「法外施恩」四個字，站在這裡才真正有了重量——那些被這鐵器困住的人，靠的是縣官願不願意開口。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/47_山西老陳醋.jpg" alt="47_山西老陳醋">
+        <div class="live-body">
+          <div class="live-time">13:15　晉中市・平遙古城</div>
+          <div class="live-desc">街上每隔幾步就是醋的招牌，老陳醋缸一字排開：老陳三年、清香、棗醋…各款標籤密密麻麻。跟台灣慣用的白醋全然不同——山西陳醋色深濃稠，酸裡帶著一絲微甜。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/48_日昇昌票號.jpg" alt="48_日昇昌票號">
+        <div class="live-body">
+          <div class="live-time">13:28　晉中市・平遙・日昇昌記</div>
+          <div class="live-desc">「日昇昌記・中國票號博物館」——乍看只是棟暗褐色木構老宅，卻是道光三年（1823年）全中國第一張匯票的誕生地。商人在此存入現銀，憑密碼匯票到全國分號提款，比歐洲現代銀行體系早了數十年。</div>
+          <blockquote><span class="lv-label">小典故：</span>防偽密碼以詩句為本，每年更換。外人無從破解，縱然截票，也兌不到半文錢。</blockquote>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/49_同興公鏢局.jpg" alt="49_同興公鏢局">
+        <div class="live-body">
+          <div class="live-time">14:25　晉中市・平遙・同興公鏢局</div>
+          <div class="live-desc">「大智大勇威震四方」——同興公鏢局門聯氣場十足。清代鏢局是票號的保鏢機構，護送現銀與貨物南北奔走。走鏢靠的不只是武功，更是一聲震懾江湖的鏢號。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/50_丫斌哥鏢車合影.jpg" alt="50_丫斌哥鏢車合影">
+        <div class="live-body">
+          <div class="live-time">14:38　晉中市・平遙・同興公鏢局</div>
+          <div class="live-desc">在鏢車旁擺了個使勁推車的姿勢，黑色鐵皮箱上還留著花鳥鏽紋。鏢師走鏢時，最關鍵的一句就是那聲「合吾！」——路上遇匪，先不動手，拼的是名氣。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/51_市樓古炮合影.jpg" alt="51_市樓古炮合影">
+        <div class="live-body">
+          <div class="live-time">14:59　晉中市・平遙・市樓</div>
+          <div class="live-desc">市樓又稱「四省通衢」，是古城的視覺制高點。樓前一排古炮肅立，氣氛頓時凜冽幾分——這座明代城樓俯瞰南大街幾百年，見過票號鼎盛、見過亂世兵燹，如今見到的是絡繹不絕的遊客。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/52_城牆俯瞰古城.jpg" alt="52_城牆俯瞰古城">
+        <div class="live-body">
+          <div class="live-time">15:19　晉中市・平遙城牆　<span class="live-tag">丫斌哥隨筆</span></div>
+          <div class="live-desc">站上城牆，腳下是連片延伸到遠方的深灰屋頂，市樓孤立在中軸線上，像一枚印章壓在六百年不變的城市格局上。風從城垛縫隙吹過來，城裡的叫賣聲飄在熱風裡忽遠忽近。走了五台山、恒山、雲岡、雁門關，那些地方的重量在於「千年」；平遙的重量不同——它不只是遺址，而是一座還活著的城，活在煙火氣與遊客之間，活得笨拙又真實。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/53_市樓夜景.jpg" alt="53_市樓夜景">
+        <div class="live-body">
+          <div class="live-time">20:47　晉中市・平遙古城</div>
+          <div class="live-desc">夜裡，市樓亮起暖黃燈光，飛簷在黑色天幕下格外立體，琉璃脊獸每一片都清晰可見。白天看它是歷史遺址，夜裡看，更像一座仍在守城的崗哨——把整座古城罩在燈光裡，一夜不散。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 7 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-culture" id="d7">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">7</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月16日（二）</div>
+      <h2>平遙古城——自由深探</h2>
+      <div class="route">平遙古城 自由活動</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="history-panel">
+    <h3>今天的建議路線——用腳讀懂晉商</h3>
+    <p>早晨：城牆漫步（東門→南門段）→ 日升昌票號（開館後第一批入場最清靜）→ 平遙縣衙（清代縣級政府的完整保存，衙門文化的活教材）</p>
+    <p>下午：城隍廟（金元建築，全國重點文保單位）→ 鎮國寺（距古城15公里，五代951年木構，比顯通寺更古老的木構建築，人少且珍貴）</p>
+    <p>傍晚：古城夜景，城樓燈火映照古街，平遙的夜晚是整個山西行程中最具氛圍感的時刻。</p>
+    <p><strong>必吃</strong>：平遙牛肉（山西四大名産之首）、平遙碗禿（涼糕）、推光漆器（不是食物，是世界級非遺工藝）</p>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/16　平遙古城第二日・深度自由行　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/54_文廟學宮牌匾.jpg" alt="54_文廟學宮牌匾">
+        <div class="live-body">
+          <div class="live-time">10:14　晉中市・平遙文廟</div>
+          <div class="live-desc">早晨趁人少，頭一站推進平遙文廟。「晉商人才庫」幾個大字懸在牌坊頂上——走進去才明白這句話有多實在：平遙文廟是中國現存最早的宋代文廟木構之一，八百年前赴考的士子，走的正是眼前這條路。牌坊對聯字字有分量，「君城仰心，心仰城，城不古若人千古」——繞著念一遍，才算真正踏進了廟門。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/55_文廟萬仞牆.jpg" alt="55_文廟萬仞牆">
+        <div class="live-body">
+          <div class="live-time">10:14　晉中市・平遙文廟</div>
+          <div class="live-desc">進門先迎面撞上「萬仞宮牆」——這道高牆不是裝飾，是孔廟規制：外人不得直視聖人，非繞行不得入。牆面磚縫乾淨，時間在這裡似乎停得特別慢。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/56_大成殿合影.jpg" alt="56_大成殿合影">
+        <div class="live-body">
+          <div class="live-time">10:17　晉中市・平遙文廟・大成殿</div>
+          <div class="live-desc">大成殿台階前留影。廊柱之間透出殿內昏黃的光，站在這裡，背後是晴空，前方是百年木構——光線對比出一種說不清的莊重。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/57_大成殿孔子像.jpg" alt="57_大成殿孔子像">
+        <div class="live-body">
+          <div class="live-time">10:18　晉中市・平遙文廟・大成殿內</div>
+          <div class="live-desc">殿內孔子端坐正中，頭頂三塊匾依次懸掛：「德齊幬載」「萬世師表」「生民以來」。兩側配祀四聖，柱聯書「溢居江河隨地你……」——一整個宋代以降累積的崇敬，都壓縮在這幾平方公尺的空間裡。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/58_文廟鰲陽石.jpg" alt="58_文廟鰲陽石">
+        <div class="live-body">
+          <div class="live-time">10:33　晉中市・平遙文廟</div>
+          <div class="live-desc">出門前，一塊「鰲陽」碑立在龜座上，背後是「天地同尊」屏牆。鰲陽即文昌之地，科舉及第謂之「獨佔鰲頭」——摸一把，沾點當年的文氣，也算不虛此行。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/59_城隍廟廊道.jpg" alt="59_城隍廟廊道">
+        <div class="live-body">
+          <div class="live-time">10:50　晉中市・平遙城隍廟</div>
+          <div class="live-desc">轉入城隍廟，廊道兩側紅燈籠一路掛到底，正中「一堂」匾額端正懸著。氣氛和縣衙、文廟截然不同——這裡供的是陰間的官，民間信仰的力量，在廊道盡頭的昏暗裡自成一格。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/60_城隍廟壁畫.jpg" alt="60_城隍廟壁畫">
+        <div class="live-body">
+          <div class="live-time">10:50　晉中市・平遙城隍廟・正殿</div>
+          <div class="live-desc">正殿整面牆，是一幅城隍出巡圖，人物衣袍、旗幡、法器層層疊在雲氣之上，每個面孔表情各異，筆觸細密。香灰年積，壁畫底色已沉成深灰，顏色卻一點未褪——比多少博物館的陳列都更有溫度。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/61_馬家大院城樓.jpg" alt="61_馬家大院城樓">
+        <div class="live-body">
+          <div class="live-time">13:21　晉中市・平遙・馬家大院</div>
+          <div class="live-desc">午間吃了一碗平遙牛肉麵——湯頭厚重、麵條寬扁，滿足。飯後走去馬家大院。門樓高聳，「馬家大院」匾懸在城樓之上，氣勢先聲奪人，稱得上「平遙首宦」的派頭。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/63_馬家大院門廊.jpg" alt="63_馬家大院門廊">
+        <div class="live-body">
+          <div class="live-time">13:26　晉中市・平遙・馬家大院</div>
+          <div class="live-desc">大門上方掛著一塊奇怪的匾——「蝦錫」兩字反著寫，音「錫谷」，賜福的意思。門前龍紋石柱，門板燙金大「馬」字，整個院落的做工精細得讓人捨不得快步走。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/62_馬家大院合影.jpg" alt="62_馬家大院合影">
+        <div class="live-body">
+          <div class="live-time">13:40　晉中市・平遙・馬家大院　<span class="live-tag">丫斌哥隨筆</span></div>
+          <div class="live-desc">地圖上看，馬家大院佔地廣闊；走進才知三分之二都在整修封閉。只逛得了開放的一角，簷角雕龍、石獅把門、門楣匾額層層疊疊，精工宏偉不輸晉商各大名宅——可惜半小時就走透了，心裡難免惆悵這份殘缺。下午就此在平遙多繞了幾條小巷，讓腳決定去哪，讓眼睛決定停哪。第七天，不趕路。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/67_平遙博物館夜景.jpg" alt="67_平遙博物館夜景">
+        <div class="live-body">
+          <div class="live-time">20:31　晉中市・平遙古城博物館</div>
+          <div class="live-desc">晚飯後繞到平遙古城博物館外，新建的現代建築用暖燈勾出磚牆輪廓，一排格柵在夜空下發著橘光，和身後的明清古街形成有趣的對比。古城不只有舊——有些東西，夜裡才看得見。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/64_又見平遙劇場.jpg" alt="64_又見平遙劇場">
+        <div class="live-body">
+          <div class="live-time">19:00　晉中市・《又見平遙》情景體驗劇</div>
+          <div class="live-desc">晚場走進《又見平遙》——藍光打在古城磚牆上，演員從四面八方涌入，觀眾跟著移動，故事就在身邊發生。這不是坐著看戲，是走進歷史裡。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/65_又見平遙攀牆.jpg" alt="65_又見平遙攀牆">
+        <div class="live-body">
+          <div class="live-time">19:06　晉中市・《又見平遙》情景體驗劇　<span class="live-tag">丫斌哥隨筆</span></div>
+          <div class="live-desc">這是大型情景體驗劇，大部分時間跟著演員們走動看一幕一幕的表演，主要是讓觀眾融入歷史故事中。藍色光影打在城牆上，演員倒掛攀爬，故事非常感人，表演的方式挺驚喜。結束後走回最熱鬧的南大街，夜裡各店鋪搖曳的燈籠，讓人真有回到歷史的錯覺。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/66_平遙市樓夜人潮.jpg" alt="66_平遙市樓夜人潮">
+        <div class="live-body">
+          <div class="live-time">20:06　晉中市・平遙南大街</div>
+          <div class="live-desc">散場後的南大街，市樓在人潮中拔地而起，通身金黃，飛簷每一層都亮著。白天看它是歷史，夜裡看，更像是這座城最後的守門人——把幾百年的光都攢在這裡，不肯滅。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 8 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-river" id="d8">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">8</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月17日（三）</div>
+      <h2>隰縣小西天・壺口瀑布——黃河的咆哮</h2>
+      <div class="route">平遙 <span class="route-arrow">→</span> 隰縣 <span class="route-arrow">→</span> 吉縣</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-xiaoxitian.jpg')"><div class="img-label">隰縣小西天</div></div>
+      <div class="site-body">
+        <div class="site-name">隰縣小西天（鳳凰山）</div>
+        <div class="site-desc">建於明崇禎年間（1629–1634）。大雄寶殿內近2000尊懸塑金碧輝煌，被譽「懸塑絕唱」。《黑神話：悟空》取景地，因此爆紅。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-hukou.jpg')"><div class="img-label">壺口瀑布</div></div>
+      <div class="site-body">
+        <div class="site-name">壺口瀑布（山西岸觀，含小交通）</div>
+        <div class="site-desc">黃河中游流經晉陝大峽谷形成的天然瀑布，寬30米、深50米。6月豐水期水量最大，氣勢磅礴，水霧瀰漫，身臨其境震撼無比。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>壺口——黃河神話與歷史的交匯</h3>
+    <p><strong>大禹治水的起點</strong>：傳說4000年前，大禹在壺口「決壺口，闢龍門」，引導黃河水道，使中原免於洪患。這個故事是中國「人定勝天」精神的最早文字表述。</p>
+    <p><strong>《黃河大合唱》的誕生地</strong>：1939年，詩人光未然、作曲家冼星海在壺口聆聽黃河濤聲，創作了《黃河大合唱》。「風在吼，馬在叫，黃河在咆哮」——那個現場，就是眼前這個景象。</p>
+    <p><strong>小西天的懸塑之謎</strong>：懸塑（懸掛在空中的彩塑）技術難度極高，人物從屋頂、牆壁四面八方伸出，每一尊表情動態不重複，近2000尊在極有限空間內構成一個立體的佛教宇宙，是明代民間藝人創造力的極致展現。</p>
+    <p style="color:#888;font-size:0.82rem;">⚠️ 6月豐水期水霧大，站在岸邊衣服會被打濕，電子設備注意防水。午後光線角度最佳。</p>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/17　隰縣小西天・壺口瀑布　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/68_小西天入口合影.jpg" alt="68_小西天入口合影">
+        <div class="live-body">
+          <div class="live-time">10:35　臨汾市・隰縣・小西天</div>
+          <div class="live-desc">一早從平遙出發，車開了近兩小時，抵達隰縣鳳凰山腳下。「小西天」三字嵌在紅牆門洞正中——進去便是另一個世界。建於明崇禎年間，近400年的懸塑藏在這座山頂小廟裡，人不多，靜得出奇。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/69_小西天别有天.jpg" alt="69_小西天别有天">
+        <div class="live-body">
+          <div class="live-time">10:42　臨汾市・隰縣・小西天</div>
+          <div class="live-desc">院內一道圓形月洞門，匾額寫著「別有天」——三個字說盡了走進來的感受。紅牆、圓洞、深處的佛殿，光線從洞口穿進來，像一個通往不同時空的入口。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/70_小西天懸塑群佛.jpg" alt="70_小西天懸塑群佛">
+        <div class="live-body">
+          <div class="live-time">10:57　臨汾市・隰縣・小西天大雄寶殿</div>
+          <div class="live-desc">走入大雄寶殿，第一眼就愣在那裡——近2000尊懸塑從四面牆壁、屋頂層層伸出，金色、彩色交疊，每一尊面孔都不同，姿態各異。這是技術的極限，也是信仰的極致。難怪被稱作「懸塑絕唱」。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/71_小西天主佛龕.jpg" alt="71_小西天主佛龕">
+        <div class="live-body">
+          <div class="live-time">10:58　臨汾市・隰縣・小西天大雄寶殿</div>
+          <div class="live-desc">主佛端坐正中，兩側脅侍莊嚴肅立，佛龕四周懸塑如雲湧般圍擁——這是明代工匠花了五年時間雕出的佛教宇宙，每一寸空間都不浪費。顏色歷400年而不褪，這件事本身就是個謎。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/72_小西天護法神將.jpg" alt="72_小西天護法神將">
+        <div class="live-body">
+          <div class="live-time">10:58　臨汾市・隰縣・小西天大雄寶殿</div>
+          <div class="live-desc">殿角一尊護法神將，踩在雲頭上，鎧甲飛揚，面容威猛。這種動態感在靜態彩塑上實屬罕見，工匠把力量和速度都雕進了泥土裡。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/73_小西天懸塑全景.jpg" alt="73_小西天懸塑全景">
+        <div class="live-body">
+          <div class="live-time">10:58　臨汾市・隰縣・小西天大雄寶殿</div>
+          <div class="live-desc">退到殿外往上望，整片懸塑從屋頂垂掛而下，密密層層，在陽光斜射中泛著金色。《黑神話：悟空》讓這裡爆紅——但在遊戲之前，它已經在這座山上靜靜等了將近四百年。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/74_小西天佛字壁.jpg" alt="74_小西天佛字壁">
+        <div class="live-body">
+          <div class="live-time">11:11　臨汾市・隰縣・小西天</div>
+          <div class="live-desc">出殿前，在院牆前停了一下——一個大「佛」字填滿整塊紅牆，字形裡藏著跪拜的人形，「慈悲乃慧，大地光輝」幾字寫在旁邊。不管信不信佛，這面牆都值得停下來看一眼。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/75_壺口瀑布合影.jpg" alt="75_壺口瀑布合影">
+        <div class="live-body">
+          <div class="live-time">15:30　延安市・吉縣・壺口瀑布</div>
+          <div class="live-desc">下午抵達壺口。還沒走到跟前，聲音先到——低沉的轟鳴聲從峽谷底部傳來，腳底板都感覺得到震動。6月豐水期，水量比平時大上數倍，水霧瀰漫，站在這裡，衣服很快就濕透了。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/76_壺口瀑布全景.jpg" alt="76_壺口瀑布全景">
+        <div class="live-body">
+          <div class="live-time">15:37　延安市・吉縣・壺口瀑布</div>
+          <div class="live-desc">黃河水從寬闊的河床陡然收窄，從三十米高處傾瀉而下，白浪疊白浪，聲浪一陣壓過一陣。照片只能捕捉形狀，捕捉不了那個震動。「壺口」這兩個字，現場才真正明白為什麼這樣叫。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/77_壺口瀑布凝視.jpg" alt="77_壺口瀑布凝視">
+        <div class="live-body">
+          <div class="live-time">15:44　延安市・吉縣・壺口瀑布　<span class="live-tag">現場側記</span></div>
+          <div class="live-desc">靠著欄杆，看了很久。水霧把整個峽谷籠在白色裡，黃河水在腳下翻騰，遠處的山是深綠色，天空壓得很低。不知道在想什麼，只是站著，讓這個聲音從耳朵灌進來再從腳底流走。有些地方，不需要說話。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/78_壺口河灘小橋.jpg" alt="78_壺口河灘小橋">
+        <div class="live-body">
+          <div class="live-time">16:04　延安市・吉縣・壺口瀑布</div>
+          <div class="live-desc">沿著河灘往下走，岩石被水長年磨得光滑，一座小橋橫跨淺流，遠處是綿延的青山。剛才的轟鳴聲還在耳邊迴響，這裡卻忽然安靜下來——壺口的兩種樣子，都在同一天看到了。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/79_吉縣酒店客房.jpg" alt="79_吉縣酒店客房">
+        <div class="live-body">
+          <div class="live-time">17:25　臨汾市・吉縣　入住</div>
+          <div class="live-desc">吉縣縣城很小，但旅行社安排的這裡最好的酒店，房間倒是優雅——木地板、落地窗、整排綠植，比想像中好太多。壺口的水霧還沒全乾，先換身乾衣服，倒上熱茶，今天值了。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/80_隰縣玉露香梨.jpg" alt="80_隰縣玉露香梨">
+        <div class="live-body">
+          <div class="live-time">翌日 07:53　臨汾市・吉縣・酒店　<span class="live-tag">丫斌哥隨筆</span></div>
+          <div class="live-desc">昨天在小西天山腳買了一顆隰縣玉露香梨帶回房間，今早切開——這顆比手掌還大，人民幣只要2.5元。果肉細嫩無渣，汁水極其豐富，純甜無酸，酥脆爽口，完全沒有普通梨那種「石細胞」口感。隰縣是中國玉露香梨的主產地，這個品種在外地很難買到，能在產地吃到這樣的梨，算是此行意外的美食驚喜。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 9 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-culture" id="d9">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">9</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月18日（四）</div>
+      <h2>汾城古建築群・華門——堯舜故地</h2>
+      <div class="route">吉縣 <span class="route-arrow">→</span> 臨汾 <span class="route-arrow">→</span> 長治</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-linfen.jpg')"><div class="img-label">汾城古建築群・臨汾</div></div>
+      <div class="site-body">
+        <div class="site-name">汾城古建築群</div>
+        <div class="site-desc">中國現存最完整的縣級古城建築群。金至清代的縣衙、城隍廟、文廟、社稷廟、關帝廟全部保留，時間跨度800年，是未被商業化的真實古縣城。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-huamen.jpg')"><div class="img-label">外觀華門</div></div>
+      <div class="site-body">
+        <div class="site-name">外觀華門</div>
+        <div class="site-desc">高50米，比法國巴黎凱旋門還高0.4米，是世界最高最大的門。象徵堯・舜・禹三帝，臨汾自稱「堯都平陽」，是中華文明最早核心區域之一。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>臨汾——4300年前的堯都</h3>
+    <p>臨汾一帶是「堯都平陽」的傳說地。堯帝在此建都（約4300年前），制訂曆法、統一度量衡，<strong>禪讓天下於舜</strong>——這個故事是中國「賢能政治」理想的源頭，影響了此後兩千年的政治哲學。</p>
+    <p>不論傳說真實性，考古已在此地出土大量<strong>龍山文化（距今4500–4000年）遺址</strong>，確認這片土地是中國文明最早的核心區域之一。</p>
+    <p><strong>汾城的珍貴</strong>：中國大多數古城或已拆除，或過度商業化。汾城因為太「不出名」反而沒有被破壞，街道尺度、建築比例、功能佈局都是真實的，不是重建的仿古街。</p>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/18　汾城古建築群・華門　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/81_汾城古塔合影.jpg" alt="81_汾城古塔合影">
+        <div class="live-body">
+          <div class="live-time">10:06　臨汾市・汾城古城景區</div>
+          <div class="live-desc">從吉縣出發，車開了近兩小時，抵達汾城。景區牌子立在古塔旁邊，塔身磚砌八角，頂上居然還長著幾株松樹——這座始建於唐代的磚塔，在汾城這個沒什麼人知道的古縣城裡，靜靜站了一千多年。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/82_汾城橋星門.jpg" alt="82_汾城橋星門">
+        <div class="live-body">
+          <div class="live-time">10:13　臨汾市・汾城・文廟</div>
+          <div class="live-desc">文廟入口的「橋星門」，木料做的石牌坊式門樓，兩側石龍柱風化嚴重，龍鱗還在。紅燈籠掛在橫樑上，風一吹左右搖著——整座汾城就是這種感覺，舊得理直氣壯。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/83_汾城下馬碑.jpg" alt="83_汾城下馬碑">
+        <div class="live-body">
+          <div class="live-time">10:13　臨汾市・汾城・文廟</div>
+          <div class="live-desc">廟門邊立著一塊石碑，「文武官員至此下馬」幾個字刻得端正。旁邊牆壁嵌著一圈彩色龍紋圓雕——有趣的是，碑和雕飾並排站在一起，幾百年來沒人動過它們。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/84_汾城古柏殿堂.jpg" alt="84_汾城古柏殿堂">
+        <div class="live-body">
+          <div class="live-time">10:26　臨汾市・汾城・文廟</div>
+          <div class="live-desc">院子裡一棵古柏斜向彎去，樹幹比腰還粗，紅色紋路像是被燒過又活回來了。身後的殿堂廊柱木色深沉，紅燈籠點綴其間。文廟中還藏有明朝文學家文徵明的墨寶石刻，這句話讓人多看了幾眼牆上的字。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/85_汾城廟前合影.jpg" alt="85_汾城廟前合影">
+        <div class="live-body">
+          <div class="live-time">10:27　臨汾市・汾城・文廟</div>
+          <div class="live-desc">在廟前台階坐下來休息。兩棵古柏一左一右護著殿門，廟裡沒什麼遊客，只有偶爾飄過的風。汾城果然如預期，安靜、真實、沒有商業氣，這樣的地方在山西越來越難找了。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/86_汾城鑒客坊.jpg" alt="86_汾城鑒客坊">
+        <div class="live-body">
+          <div class="live-time">10:30　臨汾市・汾城古街</div>
+          <div class="live-desc">古街中央立著一座木構牌坊，匾額書「鑒客坊」三字，左右兩排灰磚老屋向遠處延伸，盡頭還有另一座門樓。這種街道格局幾百年沒變過，走在裡面，時間感一下子就亂了。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/87_汾城縣衙大門.jpg" alt="87_汾城縣衙大門">
+        <div class="live-body">
+          <div class="live-time">10:38　臨汾市・汾城・縣衙</div>
+          <div class="live-desc">汾城縣衙大門，兩隻石獅子把守兩側，門板年代久遠，釘頭都生了包漿，半人高的門檻壓著幾百年的進出。用腳踢了一下門板，聲音悶實——這是真木頭。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/88_華門正面.jpg" alt="88_華門正面">
+        <div class="live-body">
+          <div class="live-time">13:13　臨汾市・華門景區</div>
+          <div class="live-desc">午後抵達華門。「天下第一門」幾個大字擺在草坪前，主體建築是一座巨型門樓，高50米，比巴黎凱旋門還高0.4米。外觀雄偉，象徵堯、舜、禹三帝，是臨汾「堯都平陽」身份的現代宣示。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/89_華門合影.jpg" alt="89_華門合影">
+        <div class="live-body">
+          <div class="live-time">13:18　臨汾市・華門景區</div>
+          <div class="live-desc">在「天下第一門」牌子前留影。這座門是1990年代建的現代建築，風格仿古，氣勢確實夠大——站在前面，背後的整座城市都顯小了。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/90_華門門洞.jpg" alt="90_華門門洞">
+        <div class="live-body">
+          <div class="live-time">13:26　臨汾市・華門景區　<span class="live-tag">現場側記</span></div>
+          <div class="live-desc">走到門洞近前，才看清這扇門有多大——「華門」兩字嵌在頂部，紅色大門足有三層樓高，門釘一排排整齊壓下來，石橋從腳下往門洞延伸。早上在汾城看的是千年積累的真實，這裡看的是當代人對那段歷史的想像與重述——兩種表達方式，都是這片土地的一部分。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 10 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-gorge" id="d10">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">10</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月19日（五）</div>
+      <h2>八泉峽——太行山的壯麗峽谷</h2>
+      <div class="route">長治 <span class="route-arrow">→</span> 壺關・八泉峽景區</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-taihang.jpg')"><div class="img-label">八泉峽・太行山</div></div>
+      <div class="site-body">
+        <div class="site-name">八泉峽景區（含電瓶車+遊船+空中巴士+纜車+懸崖電梯）</div>
+        <div class="site-desc">綿延40公里的太行山大峽谷，相對高差200至800米，峽壁陡立。遊船穿越峽谷，兩岸壁立千仞，峽中天光一線，清泉直接從岩壁滲出。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>太行山——中華文明的脊梁</h3>
+    <p>太行山是黃土高原與華北平原的天然分界線，也是中國歷史上無數戰役的主戰場。長治壺關一帶的峽谷，地質屬於寒武紀至奧陶紀石灰岩層，億萬年水蝕形成壁立千仞的景觀。</p>
+    <p>峽谷內鑲嵌著<strong>滴谷寺</strong>（唐代）和<strong>九連寺</strong>（宋代），壁畫保存尚好，是研究古代佛教圖像學的珍貴資料——在壯觀的自然景觀中，突然遇見千年古寺，這正是山西獨有的體驗。</p>
+  </div>
+
+  <div class="live-dispatch">
+    <div class="live-header">
+      <span class="live-badge">🔴 丫斌哥現場直擊</span>
+      <span class="live-date">2026/06/19　長治・八泉峽　實況記錄</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/91_八泉峽入口.jpg" alt="91_八泉峽入口">
+        <div class="live-body">
+          <div class="live-time">11:53　壺關縣・八泉峽入口</div>
+          <div class="live-desc">「八泉入」牌樓，背後雲霧繚繞的太行山峰若隱若現。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/92_峽谷湖景棧道.jpg" alt="92_峽谷湖景棧道">
+        <div class="live-body">
+          <div class="live-time">12:03　壺關縣・峽谷湖景棧道</div>
+          <div class="live-desc">木棧道沿著湖邊延伸，對岸峽谷壁立，雲霧如紗般飄過山腰，湖水倒映著綠意與岩壁。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/93_峽谷遊船.jpg" alt="93_峽谷遊船">
+        <div class="live-body">
+          <div class="live-time">12:35　壺關縣・峽谷遊船</div>
+          <div class="live-desc">遊船行駛在碧綠的峽谷水面上，兩側石灰岩壁高聳，峽中視角窄如一線天。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/94_天然拱門觀景台.jpg" alt="94_天然拱門觀景台">
+        <div class="live-body">
+          <div class="live-time">13:01　壺關縣・天然拱門觀景台</div>
+          <div class="live-desc">仰拍峽壁形成的天然石拱，綠色山峰從拱門中框出，光線從上方透下來，氣勢驚人。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/95_溪流木棧道.jpg" alt="95_溪流木棧道">
+        <div class="live-body">
+          <div class="live-time">13:06　壺關縣・溪流木棧道</div>
+          <div class="live-desc">木棧道蜿蜒在溪流上方，清澈的溪水從石縫間流過，兩側綠植茂密。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/96_峽谷溪流.jpg" alt="96_峽谷溪流">
+        <div class="live-body">
+          <div class="live-time">13:13　壺關縣・峽谷溪流</div>
+          <div class="live-desc">溪流在峽谷中層層疊疊流下，長曝光拍出絲綢般質感，遠處峽壁高聳入雲。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/97_瀑布溪流特寫.jpg" alt="97_瀑布溪流特寫">
+        <div class="live-body">
+          <div class="live-time">13:33　壺關縣・瀑布溪流特寫</div>
+          <div class="live-desc">近拍溪流在石縫間蜿蜒，水流拍出柔順感，青苔附在岩石上，木棧道橫跨其上。</div>
+        </div>
+      </div>
+      <div class="live-card live-feature">
+        <img class="live-img" src="丫斌哥山西遊記/photos/98_峽谷瀑布.jpg" alt="98_峽谷瀑布">
+        <div class="live-body">
+          <div class="live-time">14:16　壺關縣・峽谷瀑布　<span class="live-tag">現場側記</span></div>
+          <div class="live-desc">站在瀑布前，水簾從峽壁頂端整齊垂落，霧氣濕冷撲面而來。峽谷在這裡突然收窄，兩側岩壁夾出一線天光，瀑布聲轟隆作響，完全蓋過人聲。這是億萬年水蝕的結果，也是太行山最直白的力量展示——不需要人為雕飾，自然本身已是最好的藝術品。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/99_纜車雲霧.jpg" alt="99_纜車雲霧">
+        <div class="live-body">
+          <div class="live-time">15:01　壺關縣・纜車</div>
+          <div class="live-desc">纜車緩緩上升，雲霧在山腰遊走，遠處峰巒層疊。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/100_峽谷俯瞰.jpg" alt="100_峽谷俯瞰">
+        <div class="live-body">
+          <div class="live-time">15:02　壺關縣・峽谷俯瞰</div>
+          <div class="live-desc">纜車視角俯瞰峽谷，峽底藏著一灣碧水，兩側峽壁陡峭如刀削。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/101_雲霧山峰.jpg" alt="101_雲霧山峰">
+        <div class="live-body">
+          <div class="live-time">15:21　壺關縣・雲霧山峰</div>
+          <div class="live-desc">雲霧環繞山峰，層層疊疊，石灰岩壁在霧中若隱若現。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/102_峭壁千仞.jpg" alt="102_峭壁千仞">
+        <div class="live-body">
+          <div class="live-time">15:49　壺關縣・峭壁千仞</div>
+          <div class="live-desc">纜車上拍攝峽壁，垂直落差數百米，綠植沿著裂縫攀附生長，底部公路如細線。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/103_懸崖電梯建築.jpg" alt="103_懸崖電梯建築">
+        <div class="live-body">
+          <div class="live-time">15:26　壺關縣・懸崖電梯建築</div>
+          <div class="live-desc">懸崖電梯外觀，三層玻璃幕牆建築嵌在山腰，「空中巴士入口」字樣標示清楚。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/104_高空俯瞰全景.jpg" alt="104_高空俯瞰全景">
+        <div class="live-body">
+          <div class="live-time">15:43　壺關縣・高空俯瞰全景</div>
+          <div class="live-desc">高處回望整個峽谷，兩側峽壁夾出一線河谷，底下景區建築渺小如積木。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/105_觀景台眺望.jpg" alt="105_觀景台眺望">
+        <div class="live-body">
+          <div class="live-time">16:44　壺關縣・觀景台眺望</div>
+          <div class="live-desc">觀景台木欄杆邊，遠眺對面峭壁與山谷，雲霧仍在流動。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/106_世界紀錄證書.jpg" alt="106_世界紀錄證書">
+        <div class="live-body">
+          <div class="live-time">15:55　壺關縣・世界紀錄證書</div>
+          <div class="live-desc">「世界紀錄證書」：世界上全露天觀光高度最高的貫通門式戶外觀光電梯——百丈懸崖天空之梯。208米高，2013年11月17日認證。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/107_電梯排隊.jpg" alt="107_電梯排隊">
+        <div class="live-body">
+          <div class="live-time">15:54　壺關縣・電梯排隊</div>
+          <div class="live-desc">電梯入口，木製候梯大廳，牆上掛著農具裝飾，遊客排隊等候搭乘。</div>
+        </div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/108_懸崖電梯仰拍.jpg" alt="108_懸崖電梯仰拍">
+        <div class="live-body">
+          <div class="live-time">18:02　壺關縣・懸崖電梯仰拍</div>
+          <div class="live-desc">仰拍懸崖電梯，鋼構軌道垂直貼在峭壁上，高度驚人，底部標示「百丈懸崖」四字。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 11 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-nature" id="d11">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">11</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月20日（六）</div>
+      <h2>紅豆峽——自然與古寺的共鳴</h2>
+      <div class="route">壺關・紅豆峽景區（含電瓶車）</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-taihang.jpg');background-position:30% center;"><div class="img-label">紅豆峽・太行山</div></div>
+      <div class="site-body">
+        <div class="site-name">紅豆峽景區</div>
+        <div class="site-desc">七仙嶺、三疊潭、紫雲嶺、龍眼泉等自然景點。峽內有樹齡逾千年的野生紅豆杉（古老裸子植物）。壁畫、石刻、碑碣遺産豐富，有歷史悠久的滴谷寺、九連寺。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 丫斌哥現場直擊 ── -->
+  <div class="live-dispatch">
+    <div class="live-badge">🔴 丫斌哥現場直擊</div>
+
+    <div class="live-grid">
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/100_紅豆峽石碑人像.jpg" alt="紅豆峽石碑">
+        <div class="live-caption">紅豆峽入口石碑，後方是經典的太行山奇峰</div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/101_紅豆峽入口石碑.jpg" alt="入口全景">
+        <div class="live-caption">「天然氧吧紅豆峽」，背景群峰層疊</div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/102_紅豆峽奇峰.jpg" alt="紅豆峽奇峰">
+        <div class="live-caption">峽谷入口水潭，奇峰倒映</div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/103_紅豆峽水潭坐姿.jpg" alt="水潭邊">
+        <div class="live-caption">水潭邊小憩，黃綠相間的水色清澈見底</div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/104_紅豆峽峽谷人像.jpg" alt="峽谷深處">
+        <div class="live-caption">峽谷深處，兩壁夾峙，仰頭可見一線天</div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/105_紅豆峽溶洞.jpg" alt="溶洞">
+        <div class="live-caption">溶洞內鐘乳石造型奇特，燈光下如夢似幻</div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/106_紅豆峽撐竹筏.jpg" alt="撐竹筏">
+        <div class="live-caption">撐竹筏穿過峽谷水面，體驗太行山水的靜謐</div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/107_紅豆峽倒影石碑.jpg" alt="倒影石碑">
+        <div class="live-caption">「峽谷」石碑倒映在水面，兩側峭壁壁立千仞</div>
+      </div>
+      <div class="live-card">
+        <img class="live-img" src="丫斌哥山西遊記/photos/108_峽谷木棧道.jpg" alt="木棧道">
+        <div class="live-caption">木棧道沿溪而建，峽谷深處綠意盎然</div>
+      </div>
+    </div>
+
+    <div class="live-feature">
+      <div class="feature-icon">⭐</div>
+      <div class="feature-text">站在太行山的峭壁之上，萬壑爭流，風雲變幻。這裡不僅有自然神功，更曾見證兩千年前韓信的驚天豪賭。當年井陘關下，漢軍面臨二十萬敵軍，退無可退。韓信在此設下千古絕陣，率萬千將士<strong>背水一戰</strong>——背靠滔滔綿河，面對鋼刀鐵騎，在絕境中拼出一條<strong>置之死地而後生</strong>的血路。登臨此地，撫摸冰冷的岩壁，千古典故的豪情與悲壯，彷彿仍在太行山的群峰間激盪。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 12 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-gorge" id="d12">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">12</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月21日（日）</div>
+      <h2>青龍峽——太行第一大峽谷</h2>
+      <div class="route">壺關 <span class="route-arrow">→</span> 長治・青龍峽景區（含電瓶車）</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-taihang.jpg');background-position:70% center;"><div class="img-label">青龍峽・太行山</div></div>
+      <div class="site-body">
+        <div class="site-name">青龍峽景區</div>
+        <div class="site-desc">面積108平方公里，「雲台山第一大峽谷」。峽內峰、崖、嶺、台、石各有千秋，泉、潭、瀑、溪、洞各具特色。植被茂密，氣候比山下涼爽5-8度，是整個行程中最清幽的一日。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 13 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-temple" id="d13">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">13</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月22日（一）</div>
+      <h2>晉祠——「桐葉封弟」的三千年傳承</h2>
+      <div class="route">長治 <span class="route-arrow">→</span> 太原・晉祠（含電瓶車）</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-jinci.jpg')"><div class="img-label">晉祠聖母殿</div></div>
+      <div class="site-body">
+        <div class="site-name">聖母殿（宋代，1023–1032年）</div>
+        <div class="site-desc">中國現存宋代木構建築代表作。殿前廊柱上的蟠龍柱（木柱纏繞木雕蟠龍）是宋代雕刻藝術精品，為全國唯一。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-jinci2.jpg')"><div class="img-label">魚沼飛梁</div></div>
+      <div class="site-body">
+        <div class="site-name">魚沼飛梁</div>
+        <div class="site-desc">方形水池上的十字形橋，建於宋代——中國現存最古老的立交橋式建築，比現代立交橋早900年。造型飄逸，猶如大鳥展翅。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-jinci3.jpg')"><div class="img-label">晉祠三絕</div></div>
+      <div class="site-body">
+        <div class="site-name">晉祠三絕</div>
+        <div class="site-desc">周柏（2700年，傾斜45度仍蒼翠）、難老泉（永不乾涸，水溫常年17度）、宋代侍女像（43尊神情各異，是宮廷生活的真實寫照）。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>「桐葉封弟」——一片樹葉開創了晉國</h3>
+    <p>周成王（周武王之子）幼年時，隨手摘下一片桐葉，剪成「珪」形（封爵信物），對弟弟叔虞說：「我用這個封你。」太史記錄在案，周公提醒：<strong>「天子無戲言。」</strong></p>
+    <p>成王只好將今山西一帶（唐地）封給叔虞，叔虞之子燮父後來改國號為「晉」。晉祠就是為祭祀這位晉國始祖及其母邑姜而建。這個故事是中國最早的「君無戲言」政治倫理記載。</p>
+    <p><strong>宋代侍女像</strong>：聖母殿內43尊彩塑，每一尊侍女神情各異——有的低眉順目，有的若有所思，有的似在竊語。塑造者顯然觀察過真實的宮廷生活，這是宮女們被永久定格在藝術中的珍貴肖像。</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 14 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-culture" id="d14">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">14</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月23日（二）</div>
+      <h2>山西省博物院・鐘樓街・柳巷——太原收官</h2>
+      <div class="route">太原市區 自由活動</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-museum.jpg')"><div class="img-label">山西省博物院</div></div>
+      <div class="site-body">
+        <div class="site-name">山西省博物院（週一閉館）</div>
+        <div class="site-desc">首批國家一級博物館，館藏文物逾50萬件。主館造型「如門似鼎」，以「晉魂」為主題展出晉國霸業、民族熔爐等7個歷史專題。</div>
+      </div>
+    </div>
+    <div class="site-card">
+      <div class="site-img photo" style="background-image:url('img-taiyuan.jpg')"><div class="img-label">鐘樓街・柳巷</div></div>
+      <div class="site-body">
+        <div class="site-name">鐘樓街・柳巷</div>
+        <div class="site-desc">太原最古老商業街區，始於宋元，盛於明清。乾和祥（老字號茶莊）、華泰厚（老字號布莊）是晉商遺風活化石。老鼠窟元宵（1952年創立）必吃。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-panel">
+    <h3>博物院鎮館之寶——不可錯過的三件</h3>
+    <p><strong>晉侯鳥尊（西周，約2800年前）</strong>：一隻鳳鳥形青銅酒器，尾部是一隻小象，造型奇特工藝精絕，迄今出土最精美的西周青銅器之一。出土自晉侯墓地，直接印證「桐葉封弟」的歷史。</p>
+    <p><strong>虞弘墓石槨（北齊，570年）</strong>：石槨上刻滿粟特人（中亞絲路商人）的宴飲、狩獵場景，人物服飾明顯中亞風格——山西作為絲路東端的直接考古證據。</p>
+    <p><strong>彩繪散樂浮雕（五代，約920年）</strong>：11位樂師石雕，清晰可見琵琶、箜篌、笙等樂器，是中國音樂史最珍貴的圖像資料之一。</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ DAY 15 ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<section class="day-section theme-culture" id="d15">
+  <div class="day-header">
+    <div class="day-badge"><div class="num">15</div><div class="label">DAY</div></div>
+    <div class="day-info">
+      <div class="date">6月24日（三）</div>
+      <h2>返程——帶走2700年的記憶</h2>
+      <div class="route">太原 <span class="route-arrow">✈</span> 上海浦東 <span class="route-arrow">✈</span> 桃園</div>
+    </div>
+    <div class="accommodation"><div class="acc-label">回到</div><div class="acc-name">溫暖的家</div></div>
+  </div>
+
+  <div class="history-panel">
+    <h3>山西15日——走過了什麼</h3>
+    <p>從北魏的雲岡石窟到宋代的晉祠，從明代的平遙古城到清代的票號金融帝國，這15天走過的每一個地點都是中國歷史的一個切片。</p>
+    <p>班機：太原 → 浦東 → 桃園，預計14:25抵達桃園。</p>
+
+    <div style="margin-top:20px;padding:20px;background:rgba(27,67,50,0.06);border-radius:10px;">
+      <div style="font-size:0.85rem;color:#2D6A4F;font-weight:700;margin-bottom:12px;letter-spacing:2px;">▌ 15天走過的時間軸</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;font-size:0.83rem;">
+        <div><strong style="color:var(--gold)">傳說時代</strong><br>4300年前・堯舜禹<br>壺口瀑布・大禹治水</div>
+        <div><strong style="color:var(--gold)">西周・春秋</strong><br>2700年前・晉國<br>晉祠・晉侯鳥尊</div>
+        <div><strong style="color:var(--gold)">北魏</strong><br>1500年前・鮮卑漢化<br>雲岡石窟・懸空寺</div>
+        <div><strong style="color:var(--gold)">唐宋</strong><br>1000年前・文明鼎盛<br>五台山・晉祠宋塑</div>
+        <div><strong style="color:var(--gold)">明清</strong><br>400年前・晉商金融<br>平遙・日升昌</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<div class="day-divider"></div>
+<footer>
+  <p style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;">山西漫遊 15 日 ・ 深度文化歷史之旅</p>
+  <p>2026年6月10日—6月24日 &nbsp;|&nbsp; 何哥旅遊</p>
+  <p style="margin-top:16px;font-size:0.8rem;">旅遊筆記導覽文件 &nbsp;・&nbsp; <strong>山西——中國古建築的寶庫，80%元代以前木構在此</strong></p>
+</footer>
+
+</body>
+</html>
