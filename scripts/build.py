@@ -26,6 +26,52 @@ GRADIENTS = ['g-temple', 'g-cave', 'g-tower', 'g-city', 'g-river', 'g-mountain',
 
 
 # ─────────────────────────────────────────────────────────────────────────
+#  Minimal YAML loader for landmarks.yaml (stdlib only; handles flat keys
+#  inside a list-of-maps structure, no nested objects needed).
+# ─────────────────────────────────────────────────────────────────────────
+def _yaml_scalar(v):
+    v = v.strip()
+    if not v or v in ('null', 'Null', 'NULL', '~'):
+        return None
+    if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
+        return v[1:-1]
+    return v
+
+
+def load_landmarks_yaml(path):
+    """Return dict keyed by chinese_name → landmark dict."""
+    if not os.path.exists(path):
+        return {}
+    landmarks = {}
+    current = None
+    in_landmarks = False
+    with open(path, encoding='utf-8') as fh:
+        for raw_line in fh:
+            line = raw_line.rstrip('\n')
+            stripped = line.lstrip()
+            if stripped.startswith('#'):
+                continue
+            if stripped == 'landmarks:':
+                in_landmarks = True
+                continue
+            if not in_landmarks:
+                continue
+            # new list item
+            if re.match(r'^  - ', line):
+                current = {}
+                m = re.match(r'^  - ([A-Za-z_]+):\s*(.*)', line)
+                if m:
+                    current[m.group(1)] = _yaml_scalar(m.group(2))
+                    if m.group(1) == 'chinese_name' and current.get('chinese_name'):
+                        landmarks[current['chinese_name']] = current
+            elif current is not None and re.match(r'^    [A-Za-z_]', line):
+                m = re.match(r'^    ([A-Za-z_]+):\s*(.*)', line)
+                if m:
+                    current[m.group(1)] = _yaml_scalar(m.group(2))
+    return landmarks
+
+
+# ─────────────────────────────────────────────────────────────────────────
 #  小工具
 # ─────────────────────────────────────────────────────────────────────────
 def esc(s=''):
@@ -138,7 +184,7 @@ def classify_block(label):
     l = label.lower()
     if re.search(r'古蹟|古迹|sites?', l):
         return 'sites'
-    if re.search(r'歷史|历史|history', l):
+    if re.search(r'歷史|历史|history|後記|后记|epilogue', l):
         return 'history'
     if re.search(r'現場|现场|直擊|直击|live', l):
         return 'live'
@@ -337,20 +383,49 @@ def render_live(block, slug, day_meta):
     )
 
 
-def render_plan(block):
+def render_plan(block, landmarks=None):
     _, cards = split_cards(block['lines'])
     out = []
+    landmarks = landmarks or {}
     for i, c in enumerate(cards):
         name, _, _ = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
+        lm = landmarks.get(name)
+        if lm is None:
+            # fuzzy: find landmark whose chinese_name starts with card name, or vice versa
+            for k, v in landmarks.items():
+                if k.startswith(name) or name.startswith(k):
+                    lm = v
+                    break
+        hero = lm.get('hero_image') if lm else None
+        if hero and lm.get('image_verification_status') == 'verified':
+            img_div = ('        <div class="site-img photo" style="background-image:url(\'../../%s\')">'
+                       '<div class="img-label">%s</div></div>' % (hero, esc(name)))
+            attribution = lm.get('attribution', '')
+            license_txt = lm.get('license', '')
+            official_url = lm.get('official_url') or ''
+            meta_parts = []
+            if attribution:
+                meta_parts.append('<span class="site-attribution">%s · %s</span>'
+                                  % (esc(attribution), esc(license_txt)))
+            if official_url and official_url not in ('null', 'unverified', ''):
+                meta_parts.append('<span class="site-attribution"><a href="%s" target="_blank" rel="noopener">官方資訊</a>'
+                                  ' <span class="site-ref-img-badge">參考圖片</span></span>' % esc(official_url))
+            meta_html = ('          <div class="site-meta">\n            %s\n          </div>'
+                         % '\n            '.join(meta_parts)) if meta_parts else ''
+        else:
+            img_div = ('        <div class="site-img %s"><div class="img-label">%s</div></div>'
+                       % (GRADIENTS[i % len(GRADIENTS)], esc(name)))
+            meta_html = ''
         out.append(
             '      <div class="site-card">\n'
-            '        <div class="site-img %s"><div class="img-label">%s</div></div>\n'
+            '%s\n'
             '        <div class="site-body">\n'
             '          <div class="site-name">%s</div>\n'
             '          <div class="site-desc">%s</div>\n'
+            '%s\n'
             '        </div>\n'
-            '      </div>' % (GRADIENTS[i % len(GRADIENTS)], esc(name), esc(name), inline(desc))
+            '      </div>' % (img_div, esc(name), inline(desc), meta_html)
         )
     return '    <div class="sites-grid">\n%s\n    </div>' % '\n'.join(out)
 
@@ -358,7 +433,7 @@ def render_plan(block):
 # ─────────────────────────────────────────────────────────────────────────
 #  组装一天
 # ─────────────────────────────────────────────────────────────────────────
-def render_day(day, slug, status, gi):
+def render_day(day, slug, status, gi, landmarks=None):
     head = parse_day_heading(day['heading'])
     blocks = split_blocks(day['lines'])
     meta_block = next((b for b in blocks if b['kind'] == 'meta'), None)
@@ -387,7 +462,7 @@ def render_day(day, slug, status, gi):
         elif b['kind'] == 'live' and status == 'done':
             sections.append(render_live(b, slug, day_meta_live))
         elif b['kind'] == 'plan':
-            sections.append(render_plan(b))
+            sections.append(render_plan(b, landmarks))
 
     did = ('d%s' % head['day_num']) if head['day_num'] else ''
     route_div = ('<div class="route">%s</div>' % route_html(head['route'])) if head['route'] else ''
@@ -416,7 +491,7 @@ def render_day(day, slug, status, gi):
 # ─────────────────────────────────────────────────────────────────────────
 #  组装一趟旅程页
 # ─────────────────────────────────────────────────────────────────────────
-def render_trip_page(trip, shell, prev_trip, next_trip):
+def render_trip_page(trip, shell, prev_trip, next_trip, landmarks=None):
     data, days, slug = trip['data'], trip['days'], trip['slug']
     gi = [0]
     title_html = re.sub(r'\{([^}]+)\}', r'<span>\1</span>', (data.get('title') or slug))
@@ -469,7 +544,7 @@ def render_trip_page(trip, shell, prev_trip, next_trip):
                 '</section>' % (esc(data.get('title') or slug), svg)
             )
 
-    day_html = '\n'.join(render_day(d, slug, data.get('status'), gi) for d in days)
+    day_html = '\n'.join(render_day(d, slug, data.get('status'), gi, landmarks) for d in days)
 
     def clean_title(t):
         return re.sub(r'[{}]', '', t or '')
@@ -578,12 +653,17 @@ def render_index(trips, shell):
 # ─────────────────────────────────────────────────────────────────────────
 #  主流程
 # ─────────────────────────────────────────────────────────────────────────
-def copy_tree(src, dst):
+def copy_tree(src, dst, skip=None):
+    """复制目录树。skip 内的目录名（任意层级）会被跳过——
+    用于把 photos/<slug>/originals/ 原始照片仓库排除在发布品之外。"""
+    skip = skip or set()
     os.makedirs(dst, exist_ok=True)
     for name in os.listdir(src):
+        if name in skip:
+            continue
         s, d = os.path.join(src, name), os.path.join(dst, name)
         if os.path.isdir(s):
-            copy_tree(s, d)
+            copy_tree(s, d, skip)
         else:
             shutil.copy2(s, d)
 
@@ -637,7 +717,9 @@ def main():
     for i, t in enumerate(trips):
         prev_t = trips[i - 1] if i > 0 else None
         next_t = trips[i + 1] if i < len(trips) - 1 else None
-        html = render_trip_page(t, shell, prev_t, next_t)
+        lm_path = os.path.join(D_CONTENT, t['slug'], 'landmarks.yaml')
+        trip_landmarks = load_landmarks_yaml(lm_path)
+        html = render_trip_page(t, shell, prev_t, next_t, trip_landmarks)
         with open(os.path.join(D_DIST, 'trips', '%s.html' % t['slug']), 'w', encoding='utf-8') as f:
             f.write(html)
 
@@ -646,7 +728,7 @@ def main():
 
     shutil.copy2(os.path.join(D_TEMPLATES, 'base.css'), os.path.join(D_DIST, 'base.css'))
     if os.path.exists(D_PHOTOS):
-        copy_tree(D_PHOTOS, os.path.join(D_DIST, 'photos'))
+        copy_tree(D_PHOTOS, os.path.join(D_DIST, 'photos'), skip={'originals'})
 
     missing = 0
     for t in trips:

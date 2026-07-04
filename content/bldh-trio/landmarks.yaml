@@ -1,0 +1,559 @@
+# Baltic Trio (bldh-trio) — Landmark Reference Dataset
+# Generated: 2026-07-04
+# Source: Official tourism sites + Wikimedia Commons
+# Usage: Reference only. Personal travel photos remain primary visual content.
+
+landmarks:
+
+  # ── LITHUANIA / VILNIUS ─────────────────────────────────────────────────────
+
+  - chinese_name: 克格勃博物館（KGB 博物館）
+    english_name: Museum of Occupations and Freedom Fights
+    local_name: Okupacijų ir laisvės kovų muziejus
+    country: Lithuania
+    city: Vilnius
+    day: 2
+    category: museum
+    coordinates: { lat: 54.6897, lon: 25.2693 }
+    official_url: https://olkm.lt/en/museum/history-of-the-museum/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Museum_of_Occupations_and_Freedom_Fights
+    image_license: CC BY-SA 2.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/kgb-museum.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 2.0
+    attribution: "Adam Jones, via Wikimedia Commons"
+    wikimedia_file: "File:Facade of Former KGB Headquarters with Names of Victims - Vilnius - Lithuania (27864140815) (2).jpg"
+    image_verification_status: verified
+
+  - chinese_name: 格迪米納斯塔（含搭纜車）
+    english_name: Gediminas Castle Tower
+    local_name: Gedimino pilies bokštas
+    country: Lithuania
+    city: Vilnius
+    day: 3
+    category: castle
+    coordinates: { lat: 54.6867, lon: 25.2907 }
+    official_url: https://lnm.lt/en/museums/gediminas-castle-tower/
+    unesco_url: https://whc.unesco.org/en/list/541/
+    unesco_note: Part of Vilnius Historic Centre (WHS #541)
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Gediminas_Tower
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/gediminas-tower.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Ken Eckert, via Wikimedia Commons"
+    wikimedia_file: "File:Gediminas Castle Tower, Vilnius.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 維爾紐斯大教堂
+    english_name: Cathedral Basilica of St. Stanislaus and St. Ladislaus of Vilnius
+    local_name: Vilniaus Šventųjų Stanislovo ir Vladislovo arkikatedra bazilika
+    country: Lithuania
+    city: Vilnius
+    day: 3
+    category: church
+    coordinates: { lat: 54.6845, lon: 25.2867 }
+    official_url: https://www.govilnius.lt/visit-vilnius/places/the-cathedral-basilica-of-st-stanislaus-and-st-ladislaus
+    unesco_url: https://whc.unesco.org/en/list/541/
+    unesco_note: Part of Vilnius Historic Centre (WHS #541)
+    wikimedia_commons: https://commons.wikimedia.org/wiki/File:Cathedral_Basilica_of_St_Stanislaus_and_St_Ladislaus_of_Vilnius.jpg
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/vilnius-cathedral.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Mattias Hill, via Wikimedia Commons"
+    wikimedia_file: "File:Cathedral Basilica of St Stanislaus and St Ladislaus of Vilnius.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 維爾紐斯大學
+    english_name: Vilnius University
+    local_name: Vilniaus universitetas
+    country: Lithuania
+    city: Vilnius
+    day: 3
+    category: historic_ensemble
+    coordinates: { lat: 54.6762, lon: 25.2857 }
+    official_url: https://www.govilnius.lt/visit-vilnius/places/the-vilnius-university
+    unesco_url: https://whc.unesco.org/en/list/541/
+    unesco_note: Ensemble cited in Vilnius Historic Centre inscription (WHS #541)
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Vilnius_University
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/vilnius-university.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Scotch Mist, via Wikimedia Commons"
+    wikimedia_file: "File:Vilnius University 09.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 聖安娜教堂
+    english_name: Church of St. Anne
+    local_name: Šv. Onos bažnyčia
+    country: Lithuania
+    city: Vilnius
+    day: 3
+    category: church
+    coordinates: { lat: 54.6820, lon: 25.2881 }
+    official_url: https://lithuania.travel/en/where-to-visit/major-cities/vilnius/top-10-places-to-visit-in-vilnius/st-annes-church-and-bernardine-church-ensemble
+    unesco_url: https://whc.unesco.org/en/list/541/
+    unesco_note: Part of Vilnius Historic Centre (WHS #541)
+    wikimedia_commons: https://commons.wikimedia.org/wiki/File:St._Anne's_Church_in_Vilnius_(Wilno).JPG
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/st-annes-church.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Pudelek (Marcin Szala), via Wikimedia Commons"
+    wikimedia_file: "File:St. Anne's Church in Vilnius (Wilno).JPG"
+    image_verification_status: verified
+
+  - chinese_name: 聖彼得與聖保羅教堂
+    english_name: Church of St. Peter and St. Paul
+    local_name: Šv. apaštalų Petro ir Povilo bažnyčia
+    country: Lithuania
+    city: Vilnius
+    day: 3
+    category: church
+    coordinates: { lat: 54.6930, lon: 25.2956 }
+    official_url: https://www.govilnius.lt/visit-vilnius/places/church-of-st-peter-and-st-paul
+    unesco_url: null
+    unesco_note: Located in Antakalnis district, outside Vilnius Historic Centre inscribed boundary
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Church_of_St._Peter_and_St._Paul_in_Vilnius
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/st-peter-paul-vilnius.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Diliff, via Wikimedia Commons"
+    wikimedia_file: "File:St. Peter and St. Paul's Church Exterior, Vilnius, Lithuania - Diliff.jpg"
+    image_verification_status: verified
+
+  # ── LITHUANIA / TRAKAI ──────────────────────────────────────────────────────
+
+  - chinese_name: 特拉凱水中古堡
+    english_name: Trakai Island Castle
+    local_name: Trakų salos pilis
+    country: Lithuania
+    city: Trakai
+    day: 4
+    category: castle
+    coordinates: { lat: 54.6490, lon: 24.9322 }
+    official_url: https://www.trakai-visit.lt/en/traku-salos-pilis/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/File:Trakai_Island_Castle,_Lithuania_-_Diliff.jpg
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/trakai-castle.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Diliff, via Wikimedia Commons"
+    wikimedia_file: "File:Trakai Island Castle, Lithuania - Diliff.jpg"
+    image_verification_status: verified
+
+  # ── LITHUANIA / KAUNAS ──────────────────────────────────────────────────────
+
+  - chinese_name: 考納斯城堡
+    english_name: Kaunas Castle
+    local_name: Kauno pilis
+    country: Lithuania
+    city: Kaunas
+    day: 4
+    category: castle
+    coordinates: { lat: 54.8989, lon: 23.8853 }
+    official_url: https://visit.kaunas.lt/en/see-and-do/top/kauno-pilis/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/File:Kaunas_Castle_in_2011.JPG
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/kaunas-castle.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Pudelek (Marcin Szala), via Wikimedia Commons"
+    wikimedia_file: "File:Kaunas Castle in 2011.JPG"
+    image_verification_status: verified
+
+  # ── LITHUANIA / ŠIAULIAI ────────────────────────────────────────────────────
+
+  - chinese_name: 十字架山
+    english_name: Hill of Crosses
+    local_name: Kryžių kalnas
+    country: Lithuania
+    city: Šiauliai (12 km north)
+    day: 5
+    category: pilgrimage_site
+    coordinates: { lat: 56.0154, lon: 23.4168 }
+    official_url: https://lithuania.travel/en/where-to-visit/top-sites-in-lithuania/hill-of-crosses
+    unesco_url: null
+    unesco_note: Lithuanian cross-crafting art inscribed on UNESCO Intangible Cultural Heritage list 2008 (https://ich.unesco.org/en/RL/lithuanian-cross-crafting-art-and-its-symbolism-00243); site itself has no WHC monument listing
+    wikimedia_commons: https://commons.wikimedia.org/wiki/File:Hill_of_Crosses,_Lithuania.JPG
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/hill-of-crosses.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Avi1111 dr. avishai teicher, via Wikimedia Commons"
+    wikimedia_file: "File:Hill of Crosses, Lithuania.JPG"
+    image_verification_status: verified
+
+  # ── LATVIA / PILSRUNDĀLE ────────────────────────────────────────────────────
+
+  - chinese_name: 隆黛爾宮
+    english_name: Rundāle Palace
+    local_name: Rundāles pils
+    country: Latvia
+    city: Pilsrundāle (Bauska Municipality)
+    day: 5
+    category: palace_museum
+    coordinates: { lat: 56.4138, lon: 24.0248 }
+    official_url: https://rundale.net/en/
+    unesco_url: https://whc.unesco.org/en/tentativelists/6544/
+    unesco_note: UNESCO Tentative List only (submitted 2021); not yet inscribed
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Rund%C4%81le_Palace
+    image_license: CC BY-SA 2.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/rundale-palace.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 2.0
+    attribution: "Jeroen Komen from Utrecht, Netherlands, via Wikimedia Commons"
+    wikimedia_file: "File:Rundale palace, still the most beautiful in the world. Latvia (10759228303).jpg"
+    image_verification_status: verified
+
+  # ── LATVIA / RIGA ───────────────────────────────────────────────────────────
+
+  - chinese_name: 里加舊城區
+    english_name: Historic Centre of Riga
+    local_name: Rīgas vēsturiskais centrs
+    country: Latvia
+    city: Riga
+    day: 6
+    category: historic_district
+    coordinates: { lat: 56.9470, lon: 24.1063 }
+    official_url: https://www.liveriga.com/en/7896-the-old-town
+    unesco_url: https://whc.unesco.org/en/list/852/
+    unesco_note: UNESCO World Heritage Site #852
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Vecr%C4%ABga
+    image_license: Public domain
+    verification: verified
+    hero_image: photos/bldh-trio/reference/riga-old-town.jpg
+    image_source: Wikimedia Commons
+    license: Public domain
+    attribution: "Benjamin Snyder, via Wikimedia Commons (Public domain)"
+    wikimedia_file: "File:Riga Panorama.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 聖彼得教堂（里加）
+    english_name: St. Peter's Church, Riga
+    local_name: Svētā Pētera baznīca
+    country: Latvia
+    city: Riga
+    day: 6
+    category: church
+    coordinates: { lat: 56.9475, lon: 24.1086 }
+    official_url: https://svpetera.lv/en/
+    unesco_url: https://whc.unesco.org/en/list/852/
+    unesco_note: Part of Historic Centre of Riga (WHS #852)
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Saint_Peter%27s_Church,_Riga
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/riga-st-peter.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Karlis Ustups, via Wikimedia Commons"
+    wikimedia_file: "File:20070630-IMG 1711. Rīgas Svētā Pētera baznīca, panorāma.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 里加大教堂
+    english_name: Riga Cathedral (Dome Cathedral)
+    local_name: Rīgas Doms
+    country: Latvia
+    city: Riga
+    day: 6
+    category: church
+    coordinates: { lat: 56.9491, lon: 24.1047 }
+    official_url: https://doms.lv/en/
+    unesco_url: https://whc.unesco.org/en/list/852/
+    unesco_note: Part of Historic Centre of Riga (WHS #852)
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Riga_Dome_Cathedral
+    image_license: Public domain
+    verification: verified
+    hero_image: photos/bldh-trio/reference/riga-dome-cathedral.jpg
+    image_source: Wikimedia Commons
+    license: Public domain
+    attribution: "Unknown, via Wikimedia Commons (Public domain)"
+    wikimedia_file: "File:Dome Cathedral Riga.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 瑞典門
+    english_name: Swedish Gate
+    local_name: Zviedru vārti
+    country: Latvia
+    city: Riga
+    day: 6
+    category: historic_gate
+    coordinates: { lat: 56.9514, lon: 24.1064 }
+    official_url: https://www.liveriga.com/en/7896-the-old-town
+    unesco_url: https://whc.unesco.org/en/list/852/
+    unesco_note: Part of Historic Centre of Riga (WHS #852)
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Swedish_Gate,_Riga
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/swedish-gate.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Андрей Романенко, via Wikimedia Commons"
+    wikimedia_file: "File:Swedish Gate (Riga).jpg"
+    image_verification_status: verified
+
+  # ── LATVIA / SIGULDA ────────────────────────────────────────────────────────
+
+  - chinese_name: 圖雷達紅磚城堡
+    english_name: Turaida Castle (Turaida Museum Reserve)
+    local_name: Turaidas pils
+    country: Latvia
+    city: Sigulda
+    day: 7
+    category: castle
+    coordinates: { lat: 57.1822, lon: 24.8503 }
+    official_url: https://tmr.gov.lv/en
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Turaida_Castle
+    image_license: CC0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/turaida-castle.jpg
+    image_source: Wikimedia Commons
+    license: CC0 (Public domain dedication)
+    attribution: "Qasinka, via Wikimedia Commons (CC0)"
+    wikimedia_file: "File:2023 Turaida castle 1.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 古特曼洞穴
+    english_name: Gutmanis Cave
+    local_name: Gūtmaņa ala
+    country: Latvia
+    city: Sigulda
+    day: 7
+    category: natural_site
+    coordinates: { lat: 57.1656, lon: 24.8458 }
+    official_url: https://www.latvia.travel/en/sight/gutmans-cave
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Gutman%27s_Cave
+    image_license: Public domain
+    verification: verified
+    hero_image: photos/bldh-trio/reference/gutmanis-cave.jpg
+    image_source: Wikimedia Commons
+    license: Public domain
+    attribution: "Karl fon Ungern-Sternberg, via Wikimedia Commons (Public domain, 1810 artwork)"
+    wikimedia_file: "File:Gutmanis Cave 1810.jpg"
+    image_verification_status: verified
+    image_note: Historical 1810 artwork; no modern CC photo available in category
+
+  - chinese_name: 顛倒屋
+    english_name: Upside Down House
+    local_name: Apgrieztā māja
+    country: Latvia
+    city: unverified
+    day: 7
+    category: attraction
+    coordinates: unverified
+    official_url: unverified
+    unesco_url: null
+    wikimedia_commons: null
+    image_license: unverified
+    verification: UNVERIFIED
+    verification_note: Confirmed Upside Down House (Apgrieztā māja) is located in Smārde parish, not Sigulda. No such attraction found on official Sigulda tourism portals. City assignment requires confirmation.
+    hero_image: null
+    image_source: null
+    license: null
+    attribution: null
+    image_verification_status: skipped — landmark UNVERIFIED
+
+  # ── ESTONIA / TARTU ─────────────────────────────────────────────────────────
+
+  - chinese_name: 塔圖市區
+    english_name: Tartu Old Town
+    local_name: Tartu vanalinn
+    country: Estonia
+    city: Tartu
+    day: 7
+    category: historic_district
+    coordinates: { lat: 58.3803, lon: 26.7224 }
+    official_url: https://visittartu.com/see-do/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Tartu_Town_Hall_Square
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/tartu-old-town.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Cayambe, via Wikimedia Commons"
+    wikimedia_file: "File:Tartu Town Hall Square north.jpg"
+    image_verification_status: verified
+
+  # ── ESTONIA / PÄRNU ─────────────────────────────────────────────────────────
+
+  - chinese_name: 派爾努
+    english_name: Pärnu
+    local_name: Pärnu
+    country: Estonia
+    city: Pärnu
+    day: 8
+    category: coastal_city
+    coordinates: { lat: 58.3859, lon: 24.4971 }
+    official_url: https://visitparnu.com/en/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:P%C3%A4rnu
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/parnu.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Kristian Pikner, via Wikimedia Commons"
+    wikimedia_file: "File:Pärnu kesklinn - Aerial photo of Pärnu in Estonia (2).jpg"
+    image_verification_status: verified
+
+  # ── ESTONIA / TALLINN ───────────────────────────────────────────────────────
+
+  - chinese_name: 塔林市政廳廣場
+    english_name: Tallinn Town Hall Square
+    local_name: Raekoja plats
+    country: Estonia
+    city: Tallinn
+    day: 9
+    category: square
+    coordinates: { lat: 59.4358, lon: 24.7405 }
+    official_url: https://visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/26907/raekoja-plats-town-hall-square
+    unesco_url: https://whc.unesco.org/en/list/822/
+    unesco_note: Part of Historic Centre of Tallinn (WHS #822)
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Town_Hall_Square_(Tallinn)
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/tallinn-town-hall-square.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Julie Anne Workman, via Wikimedia Commons"
+    wikimedia_file: "File:Tallinn Town Hall Square, 2013.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 窺視廚房塔
+    english_name: Kiek in de Kök Fortifications Museum
+    local_name: Kiek in de Kök
+    country: Estonia
+    city: Tallinn
+    day: 9
+    category: museum
+    coordinates: { lat: 59.4347, lon: 24.7441 }
+    official_url: https://linnamuuseum.ee/en/kiek-in-de-kok/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Kiek_in_de_K%C3%B6k
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/kiek-in-de-kok.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Diego Delso, via Wikimedia Commons"
+    wikimedia_file: "File:Kiek in de Kök, Tallin, Estonia, 2012-08-05, DD 01.JPG"
+    image_verification_status: verified
+
+  - chinese_name: 聖歐拉夫教堂
+    english_name: St. Olaf's Church
+    local_name: Oleviste kirik
+    country: Estonia
+    city: Tallinn
+    day: 9
+    category: church
+    coordinates: { lat: 59.4413, lon: 24.7483 }
+    official_url: http://www.oleviste.ee
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:St_Olaf%27s_Church,_Tallinn
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/st-olafs-church.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Diego Delso, via Wikimedia Commons"
+    wikimedia_file: "File:Iglesia de San Olaf, Tallinn, Estonia, 2012-08-05, DD 01.JPG"
+    image_verification_status: verified
+
+  - chinese_name: 三姊妹之屋
+    english_name: Three Sisters Houses
+    local_name: Kolm Õde
+    country: Estonia
+    city: Tallinn
+    day: 9
+    category: historic_building
+    coordinates: { lat: 59.4432, lon: 24.7488 }
+    official_url: https://www.threesistershotel.ee/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Three_Sisters_in_Tallinn
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/three-sisters.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "Alma Pater, via Wikimedia Commons"
+    wikimedia_file: "File:Three Sisters in Tallinn1.JPG"
+    image_verification_status: verified
+
+  - chinese_name: 亞歷山大涅夫斯基教堂
+    english_name: Alexander Nevsky Cathedral
+    local_name: Aleksander Nevski katedraal
+    country: Estonia
+    city: Tallinn
+    day: 9
+    category: church
+    coordinates: { lat: 59.4364, lon: 24.7450 }
+    official_url: https://nevskysobor.ee
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Alexander_Nevsky_Cathedral_(Tallinn)
+    image_license: CC BY-SA 3.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/alexander-nevsky-tallinn.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 3.0
+    attribution: "kallerna, via Wikimedia Commons"
+    wikimedia_file: "File:Alexander Nevsky Cathedral, Tallinn.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 塔林漁人市場
+    english_name: Tallinn Fish Market
+    local_name: Kalaturg
+    country: Estonia
+    city: Tallinn
+    day: 10
+    category: market
+    coordinates: { lat: 59.4463, lon: 24.7489 }
+    official_url: https://www.visittallinn.ee/eng/visitor/see-do/sightseeing/pid-177497/kalaturg-fish-market
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/File:Kalaturg.jpg
+    image_license: CC BY-SA 2.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/tallinn-fish-market.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 2.0
+    attribution: "Guillaume Speurt, via Wikimedia Commons"
+    wikimedia_file: "File:Kalaturg.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 露天博物館
+    english_name: Estonian Open Air Museum
+    local_name: Eesti Vabaõhumuuseum
+    country: Estonia
+    city: Tallinn
+    day: 10
+    category: museum
+    coordinates: { lat: 59.4538, lon: 24.6265 }
+    official_url: https://evm.ee/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Estonian_Open_Air_Museum
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/estonian-open-air-museum.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Bahnfrend, via Wikimedia Commons"
+    wikimedia_file: "File:Estonian Open Air Museum, 2006 (01).jpg"
+    image_verification_status: verified
