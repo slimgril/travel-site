@@ -399,7 +399,7 @@ def render_plan(block, landmarks=None):
                     break
         hero = lm.get('hero_image') if lm else None
         if hero and lm.get('image_verification_status') == 'verified':
-            img_div = ('        <div class="site-img photo" style="background-image:url(\'../../%s\')">'
+            img_div = ('        <div class="site-img photo" style="background-image:url(\'../%s\')">'
                        '<div class="img-label">%s</div></div>' % (hero, esc(name)))
             attribution = lm.get('attribution', '')
             license_txt = lm.get('license', '')
@@ -574,6 +574,85 @@ def render_trip_page(trip, shell, prev_trip, next_trip, landmarks=None):
 # ─────────────────────────────────────────────────────────────────────────
 #  首页
 # ─────────────────────────────────────────────────────────────────────────
+# About Ben / 旅人介紹——恢復自山西原首頁；肖像使用 photos/site/（網站層級素材，
+# 非任何 Trip 的行程照片）。此段含字面 %（width:100% 等），為模組層級常數，
+# render_index() 只引用、不重新組裝。
+TRAVELER_SECTION = (
+    '<section style="background:linear-gradient(135deg,#0D2B1F 0%,#1B4332 60%,#2D4A22 100%);'
+    ' padding:80px 20px; text-align:center; position:relative; overflow:hidden;">\n'
+    '  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,'
+    ' rgba(212,168,67,0.08) 0%, transparent 70%);"></div>\n'
+    '  <div style="max-width:720px;margin:0 auto;position:relative;">\n'
+    '    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;'
+    'margin-bottom:44px;align-items:flex-end;">\n'
+    '      <div style="position:relative;flex-shrink:0;">\n'
+    '        <div style="width:200px;height:260px;border-radius:20px;overflow:hidden;'
+    'border:3px solid rgba(212,168,67,0.5);box-shadow:0 16px 48px rgba(0,0,0,0.5);">\n'
+    '          <img src="photos/site/yabin-wuxi.jpg" alt="丫斌哥 無錫"'
+    ' style="width:100%;height:100%;object-fit:cover;object-position:center top;">\n'
+    '        </div>\n'
+    '        <div style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);'
+    'background:rgba(0,0,0,0.75);color:rgba(255,255,255,0.7);font-size:0.7rem;padding:4px 12px;'
+    'border-radius:20px;white-space:nowrap;border:1px solid rgba(255,255,255,0.15);">\n'
+    '          📍 無錫・2026.03\n'
+    '        </div>\n'
+    '      </div>\n'
+    '      <div style="flex:1;min-width:220px;max-width:320px;text-align:center;padding:0 8px;">\n'
+    '        <div style="font-size:4rem;color:rgba(212,168,67,0.2);line-height:0.8;'
+    'margin-bottom:12px;font-family:Georgia,serif;">&ldquo;</div>\n'
+    '        <div style="display:inline-flex;align-items:center;gap:12px;'
+    'background:rgba(255,255,255,0.07);border:1px solid rgba(212,168,67,0.35);border-radius:40px;'
+    'padding:8px 22px;margin-bottom:20px;">\n'
+    '          <span style="color:var(--gold-light);letter-spacing:3px;font-size:0.82rem;'
+    'font-weight:600;">旅　人</span>\n'
+    '          <span style="color:#fff;font-size:1.05rem;font-weight:700;'
+    'letter-spacing:2px;">丫斌哥</span>\n'
+    '        </div>\n'
+    '        <p style="color:#fff;font-size:clamp(1.1rem,3vw,1.5rem);font-weight:300;'
+    'line-height:1.9;letter-spacing:0.05em;">\n'
+    '          退休，不是句點——<br>是另一段旅程的<br>'
+    '<strong style="color:var(--gold);font-weight:700;">起點</strong>。\n'
+    '        </p>\n'
+    '      </div>\n'
+    '      <div style="position:relative;flex-shrink:0;">\n'
+    '        <div style="width:200px;height:260px;border-radius:20px;overflow:hidden;'
+    'border:3px solid rgba(212,168,67,0.5);box-shadow:0 16px 48px rgba(0,0,0,0.5);">\n'
+    '          <img src="photos/site/yabin-dalat.jpg" alt="丫斌哥 大叻"'
+    ' style="width:100%;height:100%;object-fit:cover;object-position:center top;">\n'
+    '        </div>\n'
+    '        <div style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);'
+    'background:rgba(0,0,0,0.75);color:rgba(255,255,255,0.7);font-size:0.7rem;padding:4px 12px;'
+    'border-radius:20px;white-space:nowrap;border:1px solid rgba(255,255,255,0.15);">\n'
+    '          📍 越南大叻・2026.05\n'
+    '        </div>\n'
+    '      </div>\n'
+    '    </div>\n'
+    '    <div style="width:60px;height:2px;background:linear-gradient(90deg,transparent,'
+    'var(--gold),transparent);margin:0 auto 32px;"></div>\n'
+    '    <p style="color:rgba(255,255,255,0.78);font-size:1.05rem;line-height:2;'
+    'letter-spacing:0.03em;margin-bottom:28px;">\n'
+    '      帥氣、有個性，骨子裡藏著一股不安分的靈魂。<br>\n'
+    '      在人生最自由的時刻，他立下誓言：<br>\n'
+    '      <strong style="color:var(--gold-light);">用餘生走遍天下，用雙腳丈量世界，'
+    '用心去感受每一片土地的呼吸。</strong>\n'
+    '    </p>\n'
+    '    <p style="color:rgba(255,255,255,0.6);font-size:0.98rem;line-height:2;'
+    'letter-spacing:0.03em;margin-bottom:36px;">\n'
+    '      不是走馬看花，不是打卡留念。<br>\n'
+    '      他要的是真正的相遇——與古城相遇，與歷史相遇，<br>\n'
+    '      與陌生的人情風土，面對面地相遇。\n'
+    '    </p>\n'
+    '    <p style="color:rgba(255,255,255,0.78);font-size:1.05rem;line-height:2;'
+    'letter-spacing:0.03em;margin-bottom:0;">\n'
+    '      這本旅誌，是他送給自己的禮物，<br>\n'
+    '      也是他向每一位讀者發出的邀請：<br>\n'
+    '      <strong style="color:#fff;">翻開每一頁，你不只是讀者，你是他的旅伴。</strong>\n'
+    '    </p>\n'
+    '  </div>\n'
+    '</section>\n\n'
+)
+
+
 def render_index(trips, shell):
     done = [t for t in trips if t['data'].get('status') == 'done']
     countries, cities = set(), set()
@@ -626,7 +705,8 @@ def render_index(trips, shell):
             )
         )
 
-    body = (
+    # Hero（%s = stat_cards）——單獨格式化，避免下方 About Ben 的字面 % 被誤解析
+    hero = (
         '<section class="hero">\n'
         '  <div class="hero-badge">World Journey</div>\n'
         '  <h1>旅人：<span>丫斌哥</span></h1>\n'
@@ -634,16 +714,28 @@ def render_index(trips, shell):
         '  <div class="hero-stats">\n%s\n  </div>\n'
         '  <div class="scroll-hint">▼ 所有旅程</div>\n'
         '</section>\n\n'
+    ) % stat_cards
+
+    # About Ben / 旅人介紹——恢復自山西原首頁；模組層級 TRAVELER_SECTION 常數。
+    traveler = TRAVELER_SECTION
+
+    # THE JOURNEYS（%s = series 卡片）
+    journeys = (
         '<section style="max-width:1100px;margin:0 auto;padding:60px 20px;">\n'
         '  <div class="section-title" style="color:var(--gold);text-align:center;">THE JOURNEYS</div>\n'
         '  <h2 class="section-heading" style="color:var(--green-dark);text-align:center;">世界旅行計畫</h2>\n'
         '  <div class="series-grid">\n%s\n  </div>\n'
         '</section>\n\n'
+    ) % '\n'.join(series)
+
+    footer = (
         '<footer>\n'
         '  <p><strong>丫斌哥 World Journey</strong></p>\n'
         '  <p style="margin-top:8px;font-size:0.78rem;">用餘生走遍天下，用雙腳丈量世界。© 2026</p>\n'
-        '</footer>' % (stat_cards, '\n'.join(series))
+        '</footer>'
     )
+
+    body = hero + traveler + journeys + footer
 
     return (shell.replace('{{TITLE}}', '丫斌哥 World Journey — 退休後的世界旅行計畫')
                  .replace('{{DESC}}', '退休不是終點，而是另一段探索世界的開始。丫斌哥的世界旅行計畫。')
@@ -665,6 +757,10 @@ def copy_tree(src, dst, skip=None):
         if os.path.isdir(s):
             copy_tree(s, d, skip)
         else:
+            if name.startswith('.') or re.search(r' \d+\.[^.]+$', name):
+                continue
+            if os.path.getsize(s) == 0:
+                continue
             shutil.copy2(s, d)
 
 
@@ -694,7 +790,18 @@ def load_trip_folder(folder):
     return {'slug': slug, 'data': data, 'days': split_days('\n\n'.join(bodies))}
 
 
-def main():
+def main(dist_dir=None, overlay=None, label='dist/', landmarks_patch=None):
+    """dist_dir: 輸出目錄，預設 D_DIST（生產環境，行為與原版完全相同）。
+    overlay: 選用 callback，簽名 overlay(dist_dir, photos_root)，在 photos/ 複製到
+             dist 之後執行——目前只有 Prototype Build 用它把 cooked/matched/ 疊到
+             dist-prototype 的複本上，不會動到磁碟上的 photos/<slug>/reference/。
+    label: 純粹用於最後一行輸出訊息，方便分辨生產／原型 build。
+    landmarks_patch: 選用 dict，{slug: {chinese_name: {欄位: 值, ...}}}——只在記憶體裡
+             覆寫 load_landmarks_yaml() 讀出的欄位（例如給還沒有 reference/ 檔案、
+             未完整核實地點的景點一張示意用途的照片），不會寫回 landmarks.yaml。
+             預設 None，生產環境完全不受影響。"""
+    dist_dir = dist_dir or D_DIST
+
     trips = []
     for name in sorted(os.listdir(D_CONTENT)):
         p = os.path.join(D_CONTENT, name)
@@ -705,9 +812,9 @@ def main():
 
     trips.sort(key=lambda t: str(t['data'].get('date_start') or ''))
 
-    if os.path.exists(D_DIST):
-        shutil.rmtree(D_DIST)
-    os.makedirs(os.path.join(D_DIST, 'trips'), exist_ok=True)
+    if os.path.exists(dist_dir):
+        shutil.rmtree(dist_dir)
+    os.makedirs(os.path.join(dist_dir, 'trips'), exist_ok=True)
 
     with open(os.path.join(D_TEMPLATES, 'shell.html'), encoding='utf-8') as f:
         shell = f.read()
@@ -719,24 +826,37 @@ def main():
         next_t = trips[i + 1] if i < len(trips) - 1 else None
         lm_path = os.path.join(D_CONTENT, t['slug'], 'landmarks.yaml')
         trip_landmarks = load_landmarks_yaml(lm_path)
+        patch = (landmarks_patch or {}).get(t['slug'])
+        if patch:
+            for cname, fields in patch.items():
+                if cname in trip_landmarks:
+                    trip_landmarks[cname].update(fields)
         html = render_trip_page(t, shell, prev_t, next_t, trip_landmarks)
-        with open(os.path.join(D_DIST, 'trips', '%s.html' % t['slug']), 'w', encoding='utf-8') as f:
+        with open(os.path.join(dist_dir, 'trips', '%s.html' % t['slug']), 'w', encoding='utf-8') as f:
             f.write(html)
 
-    with open(os.path.join(D_DIST, 'index.html'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(dist_dir, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(render_index(trips, index_shell))
 
-    shutil.copy2(os.path.join(D_TEMPLATES, 'base.css'), os.path.join(D_DIST, 'base.css'))
+    shutil.copy2(os.path.join(D_TEMPLATES, 'base.css'), os.path.join(dist_dir, 'base.css'))
     if os.path.exists(D_PHOTOS):
-        copy_tree(D_PHOTOS, os.path.join(D_DIST, 'photos'), skip={'originals'})
+        copy_tree(D_PHOTOS, os.path.join(dist_dir, 'photos'), skip={'originals', 'unassigned', 'source', 'cooked'})
+
+    if overlay is not None:
+        overlay(dist_dir, D_PHOTOS)
 
     missing = 0
     for t in trips:
-        with open(os.path.join(D_DIST, 'trips', '%s.html' % t['slug']), encoding='utf-8') as f:
+        with open(os.path.join(dist_dir, 'trips', '%s.html' % t['slug']), encoding='utf-8') as f:
             html = f.read()
-        for m in re.finditer(r'src="\.\./photos/([^"]+)"', html):
-            if not os.path.exists(os.path.join(D_DIST, 'photos', m.group(1))):
-                print('  ⚠ 缺图：%s（%s）' % (m.group(1), t['slug']))
+        # <img src="../photos/...">（day 卡片、live 卡片）
+        # 與 background-image:url('../photos/...')（plan hero、sites 卡片）都要檢查，
+        # 否則 CSS 背景圖的缺圖會被漏掉（hero image 走的正是這條路徑）。
+        refs = re.findall(r'src="\.\./photos/([^"]+)"', html)
+        refs += re.findall(r"background-image:url\('\.\./photos/([^']+)'\)", html)
+        for path in refs:
+            if not os.path.exists(os.path.join(dist_dir, 'photos', path)):
+                print('  ⚠ 缺图：%s（%s）' % (path, t['slug']))
                 missing += 1
 
     print('─' * 50)
@@ -744,7 +864,7 @@ def main():
     for t in trips:
         print('    %s: %d 天, status=%s' % (t['slug'], len(t['days']), t['data'].get('status')))
     print('✓ 缺图 %d 张' % missing)
-    print('✓ 输出 → dist/')
+    print('✓ 输出 → %s' % label)
     print('─' * 50)
 
 

@@ -5,6 +5,48 @@
 
 landmarks:
 
+  # ── TAIWAN / TRANSIT ─────────────────────────────────────────────────────────
+
+  - chinese_name: 桃園國際機場 第二航廈
+    english_name: Taiwan Taoyuan International Airport Terminal 2
+    local_name: 臺灣桃園國際機場第二航廈
+    country: Taiwan
+    city: Taoyuan
+    day: 1
+    category: airport_terminal
+    coordinates: { lat: 25.0797, lon: 121.2342 }
+    official_url: https://www.taoyuan-airport.com/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Taiwan_Taoyuan_International_Airport_Terminal_2
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/taoyuan-airport-terminal-2.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Solomon203, via Wikimedia Commons"
+    wikimedia_file: "File:Taoyuan Airport Terminal 2 outside space frames 20211127.jpg"
+    image_verification_status: verified
+
+  - chinese_name: 返抵國門
+    english_name: Taiwan Taoyuan International Airport Terminal 2
+    local_name: 臺灣桃園國際機場第二航廈
+    country: Taiwan
+    city: Taoyuan
+    day: 11
+    category: airport_terminal
+    coordinates: { lat: 25.0797, lon: 121.2342 }
+    official_url: https://www.taoyuan-airport.com/
+    unesco_url: null
+    wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Taiwan_Taoyuan_International_Airport_Terminal_2
+    image_license: CC BY-SA 4.0
+    verification: verified
+    hero_image: photos/bldh-trio/reference/taoyuan-airport-terminal-2.jpg
+    image_source: Wikimedia Commons
+    license: CC BY-SA 4.0
+    attribution: "Solomon203, via Wikimedia Commons"
+    wikimedia_file: "File:Taoyuan Airport Terminal 2 outside space frames 20211127.jpg"
+    image_verification_status: verified
+
   # ── LITHUANIA / VILNIUS ─────────────────────────────────────────────────────
 
   - chinese_name: 克格勃博物館（KGB 博物館）
@@ -25,6 +67,26 @@ landmarks:
     license: CC BY-SA 2.0
     attribution: "Adam Jones, via Wikimedia Commons"
     wikimedia_file: "File:Facade of Former KGB Headquarters with Names of Victims - Vilnius - Lithuania (27864140815) (2).jpg"
+    image_verification_status: verified
+
+  - chinese_name: AKROPOLIS 複合式購物中心
+    english_name: AKROPOLIS Vilnius
+    local_name: AKROPOLIS Vilnius
+    country: Lithuania
+    city: Vilnius
+    day: 2
+    category: shopping_center
+    coordinates: { lat: 54.7102, lon: 25.2639 }
+    official_url: https://akropolis.lt/en/vilnius
+    unesco_url: null
+    wikimedia_commons: null
+    image_license: 使用者提供授權照片
+    verification: verified
+    hero_image: photos/bldh-trio/reference/akropolis-vilnius.jpg
+    image_source: user-provided candidate
+    license: 使用者提供授權照片
+    attribution: "使用者提供授權照片"
+    wikimedia_file: null
     image_verification_status: verified
 
   - chinese_name: 格迪米納斯塔（含搭纜車）
@@ -355,21 +417,21 @@ landmarks:
     english_name: Upside Down House
     local_name: Apgrieztā māja
     country: Latvia
-    city: unverified
+    city: Smārde, Tukums Municipality
     day: 7
     category: attraction
-    coordinates: unverified
-    official_url: unverified
+    coordinates: { lat: 56.963, lon: 23.337 }
+    official_url: https://www.latvia.travel/en/sight/inverted-house
     unesco_url: null
     wikimedia_commons: null
-    image_license: unverified
-    verification: UNVERIFIED
-    verification_note: Confirmed Upside Down House (Apgrieztā māja) is located in Smārde parish, not Sigulda. No such attraction found on official Sigulda tourism portals. City assignment requires confirmation.
-    hero_image: null
-    image_source: null
-    license: null
-    attribution: null
-    image_verification_status: skipped — landmark UNVERIFIED
+    image_license: official tourism / EU CAP Network source
+    verification: verified
+    verification_note: Official tourism sources place Apgrieztā māja in Smārde parish, Tukums district, not Sigulda.
+    hero_image: photos/bldh-trio/reference/upside-down-house-smarde.webp
+    image_source: EU CAP Network
+    license: official source image
+    attribution: "EU CAP Network / Apgrieztā māja Smārde"
+    image_verification_status: verified
 
   # ── ESTONIA / TARTU ─────────────────────────────────────────────────────────
 
@@ -489,13 +551,13 @@ landmarks:
     official_url: https://www.threesistershotel.ee/
     unesco_url: null
     wikimedia_commons: https://commons.wikimedia.org/wiki/Category:Three_Sisters_in_Tallinn
-    image_license: CC BY-SA 3.0
+    image_license: CC BY-SA 4.0
     verification: verified
     hero_image: photos/bldh-trio/reference/three-sisters.jpg
     image_source: Wikimedia Commons
-    license: CC BY-SA 3.0
-    attribution: "Alma Pater, via Wikimedia Commons"
-    wikimedia_file: "File:Three Sisters in Tallinn1.JPG"
+    license: CC BY-SA 4.0
+    attribution: "Mike Peel (www.mikepeel.net), via Wikimedia Commons"
+    wikimedia_file: "File:At Tallinn 2024 265.jpg"
     image_verification_status: verified
 
   - chinese_name: 亞歷山大涅夫斯基教堂
