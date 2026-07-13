@@ -1,6 +1,6 @@
 # STATUS — travel-site
 
-最後更新：2026-07-13（Mapping Report 4d129fde — 4 灰卡修復）
+最後更新：2026-07-13（GitHub remote `origin` → slimgril/travel-site）
 
 ## Travel Site v0.3 Release (2026-07-13)
 
@@ -56,6 +56,17 @@
 ---
 
 ## 專案概況
+
+
+## GitHub Remote（2026-07-13）
+
+| 項目 | 值 |
+|------|-----|
+| **Repository** | https://github.com/slimgril/travel-site.git |
+| **Remote** | `origin` |
+| **Default branch** | `main` |
+| **Deployment** | https://cluttered-breath-prototype.surge.sh/ |
+| **紀錄** | `REPOSITORY.md` |
 
 靜態旅遊網站，以 Markdown + 照片建置多趟旅程。主要 build 入口為 `scripts/build.py`（正式）與 `scripts/build_prototype.py`（原型預覽）。
 

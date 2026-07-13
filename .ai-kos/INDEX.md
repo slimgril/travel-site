@@ -60,6 +60,7 @@ Canonical entry point for repository governance.
 - Session state: `SESSION.md`
 - Asset and migration notes: `ASSET_CHECKLIST.md`
 - Project status: `.ai-kos/STATUS.md`
+- Repository record: `REPOSITORY.md`
 - Architecture decisions: `.ai-kos/DECISIONS.md`
 - Changelog: `HISTORY.md`
 
