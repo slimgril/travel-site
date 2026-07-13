@@ -1,0 +1,2195 @@
+{
+  "version": 1,
+  "source": {
+    "type": "google_drive",
+    "drive_url": "https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD",
+    "folder_id": "1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD"
+  },
+  "last_sync": "2026-07-13T10:30:50.992446+00:00",
+  "summary": {
+    "synced_count": 78,
+    "drive_listed": 15,
+    "drive_baikal_candidates": 0,
+    "drive_new_imported": 0,
+    "review_required_count": 15,
+    "drive_access_method": "gdown"
+  },
+  "synced": [
+    {
+      "day": 1,
+      "dest": "photos/baikal-rail/day01/beijing-airport.jpg",
+      "filename": "beijing-airport.jpg",
+      "hash": "20b3eb33443d62dfd536c119cc1a1ed91eb94b6dbedda67bf9a823b2be949cb6",
+      "size": 153805,
+      "source": null,
+      "source_folder": null,
+      "synced_at": "2026-07-10T12:07:08.944093+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 2,
+      "dest": "photos/baikal-rail/day02/chinggis-khaan-statue.jpg",
+      "filename": "chinggis-khaan-statue.jpg",
+      "hash": "1843247fa0a3ef94a470bce50fa084da0333d9881693726b3415aae674d66a95",
+      "size": 202322,
+      "source": null,
+      "source_folder": "Day 02 - 草原騎馬",
+      "synced_at": "2026-07-10T12:07:08.945431+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 2,
+      "dest": "photos/baikal-rail/day02/genghis-khan-statue-downloaded.jpg",
+      "filename": "genghis-khan-statue-downloaded.jpg",
+      "hash": "b60d5645e4760521f3a3b5960f0b1c1dd387726e881783a2c5e17db8bedcc688",
+      "size": 6682373,
+      "source": null,
+      "source_folder": "Day 02 - 草原騎馬",
+      "synced_at": "2026-07-11T01:08:48.674060+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 2,
+      "dest": "photos/baikal-rail/day02/mongolia-horseback-riding-downloaded.png",
+      "filename": "mongolia-horseback-riding-downloaded.png",
+      "hash": "6d26e003b934d9bdf77c34d7097632560d0be870523264cfc46ed7de88d49827",
+      "size": 1406109,
+      "source": null,
+      "source_folder": "Day 02 - 草原騎馬",
+      "synced_at": "2026-07-12T02:56:57.416359+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 2,
+      "dest": "photos/baikal-rail/day02/turtle-rock-downloaded.jpg",
+      "filename": "turtle-rock-downloaded.jpg",
+      "hash": "3ea1e8f20bd3b9fa775bb21896d9ba0b73844c1215e9951a94b2252e7a0be0be",
+      "size": 3917949,
+      "source": null,
+      "source_folder": "Day 02 - 草原騎馬",
+      "synced_at": "2026-07-11T02:18:16.275945+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 2,
+      "dest": "photos/baikal-rail/day02/ulaanbaatar-city-downloaded.jpg",
+      "filename": "ulaanbaatar-city-downloaded.jpg",
+      "hash": "0a47e855d49a01de41f3ebebaa8c01b08404341804184883b3dee2bdc0c93964",
+      "size": 95665,
+      "source": null,
+      "source_folder": "Day 02 - 草原騎馬",
+      "synced_at": "2026-07-12T01:43:33.001760+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 3,
+      "dest": "photos/baikal-rail/day03/erdene-zuu-duplicate-spasskaya.jpg",
+      "filename": "erdene-zuu-duplicate-spasskaya.jpg",
+      "hash": "c8aae9e82a968b61241c7a5e474f60a331021d62de5c37f39cd48fba470b54f2",
+      "size": 5859780,
+      "source": null,
+      "source_folder": "Day 03 - 額爾登尼召寺",
+      "synced_at": "2026-07-11T02:20:22.885836+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 3,
+      "dest": "photos/baikal-rail/day03/erdene-zuu-monastery-downloaded.jpg",
+      "filename": "erdene-zuu-monastery-downloaded.jpg",
+      "hash": "41ecd584e12cfb2006652197d6fe3b0e4c094d7914b4c8f7e31e727bedf79476",
+      "size": 7391934,
+      "source": null,
+      "source_folder": "Day 03 - 額爾登尼召寺",
+      "synced_at": "2026-07-11T03:10:31.250133+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 3,
+      "dest": "photos/baikal-rail/day03/erdene-zuu-monastery.jpg",
+      "filename": "erdene-zuu-monastery.jpg",
+      "hash": "07eb1ea15dc09344049b956b39386a214e6fbad15a6490f48b88d782a3b02bce",
+      "size": 268805,
+      "source": null,
+      "source_folder": "Day 03 - 額爾登尼召寺",
+      "synced_at": "2026-07-10T12:07:08.946265+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 3,
+      "dest": "photos/baikal-rail/day03/karakorum-museum-downloaded.jpg",
+      "filename": "karakorum-museum-downloaded.jpg",
+      "hash": "e4d99bc2f776a044db9347b101bae89b47b1fead46fdc53b4eb453b27a8f1ae2",
+      "size": 4473446,
+      "source": null,
+      "source_folder": "Day 03 - 額爾登尼召寺",
+      "synced_at": "2026-07-11T03:11:34.172518+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 3,
+      "dest": "photos/baikal-rail/day03/kharkhorin-ancient-city-downloaded.jpg",
+      "filename": "kharkhorin-ancient-city-downloaded.jpg",
+      "hash": "c6ab7654d72dbef3e4491407e72860ce5c8785cf4ea501b2f88a3dd1c27d03c8",
+      "size": 534511,
+      "source": null,
+      "source_folder": "Day 03 - 額爾登尼召寺",
+      "synced_at": "2026-07-12T03:12:53.615624+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 4,
+      "dest": "photos/baikal-rail/day04/bogd-khan-winter-palace.jpg",
+      "filename": "bogd-khan-winter-palace.jpg",
+      "hash": "c33f4f6ed6d28cb5b3a0378503b006d71db7df368a24aba81a2552d125edb0c9",
+      "size": 273764,
+      "source": null,
+      "source_folder": "Day 04 - 蒙古國民族舞蹈與馬頭琴表演",
+      "synced_at": "2026-07-10T12:07:08.947925+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 5,
+      "dest": "photos/baikal-rail/day05/national-museum-mongolia-downloaded.jpg",
+      "filename": "national-museum-mongolia-downloaded.jpg",
+      "hash": "8f22af66fdba2c62a28863ebe15a6cc4fc8696ef4a987af58eff7d13ae5ccba7",
+      "size": 161284,
+      "source": null,
+      "source_folder": "Day 05 - 西伯利亞大鐵路蒙古段列車",
+      "synced_at": "2026-07-12T04:26:44.443627+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 5,
+      "dest": "photos/baikal-rail/day05/sukhbaatar-square.jpg",
+      "filename": "sukhbaatar-square.jpg",
+      "hash": "c4d66c1a5cccfdf01418f6b574d59eb56feec8874831119eee7af6d70ce89eb1",
+      "size": 214314,
+      "source": null,
+      "source_folder": "Day 05 - 西伯利亞大鐵路蒙古段列車",
+      "synced_at": "2026-07-10T12:07:08.948930+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 5,
+      "dest": "photos/baikal-rail/day05/trans-mongolian-railway-train-downloaded.jpg",
+      "filename": "trans-mongolian-railway-train-downloaded.jpg",
+      "hash": "3d266e222d71c52813a22a5630684f0734291a812382bac7bbd94098a0017365",
+      "size": 648463,
+      "source": null,
+      "source_folder": "Day 05 - 西伯利亞大鐵路蒙古段列車",
+      "synced_at": "2026-07-12T04:20:31.599800+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 6,
+      "dest": "photos/baikal-rail/day06/irkutsk-city-downloaded.jpg",
+      "filename": "irkutsk-city-downloaded.jpg",
+      "hash": "8bb6325ede484473e75ab3848b540c35f75c1647b8d3f093151a5ea5c6c5912d",
+      "size": 765266,
+      "source": null,
+      "source_folder": "Day 06 - 烏蘭烏德市中心",
+      "synced_at": "2026-07-12T04:30:50.446214+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 6,
+      "dest": "photos/baikal-rail/day06/lake-baikal-cruise.jpg",
+      "filename": "lake-baikal-cruise.jpg",
+      "hash": "669ad469065dc61eb8484f3b56365155d5ee6bb09778a41a085b434763e66542",
+      "size": 210266,
+      "source": null,
+      "source_folder": "Day 06 - 烏蘭烏德市中心",
+      "synced_at": "2026-07-10T12:07:08.949968+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 6,
+      "dest": "photos/baikal-rail/day06/lake-baikal-shaman-rock-alt.jpg",
+      "filename": "lake-baikal-shaman-rock-alt.jpg",
+      "hash": "a26c937bc4903b974ab1d480f2a5d3e27aeb08ffd199837018942ac191bb2511",
+      "size": 16625834,
+      "source": null,
+      "source_folder": "Day 06 - 烏蘭烏德市中心",
+      "synced_at": "2026-07-11T02:21:49.844291+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 6,
+      "dest": "photos/baikal-rail/day06/lake-baikal-shaman-rock-downloaded.jpg",
+      "filename": "lake-baikal-shaman-rock-downloaded.jpg",
+      "hash": "d9319d35375a37f1c6fbb983cc0e6ca055e69156206be60c8cdbe22133ec5452",
+      "size": 7941996,
+      "source": null,
+      "source_folder": "Day 06 - 烏蘭烏德市中心",
+      "synced_at": "2026-07-11T02:03:10.468879+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 6,
+      "dest": "photos/baikal-rail/day06/listvyanka-lakeside-town-downloaded.jpg",
+      "filename": "listvyanka-lakeside-town-downloaded.jpg",
+      "hash": "d5815715b7271f4e41e77468bd0b65d1211157bc4505286c396649568710e0f9",
+      "size": 341755,
+      "source": null,
+      "source_folder": "Day 06 - 烏蘭烏德市中心",
+      "synced_at": "2026-07-12T04:39:39.936855+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 7,
+      "dest": "photos/baikal-rail/day07/baikal-ecological-museum-downloaded.jpg",
+      "filename": "baikal-ecological-museum-downloaded.jpg",
+      "hash": "b791a23d05faa1ace34212dabd0e952dd775d962ebbad44695714ea0bc27a35f",
+      "size": 370981,
+      "source": null,
+      "source_folder": "Day 07 - 貝加爾湖生態博物館",
+      "synced_at": "2026-07-12T04:46:08.207731+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 7,
+      "dest": "photos/baikal-rail/day07/kirov-square-irkutsk-downloaded.jpg",
+      "filename": "kirov-square-irkutsk-downloaded.jpg",
+      "hash": "ebb55eab62c43cd71d28b53e6ca9d443e757a7cbfad85e402e53e6b77c53ed49",
+      "size": 248921,
+      "source": null,
+      "source_folder": "Day 07 - 貝加爾湖生態博物館",
+      "synced_at": "2026-07-12T04:47:30.147241+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 7,
+      "dest": "photos/baikal-rail/day07/spasskaya-church-downloaded.jpg",
+      "filename": "spasskaya-church-downloaded.jpg",
+      "hash": "c8aae9e82a968b61241c7a5e474f60a331021d62de5c37f39cd48fba470b54f2",
+      "size": 5859780,
+      "source": null,
+      "source_folder": "Day 07 - 貝加爾湖生態博物館",
+      "synced_at": "2026-07-11T02:26:14.456015+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 7,
+      "dest": "photos/baikal-rail/day07/taltsy-wooden-museum-downloaded.jpg",
+      "filename": "taltsy-wooden-museum-downloaded.jpg",
+      "hash": "a25d07c1b3345d4e5df73e0d448047bc4bf26062d7607edf1486a67170a521a6",
+      "size": 6417672,
+      "source": null,
+      "source_folder": "Day 07 - 貝加爾湖生態博物館",
+      "synced_at": "2026-07-11T02:15:15.089473+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 7,
+      "dest": "photos/baikal-rail/day07/taltsy-wooden-museum.jpg",
+      "filename": "taltsy-wooden-museum.jpg",
+      "hash": "d2d919a75d60cce66405fb1cfde1bd77f081d2b80d2fe3946aca325bf3ca6f49",
+      "size": 182553,
+      "source": null,
+      "source_folder": "Day 07 - 貝加爾湖生態博物館",
+      "synced_at": "2026-07-10T12:07:08.950549+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 8,
+      "dest": "photos/baikal-rail/day08/burkhan-bay-downloaded.jpg",
+      "filename": "burkhan-bay-downloaded.jpg",
+      "hash": "2a5cd9e7b6f6c0cd0f730ff68ba35b613e9d54e13a329fc9352a101b5ac1d1e4",
+      "size": 11716041,
+      "source": null,
+      "source_folder": "Day 08 - 烏斯季奧爾登斯基博物館",
+      "synced_at": "2026-07-11T02:29:04.980587+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 8,
+      "dest": "photos/baikal-rail/day08/burkhan-bay.jpg",
+      "filename": "burkhan-bay.jpg",
+      "hash": "cc97eae196a8840d5b06ff59c277f083f94b8f377cb13a7277b6e2130e48aded",
+      "size": 221378,
+      "source": null,
+      "source_folder": "Day 08 - 烏斯季奧爾登斯基博物館",
+      "synced_at": "2026-07-10T12:07:08.951452+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 8,
+      "dest": "photos/baikal-rail/day08/buryat-traditional-village-downloaded.jpg",
+      "filename": "buryat-traditional-village-downloaded.jpg",
+      "hash": "efab919095f037fd74aaaff0d6e0c061c21de8b853b6ac618eb28846aaf68c97",
+      "size": 275185,
+      "source": null,
+      "source_folder": "Day 08 - 烏斯季奧爾登斯基博物館",
+      "synced_at": "2026-07-12T04:54:33.684658+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 8,
+      "dest": "photos/baikal-rail/day08/olkhon-island-shore-downloaded.jpg",
+      "filename": "olkhon-island-shore-downloaded.jpg",
+      "hash": "d184d03a3362751634aef3b3ff480f277f4be1d42f0f8c6237b0e80c136710ac",
+      "size": 102259,
+      "source": null,
+      "source_folder": "Day 08 - 烏斯季奧爾登斯基博物館",
+      "synced_at": "2026-07-13T07:28:43.720122+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 8,
+      "dest": "photos/baikal-rail/day08/ust-orda-museum-downloaded.jpg",
+      "filename": "ust-orda-museum-downloaded.jpg",
+      "hash": "f33385c612aa01c0891d871b9aff2e2497a82dc4dde4e5bfc0d994998bac2cc4",
+      "size": 89975,
+      "source": null,
+      "source_folder": "Day 08 - 烏斯季奧爾登斯基博物館",
+      "synced_at": "2026-07-12T05:30:02.506922+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 9,
+      "dest": "photos/baikal-rail/day09/irkutsk-railway-station-downloaded.jpg",
+      "filename": "irkutsk-railway-station-downloaded.jpg",
+      "hash": "c2a3c05091082061626599ca3ea79fcd4fbf5ff83a8c450a8c2baf71f9d2f468",
+      "size": 644026,
+      "source": null,
+      "source_folder": "Day 09 - 湖島村落與沙灘怪松林",
+      "synced_at": "2026-07-13T07:31:52.503705+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 9,
+      "dest": "photos/baikal-rail/day09/olkhon-island-sunrise.jpg",
+      "filename": "olkhon-island-sunrise.jpg",
+      "hash": "8b5a497cb2c28b7289edc40cb17d54a5cebbff1c6bda32f135dd7d9f960c1622",
+      "size": 156188,
+      "source": null,
+      "source_folder": "Day 09 - 湖島村落與沙灘怪松林",
+      "synced_at": "2026-07-10T12:07:08.953221+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 9,
+      "dest": "photos/baikal-rail/day09/olkhon-village-beach-pines-downloaded.jpg",
+      "filename": "olkhon-village-beach-pines-downloaded.jpg",
+      "hash": "1fbb9e1945c2d4ca3726703a69a20a4ab5736827c7505faef5493c2a964b75fa",
+      "size": 292755,
+      "source": null,
+      "source_folder": "Day 09 - 湖島村落與沙灘怪松林",
+      "synced_at": "2026-07-13T07:34:17.009003+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 10,
+      "dest": "photos/baikal-rail/day10/ilanskaya-station.jpg",
+      "filename": "ilanskaya-station.jpg",
+      "hash": "bde3a6cdea57fe5a6c42d7bd55e09d9ea3b1f60e58a36466a2b1666601ff3d2c",
+      "size": 233066,
+      "source": null,
+      "source_folder": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築",
+      "synced_at": "2026-07-10T12:07:08.954629+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 10,
+      "dest": "photos/baikal-rail/day10/krasnoyarsk-railway-bridge-downloaded.jpg",
+      "filename": "krasnoyarsk-railway-bridge-downloaded.jpg",
+      "hash": "7c69b7a7bdf7bd65f47ada06ebd76a58d83f0954e9ab38747b0ec43ecd0de5a4",
+      "size": 4767201,
+      "source": null,
+      "source_folder": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築",
+      "synced_at": "2026-07-11T02:30:21.362682+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 10,
+      "dest": "photos/baikal-rail/day10/mariinsk-wooden-architecture-downloaded.jpg",
+      "filename": "mariinsk-wooden-architecture-downloaded.jpg",
+      "hash": "d27f565bac77e4422d182e7c0fe6b9b8c9b258728381cd1e760536263c8f6ab7",
+      "size": 174364,
+      "source": null,
+      "source_folder": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築",
+      "synced_at": "2026-07-13T07:46:01.241691+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 10,
+      "dest": "photos/baikal-rail/day10/zima-railway-station-downloaded.jpg",
+      "filename": "zima-railway-station-downloaded.jpg",
+      "hash": "e1c82b87b74cafa3a741ae1d1ab03db82771566ab7c34e5632d208e79c8c7e0f",
+      "size": 160143,
+      "source": null,
+      "source_folder": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築",
+      "synced_at": "2026-07-13T07:41:59.670279+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 11,
+      "dest": "photos/baikal-rail/day11/alexander-nevsky-cathedral-downloaded.jpg",
+      "filename": "alexander-nevsky-cathedral-downloaded.jpg",
+      "hash": "7fe324205250511561ab868dee7da67838ed5e08151dbb11243d07198bdaadc4",
+      "size": 8607567,
+      "source": null,
+      "source_folder": "Day 11 - 聖亞歷山大涅夫斯基教堂",
+      "synced_at": "2026-07-11T02:33:12.238300+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 11,
+      "dest": "photos/baikal-rail/day11/novosibirsk-opera-theatre-downloaded.jpg",
+      "filename": "novosibirsk-opera-theatre-downloaded.jpg",
+      "hash": "bb36d3b1af1b1c130ddaba4931463e7e10bc3e5207419341c9aaca1b4f726bac",
+      "size": 5297032,
+      "source": null,
+      "source_folder": "Day 11 - 聖亞歷山大涅夫斯基教堂",
+      "synced_at": "2026-07-11T02:31:49.096190+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 11,
+      "dest": "photos/baikal-rail/day11/novosibirsk-railway-station.jpg",
+      "filename": "novosibirsk-railway-station.jpg",
+      "hash": "a8774244c4280569efbc746d3135c8c1e5b36b2e1f6133a1b7abc1495865a63f",
+      "size": 199409,
+      "source": null,
+      "source_folder": "Day 11 - 聖亞歷山大涅夫斯基教堂",
+      "synced_at": "2026-07-10T12:07:08.956156+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 11,
+      "dest": "photos/baikal-rail/day11/novosibirsk-zoo-downloaded.jpg",
+      "filename": "novosibirsk-zoo-downloaded.jpg",
+      "hash": "53212412989f8e40887cecad07b3e3fb2197746a506f48e5e9fbc3c28ffe11f5",
+      "size": 155958,
+      "source": null,
+      "source_folder": "Day 11 - 聖亞歷山大涅夫斯基教堂",
+      "synced_at": "2026-07-13T07:51:18.542236+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 12,
+      "dest": "photos/baikal-rail/day12/barabinsk-station-downloaded.jpg",
+      "filename": "barabinsk-station-downloaded.jpg",
+      "hash": "58a9b661db0c3b76274e509b7d8051de625750f9204441337d446048f04b798a",
+      "size": 83288,
+      "source": null,
+      "source_folder": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔",
+      "synced_at": "2026-07-13T07:54:59.236370+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 12,
+      "dest": "photos/baikal-rail/day12/europe-asia-border-downloaded.jpg",
+      "filename": "europe-asia-border-downloaded.jpg",
+      "hash": "f530cdac4802251ea18e8e0e783859fd90bc3c07f6cdb47721ee3c44570d6207",
+      "size": 308239,
+      "source": null,
+      "source_folder": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔",
+      "synced_at": "2026-07-11T02:41:14.647491+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 12,
+      "dest": "photos/baikal-rail/day12/europe-asia-border.jpg",
+      "filename": "europe-asia-border.jpg",
+      "hash": "5158b66c9f9b711543ed45abe88e3c085307fa6ffd05d6a94bbe5a007ceae2fd",
+      "size": 202772,
+      "source": null,
+      "source_folder": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔",
+      "synced_at": "2026-07-10T12:07:08.957030+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 12,
+      "dest": "photos/baikal-rail/day12/omsk-irtysh-river-downloaded.jpg",
+      "filename": "omsk-irtysh-river-downloaded.jpg",
+      "hash": "c94b836bc810490fadcda1156b7c9acf51b8eaabbd67cc0083c00eb08a88071d",
+      "size": 84074,
+      "source": null,
+      "source_folder": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔",
+      "synced_at": "2026-07-13T08:07:08.734689+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 12,
+      "dest": "photos/baikal-rail/day12/tyumen-riverfront-downloaded.jpg",
+      "filename": "tyumen-riverfront-downloaded.jpg",
+      "hash": "06cced95d63bc2dd21a6b9671db3903887568a23c1ed6c3b8bbd2adf0b39a08f",
+      "size": 203181,
+      "source": null,
+      "source_folder": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔",
+      "synced_at": "2026-07-13T07:59:23.303387+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 12,
+      "dest": "photos/baikal-rail/day12/uralmash-heavy-machinery-downloaded.jpg",
+      "filename": "uralmash-heavy-machinery-downloaded.jpg",
+      "hash": "4176b8e59e8bbb0f473b6c04a401e0a78fb313cf17d59a998b91e3874b8ba4ad",
+      "size": 80081,
+      "source": null,
+      "source_folder": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔",
+      "synced_at": "2026-07-13T07:57:13.786304+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 13,
+      "dest": "photos/baikal-rail/day13/church-on-blood-yekaterinburg-downloaded.jpg",
+      "filename": "church-on-blood-yekaterinburg-downloaded.jpg",
+      "hash": "950ad96cbdff54f35f6ee6af2fe790c09653f572b2432249ca8b0e6411d14de5",
+      "size": 3393732,
+      "source": null,
+      "source_folder": "Day 13 - 聖彼得堡北方威尼斯運河",
+      "synced_at": "2026-07-11T02:42:00.999368+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 13,
+      "dest": "photos/baikal-rail/day13/church-on-blood-yekaterinburg.jpg",
+      "filename": "church-on-blood-yekaterinburg.jpg",
+      "hash": "cb4a8754e50f9ce57c0cacf6022f15794ce902be9f02d4a52d676157aaabdf89",
+      "size": 253399,
+      "source": null,
+      "source_folder": "Day 13 - 聖彼得堡北方威尼斯運河",
+      "synced_at": "2026-07-10T12:07:08.960242+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 13,
+      "dest": "photos/baikal-rail/day13/saint-petersburg-canals-downloaded.jpg",
+      "filename": "saint-petersburg-canals-downloaded.jpg",
+      "hash": "8ea0132ce1e343bd15a49b2feccc3512559ca587fe644e3d7b089d0bf2d4e420",
+      "size": 362375,
+      "source": null,
+      "source_folder": "Day 13 - 聖彼得堡北方威尼斯運河",
+      "synced_at": "2026-07-13T08:12:02.284090+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 14,
+      "dest": "photos/baikal-rail/day14/gulf-of-finland-coast-downloaded.jpg",
+      "filename": "gulf-of-finland-coast-downloaded.jpg",
+      "hash": "0c154a9c2bb04be894e34aa836f7d400aad2c2a829b20f43131f3f177578bd94",
+      "size": 76112,
+      "source": null,
+      "source_folder": "Day 14 - 芬蘭灣海岸線風景",
+      "synced_at": "2026-07-13T08:19:16.799887+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 14,
+      "dest": "photos/baikal-rail/day14/kotlin-island-kronstadt-downloaded.jpg",
+      "filename": "kotlin-island-kronstadt-downloaded.jpg",
+      "hash": "f62bbaa6e1147a95a2d2afadcdfa55a1d4939f892f8152ef63a20c721905f7ce",
+      "size": 361405,
+      "source": null,
+      "source_folder": "Day 14 - 芬蘭灣海岸線風景",
+      "synced_at": "2026-07-13T08:16:52.975727+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 14,
+      "dest": "photos/baikal-rail/day14/kronstadt-fortress.jpg",
+      "filename": "kronstadt-fortress.jpg",
+      "hash": "e51661f226b0bed789d85a0802d2f1a3b3ba3db5b4296f8ffdf46780261d50f3",
+      "size": 215051,
+      "source": null,
+      "source_folder": "Day 14 - 芬蘭灣海岸線風景",
+      "synced_at": "2026-07-10T12:07:08.962360+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 14,
+      "dest": "photos/baikal-rail/day14/peterhof-grand-cascade-downloaded.jpg",
+      "filename": "peterhof-grand-cascade-downloaded.jpg",
+      "hash": "62c3cc2e0381c655a2cc8a900702164033dec90bbb59090aab9b1b59c45c4c4d",
+      "size": 4521025,
+      "source": null,
+      "source_folder": "Day 14 - 芬蘭灣海岸線風景",
+      "synced_at": "2026-07-11T02:45:17.353909+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 15,
+      "dest": "photos/baikal-rail/day15/catherine-palace-downloaded.jpg",
+      "filename": "catherine-palace-downloaded.jpg",
+      "hash": "e02cf1653397a1942cdb50cf6c987d14475eeea3a59ae4a711e20090effca08f",
+      "size": 21401222,
+      "source": null,
+      "source_folder": "Day 15 - 葉卡捷琳娜宮",
+      "synced_at": "2026-07-11T02:47:21.881877+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 15,
+      "dest": "photos/baikal-rail/day15/catherine-palace.jpg",
+      "filename": "catherine-palace.jpg",
+      "hash": "202f9be8b007c4fea53109cf465c1c40d16eb7b9a2992275425880a0be2e1e13",
+      "size": 198720,
+      "source": null,
+      "source_folder": "Day 15 - 葉卡捷琳娜宮",
+      "synced_at": "2026-07-10T12:07:08.964048+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 15,
+      "dest": "photos/baikal-rail/day15/catherine-park-lake-downloaded.jpg",
+      "filename": "catherine-park-lake-downloaded.jpg",
+      "hash": "b31efd6e7af60200ab5cd1b29a5aa9fda786b562fff663824fc9b905fecb389d",
+      "size": 961653,
+      "source": null,
+      "source_folder": "Day 15 - 葉卡捷琳娜宮",
+      "synced_at": "2026-07-13T08:37:09.673482+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 15,
+      "dest": "photos/baikal-rail/day15/nevsky-prospect-downloaded.jpg",
+      "filename": "nevsky-prospect-downloaded.jpg",
+      "hash": "53be57364af914b50ec678687dccaab53d67f4c3c0416dd38061acdb9f5653fc",
+      "size": 165830,
+      "source": null,
+      "source_folder": "Day 15 - 葉卡捷琳娜宮",
+      "synced_at": "2026-07-13T08:33:13.427793+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 15,
+      "dest": "photos/baikal-rail/day15/peterhof-gardens-downloaded.jpg",
+      "filename": "peterhof-gardens-downloaded.jpg",
+      "hash": "1cec19c4b412a829d024e6c3710f9b6b65ee7b7f6171b029bb7f016f6fd8bcb2",
+      "size": 355145,
+      "source": null,
+      "source_folder": "Day 15 - 葉卡捷琳娜宮",
+      "synced_at": "2026-07-13T08:28:55.549676+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 15,
+      "dest": "photos/baikal-rail/day15/saint-isaac-cathedral-downloaded.jpeg",
+      "filename": "saint-isaac-cathedral-downloaded.jpeg",
+      "hash": "febf0056a3d8ae1d29be124ec59be00a8effa5b7a5facdd4d4157faa4c27daa6",
+      "size": 5600197,
+      "source": null,
+      "source_folder": "Day 15 - 葉卡捷琳娜宮",
+      "synced_at": "2026-07-11T02:49:09.290427+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 15,
+      "dest": "photos/baikal-rail/day15/savior-on-spilled-blood-downloaded.jpg",
+      "filename": "savior-on-spilled-blood-downloaded.jpg",
+      "hash": "d5b646b3a1ad13d7bd16d0c9d52032c78bf194d3c865b6f32f90deb5fe334437",
+      "size": 2694686,
+      "source": null,
+      "source_folder": "Day 15 - 葉卡捷琳娜宮",
+      "synced_at": "2026-07-11T02:55:47.105136+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 16,
+      "dest": "photos/baikal-rail/day16/kremlin-panorama-downloaded.jpg",
+      "filename": "kremlin-panorama-downloaded.jpg",
+      "hash": "414f94347a3592fd4c1b319ec5460e3b65729f1dd705f53c741b1329b5608796",
+      "size": 6088006,
+      "source": null,
+      "source_folder": "Day 16 - 莫斯科市天際線大景",
+      "synced_at": "2026-07-11T03:02:27.145737+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 16,
+      "dest": "photos/baikal-rail/day16/moscow-skyline-downloaded.jpg",
+      "filename": "moscow-skyline-downloaded.jpg",
+      "hash": "00f67a9f4f26ad6f3e1d7bde3049c95b4b826b25f8f97641548d0c3ab76273e8",
+      "size": 138770,
+      "source": null,
+      "source_folder": "Day 16 - 莫斯科市天際線大景",
+      "synced_at": "2026-07-13T08:44:38.456761+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 16,
+      "dest": "photos/baikal-rail/day16/palace-square-downloaded.jpg",
+      "filename": "palace-square-downloaded.jpg",
+      "hash": "5838f9de09a800c6da9c56ce9bd11b223d9188ca3eeb1a714bbfa37ec4094609",
+      "size": 532039,
+      "source": null,
+      "source_folder": "Day 16 - 莫斯科市天際線大景",
+      "synced_at": "2026-07-13T08:41:11.697392+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 16,
+      "dest": "photos/baikal-rail/day16/peter-and-paul-fortress-downloaded.jpg",
+      "filename": "peter-and-paul-fortress-downloaded.jpg",
+      "hash": "302e69a3fe906e8f82d8f3c174319fbf87e4265d4c48350752129f31ce4c1d8e",
+      "size": 338735,
+      "source": null,
+      "source_folder": "Day 16 - 莫斯科市天際線大景",
+      "synced_at": "2026-07-13T08:42:55.008123+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 16,
+      "dest": "photos/baikal-rail/day16/st-basil-red-square-downloaded.jpg",
+      "filename": "st-basil-red-square-downloaded.jpg",
+      "hash": "5ef59df82ad3a39e18a1f2e4f4de335f6388a4aa03b4127e9f45db9aebab9c6b",
+      "size": 2933823,
+      "source": null,
+      "source_folder": "Day 16 - 莫斯科市天際線大景",
+      "synced_at": "2026-07-11T02:57:55.209810+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 16,
+      "dest": "photos/baikal-rail/day16/winter-palace-hermitage-downloaded.jpg",
+      "filename": "winter-palace-hermitage-downloaded.jpg",
+      "hash": "0c3636c2a597cbd7a6bef20a79940f02efe25917ffb229a64ec5c326c55aef67",
+      "size": 9890032,
+      "source": null,
+      "source_folder": "Day 16 - 莫斯科市天際線大景",
+      "synced_at": "2026-07-11T02:43:38.951141+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 16,
+      "dest": "photos/baikal-rail/day16/winter-palace-hermitage.jpg",
+      "filename": "winter-palace-hermitage.jpg",
+      "hash": "0d4192e4569875661d92cff0ce497273db35c25f8d6da68cac9a0a38516cb85a",
+      "size": 191093,
+      "source": null,
+      "source_folder": "Day 16 - 莫斯科市天際線大景",
+      "synced_at": "2026-07-10T12:07:08.964964+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 17,
+      "dest": "photos/baikal-rail/day17/kremlin-red-wall-downloaded.jpg",
+      "filename": "kremlin-red-wall-downloaded.jpg",
+      "hash": "670467de111c437f4a3a3e340ca50849fee0222ac548ae6e9a348a6527609f81",
+      "size": 104092,
+      "source": null,
+      "source_folder": "Day 17 - 莫斯科紅場聖瓦西里大教堂",
+      "synced_at": "2026-07-13T08:46:22.054117+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 17,
+      "dest": "photos/baikal-rail/day17/moscow-metro-palace-station-downloaded.jpg",
+      "filename": "moscow-metro-palace-station-downloaded.jpg",
+      "hash": "f02cc4b179620f2287f95aa37feb75a4508b34cca7558bc13286639c7eae943b",
+      "size": 778038,
+      "source": null,
+      "source_folder": "Day 17 - 莫斯科紅場聖瓦西里大教堂",
+      "synced_at": "2026-07-13T08:47:59.084866+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 17,
+      "dest": "photos/baikal-rail/day17/red-square.jpg",
+      "filename": "red-square.jpg",
+      "hash": "32a5665f814bf363d7721870ff43f2205a04266871191ee9cb7eb1c917df7c4e",
+      "size": 202764,
+      "source": null,
+      "source_folder": "Day 17 - 莫斯科紅場聖瓦西里大教堂",
+      "synced_at": "2026-07-10T12:07:08.966574+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 17,
+      "dest": "photos/baikal-rail/day17/saint-basil-cathedral-front-downloaded.jpg",
+      "filename": "saint-basil-cathedral-front-downloaded.jpg",
+      "hash": "07a61e682b09a90589898ec11d54633c67145fd445c2fe375938482978577c20",
+      "size": 1571571,
+      "source": null,
+      "source_folder": "Day 17 - 莫斯科紅場聖瓦西里大教堂",
+      "synced_at": "2026-07-13T08:50:03.411335+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 18,
+      "dest": "photos/baikal-rail/day18/kolomenskoye-estate-downloaded.jpg",
+      "filename": "kolomenskoye-estate-downloaded.jpg",
+      "hash": "5bcfbb8d6aeeca5f1f807c6ea6c12f4b43cd73ed6a84292be99587f767d45b5b",
+      "size": 1239202,
+      "source": null,
+      "source_folder": "Day 18 - 卡洛明斯科婭沙皇避暑莊園",
+      "synced_at": "2026-07-13T08:53:36.053374+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 18,
+      "dest": "photos/baikal-rail/day18/tsaritsyno-reserve.jpg",
+      "filename": "tsaritsyno-reserve.jpg",
+      "hash": "06859223e1454e1c3c6af01d3d42063679bb4855a046b0a3258368dcd1ceadd1",
+      "size": 197641,
+      "source": null,
+      "source_folder": "Day 18 - 卡洛明斯科婭沙皇避暑莊園",
+      "synced_at": "2026-07-10T12:07:08.967291+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 19,
+      "dest": "photos/baikal-rail/day19/izmailovo-market-kremlin-downloaded.jpg",
+      "filename": "izmailovo-market-kremlin-downloaded.jpg",
+      "hash": "b5af525c487a3a291453b64bf93db8cbb36b4665e54f934244bfdb5b710499ba",
+      "size": 235527,
+      "source": null,
+      "source_folder": "Day 19 - 伊茲麥洛夫跳蚤市集城堡",
+      "synced_at": "2026-07-13T08:57:10.419046+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 19,
+      "dest": "photos/baikal-rail/day19/izmailovo-park-downloaded.jpg",
+      "filename": "izmailovo-park-downloaded.jpg",
+      "hash": "19361ded422410b221c478d2d6a3e0fa13f5703dccc7de19f9730ec36f2663ac",
+      "size": 3475870,
+      "source": null,
+      "source_folder": "Day 19 - 伊茲麥洛夫跳蚤市集城堡",
+      "synced_at": "2026-07-13T08:55:40.274079+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 19,
+      "dest": "photos/baikal-rail/day19/sparrow-hills-viewpoint.jpg",
+      "filename": "sparrow-hills-viewpoint.jpg",
+      "hash": "26135e20fbab73c6cb8c1d95af4929264af41a94d46620cdf8c1644f3c251d71",
+      "size": 249261,
+      "source": null,
+      "source_folder": "Day 19 - 伊茲麥洛夫跳蚤市集城堡",
+      "synced_at": "2026-07-10T12:07:08.967867+00:00",
+      "status": "seeded_existing"
+    },
+    {
+      "day": 20,
+      "dest": "photos/baikal-rail/day20/return-flight.jpg",
+      "filename": "return-flight.jpg",
+      "hash": "13951606205b546931b5e9e6e7aaaf104fa4f0cac8f0ea8d67b6c5cdeaf38727",
+      "size": 178260,
+      "source": null,
+      "source_folder": null,
+      "synced_at": "2026-07-10T12:07:08.968648+00:00",
+      "status": "seeded_existing"
+    }
+  ],
+  "source_inventory": [
+    {
+      "source": "Day 02 - 成吉思汗巨大不鏽鋼塑像/IMG_2432.JPG",
+      "day": 2,
+      "folder": "Day 02 - 成吉思汗巨大不鏽鋼塑像",
+      "hash": "cc3e77ef7775a7a21ef3f723a53d7cef374c14e61d1894234c17a35e025d967c",
+      "size": 1877053,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 成吉思汗巨大不鏽鋼塑像/IMG_2433.JPG",
+      "day": 2,
+      "folder": "Day 02 - 成吉思汗巨大不鏽鋼塑像",
+      "hash": "cb1604fe698e2b14900f40be7198d655bb802f6a8d6f6f7a57152e0472794fed",
+      "size": 64721,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 成吉思汗巨大不鏽鋼塑像/IMG_2434.JPG",
+      "day": 2,
+      "folder": "Day 02 - 成吉思汗巨大不鏽鋼塑像",
+      "hash": "58ff24d764ecf95e46cc2233f7aed5f6a00d7b9b88f448799d67811ab88e8321",
+      "size": 179627,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 成吉思汗巨大不鏽鋼塑像/IMG_2435.JPG",
+      "day": 2,
+      "folder": "Day 02 - 成吉思汗巨大不鏽鋼塑像",
+      "hash": "a81b7ea0c3f4b0a99e3356c8c6677d897bacaa03820adcd1e3636eb4c37b5172",
+      "size": 238953,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 烏蘭巴托市景/IMG_2423.JPG",
+      "day": 2,
+      "folder": "Day 02 - 烏蘭巴托市景",
+      "hash": "b72f65c22c6ed358fa4d0a312226cb0b778e953d0703ca17fd87d7a32f164d52",
+      "size": 668754,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 烏蘭巴托市景/IMG_2424.JPG",
+      "day": 2,
+      "folder": "Day 02 - 烏蘭巴托市景",
+      "hash": "43c7b795e8d2913e41f5d2ab7423213e20946e133e5177ca521f0c5e31e8e833",
+      "size": 89605,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 烏蘭巴托市景/IMG_2426.JPG",
+      "day": 2,
+      "folder": "Day 02 - 烏蘭巴托市景",
+      "hash": "95d72830d04e774ae8c6a4a3a8cb3d013e8fc7ca1f8830d783d535829c23a4b9",
+      "size": 209593,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 特勒吉國家公園烏龜石/IMG_2436.JPG",
+      "day": 2,
+      "folder": "Day 02 - 特勒吉國家公園烏龜石",
+      "hash": "42ad3495b06407c7c07b719da7c390e3f7ffb3834a116fede6e4e2ce0b98cca9",
+      "size": 2028600,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 特勒吉國家公園烏龜石/IMG_2437.JPG",
+      "day": 2,
+      "folder": "Day 02 - 特勒吉國家公園烏龜石",
+      "hash": "2e41d32222bfb6a3d20f86061d60a2cc841d7e96b50e264f82150128c5774bfb",
+      "size": 92721,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 特勒吉國家公園烏龜石/IMG_2438.JPG",
+      "day": 2,
+      "folder": "Day 02 - 特勒吉國家公園烏龜石",
+      "hash": "0156893448cb27d3508411dc4cacc3b002159b4d112a6a79e897db7cb7e6de9c",
+      "size": 120686,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 草原騎馬/IMG_2429.JPG",
+      "day": 2,
+      "folder": "Day 02 - 草原騎馬",
+      "hash": "99b98c54262e15c3b2f36f07dddc70eba2e9ea04fba382e063fa75bb204b8a49",
+      "size": 469317,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 草原騎馬/IMG_2430.JPG",
+      "day": 2,
+      "folder": "Day 02 - 草原騎馬",
+      "hash": "14e23119b00434d47b78691a74f0eb7d88901065aa24189d44e925f6ef268745",
+      "size": 156439,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 02 - 草原騎馬/IMG_2431.JPG",
+      "day": 2,
+      "folder": "Day 02 - 草原騎馬",
+      "hash": "c334e99d47e83dcf27831be0b696d3c20befe7aede5a5c03814b709da1a3db08",
+      "size": 75508,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 哈爾和林博物館/IMG_2447.JPG",
+      "day": 3,
+      "folder": "Day 03 - 哈爾和林博物館",
+      "hash": "a255be8bd46668294e58cd8037ec65e1e4883d0720b020176f7aa20e331efd9c",
+      "size": 148026,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 哈爾和林博物館/IMG_2448.JPG",
+      "day": 3,
+      "folder": "Day 03 - 哈爾和林博物館",
+      "hash": "190cbbd56d2105e51c09219c982f07666565cc39a7928a7c76c5fba3ff4c7d0c",
+      "size": 130500,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 哈爾和林博物館/IMG_2449.JPG",
+      "day": 3,
+      "folder": "Day 03 - 哈爾和林博物館",
+      "hash": "ca73d7f48d7f29a9d5b0bccd21c016e4506cb4fb344049167383b90e6914ae18",
+      "size": 300705,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 哈爾和林古都遺跡/IMG_2440.JPG",
+      "day": 3,
+      "folder": "Day 03 - 哈爾和林古都遺跡",
+      "hash": "169826661f9502352e2759ace142d9247e48b64ac2630d85a70b00b736da0bb0",
+      "size": 606928,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 哈爾和林古都遺跡/IMG_2441 (1).JPG",
+      "day": 3,
+      "folder": "Day 03 - 哈爾和林古都遺跡",
+      "hash": "4404d0fec490d386ab814bcfc3a24bf013b5463b93ab87ce4276635e8513d4a7",
+      "size": 606112,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 哈爾和林古都遺跡/IMG_2441.JPG",
+      "day": 3,
+      "folder": "Day 03 - 哈爾和林古都遺跡",
+      "hash": "4404d0fec490d386ab814bcfc3a24bf013b5463b93ab87ce4276635e8513d4a7",
+      "size": 606112,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 額爾登尼召寺/IMG_2444 (1).JPG",
+      "day": 3,
+      "folder": "Day 03 - 額爾登尼召寺",
+      "hash": "00ec9a0f7fc937d151dc024b4458d824bda27462da8a83d15031db128f9c4f35",
+      "size": 358289,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 額爾登尼召寺/IMG_2444.JPG",
+      "day": 3,
+      "folder": "Day 03 - 額爾登尼召寺",
+      "hash": "0b9922e492a7154d90404f46cfed42e8f4b086d23daaa65ceebb03352a0fe97c",
+      "size": 365132,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 03 - 額爾登尼召寺/IMG_2445.JPG",
+      "day": 3,
+      "folder": "Day 03 - 額爾登尼召寺",
+      "hash": "4a8746fa48a96782927606db13885b2af4bfcbc4dff288da3fb5cef2c1720d04",
+      "size": 313527,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 04 - 柏格多汗冬宮/IMG_2452.JPG",
+      "day": 4,
+      "folder": "Day 04 - 柏格多汗冬宮",
+      "hash": "4c155b07b866c24440359a20e6bc2a61992bf6ce65dc321d86ffbb0a4767c531",
+      "size": 811530,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 04 - 柏格多汗冬宮/IMG_2453.PNG",
+      "day": 4,
+      "folder": "Day 04 - 柏格多汗冬宮",
+      "hash": "79b2be5d4c2c747d241d2b0ca1ba08621a03e808cd02c3b2e737b225516bc5a8",
+      "size": 1170690,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 04 - 柏格多汗冬宮/IMG_2454.JPG",
+      "day": 4,
+      "folder": "Day 04 - 柏格多汗冬宮",
+      "hash": "9df3be3bdc3bd4a4a667846216aa1403ce12ef8dcf5ef94e02a71003b6c83b4b",
+      "size": 98832,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 04 - 柏格多汗冬宮/IMG_2455.JPG",
+      "day": 4,
+      "folder": "Day 04 - 柏格多汗冬宮",
+      "hash": "0bc99499a406417134ef634022caab4fbd379ec6c2dae8ef3f5caf03ae9e1576",
+      "size": 262652,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 05 - 國立蒙古歷史博物館/IMG_2456.JPG",
+      "day": 5,
+      "folder": "Day 05 - 國立蒙古歷史博物館",
+      "hash": "3de25b0917c437e329df19fb50c3c6a2be0d4536ce6f3c16aa620f46f55111d2",
+      "size": 63093,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 05 - 國立蒙古歷史博物館/IMG_2458.JPG",
+      "day": 5,
+      "folder": "Day 05 - 國立蒙古歷史博物館",
+      "hash": "c6a72338aaf55d9314d66d36ad4c3748f48d90d7757142549d56a018a73130bc",
+      "size": 27405,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 05 - 國立蒙古歷史博物館/IMG_2459.JPG",
+      "day": 5,
+      "folder": "Day 05 - 國立蒙古歷史博物館",
+      "hash": "7d2dec110a9a104e5a58531a8367a34250d968983046d047e61fd8b9fe0c9966",
+      "size": 238120,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 05 - 西伯利亞大鐵路蒙古段列車/IMG_2450.JPG",
+      "day": 5,
+      "folder": "Day 05 - 西伯利亞大鐵路蒙古段列車",
+      "hash": "33e023dd013b81201853cfdbc82768984f98c28a87f75a83b951944d9b04350f",
+      "size": 317015,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 06 - 伊爾庫次克市景明珠/IMG_2461.JPG",
+      "day": 6,
+      "folder": "Day 06 - 伊爾庫次克市景明珠",
+      "hash": "7ad6120d69444e584f7fc0a907d0dd017c1f62108f1ece40650ded837e683569",
+      "size": 466137,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 06 - 伊爾庫次克市景明珠/IMG_2462.JPG",
+      "day": 6,
+      "folder": "Day 06 - 伊爾庫次克市景明珠",
+      "hash": "e38936f296367d82fd26721d4af8fd898c8116b9e09279829c733719c51f1843",
+      "size": 88399,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 06 - 伊爾庫次克市景明珠/IMG_2463.JPG",
+      "day": 6,
+      "folder": "Day 06 - 伊爾庫次克市景明珠",
+      "hash": "9856c20396bae3e11b434472684eb24a840c36bb34e8a412822c5aa4b7c03c1e",
+      "size": 179165,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 06 - 塔利茨木造建築博物館/IMG_2467.JPG",
+      "day": 6,
+      "folder": "Day 06 - 塔利茨木造建築博物館",
+      "hash": "7465b59d5f4e23a693633b86cf59da259e2ce3f71175369b72414bf16a2c27fa",
+      "size": 265284,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 06 - 塔利茨木造建築博物館/IMG_2468.JPG",
+      "day": 6,
+      "folder": "Day 06 - 塔利茨木造建築博物館",
+      "hash": "7de120bf69bc3e6f353519944d021ceefbbb2eb0413ce3815fb63973a25f3ce7",
+      "size": 168014,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 06 - 塔利茨木造建築博物館/IMG_2469.JPG",
+      "day": 6,
+      "folder": "Day 06 - 塔利茨木造建築博物館",
+      "hash": "b00f5db468d7573348a50c42f70357192724adb6e6df817eb734da7538f93d3a",
+      "size": 170396,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 06 - 李斯特維揚卡湖畔小鎮/IMG_2465.JPG",
+      "day": 6,
+      "folder": "Day 06 - 李斯特維揚卡湖畔小鎮",
+      "hash": "ca5ea02c1d4ade81b308df30a369ea608a7c7e570dcdf06571fda5982996fffb",
+      "size": 68993,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 06 - 李斯特維揚卡湖畔小鎮/IMG_2466.JPG",
+      "day": 6,
+      "folder": "Day 06 - 李斯特維揚卡湖畔小鎮",
+      "hash": "7d4b1325c991a41ddd3a2929545c7ec822274dbe3c9fab6f5d12a8d489197783",
+      "size": 217258,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 07 - 基洛夫廣場/IMG_2473.JPG",
+      "day": 7,
+      "folder": "Day 07 - 基洛夫廣場",
+      "hash": "bb579f2edd84472a7d280e35bf416c6392a400fc11298c7877772773904705ac",
+      "size": 73598,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 07 - 斯帕斯卡亞教堂/IMG_2476.JPG",
+      "day": 7,
+      "folder": "Day 07 - 斯帕斯卡亞教堂",
+      "hash": "57261579c0f0a07930755b7b72cdbbbec06ad053a6458e1d3e03ddcc89ae9ee3",
+      "size": 160201,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 07 - 斯帕斯卡亞教堂/IMG_2477.JPG",
+      "day": 7,
+      "folder": "Day 07 - 斯帕斯卡亞教堂",
+      "hash": "080beaeeb52810b1fc5d934f788d38b602103e2d1c37c10f9c9970d40c77f734",
+      "size": 92292,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 07 - 斯帕斯卡亞教堂/IMG_2478.JPG",
+      "day": 7,
+      "folder": "Day 07 - 斯帕斯卡亞教堂",
+      "hash": "bd01a101c96e08a667679f0404059db869a08a5c4922aff8dec39a8f31347462",
+      "size": 130988,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 07 - 貝加爾湖生態博物館/IMG_2470.JPG",
+      "day": 7,
+      "folder": "Day 07 - 貝加爾湖生態博物館",
+      "hash": "ffb950452d81023eb0821bc41dc1aefb45b9382c0c4ee6ad0870e9e068e4b7df",
+      "size": 158597,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 07 - 貝加爾湖生態博物館/IMG_2472.JPG",
+      "day": 7,
+      "folder": "Day 07 - 貝加爾湖生態博物館",
+      "hash": "27749622526174075ac48e36846c90452120facafce44dc75ddead6f3082af74",
+      "size": 285419,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 奧利洪島壯闊湖岸/IMG_2498.JPG",
+      "day": 8,
+      "folder": "Day 08 - 奧利洪島壯闊湖岸",
+      "hash": "70cdbcbd5ab4834ccba966883bfd841ccf4b2dec5b8ddbf819f094452324f1a0",
+      "size": 85139,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 奧利洪島壯闊湖岸/IMG_2500.JPG",
+      "day": 8,
+      "folder": "Day 08 - 奧利洪島壯闊湖岸",
+      "hash": "5c1a520e09984285bdff96a762a9206d62501179dd1dfb35d61e030c58788987",
+      "size": 438839,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 奧利洪島壯闊湖岸/IMG_2501.JPG",
+      "day": 8,
+      "folder": "Day 08 - 奧利洪島壯闊湖岸",
+      "hash": "44bc99b4db98b9240ad8ba11ffec9ff1ef4cf0609bca2de9bb384352e30646ba",
+      "size": 92192,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 奧利洪島薩滿岩/IMG_2491.JPG",
+      "day": 8,
+      "folder": "Day 08 - 奧利洪島薩滿岩",
+      "hash": "a65a58220ad3c712dd968fd58f1e54592cde8c9847d2e770933bd4df8f23317b",
+      "size": 303326,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 奧利洪島薩滿岩/IMG_2492.JPG",
+      "day": 8,
+      "folder": "Day 08 - 奧利洪島薩滿岩",
+      "hash": "c584d53d372597e8c338eb5c2b3bc95dfed2e42db921f65af2694d9ac70f270f",
+      "size": 359627,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 奧利洪島薩滿岩/IMG_2493.JPG",
+      "day": 8,
+      "folder": "Day 08 - 奧利洪島薩滿岩",
+      "hash": "fce829543fe5548d243684b590c6c01ab59f6be3a002501b8db49de7745c8f28",
+      "size": 511755,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 奧利洪島薩滿岩/IMG_2495.JPG",
+      "day": 8,
+      "folder": "Day 08 - 奧利洪島薩滿岩",
+      "hash": "673452768ef77247abeb5ebe69e3ce894a6c6c1399241354cd0c6ff1612cfa20",
+      "size": 274882,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 布里亞特傳統村落/IMG_2479.JPG",
+      "day": 8,
+      "folder": "Day 08 - 布里亞特傳統村落",
+      "hash": "b59070f9f14031af7859afcfdeb09913cd26eafaf41ae9b477fb7eb4e9ebf594",
+      "size": 227803,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 烏斯季奧爾登斯基博物館/IMG_2483.JPG",
+      "day": 8,
+      "folder": "Day 08 - 烏斯季奧爾登斯基博物館",
+      "hash": "7d9fa114481d79bb78b9ce7ef8571bd758ba77a6ee08d3424e74db937e8029b4",
+      "size": 97161,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 烏斯季奧爾登斯基博物館/IMG_2484.JPG",
+      "day": 8,
+      "folder": "Day 08 - 烏斯季奧爾登斯基博物館",
+      "hash": "0c0b06d2f7ba8e021941913e59bfb8158844affdc6aba108681e5fab9798b709",
+      "size": 106075,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 08 - 烏斯季奧爾登斯基博物館/IMG_2486.JPG",
+      "day": 8,
+      "folder": "Day 08 - 烏斯季奧爾登斯基博物館",
+      "hash": "49134206b333931d8f6ad0772ef6c2f765ff3d35aad3a4ff948cb030ea992fb4",
+      "size": 154048,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 09 - 伊爾庫次克火車站/IMG_2502.JPG",
+      "day": 9,
+      "folder": "Day 09 - 伊爾庫次克火車站",
+      "hash": "95a37f3b988d7be7e670c8a5cf405db77e258b70c439cd6b22996470fdb3c901",
+      "size": 105617,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 09 - 伊爾庫次克火車站/IMG_2503.JPG",
+      "day": 9,
+      "folder": "Day 09 - 伊爾庫次克火車站",
+      "hash": "1b7f687820c21f7d6e43ab85150620181778447500f7c03cfaa2d035ebfced59",
+      "size": 254794,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 09 - 伊爾庫次克火車站/IMG_2506.JPG",
+      "day": 9,
+      "folder": "Day 09 - 伊爾庫次克火車站",
+      "hash": "549601749f2fd0fe54a609f826f2999b3b67d21ba567fdb03a68ed20e1c6ca4b",
+      "size": 456262,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 09 - 湖島村落與沙灘怪松林/IMG_2507.JPG",
+      "day": 9,
+      "folder": "Day 09 - 湖島村落與沙灘怪松林",
+      "hash": "f762405bdf47327ed25508a476a7763816fe8ec782349fccd6a785a01b57c638",
+      "size": 309163,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 09 - 湖島村落與沙灘怪松林/IMG_2510.JPG",
+      "day": 9,
+      "folder": "Day 09 - 湖島村落與沙灘怪松林",
+      "hash": "e34a5da9612ba38422b035a233bf3d7351c753239668c7424f045646531e076f",
+      "size": 476134,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 10 - 克拉斯諾亞爾斯克葉尼塞河鐵路橋/IMG_2511.JPG",
+      "day": 10,
+      "folder": "Day 10 - 克拉斯諾亞爾斯克葉尼塞河鐵路橋",
+      "hash": "7dbd792037d43b839332daa72d583600cbbb379d96dc02cda927ff06e19d3b3f",
+      "size": 254099,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 10 - 克拉斯諾亞爾斯克葉尼塞河鐵路橋/IMG_2512.JPG",
+      "day": 10,
+      "folder": "Day 10 - 克拉斯諾亞爾斯克葉尼塞河鐵路橋",
+      "hash": "1149e4c26dc10f66079ede8d6110933b4921bc0ef2c38f5202be9c018f1c47c6",
+      "size": 111046,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 10 - 克拉斯諾亞爾斯克葉尼塞河鐵路橋/IMG_2513.JPG",
+      "day": 10,
+      "folder": "Day 10 - 克拉斯諾亞爾斯克葉尼塞河鐵路橋",
+      "hash": "13792db4ddce919ae7de9519151dc7807d2e36ead3d3115ba843029c42a07ff9",
+      "size": 76557,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 10 - 克拉斯諾亞爾斯克葉尼塞河鐵路橋/IMG_2514.JPG",
+      "day": 10,
+      "folder": "Day 10 - 克拉斯諾亞爾斯克葉尼塞河鐵路橋",
+      "hash": "744605aeeade1a8930d42101fa05d837dcd06e7b5837985e886ddb49f98ac473",
+      "size": 101785,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 10 - 濟馬 Zima 小鎮火車站/IMG_2515.JPG",
+      "day": 10,
+      "folder": "Day 10 - 濟馬 Zima 小鎮火車站",
+      "hash": "dc5a5f9bbd566be5d67176a641eb1f11e422bd3db756454d083da7e7f5f2be84",
+      "size": 168069,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築/IMG_2517.JPG",
+      "day": 10,
+      "folder": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築",
+      "hash": "b28e5348b0ed3c1d8a6e606cac354053d7878ea4a640dac5ae017874011cab10",
+      "size": 634295,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築/IMG_2519.JPG",
+      "day": 10,
+      "folder": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築",
+      "hash": "97cb2f79d928e810d53e1f911e115ee6388184f61a4513c13fcb4b27e6f42c47",
+      "size": 101829,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築/IMG_2520.JPG",
+      "day": 10,
+      "folder": "Day 10 - 馬林斯克 Mariinsk 木造歷史建築",
+      "hash": "94ec3e53d504af9610683b6a04f51aa020e4217eab65562ff0d96b8f5193d4d7",
+      "size": 370275,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 11 - 新西伯利亞國立歌劇院/IMG_2521.JPG",
+      "day": 11,
+      "folder": "Day 11 - 新西伯利亞國立歌劇院",
+      "hash": "3af40f0f9e41f43b72132ecb8b6164f0b0505217af349dab75471388eacb4f93",
+      "size": 232306,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 11 - 新西伯利亞國立歌劇院/IMG_2522.JPG",
+      "day": 11,
+      "folder": "Day 11 - 新西伯利亞國立歌劇院",
+      "hash": "b212860d8e197cf387b29fd5dc90cc936c68582b931a8fc6d3f4ef4cc3da45a5",
+      "size": 336604,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 11 - 新西伯利亞極地動物園/IMG_2523.JPG",
+      "day": 11,
+      "folder": "Day 11 - 新西伯利亞極地動物園",
+      "hash": "3336991271c091d381048d15789410709080ead5b3f634140a83955fa3d3b818",
+      "size": 87397,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 11 - 新西伯利亞極地動物園/IMG_2525.PNG",
+      "day": 11,
+      "folder": "Day 11 - 新西伯利亞極地動物園",
+      "hash": "0a0e9a953b0b729db3ede5aa026d9809f12a1f74aafa9ef46127d972049e7cbe",
+      "size": 2588555,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 11 - 聖亞歷山大涅夫斯基教堂/IMG_2526.JPG",
+      "day": 11,
+      "folder": "Day 11 - 聖亞歷山大涅夫斯基教堂",
+      "hash": "6f524141ecc06e4fca2ed3eff8c081ec725657b5a57723680cc458678007762d",
+      "size": 98526,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 11 - 聖亞歷山大涅夫斯基教堂/IMG_2527.JPG",
+      "day": 11,
+      "folder": "Day 11 - 聖亞歷山大涅夫斯基教堂",
+      "hash": "42918920f053cc305656d05bbbe30489af81e1d00549ce03682c3106b043fadf",
+      "size": 581366,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 11 - 聖亞歷山大涅夫斯基教堂/IMG_2528.JPG",
+      "day": 11,
+      "folder": "Day 11 - 聖亞歷山大涅夫斯基教堂",
+      "hash": "7eced274185bf1704011c67bf8500c2ccd1fb3e125af421910fbd959e82e56f6",
+      "size": 123041,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 11 - 聖亞歷山大涅夫斯基教堂/IMG_2529.JPG",
+      "day": 11,
+      "folder": "Day 11 - 聖亞歷山大涅夫斯基教堂",
+      "hash": "801f46b97ab69acb0d0a5322ca35f3de63ad10862d0256636ac2ad23db797810",
+      "size": 207982,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 巴拉賓斯克 Barabinsk 補給站/IMG_2531.JPG",
+      "day": 12,
+      "folder": "Day 12 - 巴拉賓斯克 Barabinsk 補給站",
+      "hash": "02e273d8e98540f136ceacc191cb790c9d834911942c5f1949a7b916925aae73",
+      "size": 71275,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 巴拉賓斯克 Barabinsk 補給站/IMG_2532.JPG",
+      "day": 12,
+      "folder": "Day 12 - 巴拉賓斯克 Barabinsk 補給站",
+      "hash": "21b33490610981384e3046971725b361a2c8834cfc6720bc64898d5eb48f92ae",
+      "size": 233384,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 巴拉賓斯克 Barabinsk 補給站/IMG_2533.JPG",
+      "day": 12,
+      "folder": "Day 12 - 巴拉賓斯克 Barabinsk 補給站",
+      "hash": "652b9f043f074f6875bc90aacaea14109e09cbb9d2c66f268c00493bc00db715",
+      "size": 78027,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 烏拉爾重機械廠歷史照片/IMG_2534.JPG",
+      "day": 12,
+      "folder": "Day 12 - 烏拉爾重機械廠歷史照片",
+      "hash": "f7c4b187693c2b2b0d1ffc9755c2bff33127b7ebbcc1c83e71a7af0271793f46",
+      "size": 217472,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 烏拉爾重機械廠歷史照片/IMG_2536.JPG",
+      "day": 12,
+      "folder": "Day 12 - 烏拉爾重機械廠歷史照片",
+      "hash": "98cd3325050e6a10b7b23acdd1d41310deac130c4bfdf163453b51ec8272c8ac",
+      "size": 375109,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 烏拉爾重機械廠歷史照片/IMG_2537.JPG",
+      "day": 12,
+      "folder": "Day 12 - 烏拉爾重機械廠歷史照片",
+      "hash": "43802c61cb61b66004edb5069e8f19b3b1e5b34035d9dbc17a0ffb423d4858cd",
+      "size": 265421,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 秋明 Tyumen 地理分界門戶/IMG_2540.JPG",
+      "day": 12,
+      "folder": "Day 12 - 秋明 Tyumen 地理分界門戶",
+      "hash": "a8b5e41423b296299e8020bbbe4b69c3df7fac260e937e381e9a3298f39d910e",
+      "size": 149308,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 葉卡捷琳堡歐亞分界紀念碑/IMG_2541.JPG",
+      "day": 12,
+      "folder": "Day 12 - 葉卡捷琳堡歐亞分界紀念碑",
+      "hash": "4fd56ae65f959f88e8e675177d19dae9678aba2d1ddccc579a275060a183076d",
+      "size": 311619,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 葉卡捷琳堡歐亞分界紀念碑/IMG_2542.JPG",
+      "day": 12,
+      "folder": "Day 12 - 葉卡捷琳堡歐亞分界紀念碑",
+      "hash": "3b510ae7b794f68c5dbb92f74a95a508d0a35dfc737c1ab7474728be49268644",
+      "size": 84122,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 葉卡捷琳堡歐亞分界紀念碑/IMG_2543.JPG",
+      "day": 12,
+      "folder": "Day 12 - 葉卡捷琳堡歐亞分界紀念碑",
+      "hash": "246ac4cf553f73ee6daaabe4d4e8a3dd44cb3b4efeeb3643beab4995abd397b5",
+      "size": 185708,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 葉卡捷琳堡滴血教堂/IMG_2544.JPG",
+      "day": 12,
+      "folder": "Day 12 - 葉卡捷琳堡滴血教堂",
+      "hash": "867c72e14cfec49e20a034ba60fba756f16beac47f61ba67a8879a629f8d3b37",
+      "size": 334405,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 葉卡捷琳堡滴血教堂/IMG_2545.JPG",
+      "day": 12,
+      "folder": "Day 12 - 葉卡捷琳堡滴血教堂",
+      "hash": "58483c401eab8718b7913935adbdcedc1f3488c3aa4e759638eb7b91cd816d88",
+      "size": 88931,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 葉卡捷琳堡滴血教堂/IMG_2546.JPG",
+      "day": 12,
+      "folder": "Day 12 - 葉卡捷琳堡滴血教堂",
+      "hash": "35f95681a9fa2f9a7d3a1d2774c16d44337c77567a02d9a1f92aff134bb5e40c",
+      "size": 248377,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 葉卡捷琳堡滴血教堂/IMG_2547.JPG",
+      "day": 12,
+      "folder": "Day 12 - 葉卡捷琳堡滴血教堂",
+      "hash": "32d6ba50884fd473d8711bd954a89d05faf779a174453548698b8c5f578c0332",
+      "size": 384326,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔/IMG_2549.JPG",
+      "day": 12,
+      "folder": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔",
+      "hash": "e2f0973c292f5b8f1ba57b6d6411e5110ffbf68cc280fdc1c84fa2c88c0cf86d",
+      "size": 107657,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔/IMG_2550.JPG",
+      "day": 12,
+      "folder": "Day 12 - 鄂木斯克 Omsk 額爾齊斯河畔",
+      "hash": "10b0ca221fe3f0302cd74d50f860488114a8b35a71211e06cca34a11e3753871",
+      "size": 79783,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 13 - 聖彼得堡冬宮/IMG_2551.JPG",
+      "day": 13,
+      "folder": "Day 13 - 聖彼得堡冬宮",
+      "hash": "4c4079b6c5b93232505dae9c1108a66469004c49808020d2fcea804f1435cd1f",
+      "size": 545454,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 13 - 聖彼得堡冬宮/IMG_2553.JPG",
+      "day": 13,
+      "folder": "Day 13 - 聖彼得堡冬宮",
+      "hash": "11613d519014dacb5321eafee3e6eb5ff320c483b7bd790347554cf33dbcbde8",
+      "size": 248431,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 13 - 聖彼得堡冬宮/IMG_2554.JPG",
+      "day": 13,
+      "folder": "Day 13 - 聖彼得堡冬宮",
+      "hash": "a3ccb0a53c579f2df86171583172574b893ec5dc54cb946a5b62364083aa8863",
+      "size": 503048,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 13 - 聖彼得堡北方威尼斯運河/IMG_2556.JPG",
+      "day": 13,
+      "folder": "Day 13 - 聖彼得堡北方威尼斯運河",
+      "hash": "e7af6de9479769c0220c179bd74a47327de77258e253680a8632e51d25153ee3",
+      "size": 124217,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 13 - 聖彼得堡北方威尼斯運河/IMG_2557.JPG",
+      "day": 13,
+      "folder": "Day 13 - 聖彼得堡北方威尼斯運河",
+      "hash": "4b7d8708340ebadf888e55382167903f2bc40cc5fbeb1c81790c844e41d10aa4",
+      "size": 88786,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 14 - 彼得夏宮大噴泉/IMG_2558.JPG",
+      "day": 14,
+      "folder": "Day 14 - 彼得夏宮大噴泉",
+      "hash": "4c74249f44a6394372c5edeee1743483467f3827ec030f126b7f407f29fd7071",
+      "size": 432163,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 14 - 彼得夏宮大噴泉/IMG_2559.JPG",
+      "day": 14,
+      "folder": "Day 14 - 彼得夏宮大噴泉",
+      "hash": "a476aff97fd9d00bd8bd9d54783a8e94d4e766c1aa4eaae7230bf9b27cd2a53e",
+      "size": 105941,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 14 - 彼得夏宮大噴泉/IMG_2560.JPG",
+      "day": 14,
+      "folder": "Day 14 - 彼得夏宮大噴泉",
+      "hash": "448a6351f03657252034c5c633e408cde8d415c14b12fe984208dc2e8aee96da",
+      "size": 132263,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 14 - 科特林島歷史風光/IMG_2562.JPG",
+      "day": 14,
+      "folder": "Day 14 - 科特林島歷史風光",
+      "hash": "b8a5e782229ca67cf040ace2c607d1a7bdda55165ef15a79d468774a8240ffec",
+      "size": 726442,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 14 - 科特林島歷史風光/IMG_2563.JPG",
+      "day": 14,
+      "folder": "Day 14 - 科特林島歷史風光",
+      "hash": "15de21693daf84f9fc88811924f61915da17b0eae33844fa1277ef9287bdd314",
+      "size": 366173,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 14 - 科特林島歷史風光/IMG_2564.JPG",
+      "day": 14,
+      "folder": "Day 14 - 科特林島歷史風光",
+      "hash": "0192d4590970f33951e2e6e6231e0f7231cd6ff7afbd8f2407b07395ff0e5a99",
+      "size": 254621,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 14 - 芬蘭灣海岸線風景/IMG_2566.JPG",
+      "day": 14,
+      "folder": "Day 14 - 芬蘭灣海岸線風景",
+      "hash": "c5550e251a647a393d5c48662c9562f3819d50ce5c3d44e25a95243e33a99085",
+      "size": 65742,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 彼得夏宮花園全景/IMG_2568.JPG",
+      "day": 15,
+      "folder": "Day 15 - 彼得夏宮花園全景",
+      "hash": "85e9f622b7502c285395e06a4bf04b179cb235299cf0b4bb3cc92312ba868ce6",
+      "size": 777356,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 彼得夏宮花園全景/IMG_2570.JPG",
+      "day": 15,
+      "folder": "Day 15 - 彼得夏宮花園全景",
+      "hash": "7e246fa5efdc7cc880a47fa2d7c16dfb4e543ae21610d7c192be9ae6d357837e",
+      "size": 543949,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 彼得夏宮花園全景/IMG_2571.JPG",
+      "day": 15,
+      "folder": "Day 15 - 彼得夏宮花園全景",
+      "hash": "e90e2782d4deaa6490669567dc05ec0d52f02eb69027e35b736a49a165e85de5",
+      "size": 159367,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 聖彼得堡浴血復活大教堂/IMG_2572.JPG",
+      "day": 15,
+      "folder": "Day 15 - 聖彼得堡浴血復活大教堂",
+      "hash": "fbcc897ce4f2a099117af9534a3a053e9330fb636a902814503fdd252a59aca5",
+      "size": 155500,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 聖彼得堡浴血復活大教堂/IMG_2573.JPG",
+      "day": 15,
+      "folder": "Day 15 - 聖彼得堡浴血復活大教堂",
+      "hash": "98aa50ee159f099c38cf19329946999343aa53cd094ebee0e545b587c9ae4b2c",
+      "size": 278292,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 聖彼得堡浴血復活大教堂/IMG_2574.JPG",
+      "day": 15,
+      "folder": "Day 15 - 聖彼得堡浴血復活大教堂",
+      "hash": "159c588292b62ab705363b7a5d8b050c999f55c6c295d66e885075cf1d380e3f",
+      "size": 334906,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 聖彼得堡涅瓦大街街景/IMG_2575.JPG",
+      "day": 15,
+      "folder": "Day 15 - 聖彼得堡涅瓦大街街景",
+      "hash": "e41958e19477a4ab8de854800d37ab717c775ecfe98753bbe1e6f22655355ba3",
+      "size": 102779,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 聖彼得堡聖以薩大教堂/IMG_2577.JPG",
+      "day": 15,
+      "folder": "Day 15 - 聖彼得堡聖以薩大教堂",
+      "hash": "8312d067a75681bfac120e327918c59e30143dc48aa14edee810292bc741efb7",
+      "size": 273267,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 聖彼得堡聖以薩大教堂/IMG_2578.JPG",
+      "day": 15,
+      "folder": "Day 15 - 聖彼得堡聖以薩大教堂",
+      "hash": "b0db6033beae6cd269dab3500dd597e36fe0217a6e9c17194b1ef7dbe36dfb30",
+      "size": 322296,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 葉卡捷琳娜公園湖泊/IMG_2580.JPG",
+      "day": 15,
+      "folder": "Day 15 - 葉卡捷琳娜公園湖泊",
+      "hash": "438258e171a1fc1bac7199f5f898e80dbc8ad222cc8e272553769e77ca26c068",
+      "size": 838805,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 葉卡捷琳娜宮/IMG_2581.JPG",
+      "day": 15,
+      "folder": "Day 15 - 葉卡捷琳娜宮",
+      "hash": "0d44cfe8275447abce0d2ae39d686598afe9504493792dcb6e29e955df7d9519",
+      "size": 694748,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 葉卡捷琳娜宮/IMG_2582.JPG",
+      "day": 15,
+      "folder": "Day 15 - 葉卡捷琳娜宮",
+      "hash": "ca2ee7a92bccf06199ce1c4cd7480b1debdb1fb54e724715545ad1b1e749809e",
+      "size": 532871,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 15 - 葉卡捷琳娜宮/IMG_2583.JPG",
+      "day": 15,
+      "folder": "Day 15 - 葉卡捷琳娜宮",
+      "hash": "8ce8a4960db9cfe8fbd86e596d603e2fcd43f900cbcfe52454b8b9c71d16f9e6",
+      "size": 349713,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 16 - 宮殿廣場/IMG_2584.JPG",
+      "day": 16,
+      "folder": "Day 16 - 宮殿廣場",
+      "hash": "4ff49989793e0e54da4b602b767d9329714d3cec5b8019dc67978060dbdc3dc3",
+      "size": 195365,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 16 - 宮殿廣場/IMG_2586.JPG",
+      "day": 16,
+      "folder": "Day 16 - 宮殿廣場",
+      "hash": "49a6a553dc51ef471fcc4f69be395df19100275c160f07630be2882297fa7986",
+      "size": 55800,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 16 - 宮殿廣場/IMG_2587.JPG",
+      "day": 16,
+      "folder": "Day 16 - 宮殿廣場",
+      "hash": "fc200c68e436bedc27eeedc820363509b3235fe9a3df1d46700b8af63b567bc8",
+      "size": 86722,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 16 - 彼得保羅要塞/IMG_2589.JPG",
+      "day": 16,
+      "folder": "Day 16 - 彼得保羅要塞",
+      "hash": "34c4de90df41483e04fcc66f2f741d1b5388c53b759c1b11ed4fe01706695712",
+      "size": 986923,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 16 - 彼得保羅要塞/IMG_2590.JPG",
+      "day": 16,
+      "folder": "Day 16 - 彼得保羅要塞",
+      "hash": "af38dbdefb3af3fbe502dd3e25077a7f43bbc4c290f993ecfeebb0c8bb50d08c",
+      "size": 151628,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 16 - 莫斯科市天際線大景/IMG_2591.JPG",
+      "day": 16,
+      "folder": "Day 16 - 莫斯科市天際線大景",
+      "hash": "2adbf2f99d330161ca8f61a07433afb81be15546e83d1e330ebff404fd776390",
+      "size": 81997,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 16 - 莫斯科市天際線大景/IMG_2592.JPG",
+      "day": 16,
+      "folder": "Day 16 - 莫斯科市天際線大景",
+      "hash": "3e757bd2e5e167754bd8546e0fea1087605a7f9b40828cee96f536e647a6cec1",
+      "size": 90441,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 16 - 莫斯科市天際線大景/IMG_2594.JPG",
+      "day": 16,
+      "folder": "Day 16 - 莫斯科市天際線大景",
+      "hash": "91e2daeea4a6abace6bc24ccc290c15fce62d846763b104f23d683f17db0c17b",
+      "size": 200659,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科克里姆林宮紅牆/IMG_2596.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科克里姆林宮紅牆",
+      "hash": "86452147a8b6237ee0ab56a1610a91f4e348049e81f418d1f5b25c4beed506ef",
+      "size": 189028,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科克里姆林宮紅牆/IMG_2597.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科克里姆林宮紅牆",
+      "hash": "e9d1945c7431ed97cadbae1dec572d03a4b04cacfa5be24936a156c36d40bd35",
+      "size": 109789,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科克里姆林宮紅牆/IMG_2598.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科克里姆林宮紅牆",
+      "hash": "75c50e272c07d2a1c1cb25fce0068566d35307df65310413240288c3d9a09354",
+      "size": 178376,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科地下宮殿地鐵站/IMG_2600.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科地下宮殿地鐵站",
+      "hash": "2c36603f400eeffdda7a5337a71a9566b5744bc642ed784a4c1d2a426e128148",
+      "size": 530899,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科地下宮殿地鐵站/IMG_2601.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科地下宮殿地鐵站",
+      "hash": "5a42264caf7a614a2fa3eafdd28e817c7659c5d1dcc044b78becf4686a075544",
+      "size": 84948,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科地下宮殿地鐵站/IMG_2602.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科地下宮殿地鐵站",
+      "hash": "8fae0bbaefb1e6cee9f7054dba93f20dca2e5614a1e0120a1452903ecf9cc030",
+      "size": 523669,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科紅場聖瓦西里大教堂/IMG_2603.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科紅場聖瓦西里大教堂",
+      "hash": "7db997030f5028e8a044b29b8af82b70c35db81e529c61904729f08fc2c1486c",
+      "size": 177087,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科紅場聖瓦西里大教堂/IMG_2604.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科紅場聖瓦西里大教堂",
+      "hash": "1b23e9b5ec3d51d889d566e97f941dfd3653b66de26dbea4b04800b0bb933264",
+      "size": 1458525,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 17 - 莫斯科紅場聖瓦西里大教堂/IMG_2605.JPG",
+      "day": 17,
+      "folder": "Day 17 - 莫斯科紅場聖瓦西里大教堂",
+      "hash": "df5eab24e25854aae331ef68f3ff3a86120b65863c71cf20146387094ba1195a",
+      "size": 397407,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 19 - 伊茲麥洛夫跳蚤市集城堡/IMG_2610.JPG",
+      "day": 19,
+      "folder": "Day 19 - 伊茲麥洛夫跳蚤市集城堡",
+      "hash": "471a4e4a56cfd4c2481e6803b8ad1e0afea756b3e2a57e2eb8a1e8caf5aafdb7",
+      "size": 126275,
+      "imported": false,
+      "status": "consumed"
+    },
+    {
+      "source": "Day 19 - 伊茲麥洛夫跳蚤市集城堡/IMG_2612.JPG",
+      "day": 19,
+      "folder": "Day 19 - 伊茲麥洛夫跳蚤市集城堡",
+      "hash": "cc1b7eb2f91039ca3b8094d2a229afb81fbbd14d67e06e25988c9e2f897c5ccd",
+      "size": 366403,
+      "imported": false,
+      "status": "consumed"
+    }
+  ],
+  "review_required": [
+    {
+      "drive_path": "0711/IMG20260701190848.jpg",
+      "drive_file_id": "1Y3qbqk0Fl8vETx4aSCve1KszEiaD1IeQ",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0711/IMG20260712033522.jpg",
+      "drive_file_id": "1Ql6SOogwY-ZeUC9-v3h5CKW1FfhckXpM",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG20260712141241.jpg",
+      "drive_file_id": "1tBXofBoy6EmCTRrPfU_nN6szw0mBDimO",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG20260712154045.jpg",
+      "drive_file_id": "1X0sFoC1-XGU3pSPvMqJCSioWetKgy5UT",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG20260712160206.jpg",
+      "drive_file_id": "1MaITOYMEzeirXmGcPkpGWAWsK7SwBm5d",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG20260712161032.jpg",
+      "drive_file_id": "19cvX6cJjrudrVMRjGQ8RMy38nd_1irbk",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG20260712181346.jpg",
+      "drive_file_id": "18rRwQpOZpRc2Z2Mea7wK0c0r4EPkxLEl",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG_20260712_161953.jpg",
+      "drive_file_id": "1lgr9y1E2LM91B0QCy2tGfxsyJ-vshf_Q",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG_20260712_193512.jpg",
+      "drive_file_id": "1WNIjU1P4FlVJKCpuWsDSExUJqzELb23W",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG_20260712_193814.jpg",
+      "drive_file_id": "18K2wOZ9KQ6Bqag4eryk71xykxjCKs6F-",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG_20260712_212042.jpg",
+      "drive_file_id": "1qo4D7qYAt7uBpYz8xci-TabPtgWkAV22",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG_20260712_212143.jpg",
+      "drive_file_id": "1m-qLls2IvCpsD2WLcGeLH8o3P3BE48_f",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG_20260713_041112.jpg",
+      "drive_file_id": "1mRcSS2w7jqkdQrMwKQyevGyUAAlfpCia",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG_20260713_041200.jpg",
+      "drive_file_id": "1zfLstPsyP5-5ktTsbpmFdFpwDyUxIEfN",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0712/IMG_20260713_041640.jpg",
+      "drive_file_id": "1KJER1PJNNMdFOnRMGwSvw3vz2ySAoYpX",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    }
+  ]
+}

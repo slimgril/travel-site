@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "trip_slug": "baikal-rail",
+  "drive": {
+    "folder_url": "https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD",
+    "folder_id": "1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD"
+  },
+  "paths": {
+    "sync_state": "content/baikal-rail/source/photo-sync.json",
+    "source_originals": "content/baikal-rail/source/drive-originals",
+    "photos_root": "photos/baikal-rail",
+    "content_root": "content/baikal-rail"
+  },
+  "access_methods": ["gdown", "google_drive_api", "rclone"],
+  "deploy": {
+    "surge_domain": "cluttered-breath-prototype.surge.sh",
+    "dist_prototype": "dist-prototype",
+    "dist_preview_deploy": "dist-preview-deploy",
+    "sips_max_dimension": 1200,
+    "sips_jpeg_quality": 82
+  },
+  "naming": {
+    "downloaded_suffix": "-downloaded",
+    "day_folder_pattern": "^Day (\\d{2}) - (.+)$"
+  }
+}
