@@ -5,10 +5,10 @@
 ### ![新西伯利亞](day11/novosibirsk-railway-station.jpg) 新西伯利亞
 俄羅斯第三大城市，因西伯利亞大鐵路而興起，是西伯利亞交通與科學重鎮。
 
-### 地方誌博物館
+### ![地方誌博物館](day11/novosibirsk-local-history-museum-downloaded.jpg) 地方誌博物館
 展示西伯利亞自然、民族文化與城市發展。
 
-### 火車博物館
+### ![火車博物館](day11/novosibirsk-railway-museum-downloaded.jpg) 火車博物館
 展示蒸汽、柴油與電力機車及各式車廂。
 
 ### ![極地動物園](day11/novosibirsk-zoo-downloaded.jpg) 極地動物園

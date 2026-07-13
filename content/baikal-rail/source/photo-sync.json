@@ -5,9 +5,9 @@
     "drive_url": "https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD",
     "folder_id": "1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD"
   },
-  "last_sync": "2026-07-13T10:30:50.992446+00:00",
+  "last_sync": "2026-07-13T11:31:48.695545+00:00",
   "summary": {
-    "synced_count": 78,
+    "synced_count": 82,
     "drive_listed": 15,
     "drive_baikal_candidates": 0,
     "drive_new_imported": 0,
@@ -872,6 +872,50 @@
       "source_folder": null,
       "synced_at": "2026-07-10T12:07:08.968648+00:00",
       "status": "seeded_existing"
+    },
+    {
+      "day": 4,
+      "dest": "photos/baikal-rail/day04/mongolia-folk-dance-morin-khuur-downloaded.jpg",
+      "filename": "mongolia-folk-dance-morin-khuur-downloaded.jpg",
+      "hash": "aeda2d2c29c8cc70db5b7c22208c35bec74126e096b47ebdd023fdae523d2c01",
+      "size": 852901,
+      "source": "Day 04 - 蒙古國民族舞蹈與馬頭琴表演/IMG_2617.JPG",
+      "source_folder": "Day 04 - 蒙古國民族舞蹈與馬頭琴表演",
+      "synced_at": "2026-07-13T11:31:48.695545+00:00",
+      "status": "imported"
+    },
+    {
+      "day": 6,
+      "dest": "photos/baikal-rail/day06/ulan-ude-city-center-downloaded.jpg",
+      "filename": "ulan-ude-city-center-downloaded.jpg",
+      "hash": "78a2d80f2189d03afde98e67f654c32c63f3be76fcc8ec440a7eccdd1f17c39e",
+      "size": 164485,
+      "source": "Day 06 - 烏蘭烏德市中心/IMG_2623.JPG",
+      "source_folder": "Day 06 - 烏蘭烏德市中心",
+      "synced_at": "2026-07-13T11:31:48.695545+00:00",
+      "status": "imported"
+    },
+    {
+      "day": 11,
+      "dest": "photos/baikal-rail/day11/novosibirsk-local-history-museum-downloaded.jpg",
+      "filename": "novosibirsk-local-history-museum-downloaded.jpg",
+      "hash": "75f8d2449260ce72f322a8fd731e74a839df1f599304892b76e11678b23dc594",
+      "size": 175124,
+      "source": "Day 11 - 新西伯利亞地方誌博物館/IMG_2635.JPG",
+      "source_folder": "Day 11 - 新西伯利亞地方誌博物館",
+      "synced_at": "2026-07-13T11:31:48.695545+00:00",
+      "status": "imported"
+    },
+    {
+      "day": 11,
+      "dest": "photos/baikal-rail/day11/novosibirsk-railway-museum-downloaded.jpg",
+      "filename": "novosibirsk-railway-museum-downloaded.jpg",
+      "hash": "f1ec53b4175ad5726ce4e17a12fe6fa1a91f48fa7f64aaaafb6066e176187920",
+      "size": 174883,
+      "source": "Day 11 - 新西伯利亞火車博物館/IMG_2629.JPG",
+      "source_folder": "Day 11 - 新西伯利亞火車博物館",
+      "synced_at": "2026-07-13T11:31:48.695545+00:00",
+      "status": "imported"
     }
   ],
   "source_inventory": [

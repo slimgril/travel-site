@@ -1,5 +1,16 @@
 # HISTORY
 
+## 2026-07-13 — Travel Site v0.3 Release
+
+- **Release URL**: https://cluttered-breath-prototype.surge.sh/
+- 三趟旅程正式可瀏覽：山西 (#001)、波羅的海三小國 (#002)、西伯利亞大鐵路 (#003)
+- Build PASS：`scripts/build_prototype.py` → 3 trips, 0 missing images
+- Deploy bundle：`dist-preview-deploy/`（294 files, ~93 MB, sips 壓縮）
+- 驗證 PASS：broken image/link 0、Baikal Day 1–16、homepage journey cards、mobile viewport
+- 新增 Google Drive 增量照片同步 + manifest（見下方條目）
+- Baikal Rail release ready：78 張已同步；4 gray card、15 review_required 為已知待辦
+- Surge redeploy 本次 CLI 失敗；先前部署仍 LIVE（curl HTTP 200）
+
 ## 2026-07-13 — Google Drive Incremental Photo Sync（Baikal Rail）
 
 - 完成 `scripts/sync_baikal_photos.py`：Google Drive → 增量同步 → manifest → build 檢查 → deploy 打包
