@@ -57,6 +57,7 @@ Canonical entry point for repository governance.
 ## Current Repository Documents
 
 - **Resume context (read first):** `.ai-kos/RESUME_CONTEXT.md`
+- **Project infrastructure (permanent):** `.ai-kos/INFRASTRUCTURE.md`
 - Content style (旅行札記 v1.0): `.ai-kos/CONTENT_STYLE.md`
 - Project conventions: `CONVENTIONS.md`
 - Session state: `SESSION.md`

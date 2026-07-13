@@ -4,6 +4,27 @@
 
 ---
 
+## 2026-07-13 — Google Drive Shared Folder 永久 SSOT
+
+**決策**：斌哥所有旅行照片以單一 Google Drive Shared Folder 為**永久唯一來源**（Single Source of Truth）。Folder ID 固定為 `1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD`，不因新旅程而更換。
+
+**政策**：
+
+1. **固定根資料夾** — Shared Folder URL / ID 不變；各次旅行以子資料夾區分
+2. **Resume 不 re-ask** — 恢復 session 或旅行更新時，直接使用此 Folder，不再要求使用者提供路徑
+3. **Daily Update 增量同步** — 每次日常更新由此 Folder 增量同步（見 Incremental Sync 決策）
+4. **Photo Sync 統一入口** — 所有 trip 的照片同步一律從此 Shared Folder 開始
+
+**理由**：
+
+- 避免每次 session 重複確認 Drive 路徑，降低交接摩擦
+- 單一 SSOT 便於跨 trip 管理與備份
+- 子資料夾模型已於 baikal-rail 驗證（`DRIVE_FOLDER_CONVENTION.md`）
+
+**參考**：`.ai-kos/INFRASTRUCTURE.md` · `content/baikal-rail/source/photo-sync-config.json`
+
+---
+
 ## 2026-07-13 — Google Drive 採 Incremental Sync
 
 **決策**：Baikal Rail 照片自 Google Drive 匯入時，採**增量同步**（manifest 驅動），而非每次全量重新下載。
