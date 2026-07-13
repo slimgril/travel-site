@@ -2,6 +2,16 @@
 
 最後更新：2026-07-13（GitHub remote `origin` → slimgril/travel-site）
 
+## Content Style v1.0（2026-07-13）
+
+**旅行札記** — 全站預設文風，由「旅遊景點介紹」轉型為旅行者第一人稱體驗敘事。
+
+| 項目 | 狀態 |
+|------|------|
+| **規範文件** | `.ai-kos/CONTENT_STYLE.md` |
+| **採用政策** | 增量更新；觸及才改寫，不批次重寫舊內容 |
+| **試點** | `content/bldh-trio/day01.md`（Baltic Day 1，11 區塊已改寫） |
+
 ## Travel Site v0.3 Release (2026-07-13)
 
 **正式瀏覽版** — 供斌哥 review 的三趟旅程原型站。

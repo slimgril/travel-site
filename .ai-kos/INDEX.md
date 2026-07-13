@@ -56,6 +56,7 @@ Canonical entry point for repository governance.
 
 ## Current Repository Documents
 
+- Content style (旅行札記 v1.0): `.ai-kos/CONTENT_STYLE.md`
 - Project conventions: `CONVENTIONS.md`
 - Session state: `SESSION.md`
 - Asset and migration notes: `ASSET_CHECKLIST.md`
