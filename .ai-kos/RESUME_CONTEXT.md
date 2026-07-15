@@ -5,6 +5,8 @@ Knowledge-only governance doc — no build, deploy, or code changes implied by r
 
 > **Note:** `SESSION.md` is stale (last Baltic session). Prefer this file + `.ai-kos/STATUS.md` for current state.
 
+**Active project path（git 有效）：** `~/Documents/Projects/旅遊/travel-site/` — 非 Desktop。
+
 ---
 
 ## Resume — Read First
@@ -13,10 +15,12 @@ Knowledge-only governance doc — no build, deploy, or code changes implied by r
 
 Travel Site moved from **Development Mode → Operational Mode** (2026-07-13).
 
+**Daily rule（2026-07-16 起）：** 開工或排程 session 時，**第二讀** `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行 Daily Travel Photo Sync 全流程。
+
 **Current focus:**
 
-- Daily sync 斌哥 travel photos
-- Update daily travel journal (旅行札記)
+- Daily sync 斌哥 travel photos（Drive SSOT → manifest 增量）
+- Update daily travel journal (旅行札記，CONTENT_STYLE 第一人稱)
 - Build → Verify → Deploy
 - Commit → Push → Handoff
 
@@ -63,14 +67,9 @@ Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTEN
 
 ### Daily Travel Update Workflow
 
-1. **Sync photos** (Drive or existing folder) — no re-sync duplicates
-2. **Update** `content/bldh-trio/dayXX.md` per `CONTENT_STYLE.md`
-3. `python3 scripts/build_prototype.py`
-4. `package_preview_deploy` (sips outside sandbox)
-5. `surge dist-preview-deploy cluttered-breath.surge.sh`
-6. **Verify** HTTP 200 page + images
-7. `git commit` + `push` when user asks
-8. **Handoff**
+**Canonical rule：** `.ai-kos/DAILY_TRAVEL_UPDATE.md`（含輸出模板、Error Policy、08:00 觸發）
+
+摘要：Drive SSOT（見 `.ai-kos/INFRASTRUCTURE.md`）→ 增量 sync → 更新 dayXX.md → build → verify → deploy → commit/push（有變更）→ handoff
 
 ---
 
@@ -95,6 +94,8 @@ Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTEN
 
 ## Related Documents
 
+- **Daily operational rule:** `.ai-kos/DAILY_TRAVEL_UPDATE.md`
+- Drive SSOT & paths: `.ai-kos/INFRASTRUCTURE.md`
 - Content style spec: `.ai-kos/CONTENT_STYLE.md`
 - Project status: `.ai-kos/STATUS.md`
 - Governance index: `.ai-kos/INDEX.md`

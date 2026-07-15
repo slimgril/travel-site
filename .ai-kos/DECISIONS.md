@@ -4,6 +4,31 @@
 
 ---
 
+## 2026-07-16 — Daily Travel Photo Sync（Operational Mode 08:00）
+
+**決策**：自 2026-07-16 起，travel-site 進入 **Daily Travel Photo Sync** 營運規則 — 每日 **08:00（Asia/Taipei）** Agent **主動**執行 Daily Travel Update，無需使用者提醒。
+
+**流程**（canonical：`.ai-kos/DAILY_TRAVEL_UPDATE.md`）：
+
+1. Drive SSOT 掃描（`.ai-kos/INFRASTRUCTURE.md`，不 re-ask Folder ID）
+2. 增量同步（比對 `photo-sync.json` manifest）
+3. 更新旅行札記（所有新照片，`.ai-kos/CONTENT_STYLE.md` 第一人稱視角）
+4. Build → Verify → Deploy → Commit/Push（有變更時）→ Handoff
+
+**Error Policy**：auth / permission / infrastructure 錯誤 — **立即停止、不重試、回報根因**。
+
+**理由**：
+
+- Operational Mode 需固定節奏，避免照片與札記滞後
+- 單一 canonical 規則供開工與排程 session 遵循
+- 與既有 Drive SSOT、增量 sync 決策一致，不重複基礎設施定義
+
+**Active path**：`~/Documents/Projects/旅遊/travel-site/`（git 有效；Desktop 路徑已棄用）
+
+**參考**：`.ai-kos/DAILY_TRAVEL_UPDATE.md` · `.ai-kos/RESUME_CONTEXT.md` · `content/baikal-rail/source/PHOTO_SYNC.md`
+
+---
+
 ## 2026-07-13 — Google Drive Shared Folder 永久 SSOT
 
 **決策**：斌哥所有旅行照片以單一 Google Drive Shared Folder 為**永久唯一來源**（Single Source of Truth）。Folder ID 固定為 `1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD`，不因新旅程而更換。

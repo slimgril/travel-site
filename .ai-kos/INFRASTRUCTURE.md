@@ -26,6 +26,25 @@
 
 ---
 
+## Local Photo Paths — Baikal Rail（Cyprian Railroad 20 日）
+
+**2026-07-15**：桌面暫存夾已移入專案；**整個旅遊專案**已移至 `~/Documents/Projects/旅遊/`。Resume 時**勿再查 Desktop**，一律從下列路徑找圖。
+
+| 路徑 | 用途 |
+|------|------|
+| `~/Documents/Projects/旅遊/travel-site/photos/baikal-rail/day01/` … `day20/` | **網站正式用圖**（build 引用、`*-downloaded.jpg` 命名） |
+| `~/Documents/Projects/旅遊/travel-site/content/baikal-rail/source/Siberian_Railway_Landmarks/` | **下載暫存區**（依 `Day NN - 景點名` 分類；新圖先放這裡） |
+| `~/Documents/Projects/旅遊/travel-site/content/baikal-rail/source/drive-originals/` | Drive 同步原始檔（依 Drive 路徑鏡像） |
+| `~/Documents/Projects/旅遊/travel-site/content/baikal-rail/source/photo-sync.json` | 已匯入 manifest（hash、來源、待審） |
+
+### 工作流程
+
+1. 新下載照片 → `source/Siberian_Railway_Landmarks/Day NN - 景點名/`
+2. 確認後搬入 → `photos/baikal-rail/dayNN/`（必要時重新命名為 `{slug}-downloaded.jpg`）
+3. 桌面**不再**放置 `Siberian_Railway_Landmarks` 資料夾
+
+---
+
 ## Related Paths（Read-Only Reference）
 
 以下為既有實作與慣例文件，**本文件不修改它們**；僅作交叉引用。
@@ -55,7 +74,9 @@ Google Drive Shared Folder（永久根，folder_id 固定）
 | 情境 | 行為 |
 |------|------|
 | Resume / 開工 | 直接使用上方 Shared Folder，不詢問路徑 |
-| Daily Update / 照片同步 | 從 Shared Folder 增量同步；依旅程子資料夾區分 |
+| Daily Update / 照片同步 | 遵循 `.ai-kos/DAILY_TRAVEL_UPDATE.md`（每日 08:00 主動執行） |
 | 新旅程 | 在 Shared Folder 內新增子資料夾，**不**建立新 Shared Folder |
 
-**決策背景**：`.ai-kos/DECISIONS.md` — Google Drive Shared Folder 永久 SSOT
+**決策背景**：`.ai-kos/DECISIONS.md` — Google Drive Shared Folder 永久 SSOT · Daily Travel Photo Sync（2026-07-16）
+
+**Canonical 營運規則**：`.ai-kos/DAILY_TRAVEL_UPDATE.md`

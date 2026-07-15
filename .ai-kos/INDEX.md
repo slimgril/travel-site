@@ -57,6 +57,7 @@ Canonical entry point for repository governance.
 ## Current Repository Documents
 
 - **Resume context (read first):** `.ai-kos/RESUME_CONTEXT.md`
+- **Daily operational rule (08:00 sync):** `.ai-kos/DAILY_TRAVEL_UPDATE.md`
 - **Project infrastructure (permanent):** `.ai-kos/INFRASTRUCTURE.md`
 - Content style (旅行札記 v1.0): `.ai-kos/CONTENT_STYLE.md`
 - Project conventions: `CONVENTIONS.md`
@@ -67,12 +68,20 @@ Canonical entry point for repository governance.
 - Architecture decisions: `.ai-kos/DECISIONS.md`
 - Changelog: `HISTORY.md`
 
+## Daily Travel Update（Operational Mode）
+
+- **Canonical rule:** `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行；Drive SSOT → 增量 sync → 旅行札記 → build → verify → deploy → commit/push → handoff
+- Active project path: `~/Documents/Projects/旅遊/travel-site/`（非 Desktop）
+- Cross-ref: `.ai-kos/INFRASTRUCTURE.md` · `.ai-kos/CONTENT_STYLE.md` · `content/baikal-rail/source/PHOTO_SYNC.md`
+
 ## Baikal Rail Photo Sync
 
 - Operations: `content/baikal-rail/source/PHOTO_SYNC.md`
 - Drive folder convention: `content/baikal-rail/source/DRIVE_FOLDER_CONVENTION.md`
 - Sync script: `scripts/sync_baikal_photos.py`
 - Config / manifest: `content/baikal-rail/source/photo-sync-config.json`, `photo-sync.json`
+- **Local staging (downloads):** `content/baikal-rail/source/Siberian_Railway_Landmarks/`
+- **Site photos:** `photos/baikal-rail/day01/` … `day20/`
 
 ## Governance Backlog
 
