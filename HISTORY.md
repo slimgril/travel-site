@@ -1,5 +1,28 @@
 # HISTORY
 
+## 2026-07-16 — Baltic daily travel update
+
+- **Production URL**: https://cluttered-breath.surge.sh/
+- 同步 5 張 bldh-trio 照片 + 更新 day01／day03／day04 札記
+- Build PASS：`scripts/build_prototype.py`；deploy bundle `dist-preview-deploy/`（343 files, sips）
+- Deploy：global `surge` 失敗；`npx surge dist-preview-deploy cluttered-breath.surge.sh` 成功
+- Live 驗證：首頁、bldh-trio 頁、5 張新圖 HTTP 200
+- Drive 本機：`0712/` 13 檔、`0713/` 2 檔；`0712/` 內 3 張 7/13 凌晨圖尚未入 `photos/`
+
+## 2026-07-15 — Desktop 全面整理
+
+- 桌面 28 項專案／檔案全部移入 `~/Documents/Projects/` 及對應子資料夾
+- 索引文件：`~/Documents/Projects/DESKTOP_INDEX.md`
+- 旅遊專案：`~/Documents/Projects/旅遊/travel-site/`
+- 桌面僅剩系統檔（`.DS_Store`、`.localized`、Google Drive 暫存）
+
+## 2026-07-15 — Baikal Rail 照片暫存區移入專案
+
+- **Cyprian Railroad 20 日**（`baikal-rail`）桌面暫存夾 `Siberian_Railway_Landmarks` 整體移入 `content/baikal-rail/source/`
+- 153 張有效照片搬入 `photos/baikal-rail/day02~day19/`；網站正式用圖現共 235 張，build 缺圖 0
+- 更新路徑紀錄：`.ai-kos/INFRASTRUCTURE.md`、`STATUS.md`、`INDEX.md`、`PHOTO_SYNC.md`、`DRIVE_FOLDER_CONVENTION.md`
+- **Resume 規則**：查圖先看 `photos/baikal-rail/dayXX/`；新下載暫存放 `source/Siberian_Railway_Landmarks/`；**勿查 Desktop**
+
 ## 2026-07-13 — Travel Site v0.3 Release
 
 - **Release URL**: https://cluttered-breath-prototype.surge.sh/

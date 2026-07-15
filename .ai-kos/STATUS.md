@@ -1,6 +1,37 @@
 # STATUS — travel-site
 
-最後更新：2026-07-13（GitHub remote `origin` → slimgril/travel-site）
+最後更新：2026-07-16（GitHub remote `origin` → slimgril/travel-site）
+
+
+## 2026-07-16 — Baltic daily travel update
+
+| 項目 | 狀態 |
+|------|------|
+| **Production URL** | https://cluttered-breath.surge.sh/ |
+| **Build** | PASS — `python3 scripts/build_prototype.py`（bldh-trio 缺圖 0；baikal 缺圖 3 為既有） |
+| **Deploy** | PASS — `npx surge dist-preview-deploy cluttered-breath.surge.sh`（global `surge` 首次失敗） |
+| **Live checks** | Homepage、`/trips/bldh-trio.html`、5 張新圖 HTTP 200 |
+
+- 札記：`content/bldh-trio/day01.md`、`day03.md`、`day04.md`
+- 新圖：`hippodrome-obelisk-sunset.jpg`；立陶宛午餐／晚餐；考納斯城堡 2 張
+- Drive 本機鏡像：`content/bldh-trio/source/drive-originals/0712/`（13）、`0713/`（2）
+## 2026-07-15 — Desktop 全面整理
+
+- 桌面所有專案與檔案移入 `~/Documents/Projects/`（見 `DESKTOP_INDEX.md`）
+- 旅遊專案新路徑：`~/Documents/Projects/旅遊/travel-site/`
+- 健康管理：`~/Documents/健康管理/`
+
+## Baikal Rail 照片路徑整理（2026-07-15）
+
+**Cyprian Railroad 20 日**（slug `baikal-rail`）本機照片已集中於專案內，桌面不再保留暫存夾。
+
+| 路徑 | 用途 |
+|------|------|
+| `photos/baikal-rail/day01~20/` | 網站正式用圖（235 張，build 缺圖 0） |
+| `content/baikal-rail/source/Siberian_Railway_Landmarks/` | 下載暫存區（自 Desktop 移入；新圖先放此處） |
+
+- 2026-07-15：153 張有效照片自暫存區搬入 `photos/baikal-rail/`；暫存資料夾整體移入 `source/`
+- Resume 時查圖：見 `.ai-kos/INFRASTRUCTURE.md` § Local Photo Paths
 
 ## Content Style v1.0（2026-07-13）
 
@@ -51,7 +82,7 @@
 | 磁碟未引用備援圖 | 11（舊版/重複檔，不影響 build） |
 
 - 20 天行程 HTML 完整，全 20 天 nav 可達
-- **4 灰卡已修復**（Desktop `Siberian_Railway_Landmarks` → `photos/baikal-rail/`）：
+- **4 灰卡已修復**（`source/Siberian_Railway_Landmarks` → `photos/baikal-rail/`）：
   - Day 4：`mongolia-folk-dance-morin-khuur-downloaded.jpg`（IMG_2617, 1920×1440）
   - Day 6：`ulan-ude-city-center-downloaded.jpg`（IMG_2623, 1024×768）
   - Day 11：`novosibirsk-local-history-museum-downloaded.jpg`（IMG_2635）
