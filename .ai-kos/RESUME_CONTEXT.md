@@ -5,9 +5,16 @@ Knowledge-only governance doc — no build, deploy, or code changes implied by r
 
 > **Note:** `SESSION.md` is stale (last Baltic session). Prefer this file + `.ai-kos/STATUS.md` for current state.
 
-**Canonical workspace（git 有效）：** `/Users/mac/Documents/Projects/旅遊/travel-site/`（`~/Documents/Projects/旅遊/travel-site/`）
+## Workspace Path（HARD RULE — read before any work）
 
-> **2026-07-16**：專案已自 Desktop 移至 Documents。Agent 一律使用上述路徑；`~/Desktop/旅遊/travel-site/` 為空殼目錄（勿作為工作區）。
+```
+CANONICAL PROJECT ROOT: /Users/mac/Documents/Projects/旅遊/travel-site
+FORBIDDEN: /Users/mac/Desktop/旅遊/ — do not read, write, commit, or deploy from Desktop
+New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
+```
+
+- **Cursor workspace** 必須開啟 Documents 路徑；若目前 workspace 指向 Desktop，**立即停止**並要求使用者重新開啟正確資料夾
+- `~/Desktop/旅遊/travel-site/` 為空殼目錄（2026-07-16 確認）；見 `DEPRECATED.md`
 
 ---
 
