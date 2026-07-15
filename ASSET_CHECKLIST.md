@@ -10,9 +10,9 @@ Build 狀態：**缺圖 0 張，無錯誤**
 
 ```bash
 # 已執行：將所有 img-*.jpg 從 Golden Master 複製到 travel-site
-find "/Users/johnsonwang/Desktop/旅遊/shanxi-15day 2" \
+find "/Users/mac/Documents/Projects/旅遊/shanxi-15day 2" \
   -maxdepth 1 -name "img-*.jpg" \
-  -exec cp {} "/Users/johnsonwang/Desktop/旅遊/travel-site/photos/shanxi/" \;
+  -exec cp {} "/Users/mac/Documents/Projects/旅遊/travel-site/photos/shanxi/" \;
 # 結果：25 張 img-*.jpg 已就位
 ```
 

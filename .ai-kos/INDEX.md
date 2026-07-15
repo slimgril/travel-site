@@ -68,10 +68,18 @@ Canonical entry point for repository governance.
 - Architecture decisions: `.ai-kos/DECISIONS.md`
 - Changelog: `HISTORY.md`
 
+## Workspace Path（HARD RULE）
+
+```
+CANONICAL PROJECT ROOT: /Users/mac/Documents/Projects/旅遊/travel-site
+FORBIDDEN: /Users/mac/Desktop/旅遊/ — do not read, write, commit, or deploy from Desktop
+New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
+```
+
 ## Daily Travel Update（Operational Mode）
 
 - **Canonical rule:** `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行；Drive SSOT → 增量 sync → 旅行札記 → build → verify → deploy → commit/push → handoff
-- Active project path: `~/Documents/Projects/旅遊/travel-site/`（非 Desktop）
+- Active project path: `/Users/mac/Documents/Projects/旅遊/travel-site/`
 - Cross-ref: `.ai-kos/INFRASTRUCTURE.md` · `.ai-kos/CONTENT_STYLE.md` · `content/baikal-rail/source/PHOTO_SYNC.md`
 
 ## Baikal Rail Photo Sync

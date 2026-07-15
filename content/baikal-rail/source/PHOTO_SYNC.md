@@ -147,7 +147,7 @@ python3 scripts/sync_baikal_photos.py --dry-run
 python3 scripts/sync_baikal_photos.py --skip-deploy
 ```
 
-**注意**：不得使用本機 `Siberian_Railway_Landmarks` 作為 Drive 失敗時的 fallback。
+**注意**：本機暫存區為 `content/baikal-rail/source/Siberian_Railway_Landmarks/`（canonical）。不得作為 Drive 失敗時的 fallback。
 
 ---
 

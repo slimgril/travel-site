@@ -2,6 +2,22 @@
 
 最後更新：2026-07-16（GitHub remote `origin` → slimgril/travel-site）
 
+## 2026-07-16 — Canonical workspace path（Documents ONLY）
+
+```
+CANONICAL PROJECT ROOT: /Users/mac/Documents/Projects/旅遊/travel-site
+FORBIDDEN: /Users/mac/Desktop/旅遊/ — do not read, write, commit, or deploy from Desktop
+New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
+```
+
+| 項目 | 值 |
+|------|-----|
+| **Active project root** | `/Users/mac/Documents/Projects/旅遊/travel-site/` |
+| **Workspace parent** | `/Users/mac/Documents/Projects/旅遊/` |
+| **Git HEAD** | `ce389e9` — up to date with `origin/main` |
+| **Stale Desktop shell** | `~/Desktop/旅遊/travel-site/` — **空目錄、非 git repo**（2026-07-16 確認） |
+| **Desktop redirect** | `~/Desktop/旅遊/travel-site/DEPRECATED.md` 已放置導向說明 |
+| **Cursor 修正** | 使用者須 **File → Open Folder** → `/Users/mac/Documents/Projects/旅遊/travel-site` |
 
 ## 2026-07-16 — Baltic daily travel update
 

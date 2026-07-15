@@ -1,5 +1,11 @@
 # HISTORY
 
+## 2026-07-16 — Canonical workspace path
+
+- 專案根目錄固定為 `/Users/mac/Documents/Projects/旅遊/travel-site/`（git 有效）
+- 更新 `.ai-kos/*`、`REPOSITORY.md`、`deploy.sh` 等文件與腳本中的路徑引用
+- `~/Desktop/旅遊/travel-site/` 為空殼目錄，記錄於 `STATUS.md`
+
 ## 2026-07-16 — Baltic daily travel update
 
 - **Production URL**: https://cluttered-breath.surge.sh/

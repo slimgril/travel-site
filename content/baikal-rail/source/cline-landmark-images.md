@@ -1,6 +1,6 @@
 # Cline Landmark Images
 
-User-provided landmark images from `/Users/mac/Desktop/Siberian_Railway_Landmarks`.
+User-provided landmark images from `content/baikal-rail/source/Siberian_Railway_Landmarks/`（原 Desktop 暫存，2026-07-15 移入專案）。
 These files were inspected after deployment feedback and found to be invalid image files.
 Each `.jpg` contained an HTML Wikimedia landing page (`<!DOCTYPE html>`) instead of JPEG binary data.
 They were removed from `photos/baikal-rail/` and unlinked from `content/baikal-rail/dayXX.md`.

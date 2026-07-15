@@ -4,6 +4,26 @@
 
 ---
 
+## Workspace Paths（Canonical — HARD RULE）
+
+```
+CANONICAL PROJECT ROOT: /Users/mac/Documents/Projects/旅遊/travel-site
+WORKSPACE PARENT:       /Users/mac/Documents/Projects/旅遊/
+FORBIDDEN:              /Users/mac/Desktop/旅遊/ — do not read, write, commit, or deploy from Desktop
+New projects:           /Users/mac/Documents/Projects/旅遊/<project-name>/
+```
+
+| 項目 | 路徑 |
+|------|------|
+| **Git 有效 repo** | `/Users/mac/Documents/Projects/旅遊/travel-site/` |
+| **旅遊工作區父目錄** | `/Users/mac/Documents/Projects/旅遊/` |
+| **GitHub remote** | `https://github.com/slimgril/travel-site` |
+| **Desktop 空殼（禁止）** | `~/Desktop/旅遊/travel-site/` — 非 git repo，勿開啟為 Cursor workspace |
+
+Agent 行為：所有 `cd`、`git`、`commit`、`push`、`deploy`、檔案讀寫**僅限** Documents 路徑。不得 fallback 至 Desktop。
+
+---
+
 ## Google Drive Shared Folder（Permanent）
 
 | 項目 | 值 |
@@ -28,7 +48,7 @@
 
 ## Local Photo Paths — Baikal Rail（Cyprian Railroad 20 日）
 
-**2026-07-15**：桌面暫存夾已移入專案；**整個旅遊專案**已移至 `~/Documents/Projects/旅遊/`。Resume 時**勿再查 Desktop**，一律從下列路徑找圖。
+**Canonical project root（2026-07-16）**：`/Users/mac/Documents/Projects/旅遊/travel-site/`。桌面暫存夾已移入專案（2026-07-15）；Resume 一律從下列路徑找圖。
 
 | 路徑 | 用途 |
 |------|------|

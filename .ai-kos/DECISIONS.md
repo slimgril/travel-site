@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-07-16 — Canonical workspace path（Documents ONLY）
+
+**決策**：travel-site 與所有旅遊子專案**唯一**工作區為 Documents。Desktop 路徑**永久禁止**。
+
+```
+CANONICAL PROJECT ROOT: /Users/mac/Documents/Projects/旅遊/travel-site
+FORBIDDEN: /Users/mac/Desktop/旅遊/ — do not read, write, commit, or deploy from Desktop
+New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
+```
+
+**政策**：
+
+1. Agent / 腳本 / 文件 / Cursor workspace **一律**使用 Documents 路徑
+2. **禁止**「Desktop 或 Documents 擇一」「try both paths」等模糊指引
+3. **禁止**在 Desktop 路徑讀寫、commit、push、deploy
+4. 若 Cursor workspace 指向 Desktop → Agent **立即停止**並要求使用者重新開啟 Documents 資料夾
+5. `~/Desktop/旅遊/travel-site/` 若仍存在，僅為空殼 + `DEPRECATED.md` 導向；不自動刪除
+
+**理由**：2026-07-15 桌面整理後專案已遷移；Cursor 若開錯 workspace 會導致 agent 在空殼或錯誤路徑工作，造成資料遺失。
+
+---
+
 ## 2026-07-16 — Daily Travel Photo Sync（Operational Mode 08:00）
 
 **決策**：自 2026-07-16 起，travel-site 進入 **Daily Travel Photo Sync** 營運規則 — 每日 **08:00（Asia/Taipei）** Agent **主動**執行 Daily Travel Update，無需使用者提醒。
@@ -23,7 +45,7 @@
 - 單一 canonical 規則供開工與排程 session 遵循
 - 與既有 Drive SSOT、增量 sync 決策一致，不重複基礎設施定義
 
-**Active path**：`~/Documents/Projects/旅遊/travel-site/`（git 有效；Desktop 路徑已棄用）
+**Active path**：`/Users/mac/Documents/Projects/旅遊/travel-site/`
 
 **參考**：`.ai-kos/DAILY_TRAVEL_UPDATE.md` · `.ai-kos/RESUME_CONTEXT.md` · `content/baikal-rail/source/PHOTO_SYNC.md`
 

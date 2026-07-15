@@ -5,7 +5,9 @@ Knowledge-only governance doc — no build, deploy, or code changes implied by r
 
 > **Note:** `SESSION.md` is stale (last Baltic session). Prefer this file + `.ai-kos/STATUS.md` for current state.
 
-**Active project path（git 有效）：** `~/Documents/Projects/旅遊/travel-site/` — 非 Desktop。
+**Canonical workspace（git 有效）：** `/Users/mac/Documents/Projects/旅遊/travel-site/`（`~/Documents/Projects/旅遊/travel-site/`）
+
+> **2026-07-16**：專案已自 Desktop 移至 Documents。Agent 一律使用上述路徑；`~/Desktop/旅遊/travel-site/` 為空殼目錄（勿作為工作區）。
 
 ---
 

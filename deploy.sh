@@ -1,6 +1,7 @@
 #!/bin/zsh
 set -e
-cd "/Users/johnsonwang/Desktop/旅遊/travel-site"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
 
 echo "▶ 重建網站..."
 python3 scripts/build.py
