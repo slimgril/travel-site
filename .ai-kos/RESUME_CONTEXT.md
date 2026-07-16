@@ -22,20 +22,28 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 
 ## Resume — Read First
 
-### Operational Mode (PRIORITY)
+### Operational Phase（PRIORITY — 2026-07-16 正式生效）
 
-Travel Site moved from **Development Mode → Operational Mode** (2026-07-13).
+Travel Site 已進入 **Operational Phase**。
 
-**Daily rule（2026-07-16 起）：** 開工或排程 session 時，**第二讀** `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行 Daily Travel Photo Sync 全流程。
+> **原則：** AI-KOS 服務旅行書；旅行書不再繼續服務 AI-KOS。  
+> 自 **2026-07-17** 起，預設工作是把斌哥的旅途變成可瀏覽的書，不是擴充治理文件或重構基礎設施。
 
-**Current focus:**
+**Daily rule：** 開工或排程 session 時，讀 `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行 Daily Travel Update 全流程，結尾輸出固定營運摘要。
+
+**Current focus（只做這些）：**
 
 - Daily sync 斌哥 travel photos（Drive SSOT → manifest 增量）
-- Update daily travel journal (旅行札記，CONTENT_STYLE 第一人稱)
+- Update daily travel journal（旅行札記，CONTENT_STYLE 第一人稱）
 - Build → Verify → Deploy
-- Commit → Push → Handoff
+- Commit → Push → 固定營運摘要 Handoff
 
-**NOT primary work anymore:** site feature development, architecture changes, workflow refactors, mass rewrites of old content.
+**NOT primary work（除非使用者明確要求）：**
+
+- 新增／重寫 AI-KOS 治理文件
+- site feature development、architecture、workflow refactor
+- 舊旅程 bulk rewrite
+- Workspace / 路徑再遷移（Integrity 已完成）
 
 ---
 
@@ -77,9 +85,11 @@ Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTEN
 
 ### Daily Travel Update Workflow
 
-**Canonical rule：** `.ai-kos/DAILY_TRAVEL_UPDATE.md`（含輸出模板、Error Policy、08:00 觸發）
+**Canonical rule：** `.ai-kos/DAILY_TRAVEL_UPDATE.md`（含固定營運摘要、Error Policy、08:00 觸發）
 
 摘要：Drive SSOT（見 `.ai-kos/INFRASTRUCTURE.md`）→ 增量 sync → 更新 dayXX.md → build → verify → deploy → commit/push（有變更）→ handoff
+
+**Handoff 結尾必出固定摘要：** Date / Trip / New Photos / Updated Day / Travel Notes / Build / Deploy / Live Verification / Commit / Production / Status（完整欄位見該規則 § 輸出模板）
 
 ---
 

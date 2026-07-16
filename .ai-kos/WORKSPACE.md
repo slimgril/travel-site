@@ -1,7 +1,7 @@
 # WORKSPACE — travel-site Integrity SSOT
 
 **狀態**：Canonical（2026-07-16 Workspace Integrity）  
-**優先級**：高於功能開發。路徑衝突時以此文件為準。
+**Phase**：Operational — AI-KOS 服務旅行書；路徑衝突時以此文件為準，但**不再**以擴充本文件為每日目標。
 
 ---
 

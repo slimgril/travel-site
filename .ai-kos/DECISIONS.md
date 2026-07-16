@@ -4,6 +4,33 @@
 
 ---
 
+## 2026-07-16 — Operational Phase 正式生效
+
+**決策**：自本日起 travel-site 正式進入 **Operational Phase**。`6779dac`（Workspace Integrity）已上遠端；治理基建凍結為夠用狀態。
+
+**原則：**
+
+> AI-KOS 服務旅行書，而不是旅行書繼續服務 AI-KOS。
+
+**自 2026-07-17 起預設工作：** Daily Travel Update（照片 → 札記 → build → deploy → 固定營運摘要）。  
+**非預設：** 擴充 AI-KOS、路徑再遷移、架構重構、舊內容 bulk rewrite（需使用者明確授權）。
+
+**理由**：Integrity 與 Daily Update 模板已就緒；繼續打磨 KOS 會反客為主。
+
+---
+
+## 2026-07-16 — Daily Update 固定營運摘要（Handoff）
+
+**決策**：Daily Travel Update 每次回報**結尾**必須輸出固定短摘要（欄位名不可改），格式見 `.ai-kos/DAILY_TRAVEL_UPDATE.md` § 輸出模板。
+
+**必填欄位**：Date / Trip / New Photos / Updated Day / Travel Notes / Build / Deploy / Live Verification / Commit / Production / Status
+
+**理由**：營運已穩定；固定摘要方便每日掃讀與跨 session 對帳，避免表格與敘事混雜。
+
+**參考**：使用者核定範例（2026-07-13 Baltic，Commit `ce389e9`）
+
+---
+
 ## 2026-07-16 — Canonical workspace path（Documents ONLY）
 
 **決策**：travel-site 與所有旅遊子專案**唯一**工作區為 Documents。Desktop 路徑**永久禁止**。

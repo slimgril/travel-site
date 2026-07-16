@@ -1,6 +1,17 @@
 # STATUS — travel-site
 
-最後更新：2026-07-16（GitHub remote `origin` → slimgril/travel-site）
+最後更新：2026-07-16（Operational Phase 正式生效）
+
+## 2026-07-16 — Operational Phase
+
+| 項目 | 值 |
+|------|-----|
+| **Phase** | **Operational**（正式） |
+| **原則** | AI-KOS 服務旅行書；旅行書不再服務 AI-KOS |
+| **自** | 2026-07-17 起每日預設 = Daily Travel Update |
+| **Integrity baseline** | `6779dac` on `origin/main` |
+| **Production** | https://cluttered-breath.surge.sh/ |
+| **Handoff** | 固定營運摘要（見 `DAILY_TRAVEL_UPDATE.md`） |
 
 ## 2026-07-16 — Workspace Integrity（Priority 0）
 

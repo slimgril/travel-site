@@ -1,5 +1,11 @@
 # HISTORY
 
+## 2026-07-16 — Operational Phase
+
+- 正式進入 Operational Phase：AI-KOS 服務旅行書
+- Daily Update 固定營運摘要定稿；Integrity baseline `6779dac` 已在 `origin/main`
+- 自 2026-07-17 起預設工作為 Daily Travel Update，非治理擴充
+
 ## 2026-07-16 — Workspace Integrity
 
 - 新增 `.ai-kos/WORKSPACE.md`（路徑 SSOT）
