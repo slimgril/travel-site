@@ -1,11 +1,13 @@
 # Resume Context — travel-site
 
-**Read this file first on every resume.**  
+**Read `.ai-kos/WORKSPACE.md` first, then this file.**  
 Knowledge-only governance doc — no build, deploy, or code changes implied by reading it.
 
-> **Note:** `SESSION.md` is stale (last Baltic session). Prefer this file + `.ai-kos/STATUS.md` for current state.
+> **Note:** `SESSION.md` is stale (last Baltic session). Prefer `WORKSPACE.md` + this file + `.ai-kos/STATUS.md` for current state.
 
 ## Workspace Path（HARD RULE — read before any work）
+
+**SSOT：** `.ai-kos/WORKSPACE.md`
 
 ```
 CANONICAL PROJECT ROOT: /Users/mac/Documents/Projects/旅遊/travel-site
@@ -14,7 +16,7 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 ```
 
 - **Cursor workspace** 必須開啟 Documents 路徑；若目前 workspace 指向 Desktop，**立即停止**並要求使用者重新開啟正確資料夾
-- `~/Desktop/旅遊/travel-site/` 為空殼目錄（2026-07-16 確認）；見 `DEPRECATED.md`
+- `~/Desktop/旅遊/` 僅允許導向文件；**不得**存在可開啟的 `travel-site/` 子目錄（2026-07-16 Integrity：已移除）
 
 ---
 
@@ -66,10 +68,9 @@ Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTEN
 | 項目 | 值 |
 |------|-----|
 | **Transitional browse URL** | https://cluttered-breath.surge.sh/ |
-| **Temp validation** | cluttered-breath-prototype-v2.surge.sh |
-| **Production domain BLOCKED** | cluttered-breath-prototype.surge.sh — **404**, not on wangjohnsonwt@gmail.com account; **do NOT** update `REPOSITORY.md` / `STATUS.md` deploy URL until restored |
+| **Blocked legacy domain** | cluttered-breath-prototype.surge.sh — **404**；勿再部署至此 |
 | **GitHub** | https://github.com/slimgril/travel-site (`origin` configured) |
-| **Local HEAD** | `cddf2af` — `feat(baltic): update Day 1 travel journal with storytelling style`; likely **1 commit ahead** of `origin/main` if not pushed |
+| **Local path check** | `git rev-parse --show-toplevel` → Canonical Root |
 | **Deploy pitfall** | Run `sips` / `package_preview_deploy` **OUTSIDE sandbox** or images go black |
 
 ---

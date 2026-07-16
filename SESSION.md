@@ -1,16 +1,9 @@
 ---
 project: bldh-trio
-checkpoint:
-  type: deploy
-  ref: https://cluttered-breath-prototype.surge.sh/
-phase: "Homepage restore + prototype packaging stabilization"
-status: ready_to_commit
-approval_gate: level-1
-pending:
-  - "Commit and push homepage restore / asset cleanup / deployment packaging fixes."
-  - "Safari CSS issue remains browser-specific; Chrome validates deployment content."
-blockers: none
-updated: 2026-07-10
+status: STALE
+superseded_by: .ai-kos/WORKSPACE.md + .ai-kos/RESUME_CONTEXT.md + .ai-kos/STATUS.md
+updated: 2026-07-16
+note: "Do not use this file for active path / deploy decisions. Historical Baltic notes below are archive-only."
 ---
 
 # SESSION — Baltic Trio (bldh-trio)

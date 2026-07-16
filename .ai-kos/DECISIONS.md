@@ -20,9 +20,11 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 2. **禁止**「Desktop 或 Documents 擇一」「try both paths」等模糊指引
 3. **禁止**在 Desktop 路徑讀寫、commit、push、deploy
 4. 若 Cursor workspace 指向 Desktop → Agent **立即停止**並要求使用者重新開啟 Documents 資料夾
-5. `~/Desktop/旅遊/travel-site/` 若仍存在，僅為空殼 + `DEPRECATED.md` 導向；不自動刪除
+5. `~/Desktop/旅遊/` 僅允許導向文件（`DEPRECATED.md` / redirect `CLAUDE.md`）；**禁止**存在可被 Cursor 開啟的 `travel-site/` 子目錄
+6. Workspace Integrity SSOT：`.ai-kos/WORKSPACE.md`（路徑衝突時以此為準）
+7. 若本機 git 物件損壞，優先自 `origin/main` 還原；無法安全修復則 **rebuild clone**，不得沿用半壞 repo
 
-**理由**：2026-07-15 桌面整理後專案已遷移；Cursor 若開錯 workspace 會導致 agent 在空殼或錯誤路徑工作，造成資料遺失。
+**理由**：2026-07-15 桌面整理後專案已遷移；Cursor 若開錯 workspace 會導致 agent 在空殼或錯誤路徑工作，造成資料遺失。2026-07-16 Integrity 稽核確認：路徑已在 Documents，但 Desktop 假專案目錄與損壞 blob 仍會造成「看似還在舊路徑」的錯覺。
 
 ---
 

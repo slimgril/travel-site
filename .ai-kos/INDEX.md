@@ -56,7 +56,8 @@ Canonical entry point for repository governance.
 
 ## Current Repository Documents
 
-- **Resume context (read first):** `.ai-kos/RESUME_CONTEXT.md`
+- **Workspace integrity SSOT (path first):** `.ai-kos/WORKSPACE.md`
+- **Resume context (read second):** `.ai-kos/RESUME_CONTEXT.md`
 - **Daily operational rule (08:00 sync):** `.ai-kos/DAILY_TRAVEL_UPDATE.md`
 - **Project infrastructure (permanent):** `.ai-kos/INFRASTRUCTURE.md`
 - Content style (旅行札記 v1.0): `.ai-kos/CONTENT_STYLE.md`
@@ -70,6 +71,8 @@ Canonical entry point for repository governance.
 
 ## Workspace Path（HARD RULE）
 
+**SSOT：** `.ai-kos/WORKSPACE.md`
+
 ```
 CANONICAL PROJECT ROOT: /Users/mac/Documents/Projects/旅遊/travel-site
 FORBIDDEN: /Users/mac/Desktop/旅遊/ — do not read, write, commit, or deploy from Desktop
@@ -80,7 +83,7 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 
 - **Canonical rule:** `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行；Drive SSOT → 增量 sync → 旅行札記 → build → verify → deploy → commit/push → handoff
 - Active project path: `/Users/mac/Documents/Projects/旅遊/travel-site/`
-- Cross-ref: `.ai-kos/INFRASTRUCTURE.md` · `.ai-kos/CONTENT_STYLE.md` · `content/baikal-rail/source/PHOTO_SYNC.md`
+- Cross-ref: `.ai-kos/WORKSPACE.md` · `.ai-kos/INFRASTRUCTURE.md` · `.ai-kos/CONTENT_STYLE.md` · `content/baikal-rail/source/PHOTO_SYNC.md`
 
 ## Baikal Rail Photo Sync
 

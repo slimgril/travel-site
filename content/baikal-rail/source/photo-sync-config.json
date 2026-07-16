@@ -13,7 +13,7 @@
   },
   "access_methods": ["gdown", "google_drive_api", "rclone"],
   "deploy": {
-    "surge_domain": "cluttered-breath-prototype.surge.sh",
+    "surge_domain": "cluttered-breath.surge.sh",
     "dist_prototype": "dist-prototype",
     "dist_preview_deploy": "dist-preview-deploy",
     "sips_max_dimension": 1200,

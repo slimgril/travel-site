@@ -18,7 +18,8 @@ New projects:           /Users/mac/Documents/Projects/旅遊/<project-name>/
 | **Git 有效 repo** | `/Users/mac/Documents/Projects/旅遊/travel-site/` |
 | **旅遊工作區父目錄** | `/Users/mac/Documents/Projects/旅遊/` |
 | **GitHub remote** | `https://github.com/slimgril/travel-site` |
-| **Desktop 空殼（禁止）** | `~/Desktop/旅遊/travel-site/` — 非 git repo，勿開啟為 Cursor workspace |
+| **Desktop residue（禁止開啟）** | `~/Desktop/旅遊/` — 僅導向文件；不得有 `travel-site/` 子目錄 |
+| **Workspace SSOT** | `.ai-kos/WORKSPACE.md` |
 
 Agent 行為：所有 `cd`、`git`、`commit`、`push`、`deploy`、檔案讀寫**僅限** Documents 路徑。不得 fallback 至 Desktop。
 

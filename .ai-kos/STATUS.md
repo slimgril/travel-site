@@ -2,6 +2,17 @@
 
 最後更新：2026-07-16（GitHub remote `origin` → slimgril/travel-site）
 
+## 2026-07-16 — Workspace Integrity（Priority 0）
+
+| 項目 | 結果 |
+|------|------|
+| **Cursor folderUri** | Documents Canonical — PASS |
+| **Git toplevel** | `/Users/mac/Documents/Projects/旅遊/travel-site` — PASS |
+| **Desktop `travel-site/` 假專案** | 已刪除 — PASS |
+| **Missing git blobs** | 自 `origin/main` 還原 6 張照片 — PASS |
+| **Deploy domain config** | `cluttered-breath.surge.sh`（sync config + REPOSITORY） |
+| **SSOT** | 新增 `.ai-kos/WORKSPACE.md` |
+
 ## 2026-07-16 — Canonical workspace path（Documents ONLY）
 
 ```
@@ -14,12 +25,25 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 |------|-----|
 | **Active project root** | `/Users/mac/Documents/Projects/旅遊/travel-site/` |
 | **Workspace parent** | `/Users/mac/Documents/Projects/旅遊/` |
-| **Git HEAD** | `ce389e9` — up to date with `origin/main` |
-| **Stale Desktop shell** | `~/Desktop/旅遊/travel-site/` — **空目錄、非 git repo**（2026-07-16 確認） |
-| **Desktop redirect** | `~/Desktop/旅遊/travel-site/DEPRECATED.md` 已放置導向說明 |
-| **Cursor 修正** | 使用者須 **File → Open Folder** → `/Users/mac/Documents/Projects/旅遊/travel-site` |
+| **Git HEAD** | sync with `origin/main`（見 `git status`） |
+| **Desktop residue** | `~/Desktop/旅遊/` 僅導向文件（無 `travel-site/` 子目錄） |
+| **Cursor 修正** | 必須 **File → Open Folder** → Canonical Root |
 
-## 2026-07-16 — Baltic daily travel update
+## 2026-07-16 — Baltic resume（開工 08:00）
+
+| 項目 | 狀態 |
+|------|------|
+| **Drive scan** | OK（gdown）— Shared Folder 共 18 檔；無新 Day 資料夾候選 |
+| **bldh-trio 增量** | 無新旅人照片可入站（0711–0714 已入 day01／03／04 或為同圖原檔） |
+| **Build** | PASS — `python3 scripts/build_prototype.py`（缺圖 0） |
+| **Deploy / Commit** | SKIP — 無札記變更；待你指示 |
+| **本機修復** | 自 `cooked/matched/` 補回 `tallinn-town-hall-square.jpg`、`tartu-old-town.jpg`；baikal 3 張缺圖以同目錄備援檔補檔名 |
+
+- 已完成札記：day01、day03、day04
+- 待 Drive 新圖：day02（維爾紐斯抵達）、day05（十字架山／隆黛爾）起
+- review_required：19（日期資料夾 `0711/`–`0714/`，非 `Day XX` 結構）
+
+## 2026-07-16 — Baltic daily travel update（稍早）
 
 | 項目 | 狀態 |
 |------|------|

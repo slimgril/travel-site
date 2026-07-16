@@ -7,7 +7,7 @@
 | **Workspace Parent** | `/Users/mac/Documents/Projects/旅遊/` |
 | **Default Branch** | `main` |
 | **Remote Name** | `origin` |
-| **Deployment URL** | https://cluttered-breath-prototype.surge.sh/ |
+| **Deployment URL** | https://cluttered-breath.surge.sh/ |
 | **Created** | 2026-07-13 |
 
 ## Clone
