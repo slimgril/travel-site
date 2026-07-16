@@ -100,7 +100,8 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 
 | 項目 | 狀態 |
 |------|------|
-| **Release URL** | https://cluttered-breath-prototype.surge.sh/ |
+| **Release URL（當時）** | cluttered-breath-prototype.surge.sh（**legacy；已 BLOCKED**） |
+| **現行 Production** | https://cluttered-breath.surge.sh/ |
 | **Build** | PASS — `python3 scripts/build_prototype.py`（2026-07-13 Mapping Report：3 trips, 0 missing/broken images, 0 broken links, 0 gray cards） |
 | **Deploy bundle** | `dist-preview-deploy/` — 298 files, ~94 MB（sips 壓縮後） |
 | **Live checks** | Homepage / Baltic / Baikal Rail — HTTP 200 |
@@ -143,7 +144,8 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 
 ### 已知限制
 
-- 重新部署指令：`surge dist-preview-deploy cluttered-breath-prototype.surge.sh`
+- **現行重新部署**：`npx surge dist-preview-deploy cluttered-breath.surge.sh`
+- 勿再使用 `cluttered-breath-prototype.surge.sh`（legacy BLOCKED）
 
 ---
 
@@ -157,7 +159,7 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 | **Repository** | https://github.com/slimgril/travel-site.git |
 | **Remote** | `origin` |
 | **Default branch** | `main` |
-| **Deployment** | https://cluttered-breath-prototype.surge.sh/ |
+| **Deployment** | https://cluttered-breath.surge.sh/ |
 | **紀錄** | `REPOSITORY.md` |
 
 靜態旅遊網站，以 Markdown + 照片建置多趟旅程。主要 build 入口為 `scripts/build.py`（正式）與 `scripts/build_prototype.py`（原型預覽）。
@@ -196,7 +198,8 @@ Baikal Rail（`baikal-rail`）已具備 Google Drive 增量照片同步能力。
 
 | 項目 | 狀態 |
 |------|------|
-| **Release URL** | https://cluttered-breath-prototype.surge.sh/ |
+| **Release URL（當時）** | cluttered-breath-prototype.surge.sh（**legacy BLOCKED**） |
+| **現行 Production** | https://cluttered-breath.surge.sh/ |
 | **Build** | PASS（2026-07-13 Mapping Report：`python3 scripts/build_prototype.py` → `dist-prototype/`） |
 | **Validation** | PASS — 0 missing image、0 broken image、0 broken link、0 gray card；全 20 天 nav 可達 |
 | **Deploy** | PASS — Surge 部署成功（298 檔、94.1 MB） |
@@ -209,8 +212,8 @@ Baikal Rail（`baikal-rail`）已具備 Google Drive 增量照片同步能力。
 ```bash
 python3 scripts/build_prototype.py
 python3 -c "from pathlib import Path; import sys; sys.path.insert(0,'scripts'); from sync_baikal_photos import run_checks, SyncReport; r=SyncReport(); ok=run_checks(r); print(r.checks); sys.exit(0 if ok else 1)"
-curl -sI https://cluttered-breath-prototype.surge.sh/
-curl -sI https://cluttered-breath-prototype.surge.sh/trips/baikal-rail.html
+curl -sI https://cluttered-breath.surge.sh/
+curl -sI https://cluttered-breath.surge.sh/trips/baikal-rail.html
 ```
 
 ### 已知問題（2026-07-13 Mapping Report 後）

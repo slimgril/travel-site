@@ -1,5 +1,15 @@
 # HISTORY
 
+## 2026-07-16 — Wake command：Ingest
+
+- 新增替代指令 **Ingest** = 修改跨文件中的相關內容（一致性同步）
+- 寫入父層 `CLAUDE.md`、`DECISIONS.md`、`RESUME_CONTEXT.md`、`INDEX.md`
+
+## 2026-07-16 — Related-file consistency（Operational Phase）
+
+- 對齊仍寫舊 deploy domain / Operational Mode 的相關文件：`INDEX`、`DAILY_TRAVEL_UPDATE`、`INFRASTRUCTURE`、`STATUS` 現行指令、`PHOTO_SYNC.md`、父層 `CLAUDE.md`
+- 歷史敘事中的 prototype URL 保留並標 legacy；可執行指令一律改為 `cluttered-breath.surge.sh`
+
 ## 2026-07-16 — Operational Phase
 
 - 正式進入 Operational Phase：AI-KOS 服務旅行書

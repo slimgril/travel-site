@@ -1,6 +1,7 @@
 # Daily Travel Update — 每日旅行照片同步（Operational Rule）
 
-**狀態**：Operational Mode 生效（2026-07-16 起）  
+**狀態**：**Operational Phase** 生效（2026-07-16 正式；自 2026-07-17 起為每日預設工作）  
+**原則**：AI-KOS 服務旅行書 — 本規則服務旅程內容上線，不以擴充治理為目標  
 **觸發**：每日 **08:00（Asia/Taipei）**，Agent **主動執行**，無需使用者提醒  
 **性質**：AI-KOS 營運規則 — Agent 於「開工」或排程 session 時必讀並遵循
 
@@ -8,7 +9,7 @@
 
 ## 目的
 
-在 Operational Mode 下，以固定節奏維持 travel-site 與斌哥 Google Drive 照片 SSOT 同步，並更新旅行札記、建置、驗證、部署與版本控制。
+在 **Operational Phase** 下，以固定節奏維持 travel-site 與斌哥 Google Drive 照片 SSOT 同步，並更新旅行札記、建置、驗證、部署與版本控制。
 
 **單一真相來源（Drive）**：見 `.ai-kos/INFRASTRUCTURE.md` — **不在此重複 Folder ID**。
 
@@ -41,10 +42,11 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 
 | 文件 | 用途 |
 |------|------|
+| `.ai-kos/WORKSPACE.md` | 路徑 Integrity SSOT |
 | `.ai-kos/INFRASTRUCTURE.md` | Drive SSOT、本機照片路徑、Resume 不 re-ask |
 | `.ai-kos/CONTENT_STYLE.md` | 旅行札記 v1.0 — **第一人稱旅行者視角** |
 | `content/baikal-rail/source/PHOTO_SYNC.md` | 增量同步、manifest、build/deploy 細節 |
-| `.ai-kos/RESUME_CONTEXT.md` | Operational Mode 優先序、活躍旅程 |
+| `.ai-kos/RESUME_CONTEXT.md` | Operational Phase 優先序、活躍旅程 |
 | `.ai-kos/STATUS.md` | 當前 trip 狀態、待審數量 |
 
 ---

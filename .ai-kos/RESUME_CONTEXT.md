@@ -45,6 +45,16 @@ Travel Site 已進入 **Operational Phase**。
 - 舊旅程 bulk rewrite
 - Workspace / 路徑再遷移（Integrity 已完成）
 
+### Wake commands
+
+| 指令 | 行為 |
+|------|------|
+| **開工** / `/start` | 讀斷點 + `RESUME_CONTEXT`；預設跑 Daily Travel Update |
+| **收工** / `/end` | 寫輕量斷點至父層 `CLAUDE.md` 後道別 |
+| **Ingest** | **跨文件相關內容同步**：找出本次修改牽涉的相關文件並一併改一致（見 `DECISIONS.md`） |
+
+**Ingest 一句話：** 修改跨文件中的相關內容。不是新功能，是知識／設定一致性修補。
+
 ---
 
 ### Content Style

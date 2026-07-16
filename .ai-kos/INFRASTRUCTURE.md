@@ -94,10 +94,11 @@ Google Drive Shared Folder（永久根，folder_id 固定）
 
 | 情境 | 行為 |
 |------|------|
-| Resume / 開工 | 直接使用上方 Shared Folder，不詢問路徑 |
-| Daily Update / 照片同步 | 遵循 `.ai-kos/DAILY_TRAVEL_UPDATE.md`（每日 08:00 主動執行） |
+| Resume / 開工 | 先確認 `.ai-kos/WORKSPACE.md`；直接使用上方 Shared Folder，不詢問路徑 |
+| Daily Update / 照片同步 | 遵循 `.ai-kos/DAILY_TRAVEL_UPDATE.md`（每日 08:00；結尾固定營運摘要） |
 | 新旅程 | 在 Shared Folder 內新增子資料夾，**不**建立新 Shared Folder |
+| Operational Phase | AI-KOS 服務旅行書；不以擴充本文件為每日目標 |
 
-**決策背景**：`.ai-kos/DECISIONS.md` — Google Drive Shared Folder 永久 SSOT · Daily Travel Photo Sync（2026-07-16）
+**決策背景**：`.ai-kos/DECISIONS.md` — Google Drive Shared Folder 永久 SSOT · Daily Travel Photo Sync · Operational Phase（2026-07-16）
 
 **Canonical 營運規則**：`.ai-kos/DAILY_TRAVEL_UPDATE.md`

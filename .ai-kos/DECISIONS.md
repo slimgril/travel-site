@@ -4,6 +4,34 @@
 
 ---
 
+## 2026-07-16 — Wake command：Ingest（跨文件相關內容同步）
+
+**決策**：新增喚醒／替代指令 **Ingest**（`ingest` 同等）。
+
+**定義：**
+
+> **Ingest** = 修改跨文件中的相關內容。
+
+**行為：**
+
+1. 以本次（或使用者指定）變更為中心，搜尋仍引用舊名稱、舊 URL、舊 Phase／Mode、舊模板的相關文件  
+2. **一併修改**使 AI-KOS、操作手冊、父層 `CLAUDE.md`、現行 deploy／sync 指引一致  
+3. 歷史 archive（如 STALE `SESSION.md`、已標 legacy 的舊敘事）可保留，但**可執行指令**必須改為現行正確值  
+4. 不做無關功能開發、不做 bulk rewrite  
+5. 完成後簡報：改了哪些檔、刻意未改哪些
+
+**與其他指令關係：**
+
+| 指令 | 用途 |
+|------|------|
+| **開工** | 恢復記憶 → 預設 Daily Travel Update |
+| **收工** | 寫斷點 → 道別 |
+| **Ingest** | 跨文件相關內容同步（知識一致性） |
+
+**理由**：Operational Phase 下仍需偶爾對齊文件；用短指令代替長說明，避免漏改相關檔。
+
+---
+
 ## 2026-07-16 — Operational Phase 正式生效
 
 **決策**：自本日起 travel-site 正式進入 **Operational Phase**。`6779dac`（Workspace Integrity）已上遠端；治理基建凍結為夠用狀態。
@@ -55,22 +83,23 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 
 ---
 
-## 2026-07-16 — Daily Travel Photo Sync（Operational Mode 08:00）
+## 2026-07-16 — Daily Travel Photo Sync（Operational Phase · 08:00）
 
-**決策**：自 2026-07-16 起，travel-site 進入 **Daily Travel Photo Sync** 營運規則 — 每日 **08:00（Asia/Taipei）** Agent **主動**執行 Daily Travel Update，無需使用者提醒。
+**決策**：自 2026-07-16 起，travel-site 進入 **Daily Travel Photo Sync** 營運規則 — 每日 **08:00（Asia/Taipei）** Agent **主動**執行 Daily Travel Update，無需使用者提醒。  
+（舊稱 Operational Mode；正式名稱以 **Operational Phase** 為準，見上方條目。）
 
 **流程**（canonical：`.ai-kos/DAILY_TRAVEL_UPDATE.md`）：
 
 1. Drive SSOT 掃描（`.ai-kos/INFRASTRUCTURE.md`，不 re-ask Folder ID）
 2. 增量同步（比對 `photo-sync.json` manifest）
 3. 更新旅行札記（所有新照片，`.ai-kos/CONTENT_STYLE.md` 第一人稱視角）
-4. Build → Verify → Deploy → Commit/Push（有變更時）→ Handoff
+4. Build → Verify → Deploy → Commit/Push（有變更時）→ **固定營運摘要** Handoff
 
 **Error Policy**：auth / permission / infrastructure 錯誤 — **立即停止、不重試、回報根因**。
 
 **理由**：
 
-- Operational Mode 需固定節奏，避免照片與札記滞後
+- Operational Phase 需固定節奏，避免照片與札記滞後
 - 單一 canonical 規則供開工與排程 session 遵循
 - 與既有 Drive SSOT、增量 sync 決策一致，不重複基礎設施定義
 

@@ -62,12 +62,16 @@ Canonical entry point for repository governance.
 - **Project infrastructure (permanent):** `.ai-kos/INFRASTRUCTURE.md`
 - Content style (旅行札記 v1.0): `.ai-kos/CONTENT_STYLE.md`
 - Project conventions: `CONVENTIONS.md`
-- Session state: `SESSION.md`
+- Session archive (STALE): `SESSION.md` — 勿作 active path / deploy 依據
 - Asset and migration notes: `ASSET_CHECKLIST.md`
 - Project status: `.ai-kos/STATUS.md`
 - Repository record: `REPOSITORY.md`
 - Architecture decisions: `.ai-kos/DECISIONS.md`
 - Changelog: `HISTORY.md`
+
+## Phase
+
+**Operational Phase**（2026-07-16）— AI-KOS 服務旅行書；預設工作 = Daily Travel Update + 固定營運摘要。
 
 ## Workspace Path（HARD RULE）
 
@@ -79,11 +83,20 @@ FORBIDDEN: /Users/mac/Desktop/旅遊/ — do not read, write, commit, or deploy 
 New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 ```
 
-## Daily Travel Update（Operational Mode）
+## Daily Travel Update（Operational Phase）
 
-- **Canonical rule:** `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行；Drive SSOT → 增量 sync → 旅行札記 → build → verify → deploy → commit/push → handoff
+- **Canonical rule:** `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行；Drive SSOT → 增量 sync → 旅行札記 → build → verify → deploy → commit/push → **固定營運摘要**
+- **Deploy URL:** https://cluttered-breath.surge.sh/
 - Active project path: `/Users/mac/Documents/Projects/旅遊/travel-site/`
 - Cross-ref: `.ai-kos/WORKSPACE.md` · `.ai-kos/INFRASTRUCTURE.md` · `.ai-kos/CONTENT_STYLE.md` · `content/baikal-rail/source/PHOTO_SYNC.md`
+
+## Wake commands
+
+| 指令 | 含義 |
+|------|------|
+| **開工** | 恢復記憶；預設 Daily Travel Update |
+| **收工** | 寫斷點並道別 |
+| **Ingest** | 修改跨文件中的相關內容（一致性同步；見 `DECISIONS.md`） |
 
 ## Baikal Rail Photo Sync
 

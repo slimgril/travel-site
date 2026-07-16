@@ -179,7 +179,7 @@ python3 scripts/sync_baikal_photos.py --skip-deploy
    - New imported > 0 → 確認 dist 預覽
    - Review Required > 0 → 人工整理 Drive 或手動匯入
    - Gray cards → 對照 dayXX.md 缺圖 landmark
-4. （可選）Surge 自動部署至 cluttered-breath-prototype.surge.sh
+4. （可選）Surge 自動部署至 cluttered-breath.surge.sh
 ```
 
 ---
@@ -212,8 +212,9 @@ rclone config
 ### Build / Deploy 失敗
 
 - Build 失敗：先 `python3 scripts/build_prototype.py` 單獨排查
-- Surge CLI crash：為 CLI 已知問題；可 `--skip-deploy`，手動 `surge dist-preview-deploy cluttered-breath-prototype.surge.sh`
+- Surge CLI crash：為 CLI 已知問題；可 `--skip-deploy`，手動 `npx surge dist-preview-deploy cluttered-breath.surge.sh`
 - 部署前確認 `dist-preview-deploy` 無 0-byte 或 `* 2.jpg` 重複檔名
+- **勿**部署至 `cluttered-breath-prototype.surge.sh`（legacy BLOCKED）
 
 ### 中斷後恢復
 
@@ -243,10 +244,11 @@ Sync 腳本在 import 後可自動執行 build 並檢查：
 檢查全部 PASS 後（可用 `--skip-deploy` 略過）：
 
 1. 從 `dist-prototype/` 複製 HTML/CSS 與引用的 `photos/` → `dist-preview-deploy/`
-2. `sips` 壓縮（最長邊 1200px、JPEG 品質 82）
-3. `surge dist-preview-deploy cluttered-breath-prototype.surge.sh`
+2. `sips` 壓縮（最長邊 1200px、JPEG 品質 82）— **須在 sandbox 外執行**，否則圖片可能變黑
+3. `npx surge dist-preview-deploy cluttered-breath.surge.sh`
 
-預覽：https://cluttered-breath-prototype.surge.sh/
+Production：https://cluttered-breath.surge.sh/  
+（`surge_domain` 以 `photo-sync-config.json` 為準；與 `.ai-kos/DAILY_TRAVEL_UPDATE.md` 營運摘要 Production 欄一致）
 
 ---
 
