@@ -1,6 +1,25 @@
 # STATUS — travel-site
 
-最後更新：2026-07-16（Operational Phase 正式生效）
+最後更新：2026-07-17（Baltic Day 3 Daily Travel Update）
+
+## 2026-07-17 — Baltic Day 3 維爾紐斯（Daily Travel Update）
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic（`bldh-trio`）Day 3 ｜ 07/13 維爾紐斯首都深度遊 |
+| **Drive sync** | `0713/` 23/27 檔已同步（4 張 07/17 櫻桃酒店家 rate-limit，review_required 延後） |
+| **New Photos** | 15 張旅人照片入站 `photos/bldh-trio/day03/`（sips 1920/q88） |
+| **Travel Notes** | day03.md 由 2 卡 → 17 卡，旅行札記 v1.0（對岸共和國、聖安娜/伯納迪內、大教堂廣場、格迪米納斯塔俯瞰、佔領博物館、聖彼得保羅/聖卡濟米爾、櫻桃酒） |
+| **Hero** | 聖安娜教堂（斌哥入鏡） |
+| **Build** | PASS — `build_prototype.py`（缺圖 0） |
+| **Deploy** | PASS — `dist-preview-deploy`（308 檔/302 圖）→ cluttered-breath.surge.sh |
+| **Live** | Homepage / bldh-trio / Day 3 新圖 HTTP 200 |
+| **Commit** | `313d0d5`（origin/main） |
+
+- 已完成札記：day01、day03、day04
+- review_required：4（`IMG_20260717_1620xx`–`1627xx` 櫻桃酒專賣店，Drive rate-limit 未下載；日期屬 07/17 需人工確認歸屬）
+
+
 
 ## 2026-07-16 — Operational Phase
 
