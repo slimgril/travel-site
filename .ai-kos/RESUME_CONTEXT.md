@@ -79,6 +79,8 @@ Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTEN
 **避免：** Wikipedia 式條目、旅遊書導覽、百科介紹、年代表堆砌、建築規格羅列。  
 **偏好：** 漫步……、穿過……、抬頭望見……、停下腳步……、忍不住拍下……、留下這張照片……
 
+**BLDH Trio 排版模板（HARD RULE）：** `bldh-trio` 專案所有排版／生成／合併／渲染，一律套用根目錄 `city-magazine-template.md`「城市雜誌風排版器模板」。排版器 `scripts/build_bldh_magazine.py` → 輸出 `content/bldh-trio/bldh-trio-magazine.html`（standalone，`build.py` 不處理）。詳見 `.ai-kos/DECISIONS.md`（2026-07-18）。
+
 ---
 
 ### Infrastructure Quick Reference (facts)
@@ -127,6 +129,7 @@ Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTEN
 - **Daily operational rule:** `.ai-kos/DAILY_TRAVEL_UPDATE.md`
 - Drive SSOT & paths: `.ai-kos/INFRASTRUCTURE.md`
 - Content style spec: `.ai-kos/CONTENT_STYLE.md`
+- BLDH Trio 排版模板: `city-magazine-template.md`（排版器 `scripts/build_bldh_magazine.py`）
 - Project status: `.ai-kos/STATUS.md`
 - Governance index: `.ai-kos/INDEX.md`
 - Baikal photo sync: `content/baikal-rail/source/PHOTO_SYNC.md`

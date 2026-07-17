@@ -1,0 +1,92 @@
+<svg class="route-svg" viewBox="0 0 500 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="波羅的海三小國真實地理路線圖">
+  <style>
+    .bm-country  { stroke:#D4A843; stroke-width:1.4; stroke-linejoin:round; }
+    .bm-neighbor { fill:#CFC8B6; opacity:0.15; }
+    .bm-nlabel   { fill:#F5F0E8; opacity:0.28; font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:11px; letter-spacing:0.35em; }
+    .bm-clabel   { fill:#1B4332; font-family:'PingFang TC','Noto Sans TC',sans-serif; font-weight:700; opacity:0.78; }
+    .bm-carea    { fill:#2D6A4F; font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:10px; letter-spacing:0.05em; opacity:0.7; }
+    .bm-mark     { font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:13.5px; font-weight:700; fill:#1B4332; }
+    .bm-tag      { font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:9px; letter-spacing:0.22em; fill:#B98A2E; }
+    .bm-sea      { font-family:'PingFang TC','Noto Sans TC',sans-serif; fill:#F0CC7A; }
+  </style>
+
+  <!-- ── Neighbouring countries (faint context) ── -->
+  <path class="bm-neighbor" d="M 140,0 L 500,0 L 500,56 C 380,66 240,64 150,54 C 118,42 128,10 140,0 Z"/>
+  <path class="bm-neighbor" d="M 452,62 C 470,120 452,220 456,300 C 458,382 448,432 452,472 L 500,480 L 500,62 Z"/>
+  <path class="bm-neighbor" d="M 360,452 C 402,462 462,470 500,480 L 500,620 L 300,620 C 302,590 332,558 352,516 C 364,492 356,468 360,452 Z"/>
+  <path class="bm-neighbor" d="M 0,576 C 82,584 162,596 232,600 C 200,614 118,620 0,620 Z"/>
+  <path class="bm-neighbor" d="M 0,510 L 66,520 C 70,540 55,560 40,568 L 0,570 Z"/>
+
+  <text class="bm-nlabel" x="418" y="30">芬蘭</text>
+  <text class="bm-nlabel" x="470" y="250" transform="rotate(90 470 250)">俄羅斯</text>
+  <text class="bm-nlabel" x="404" y="556">白俄羅斯</text>
+  <text class="bm-nlabel" x="70" y="606">波蘭</text>
+
+  <!-- ── Sea labels ── -->
+  <text class="bm-sea" x="26" y="410" font-size="12" letter-spacing="0.5em" opacity="0.24" transform="rotate(-90 26 410)">BALTIC SEA</text>
+  <text class="bm-sea" x="300" y="70" font-size="9" letter-spacing="0.3em" opacity="0.42" text-anchor="middle">芬蘭灣</text>
+  <text class="bm-sea" x="188" y="284" font-size="8.5" letter-spacing="0.15em" opacity="0.5" text-anchor="middle" transform="rotate(58 188 284)">里加灣</text>
+
+  <!-- ── ESTONIA (north) + islands ── -->
+  <path class="bm-country" fill="#E6DBC1"
+        d="M 237,244 L 230,208 L 242,183 L 214,176 L 201,150 L 193,131 L 209,112 L 211,97
+           L 247,88 L 255,84 L 299,81 L 346,80 L 433,89 L 418,135 L 397,187 L 392,261
+           L 340,257 L 284,234 Z"/>
+  <path class="bm-country" fill="#E6DBC1" d="M 105,187 C 118,175 150,168 164,183 C 168,205 148,224 133,221 C 112,216 96,200 105,187 Z"/>
+  <path class="bm-country" fill="#E6DBC1" d="M 131,130 C 145,124 161,132 159,144 C 156,158 138,160 130,152 C 124,145 123,134 131,130 Z"/>
+  <circle class="bm-country" fill="#E6DBC1" cx="180" cy="196" r="6"/>
+
+  <!-- ── LATVIA (middle) ── -->
+  <path class="bm-country" fill="#ECE1C9"
+        d="M 71,392 L 110,376 L 175,375 L 242,372 L 299,396 L 340,411 L 408,430 L 434,382
+           L 413,316 L 392,261 L 340,257 L 284,234 L 237,244 L 226,287 L 219,317 L 185,306
+           L 164,273 L 151,254 L 144,241 L 90,278 L 63,316 L 61,363 L 66,390 Z"/>
+
+  <!-- ── LITHUANIA (south, largest) ── -->
+  <path class="bm-country" fill="#F1E8D4"
+        d="M 71,392 L 66,438 L 82,505 L 92,556 L 145,569 L 216,582 L 282,560 L 315,522
+           L 351,442 L 340,411 L 299,396 L 242,372 L 175,375 L 110,376 Z"/>
+
+  <!-- ── Country labels + area figures ── -->
+  <text class="bm-clabel" x="285" y="150" font-size="19">愛沙尼亞</text>
+  <text class="bm-carea"  x="286" y="167">45,300 km²</text>
+
+  <text class="bm-clabel" x="352" y="358" font-size="19">拉脫維亞</text>
+  <text class="bm-carea"  x="353" y="375">64,600 km²</text>
+
+  <text class="bm-clabel" x="96" y="486" font-size="19">立陶宛</text>
+  <text class="bm-carea"  x="97" y="503">65,300 km²</text>
+
+  <!-- ── Travel route ── -->
+  <path fill="none" stroke="#D4A843" stroke-width="2.4" stroke-linecap="round"
+        stroke-dasharray="1.4 8.5" opacity="0.95"
+        d="M 282,535 Q 250,545 211,515 Q 194,468 186,410 Q 200,360 219,317
+           Q 244,306 261,301 Q 244,240 242,183 Q 250,120 255,84"/>
+  <path fill="#D4A843" d="M 255,84 L 248,100 L 263,98 Z" opacity="0.95"/>
+
+  <circle cx="211" cy="515" r="3" fill="#D4A843" opacity="0.85"/>
+  <circle cx="242" cy="183" r="3" fill="#D4A843" opacity="0.85"/>
+
+  <!-- ── Landmark markers ── -->
+  <circle cx="282" cy="535" r="9.5" fill="none" stroke="#D4A843" stroke-width="1.3" opacity="0.7"/>
+  <circle cx="282" cy="535" r="5.5" fill="#D4A843" stroke="#F5F0E8" stroke-width="1.8"/>
+  <text class="bm-mark" text-anchor="middle" x="266" y="517">維爾紐斯舊城</text>
+  <text class="bm-tag"  text-anchor="middle" x="266" y="503">START ・ 啟程</text>
+
+  <circle cx="248" cy="547" r="5" fill="#D4A843" stroke="#F5F0E8" stroke-width="1.8"/>
+  <text class="bm-mark" x="236" y="562" text-anchor="end">特拉凱城堡</text>
+
+  <circle cx="186" cy="410" r="5" fill="#D4A843" stroke="#F5F0E8" stroke-width="1.8"/>
+  <text class="bm-mark" x="174" y="414" text-anchor="end">十字架山</text>
+
+  <circle cx="219" cy="317" r="5" fill="#D4A843" stroke="#F5F0E8" stroke-width="1.8"/>
+  <text class="bm-mark" x="230" y="332">里加舊城</text>
+
+  <circle cx="261" cy="301" r="5" fill="#D4A843" stroke="#F5F0E8" stroke-width="1.8"/>
+  <text class="bm-mark" x="273" y="299">錫古爾達</text>
+
+  <circle cx="255" cy="84" r="9.5" fill="none" stroke="#D4A843" stroke-width="1.3" opacity="0.7"/>
+  <circle cx="255" cy="84" r="5.5" fill="#D4A843" stroke="#F5F0E8" stroke-width="1.8"/>
+  <text class="bm-mark" x="272" y="90">塔林舊城</text>
+  <text class="bm-tag"  x="272" y="104">FINISH ・ 終點</text>
+</svg>

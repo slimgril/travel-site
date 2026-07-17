@@ -4,6 +4,98 @@
 
 ---
 
+## 2026-07-18 — 排版風格＝Knowledge（Template Library 原則）
+
+**性質**：架構原則（使用者明確陳述，記錄／同步，非我主動 scaffold）。
+
+**原則：** AI-KOS 將**排版風格（Layout）視為 Knowledge，而非 Prompt**。所有模板皆為**可重複使用的 Knowledge Asset**。Project **不直接描述排版**，而是**指定使用哪一個 Template**。
+
+**知識流：**
+
+```
+Knowledge → Template → Renderer → Output
+```
+
+**首個具體實例（已驗證）：**
+
+| 層 | 實體 |
+|----|------|
+| Knowledge | 旅程內容 `content/bldh-trio/day*.md`（旅行札記 v1.0） |
+| Template | `city-magazine-template.md`（城市雜誌風，根目錄 SSOT） |
+| Renderer | `scripts/build_bldh_magazine.py` |
+| Output | `content/bldh-trio/bldh-trio-magazine.html` |
+
+**含義：**
+- Project 端只需「指定 Template」，不再在 prompt 內描述排版細節
+- 同一 Template 可被多個 Project／旅程重用
+- 模板規格變更 = 修改 Template（Knowledge），Renderer 依模板產出
+
+**待批准（Suggestion，未執行）：** 是否新開 `.ai-kos/TEMPLATES.md` 作為正式 Template Library 登錄（依 `INDEX.md` 治理原則，新增治理文件需明確批准）。
+
+---
+
+## 2026-07-18 — BLDH Trio 指定「城市雜誌風排版器模板」為正式排版規格
+
+**性質**：專案排版規格決策（僅限 `bldh-trio`，不影響其他旅程或 `build.py` 主流程）。
+
+**決策：** 波羅的海三小國 11 天（`bldh-trio`）專案，所有**排版、生成、合併、渲染**流程一律套用「城市雜誌風排版器模板」。
+
+| 角色 | 檔案 |
+|------|------|
+| **模板（SSOT）** | 根目錄 `city-magazine-template.md` |
+| **排版器** | `scripts/build_bldh_magazine.py`（header 已標註以模板為準） |
+| **輸出** | `content/bldh-trio/bldh-trio-magazine.html`（standalone，`build.py` 不處理） |
+
+**模板規格摘要：** 大標題＋斜體副標（原文首句）· 行距 1.75 · 字重 300–400 · 全寬圖片不裁切／不變形 · 上下留白 · `---` 細線分隔 · `✦` 金線側註 · Day kicker（Day 01）· meta 卡片（航班／住宿／領隊／午晚餐）· 歷史／古蹟／預告分節標。
+
+**約束：**
+- 排版器必須可重複執行，且產出恆依 `city-magazine-template.md`
+- 只調整排版，不改動 `day*.md` 原始文字（layout only）
+- 未來新增的「城市散步類」旅程沿用同一模板
+
+**參考**：`city-magazine-template.md` · `scripts/build_bldh_magazine.py`
+
+---
+
+## 2026-07-17 — Knowledge First 營運驗證（Baltic Day 3）
+
+**性質**：營運驗證紀錄（非新規則、非流程重設計）。記於此處而非 AI-KOS 憲法——憲法不放營運範例。
+
+**背景**：Baltic Day 3（07/13 維爾紐斯）以一個真實案例驗證了 AI-KOS **Rule 0：Knowledge First**。
+
+**觀察到的工作流：**
+
+1. 先驗證來源完整性（Drive SSOT 掃描）
+2. 偵測到同步落差（Drive `0713/` 約 27 張，本機僅 2 張）
+3. 先修復知識完整性（增量同步補齊 Day 3 照片）
+4. 才生成旅行內容（札記 + build + deploy）
+
+**關鍵教訓：**
+
+> **正確的知識，先於正確的內容（Correct knowledge precedes correct content）。**
+
+若當時直接就本機既有 2 張照片撰稿，會漏掉整天的維爾紐斯行程；先補知識再產出，才得到完整交付。
+
+**參考**：`.ai-kos/STATUS.md`（2026-07-17 Day 3 entry）· `AI-KOS.md` Rule 0 / Rule -1（真實專案驗證）
+
+---
+
+## 2026-07-17 — Observability 原則 + Operational Confidence 選填欄位
+
+**決策**：對齊已被真實營運驗證的知識，於文件層面同步（不改行為、不重設計流程）。
+
+1. **Observability** 確立為 AI-KOS **營運設計原則**，記於 `AI-KOS.md`（哲學層級，無實作細節）：讓人類理解 AI 正在做什麼、進度、營運健康、是否需介入。其具體展現即既有的**固定營運摘要**與 **Optional Safety Layer** 批准前摘要——屬同一原則的展現，故僅交叉引用、不另立新機制。
+2. **Operational Confidence** 加入 `DAILY_TRAVEL_UPDATE.md`，為**選填**欄位（High/Medium/Low + Reason）。整合進既有「可選附註」區，不新增必填欄位、不取代 `Status`。
+
+**一致性處理（發現的潛在衝突）：**
+
+- `AI-KOS/CLAUDE.md`：「Prefer evidence-backed conclusions over self-reported confidence.」
+- 為避免牴觸，Operational Confidence 明確定義為**由摘要既有證據彙整**（Source / Build / Deploy / Live / review_required），非主觀自評。
+
+**理由**：兩項知識已由多次真實營運 session 驗證（符合 Rule -1）；以最小幅度落於最合適文件，維持一致、避免重複。
+
+---
+
 ## 2026-07-16 — Wake command：Ingest（跨文件相關內容同步）
 
 **決策**：新增喚醒／替代指令 **Ingest**（`ingest` 同等）。

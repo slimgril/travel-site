@@ -213,6 +213,26 @@ Notes
 - Next: <下一步或待人工事項>
 ```
 
+**可選欄位 — Operational Confidence（選填，非必填）：**
+
+固定摘要之後，可選擇性附上 Operational Confidence——由摘要既有結果**彙整**出的整體信心判斷，用來一眼看出「這次交付有多穩」：
+
+```text
+Operational Confidence
+High | Medium | Low
+
+Reason
+- Source completeness verified
+- Build PASS
+- Deploy PASS
+- Live Verification PASS
+- Remaining issues explicitly isolated
+```
+
+- **選填**：省略不影響 Handoff 合規；固定營運摘要本體仍為必要，不得以本欄取代任何必填欄位。
+- **證據導向**：Confidence 必須由摘要既有證據（Source 完整度 / Build / Deploy / Live Verification / review_required）推得，不得憑主觀感覺；與 AI-KOS「evidence-backed over self-reported confidence」一致。
+- **與 Status 互補，不重複**：`Status` 陳述結果（Complete / Blocked / Partial）；`Operational Confidence` 補充「證據完整度」的信心層級，兩者並存即可，勿混為一欄。
+
 **範例（2026-07-13 Baltic）：**
 
 ```text

@@ -1,8 +1,11 @@
 ---
 slug: bldh-trio
 number: World Journey #002
-title: 波羅的海三小國 {11} 日
+title: 波羅的海三小國 11 日
 subtitle: 立陶宛 · 拉脫維亞 · 愛沙尼亞　2026年7月11日 — 7月21日
+map_svg: bldh-trio/baltic-route-map.svg
+layout_template: city-magazine-template.md
+layout_renderer: scripts/build_bldh_magazine.py
 traveler: 丫斌哥
 status: upcoming
 date_start: 2026-07-11
