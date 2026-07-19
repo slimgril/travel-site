@@ -8,9 +8,9 @@
 |------|------|
 | **Trip** | Baltic（`bldh-trio`）Day 3 ｜ 07/13 維爾紐斯 |
 | **Drive** | SSOT `1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD`（[20260711波羅的海](https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD)） |
-| **Sync** | 補下載先前 rate-limit 的 4 張；另將本機未入站 1 張猫王銘牌一併入書 |
-| **New Photos** | 5 張 → `photos/bldh-trio/day03/`（sips 1920/q88）：猫王銘牌、大教堂柱廊、佔領博物館大門、櫻桃酒店內、街角乾杯 |
-| **Travel Notes** | `day03.md` 新增 5 卡（旅行札記 v1.0） |
+| **Sync** | 補下載先前 rate-limit 的照片；不確定／與既有卡同景重複者不入站 |
+| **New Photos** | 4 張 → `photos/bldh-trio/day03/`（sips 1920/q88）：大教堂柱廊、佔領博物館大門、櫻桃酒店內、街角乾杯 |
+| **Travel Notes** | `day03.md` 新增 4 卡（旅行札記 v1.0）；移除與憲法牆同景的重複「我是貓王」卡 |
 | **Build** | PASS — `build_prototype.py`（缺圖 0） |
 | **Deploy** | PASS — surge → cluttered-breath.surge.sh（313 檔） |
 | **Live** | Homepage / bldh-trio / 新圖 HTTP 200 |
