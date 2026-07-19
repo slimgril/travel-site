@@ -1,6 +1,32 @@
 # STATUS — travel-site
 
-最後更新：2026-07-17（Baltic Day 3 Daily Travel Update）
+最後更新：2026-07-19（Baltic Day 3 增量：0713 新圖入站）
+
+## 2026-07-19 — Baltic Day 3 增量（0713 新照片）
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic（`bldh-trio`）Day 3 ｜ 07/13 維爾紐斯 |
+| **Drive** | SSOT `1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD`（[20260711波羅的海](https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD)） |
+| **Sync** | 補下載先前 rate-limit 的 4 張；另將本機未入站 1 張猫王銘牌一併入書 |
+| **New Photos** | 5 張 → `photos/bldh-trio/day03/`（sips 1920/q88）：猫王銘牌、大教堂柱廊、佔領博物館大門、櫻桃酒店內、街角乾杯 |
+| **Travel Notes** | `day03.md` 新增 5 卡（旅行札記 v1.0） |
+| **Build** | PASS — `build_prototype.py`（缺圖 0） |
+| **Deploy** | PASS — surge → cluttered-breath.surge.sh（313 檔） |
+| **Live** | Homepage / bldh-trio / 新圖 HTTP 200 |
+
+## 2026-07-18 — Baltic Day 1 黑圖修復（redeploy）
+
+| 項目 | 狀態 |
+|------|------|
+| **問題** | Day 1 多數圖灰卡／全黑 — 先前在 sandbox 內跑 `sips` 導致 |
+| **Mapping** | `day01.md` ↔ `photos/bldh-trio/day01/` 14 張檔名正確，非缺圖 |
+| **Fix** | sandbox **外** 重跑 `package_preview_deploy`（308 檔／302 圖） |
+| **Build** | PASS — `build_prototype.py`（缺圖 0） |
+| **Deploy** | PASS — `npx surge dist-preview-deploy cluttered-breath.surge.sh` |
+| **Live** | Day 1 抽查（含先前黑圖）HTTP 200、非黑圖 |
+| **Commit** | SKIP（僅 rebuild／redeploy；內容未改） |
+| **Git** | `main` ahead 1（`64654fb` magazine template，未 push） |
 
 ## 2026-07-17 — Baltic Day 3 維爾紐斯（Daily Travel Update）
 
