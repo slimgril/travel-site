@@ -383,7 +383,7 @@ def render_live(block, slug, day_meta):
     )
 
 
-def render_plan(block, landmarks=None):
+def render_plan(block, landmarks=None, diagonal=False):
     _, cards = split_cards(block['lines'])
     out = []
     landmarks = landmarks or {}
@@ -417,15 +417,49 @@ def render_plan(block, landmarks=None):
             img_div = ('        <div class="site-img %s"><div class="img-label">%s</div></div>'
                        % (GRADIENTS[i % len(GRADIENTS)], esc(name)))
             meta_html = ''
+        role = ''
+        kicker = ''
+        if diagonal and len(cards) == 2:
+            if i == 0:
+                role = ' site-card--diag-primary'
+                kicker = '        <div class="diag-kicker">上午 · 歷史人文</div>\n'
+            else:
+                role = ' site-card--diag-secondary'
+                kicker = '        <div class="diag-kicker">午後 · 現代生活</div>\n'
         out.append(
-            '      <div class="site-card">\n'
+            '      <div class="site-card%s">\n'
+            '%s'
             '%s\n'
             '        <div class="site-body">\n'
             '          <div class="site-name">%s</div>\n'
             '          <div class="site-desc">%s</div>\n'
             '%s\n'
             '        </div>\n'
-            '      </div>' % (img_div, esc(name), inline(desc), meta_html)
+            '      </div>' % (role, kicker, img_div, esc(name), inline(desc), meta_html)
+        )
+    if diagonal and len(out) == 2:
+        spine = (
+            '      <div class="diag-spine" aria-hidden="true">'
+            '<span class="diag-spine-dot"></span>'
+            '<span class="diag-spine-line"></span>'
+            '<span class="diag-spine-label">行程動線</span>'
+            '<span class="diag-spine-arrow">→</span>'
+            '</div>\n'
+        )
+        souvenirs = (
+            '      <aside class="diag-souvenirs" aria-label="立陶宛紀念小物">'
+            '<span class="diag-souv diag-souv--a">琥珀吊墜</span>'
+            '<span class="diag-souv diag-souv--b">黑麥麵包</span>'
+            '<span class="diag-souv diag-souv--c">木雕鸛鳥</span>'
+            '<span class="diag-souv diag-souv--d">櫻桃酒磁鐵</span>'
+            '<span class="diag-souv diag-souv--e">亞麻手巾</span>'
+            '<span class="diag-souv diag-souv--f">Cepelinai 胸針</span>'
+            '</aside>\n'
+        )
+        return (
+            '    <div class="sites-grid sites-grid--diagonal">\n'
+            '%s%s%s\n'
+            '    </div>' % (spine, souvenirs, '\n'.join(out))
         )
     return '    <div class="sites-grid">\n%s\n    </div>' % '\n'.join(out)
 
@@ -454,6 +488,8 @@ def render_day(day, slug, status, gi, landmarks=None):
     meta_tip = ('    <div class="extra-tip">%s</div>' % '　|　'.join(extra)) if extra else ''
 
     sections = []
+    day_num = head.get('day_num') or ''
+    use_diagonal = (day_num == '2')  # 2026-07-19 斜對角動線首試（BLDH Day 2）
     for b in blocks:
         if b['kind'] == 'sites':
             sections.append(render_sites(b, slug, gi))
@@ -462,13 +498,14 @@ def render_day(day, slug, status, gi, landmarks=None):
         elif b['kind'] == 'live' and status == 'done':
             sections.append(render_live(b, slug, day_meta_live))
         elif b['kind'] == 'plan':
-            sections.append(render_plan(b, landmarks))
+            sections.append(render_plan(b, landmarks, diagonal=use_diagonal))
 
     did = ('d%s' % head['day_num']) if head['day_num'] else ''
+    day_extra_class = ' day-section--diagonal' if use_diagonal else ''
     route_div = ('<div class="route">%s</div>' % route_html(head['route'])) if head['route'] else ''
     return (
         '<div class="day-divider"></div>\n'
-        '<section class="day-section" id="%s">\n'
+        '<section class="day-section%s" id="%s">\n'
         '  <div class="day-header">\n'
         '    <div class="day-badge"><div class="num">%s</div><div class="label">DAY</div></div>\n'
         '    <div class="day-info">\n'
@@ -481,7 +518,7 @@ def render_day(day, slug, status, gi, landmarks=None):
         '%s\n'
         '%s\n'
         '</section>' % (
-            did, esc(head['day_num']), esc(head['date']),
+            day_extra_class, did, esc(head['day_num']), esc(head['date']),
             esc(head['title'] or head['route']), route_div, acc, meta_tip,
             '\n'.join(s for s in sections if s)
         )

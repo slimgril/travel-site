@@ -42,8 +42,9 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 
 | 文件 | 用途 |
 |------|------|
+| **`CLAUDE.md`（專案根）** | **Photos SSOT 入口** — Drive 分享資料夾 URL／Folder ID（每日必先讀，勿再問路徑） |
 | `.ai-kos/WORKSPACE.md` | 路徑 Integrity SSOT |
-| `.ai-kos/INFRASTRUCTURE.md` | Drive SSOT、本機照片路徑、Resume 不 re-ask |
+| `.ai-kos/INFRASTRUCTURE.md` | Drive SSOT 細節、本機照片路徑（與 CLAUDE.md 同一 Folder ID） |
 | `.ai-kos/CONTENT_STYLE.md` | 旅行札記 v1.0 — **第一人稱旅行者視角** |
 | `content/baikal-rail/source/PHOTO_SYNC.md` | 增量同步、manifest、build/deploy 細節 |
 | `.ai-kos/RESUME_CONTEXT.md` | Operational Phase 優先序、活躍旅程 |

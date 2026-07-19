@@ -167,6 +167,219 @@
     border-radius:4px; padding:1px 6px; letter-spacing:0.5px;
   }
 
+  /* ── 斜對角動線（Day 2 試驗 · 取代等大並排）── */
+  .day-section--diagonal {
+    max-width:1100px;
+    padding-left:28px;
+    padding-right:28px;
+  }
+  .sites-grid--diagonal {
+    display:grid;
+    grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);
+    grid-template-rows:auto auto;
+    gap:20px 40px;
+    position:relative;
+    margin:8px 0 40px;
+    padding:12px 8px 28px;
+    min-height:620px;
+    overflow:visible;
+  }
+  .sites-grid--diagonal .site-card {
+    background:transparent;
+    box-shadow:none;
+    border-radius:0;
+    transition:transform 0.35s ease, opacity 0.35s ease;
+  }
+  .sites-grid--diagonal .site-card:hover { transform:none; }
+  .sites-grid--diagonal .site-card--diag-primary {
+    grid-column:1;
+    grid-row:1;
+    justify-self:stretch;
+    margin-left:0; /* 收回：勿貼齊頁邊，保留留白 */
+    max-width:560px;
+    z-index:2;
+  }
+  .sites-grid--diagonal .site-card--diag-primary .site-img {
+    height:min(46vw, 320px);
+    border-radius:16px;
+    box-shadow:0 18px 48px rgba(27,67,50,0.16);
+  }
+  .sites-grid--diagonal .site-card--diag-primary .site-body {
+    padding:16px 4px 8px;
+    max-width:34rem;
+  }
+  .sites-grid--diagonal .site-card--diag-secondary {
+    grid-column:2;
+    grid-row:1 / span 2;
+    align-self:end;
+    justify-self:end;
+    width:min(100%, 340px);
+    margin-top:72px;
+    margin-bottom:8px;
+    z-index:2;
+    display:grid;
+    grid-template-areas:
+      "kicker"
+      "img"
+      "body";
+    gap:0;
+  }
+  .sites-grid--diagonal .site-card--diag-secondary .diag-kicker { grid-area:kicker; }
+  .sites-grid--diagonal .site-card--diag-secondary .site-body { grid-area:body; }
+  .sites-grid--diagonal .site-card--diag-secondary .site-img { grid-area:img; }
+  .sites-grid--diagonal .site-card--diag-secondary .site-img {
+    height:210px;
+    min-height:210px;
+    border-radius:14px;
+    box-shadow:0 14px 36px rgba(0,0,0,0.14);
+    background-size:cover;
+    background-position:center;
+  }
+  .sites-grid--diagonal .site-card--diag-secondary .site-body {
+    padding:12px 4px 0;
+    text-align:right;
+  }
+  .sites-grid--diagonal .site-card--diag-secondary .site-meta {
+    align-items:flex-end;
+  }
+  .diag-kicker {
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--green-mid);
+    margin:0 0 10px;
+    font-weight:600;
+  }
+  .sites-grid--diagonal .site-card--diag-secondary .diag-kicker {
+    text-align:right;
+    margin:0 0 8px;
+    color:#8a7350;
+  }
+  .sites-grid--diagonal .site-name {
+    font-size:1.2rem;
+    letter-spacing:0.02em;
+  }
+  .sites-grid--diagonal .site-desc {
+    font-size:0.92rem;
+    line-height:1.75;
+    color:var(--text);
+    font-weight:400;
+  }
+  /* 左下空白：立陶宛紀念小物（隨意散落，補空虛感） */
+  .diag-souvenirs {
+    position:absolute;
+    left:2%;
+    bottom:4%;
+    width:min(42%, 340px);
+    height:210px;
+    z-index:1;
+    pointer-events:none;
+  }
+  .diag-souv {
+    position:absolute;
+    display:inline-block;
+    padding:7px 12px;
+    border-radius:999px;
+    font-size:0.74rem;
+    letter-spacing:0.04em;
+    color:var(--green-dark);
+    background:rgba(255,255,255,0.82);
+    border:1px solid rgba(27,67,50,0.12);
+    box-shadow:0 6px 18px rgba(27,67,50,0.08);
+    white-space:nowrap;
+  }
+  .diag-souv--a { left:8%;  top:18%; transform:rotate(-8deg); background:rgba(255,248,230,0.92); }
+  .diag-souv--b { left:38%; top:8%;  transform:rotate(6deg); }
+  .diag-souv--c { left:12%; top:52%; transform:rotate(4deg); background:rgba(236,245,238,0.95); }
+  .diag-souv--d { left:48%; top:46%; transform:rotate(-5deg); background:rgba(255,240,242,0.95); }
+  .diag-souv--e { left:22%; top:78%; transform:rotate(9deg); }
+  .diag-souv--f { left:55%; top:72%; transform:rotate(-3deg); background:rgba(245,242,232,0.95); }
+  /* 隱形時間軸：左上→右下斜切 */
+  .diag-spine {
+    position:absolute;
+    left:46%;
+    top:14%;
+    width:2px;
+    height:52%;
+    z-index:1;
+    pointer-events:none;
+    transform:rotate(-30deg);
+    transform-origin:top center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+  .diag-spine-line {
+    flex:1;
+    width:1px;
+    background:linear-gradient(
+      180deg,
+      rgba(212,168,67,0.05) 0%,
+      rgba(212,168,67,0.55) 30%,
+      rgba(27,67,50,0.35) 70%,
+      rgba(27,67,50,0.05) 100%
+    );
+  }
+  .diag-spine-dot {
+    width:9px; height:9px; border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 0 4px rgba(212,168,67,0.18);
+    flex-shrink:0;
+  }
+  .diag-spine-label {
+    position:absolute;
+    top:42%;
+    left:14px;
+    transform:rotate(30deg);
+    white-space:nowrap;
+    font-size:0.68rem;
+    letter-spacing:0.28em;
+    color:rgba(27,67,50,0.45);
+  }
+  .diag-spine-arrow {
+    color:var(--gold);
+    font-size:0.95rem;
+    transform:rotate(30deg);
+    opacity:0.85;
+  }
+  @media (max-width:760px) {
+    .day-section--diagonal { padding-left:20px; padding-right:20px; }
+    .sites-grid--diagonal {
+      grid-template-columns:1fr;
+      grid-template-rows:auto;
+      gap:28px;
+      min-height:0;
+    }
+    .sites-grid--diagonal .site-card--diag-primary,
+    .sites-grid--diagonal .site-card--diag-secondary {
+      grid-column:1;
+      grid-row:auto;
+      margin:0;
+      width:100%;
+      max-width:none;
+      justify-self:stretch;
+    }
+    .sites-grid--diagonal .site-card--diag-primary .site-img {
+      height:240px;
+      border-radius:14px;
+    }
+    .sites-grid--diagonal .site-card--diag-secondary {
+      margin-top:0;
+    }
+    .sites-grid--diagonal .site-card--diag-secondary .site-body {
+      text-align:left;
+      padding:14px 4px 0;
+    }
+    .sites-grid--diagonal .site-card--diag-secondary .diag-kicker,
+    .sites-grid--diagonal .site-card--diag-secondary .site-meta {
+      text-align:left;
+      align-items:flex-start;
+    }
+    .diag-spine,
+    .diag-souvenirs { display:none; }
+  }
+
   /* gradient themes — multi-stop layered depth */
   .g-temple  { background:linear-gradient(160deg,#1a0530 0%,#4a1060 35%,#9b3268 65%,#d4765e 88%,#f0a87a 100%); }
   .g-cave    { background:linear-gradient(160deg,#04080f 0%,#0a1a27 28%,#0f3040 55%,#1a6060 80%,#2c8a70 100%); }

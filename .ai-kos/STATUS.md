@@ -1,6 +1,17 @@
 # STATUS — travel-site
 
-最後更新：2026-07-19（Baltic Day 3 增量：0713 新圖入站）
+最後更新：2026-07-19（Day 3 增量 + 一圖不拆兩卡原則）
+
+## 今日工作日程 — 2026-07-19
+
+| # | 項目 | 狀態 |
+|---|------|------|
+| 1 | Drive SSOT 確認並寫入 `CLAUDE.md`（分享資料夾＝每日必讀） | Done |
+| 2 | Baltic Day 3（0713）增量：大教堂柱廊、佔領博物館大門、櫻桃酒店內、街角乾杯 | Done（已上線） |
+| 3 | **一圖不拆兩卡**：撤銷同景雙卡；憲法牆併寫「我是貓王」經典描述 | Done（已上線） |
+| 4 | 原則入庫：`CLAUDE.md` 速記 + `.ai-kos/CONTENT_STYLE.md` 第 6 條 | Done |
+| 5 | **版型試驗：Day 2 斜對角動線**（取代等大並排；左下小物暫為文字標籤，待相片點綴） | Done（已上線） |
+| 6 | git push origin main | Done |
 
 ## 2026-07-19 — Baltic Day 3 增量（0713 新照片）
 
@@ -10,10 +21,13 @@
 | **Drive** | SSOT `1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD`（[20260711波羅的海](https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD)） |
 | **Sync** | 補下載先前 rate-limit 的照片；不確定／與既有卡同景重複者不入站 |
 | **New Photos** | 4 張 → `photos/bldh-trio/day03/`（sips 1920/q88）：大教堂柱廊、佔領博物館大門、櫻桃酒店內、街角乾杯 |
-| **Travel Notes** | `day03.md` 新增 4 卡（旅行札記 v1.0）；移除與憲法牆同景的重複「我是貓王」卡 |
+| **Travel Notes** | `day03.md` 新增 4 卡；憲法牆一卡併寫 ELVIS；移除同景重複卡 |
+| **原則** | 一圖不拆兩卡（`CLAUDE.md` + `CONTENT_STYLE.md`） |
 | **Build** | PASS — `build_prototype.py`（缺圖 0） |
-| **Deploy** | PASS — surge → cluttered-breath.surge.sh（313 檔） |
+| **Deploy** | PASS — surge → cluttered-breath.surge.sh |
 | **Live** | Homepage / bldh-trio / 新圖 HTTP 200 |
+| **Commit** | 本機 `316c9c0`、`5a912b1` + 未 commit：CLAUDE／CONTENT_STYLE／憲法牆併寫等 |
+| **Push** | Pending |
 
 ## 2026-07-18 — Baltic Day 1 黑圖修復（redeploy）
 
