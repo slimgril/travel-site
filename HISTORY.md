@@ -1,4 +1,57 @@
+
+## 2026-07-24 晚 — 足跡圖國名＋三原則
+
+- 貝加爾足跡圖：中國底端、蒙古左側斜直排、字級 46、返程航線改回黃
+- HARD：冰哥原圖不改；同圖不兩處；足跡圖國名 ≥ 站名 ×2
+
 # HISTORY
+
+## 2026-07-23 — Day 4＋回饋修正 handoff
+
+- Day 4（07/14）特拉凱→考納斯上線
+- 修正：meta `lodging=` 外洩；day tip 去「額外推薦」前綴；Day3→文學街；刪 Day1 重複 tip
+- Deploy：Node 20＋surge@0.23.1；大包 ECONNRESET → `dist-surge-upload`（49MB，他趟暫壓畫質）
+- Commit Pending；下一步 Day 5
+
+## 2026-07-23 — Day 4（07/14）特拉凱 → 考納斯
+
+- Drive `0714/` 增量：入站 7 張新旅人照 + 重寫 `day04.md`（9 卡）
+- 內容：特拉凱水中古堡湖景／聖像／議事廳／城堡前、Kybyn 午餐、考納斯磚拱廊、魚排＋樹蛋糕晚餐（既有城堡鐵門／石階保留）
+- Build／Deploy PASS → https://cluttered-breath.surge.sh/trips/bldh-trio.html#d4
+- `IMG_20260715_*` 暫留 `drive-originals/0714/`，歸 Day 5
+
+## 2026-07-20 — Day 2 定稿：小物集合圖 + 黑膠唱針民謠
+
+**Production：** https://cluttered-breath.surge.sh/trips/bldh-trio.html#d2  
+**結果：** 使用者確認「很完美／效果超出預期」；已 deploy；多數原始碼改動尚未 commit。
+
+### 工作內容
+- **Day 1 黑圖救援（同 session 前期）：** sandbox 內 `sips` 致 Day 1 多數圖全黑 → sandbox 外重打包並 redeploy
+- **Day 2 構圖：** 斜對角三塊往中收攏、左右邊距加大（避免外擴突兀）
+- **小物集合圖：** 使用者提供立陶宛小物拼圖 → `photos/bldh-trio/day02/lithuania-souvenirs-collage.png`，斜放 −30°；尺寸＋⅓
+- **黑膠組件：** 國旗色標籤（黃／綠／紅）＋唱針落下／抬起；唱片尺寸 −¼
+- **配樂腳本：** `scripts/prepare_lithuania_audio.py` 自 Wikimedia 下載器樂國歌片段 → 15s、淡入 0.9s／淡出 2.5s → `photos/bldh-trio/audio/lithuania_15s.mp3`
+- **試聽頁：** `content/bldh-trio/lithuania-vinyl.html`
+
+### 問題與修復
+| 問題 | 原因 | 修復 |
+|------|------|------|
+| Day 1 灰卡／黑圖 | sandbox 跑 `sips` | 必須在 sandbox **外** `package_preview_deploy` |
+| 描述區被小物蓋住 | `.diag-souvenirs` absolute 疊層 | 改占 grid 第二列 |
+| 黑膠唱片消失（只剩唱針） | disc 包進 stage 後非 flex item，`span` 寬高失效 | `.lt-vinyl__disc { display:block }` |
+| 點播放無聲音 | 音訊改 `/photos/...` 後打包 regex 漏掃 → 線上 404 | `package_preview_deploy` 支援 `/photos/` 與 `data-src` |
+
+### 關鍵檔案
+- `templates/base.css`、`templates/shell.html`
+- `scripts/build.py`、`scripts/prepare_lithuania_audio.py`、`scripts/sync_baikal_photos.py`
+- `photos/bldh-trio/day02/`、`photos/bldh-trio/audio/`
+- 斷點：`旅遊/CLAUDE.md`、`.claude-progress`、`.ai-kos/STATUS.md`
+
+### 營運摘要
+```
+Date 2026-07-20 | Trip Baltic | New Photos 0 | Updated Day Day 2（構圖／元件）
+Build PASS | Deploy PASS | Live PASS | Commit SKIP | Status Operational Complete
+```
 
 ## 2026-07-16 — Wake command：Ingest
 

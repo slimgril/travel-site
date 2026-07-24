@@ -1,19 +1,89 @@
 # STATUS — travel-site
 
-最後更新：2026-07-19（Day 3 增量 + 一圖不拆兩卡原則）
+最後更新：2026-07-24（晚間 Handoff：足跡圖國名排版＋三原則入規）
 
-## 今日工作日程 — 2026-07-19
+## 2026-07-24 晚 — 足跡圖標籤＋圖檔三原則
+
+| 項目 | 狀態 |
+|------|------|
+| **足跡圖** | `baikal-route-map.svg`：中國貼底＋字距；蒙古左側直排；國名 46px；返程航線黃 |
+| **三原則** | ①原圖不改 ②同圖不兩處 ③國名≥站名×2 → `CLAUDE.md`＋`.cursor/rules/bingge-photo-rules.mdc`＋父層 `旅遊/CLAUDE.md` |
+| **Commit** | 進行中（本 Handoff） |
+
+26-07-24 晚 — 足跡圖標籤＋圖檔三原則
+
+| 項目 | 狀態 |
+|------|------|
+| **足跡圖** | `baikal-route-map.svg`：中國貼底＋字距；蒙古左側直排；國名 46px；返程航線黃 |
+| **三原則** | ①原圖不改 ②同圖不兩處 ③國名≥站名×2 → `CLAUDE.md`＋`.cursor/rules/bingge-photo-rules.mdc`＋父層 `旅遊/CLAUDE.md` |
+| **Commit** | 進行中（本 Handoff） |
+
+## 2026-07-24 — Resume：不修圖政策＋足跡圖莫斯科→北京飛航
+
+| 項目 | 狀態 |
+|------|------|
+| **政策** | 斌哥旅遊書照片**禁止修圖**；只忠實入站原圖（部署可 sips 縮圖，非美顏／AI 修圖） |
+| **天次對照** | 07/13=Day3｜**07/14=Day4**｜**07/15=Day5**（非「七月十四＝第五天」） |
+| **Day 5** | 已入站 10 張原圖→`photos/bldh-trio/day05/`＋`day05.md` |
+| **Day 4 回饋** | 已刪重複「石階」；「磚拱廊」→「圓拱窗」向外望 |
+| **足跡圖** | `baikal-route-map.svg`：莫斯科＝鐵路終點；新增紫虛線弧 **D20 ✈ 飛回北京**＋中點小飛機 |
+| **Build** | PASS（`build_prototype.py`） |
+| **Deploy** | PASS（Node 20＋surge · `dist-surge-upload` 40.3MB） |
+| **Commit** | Pending |
+
+## 2026-07-24 — Baltic Day 5（07/15）＋Day4 回饋修正
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic（`bldh-trio`）Day 5 ｜ 07/15 十字架山 → 隆黛爾 → 里加 |
+| **Drive** | SSOT `0715/` 14 檔已下載；誤標 `IMG_20260715_*`（EXIF 實為 07/14）→ `review/day04-export-0715/` |
+| **Day4 回饋** | 刪同景「石階」卡；「磚拱廊」→「圓拱窗」敘事 |
+| **New Photos** | **10** 張 → `photos/bldh-trio/day05/` |
+| **Travel Notes** | `day05.md` 10 卡 |
+| **Skipped** | 團體花園照、宮殿戲水合影、白廳模特拍攝；`IMG_20260722_*` 仍 review |
+| **莫斯科地圖** | 已補強：莫斯科鐵路終點＋飛回北京弧線 |
+| **Build** | PASS |
+| **Deploy** | 見上方 Resume 區塊 |
+| **Live** | https://cluttered-breath.surge.sh/trips/bldh-trio.html#d5 |
+| **Commit** | Pending |
+
+## 2026-07-23 — Day 4＋回饋修正（handoff）
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic Day 4 已上線；Day1 meta／Day3 文學街／Day1 額外推薦 tip 已修 |
+| **Build** | PASS |
+| **Deploy** | PASS（Node 20＋surge@0.23.1＋`dist-surge-upload` 49MB） |
+| **Live** | https://cluttered-breath.surge.sh/trips/bldh-trio.html |
+| **Commit** | Pending |
+| **Next** | Day 5（07/15）；可選全畫質 redeploy／commit+push |
+
+## 2026-07-23 — Baltic Day 4（07/14）特拉凱 → 考納斯
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic（`bldh-trio`）Day 4 ｜ 07/14 水中古堡 |
+| **Drive** | `0714/` 列出 24 檔；本次入站明確屬 07/14 的旅人照 |
+| **New Photos** | **7** 張 → `photos/bldh-trio/day04/` |
+| **Travel Notes** | `day04.md` 9 卡 |
+| **Pending** | `IMG_20260715_*` → Day 5 |
+
+## 2026-07-20 — Day 2 構圖 + 立陶宛黑膠民謠（定稿）
 
 | # | 項目 | 狀態 |
 |---|------|------|
-| 1 | Drive SSOT 確認並寫入 `CLAUDE.md`（分享資料夾＝每日必讀） | Done |
-| 2 | Baltic Day 3（0713）增量：大教堂柱廊、佔領博物館大門、櫻桃酒店內、街角乾杯 | Done（已上線） |
-| 3 | **一圖不拆兩卡**：撤銷同景雙卡；憲法牆併寫「我是貓王」經典描述 | Done（已上線） |
-| 4 | 原則入庫：`CLAUDE.md` 速記 + `.ai-kos/CONTENT_STYLE.md` 第 6 條 | Done |
-| 5 | **版型試驗：Day 2 斜對角動線**（取代等大並排；左下小物暫為文字標籤，待相片點綴） | Done（已上線） |
-| 6 | git push origin main | Done |
+| 1 | Day 1 黑圖救援：sandbox 外重打包＋正式 redeploy | Done（已上線） |
+| 2 | Day 2 描述／小物重疊修復（souvenirs 改 grid 第二列） | Done（已上線） |
+| 3 | 立陶宛小物集合圖入站＋斜放 −30°；尺寸＋⅓ | Done（已上線） |
+| 4 | 黑膠唱片組件＋唱針動畫；尺寸 −¼ | Done（已上線） |
+| 5 | 15s 民謠剪輯腳本（淡入／淡出）＋播放器串接 | Done（已上線） |
+| 6 | Day 2 三塊往中收攏、邊距加大 | Done（已上線・使用者定稿） |
+| 7 | 修復唱片消失（display:block）＋音檔部署 404（打包掃 `/photos/`） | Done（已上線） |
+| 8 | 工作日誌：`HISTORY.md`＋本 STATUS＋父層斷點＋`.claude-progress` | Done |
+| **Live** | 使用者確認「很完美／超出預期」；音檔 HTTP 200 |
+| **Production** | https://cluttered-breath.surge.sh/trips/bldh-trio.html#d2 |
 
-## 2026-07-19 — Baltic Day 3 增量（0713 新照片）
+## 2026-07-19 — Baltic Day 3 維爾紐斯（Daily Travel Update）
 
 | 項目 | 狀態 |
 |------|------|

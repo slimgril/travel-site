@@ -1,0 +1,169 @@
+<svg class="route-svg" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="西伯利亞大鐵路足跡總覽">
+  <style>
+    .sr-china    { fill:#C84B3A; stroke:#9E3226; stroke-width:1.2; stroke-linejoin:round; }
+    .sr-mongolia { fill:#9DB86E; stroke:#6F8F45; stroke-width:1.2; stroke-linejoin:round; }
+    .sr-siberia  { fill:#B7C6BC; stroke:#7E9588; stroke-width:1.2; stroke-linejoin:round; }
+    .sr-europe   { fill:#C9D2C8; stroke:#7E9588; stroke-width:1.2; stroke-linejoin:round; }
+    .sr-lake     { fill:#6E9E9A; stroke:#4F7A76; stroke-width:1.1; opacity:0.9; }
+    /* 國家名：字級略縮（54→46），避免蒙古溢出區塊 */
+    .sr-country  { font-family:'PingFang TC','Noto Sans TC','Songti TC',serif; font-size:46px; font-weight:700; letter-spacing:0.55em; opacity:0.92; }
+    .sr-country-ru { fill:#1B4332; }
+    .sr-country-mn { fill:#2F5D28; letter-spacing:0; }
+    .sr-country-cn { fill:#F8EDE8; letter-spacing:1.05em; }
+    /* 站名（小站） */
+    .sr-mark     { font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:17px; font-weight:700; fill:#1B4332; }
+    .sr-day      { font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:17px; letter-spacing:0.08em; fill:#6B4208; font-weight:700; }
+    .sr-tag      { font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:13px; letter-spacing:0.16em; fill:#8A5A12; font-weight:700; }
+    .sr-paren    { font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:14px; letter-spacing:0.04em; fill:#2D6A4F; opacity:0.85; }
+    .sr-rail     { fill:none; stroke:#2B6CB0; stroke-width:3.4; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:7 9; }
+    /* 返程航線：黃色虛線；中段留空給民航機 */
+    .sr-flight   { fill:none; stroke:#E8B423; stroke-width:3.6; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:9 10; opacity:0.95; }
+    .sr-hub      { fill:#D4A843; stroke:#F5F0E8; stroke-width:2.2; }
+    .sr-hub-ring { fill:none; stroke:#D4A843; stroke-width:2; opacity:0.85; }
+    .sr-via      { fill:#F5F0E8; stroke:#2B6CB0; stroke-width:1.8; }
+    .sr-finish   { fill:#C84B3A; stroke:#F5F0E8; stroke-width:2.2; }
+    .sr-finish-ring { fill:none; stroke:#C84B3A; stroke-width:2.2; opacity:0.9; }
+    .sr-plane-body { fill:#F0C23A; stroke:#6B4208; stroke-width:0.7; }
+    .sr-plane-wing { fill:#E8B423; stroke:#6B4208; stroke-width:0.6; }
+    .sr-plane-win  { fill:#1B4332; opacity:0.55; }
+  </style>
+
+  <!-- Siberia -->
+  <path class="sr-siberia"
+        d="M 70,80 C 180,35 320,30 470,45 C 600,58 720,70 780,105
+           C 820,130 840,175 845,220 C 850,270 815,310 740,320
+           C 600,338 460,340 320,325 C 200,310 120,270 80,220
+           C 50,185 40,125 70,80 Z"/>
+
+  <!-- Europe west lobe -->
+  <path class="sr-europe"
+        d="M 40,70 C 85,40 140,50 165,100 C 185,140 175,210 145,280
+           C 120,335 60,345 35,300 C 15,260 15,130 40,70 Z"/>
+
+  <!-- Mongolia -->
+  <path class="sr-mongolia"
+        d="M 640,230 C 730,200 830,215 880,275 C 905,310 890,360 820,375
+           C 740,392 650,375 600,330 C 570,300 590,250 640,230 Z"/>
+
+  <!-- China -->
+  <path class="sr-china"
+        d="M 700,395 C 780,355 880,370 930,425 C 955,455 948,500 895,520
+           C 800,548 700,530 655,475 C 625,440 645,410 700,395 Z"/>
+
+  <!-- Baikal -->
+  <ellipse class="sr-lake" cx="620" cy="125" rx="48" ry="18" transform="rotate(-25 620 125)"/>
+
+  <!-- 國家名：中國貼底端＋加大字距；蒙古自西北往中斜向直排（蒙上古下） -->
+  <text class="sr-country sr-country-ru" text-anchor="middle" x="430" y="72">俄羅斯</text>
+  <g class="sr-country sr-country-mn" transform="translate(628,290) rotate(-28)" aria-label="蒙古">
+    <text text-anchor="middle" x="0" y="0">蒙</text>
+    <text text-anchor="middle" x="12" y="50">古</text>
+  </g>
+  <text class="sr-country sr-country-cn" text-anchor="middle" x="792" y="526">中國</text>
+
+  <!-- 鐵路主線：北京 → … → 聖彼得堡 → 莫斯科（終點） -->
+  <path class="sr-rail"
+        d="M 820,455
+           L 760,280
+           L 620,130
+           L 500,250
+           L 470,228
+           L 430,200
+           L 395,175
+           L 360,155
+           L 230,235
+           L 95,85
+           L 75,310"/>
+  <path fill="#2B6CB0" d="M 75,310 L 66,293 L 86,294 Z"/>
+
+  <!-- D10 腹地 -->
+  <circle class="sr-via" cx="470" cy="228" r="3.6"/>
+  <circle class="sr-via" cx="430" cy="200" r="3.6"/>
+  <circle class="sr-via" cx="395" cy="175" r="3.6"/>
+  <text class="sr-day" fill="#2B6CB0" text-anchor="middle" x="432" y="188" font-size="15">D10 腹地</text>
+
+  <!-- 北京 D1 -->
+  <circle class="sr-hub-ring" cx="820" cy="455" r="14"/>
+  <circle class="sr-hub" cx="820" cy="455" r="8.5" stroke="#F8EDE8"/>
+  <text class="sr-mark" fill="#F8EDE8" text-anchor="middle" x="820" y="448">北京</text>
+  <text class="sr-day"  fill="#F0CC7A" text-anchor="middle" x="868" y="458">D1</text>
+  <text class="sr-tag"  fill="#F0CC7A" text-anchor="middle" x="868" y="474">START</text>
+
+  <!-- 烏蘭巴托 D2–5 -->
+  <circle class="sr-hub" cx="760" cy="280" r="8.5"/>
+  <text class="sr-mark" text-anchor="middle" x="760" y="308">烏蘭巴托</text>
+  <text class="sr-day"  text-anchor="middle" x="760" y="326">D2–5</text>
+  <text class="sr-paren" text-anchor="middle" x="760" y="344">（特勒吉・哈爾和林）</text>
+
+  <!-- 貝加爾湖 D6–9 -->
+  <circle class="sr-hub" cx="620" cy="130" r="8.5"/>
+  <text class="sr-mark" text-anchor="middle" x="620" y="168">貝加爾湖</text>
+  <text class="sr-day"  text-anchor="middle" x="620" y="186">D6–9</text>
+
+  <!-- 伊爾庫次克 D6–9 -->
+  <circle class="sr-hub" cx="500" cy="250" r="8.5"/>
+  <text class="sr-mark" text-anchor="middle" x="500" y="284">伊爾庫次克</text>
+  <text class="sr-day"  text-anchor="middle" x="500" y="302">D6–9</text>
+
+  <!-- 新西伯利亞 D11 -->
+  <circle class="sr-hub" cx="360" cy="155" r="8.5"/>
+  <text class="sr-mark" text-anchor="middle" x="360" y="133">新西伯利亞</text>
+  <text class="sr-day"  text-anchor="middle" x="360" y="115">D11</text>
+
+  <!-- 葉卡捷琳堡 D12–13 -->
+  <circle class="sr-hub" cx="230" cy="235" r="8.5"/>
+  <text class="sr-mark" text-anchor="middle" x="230" y="271">葉卡捷琳堡</text>
+  <text class="sr-day"  text-anchor="middle" x="230" y="289">D12–13</text>
+  <text class="sr-tag"  text-anchor="middle" x="230" y="307">歐亞・移動</text>
+
+  <!-- 聖彼得堡 D14–16 -->
+  <circle class="sr-hub" cx="95" cy="85" r="8.5"/>
+  <text class="sr-mark" x="116" y="80">聖彼得堡</text>
+  <text class="sr-day"  x="116" y="98">D14–16</text>
+
+  <!-- 莫斯科 D16–19：鐵路最後一站 -->
+  <circle class="sr-finish-ring" cx="75" cy="310" r="16"/>
+  <circle class="sr-finish" cx="75" cy="310" r="9.5"/>
+  <text class="sr-mark" text-anchor="start" x="98" y="318" fill="#9E3226" font-size="19">莫斯科</text>
+  <text class="sr-day"  text-anchor="start" x="98" y="338" fill="#9E3226">D16–19</text>
+  <text class="sr-tag"  text-anchor="start" x="98" y="356" fill="#C84B3A">最後一站</text>
+
+  <!-- 莫斯科 → 北京：白色虛線（中段留空，不貼民航機） -->
+  <path class="sr-flight" d="M 75.0,310.0 Q 198.5,389.8 335.7,429.9"/>
+  <path class="sr-flight" d="M 514.5,464.7 Q 660.4,479.7 820.0,455.0"/>
+
+  <!-- 黃色民航客機：側視機身＋機翼＋尾翼；機頭朝北京（+X，再沿航線旋轉 ~11°） -->
+  <g transform="translate(424,440) rotate(11)" aria-hidden="true">
+    <g transform="scale(1.95)">
+      <!-- fuselage -->
+      <path class="sr-plane-body"
+            d="M 22,0
+               C 20,-2.8 16,-4.2 10,-4.2
+               L -12,-4.2
+               L -15,-11 L -13,-4.2
+               L -20,-4.2 L -22,-1.5 L -22,1.5 L -20,4.2
+               L -13,4.2 L -15,8 L -12,4.2
+               L 8,4.2
+               C 14,4.2 18.5,2.4 22,0 Z"/>
+      <!-- main wing -->
+      <path class="sr-plane-wing"
+            d="M -2,1.2 L 10,1.2 L 6,9.5 L -8,9.5 Z"/>
+      <!-- engines -->
+      <ellipse class="sr-plane-body" cx="1" cy="7.2" rx="3.2" ry="1.6"/>
+      <ellipse class="sr-plane-body" cx="-5" cy="7.2" rx="3.2" ry="1.6"/>
+      <!-- horizontal stabilizer -->
+      <path class="sr-plane-wing"
+            d="M -18,-1 L -12,-1 L -14,-5.5 L -20,-5.5 Z"/>
+      <!-- cabin windows -->
+      <rect class="sr-plane-win" x="-8" y="-2.6" width="1.5" height="1.7" rx="0.3"/>
+      <rect class="sr-plane-win" x="-5" y="-2.6" width="1.5" height="1.7" rx="0.3"/>
+      <rect class="sr-plane-win" x="-2" y="-2.6" width="1.5" height="1.7" rx="0.3"/>
+      <rect class="sr-plane-win" x="1" y="-2.6" width="1.5" height="1.7" rx="0.3"/>
+      <rect class="sr-plane-win" x="4" y="-2.6" width="1.5" height="1.7" rx="0.3"/>
+      <rect class="sr-plane-win" x="7" y="-2.6" width="1.5" height="1.7" rx="0.3"/>
+      <!-- cockpit -->
+      <path class="sr-plane-win" d="M 14,-2.2 L 18,-1.2 L 18,1.2 L 14,2.2 Z"/>
+    </g>
+  </g>
+  <text class="sr-day" fill="#FFFFFF" stroke="#6B4208" stroke-width="0.4" text-anchor="middle" x="424" y="505" font-size="16">D20 ✈ 飛回北京</text>
+</svg>

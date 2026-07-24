@@ -1,3 +1,20 @@
+# RESUME_CONTEXT（最新）
+
+**更新：** 2026-07-24 晚 Handoff
+
+## 上次停在
+
+- 貝加爾足跡圖國名排版已定（Owner BINGO）
+- 圖檔三原則已入 `CLAUDE.md`／cursor rules
+- Baltic Day5 等先前改動仍可能未全部 commit（見 STATUS）
+
+## 下一步
+
+1. 若需上線足跡圖：rebuild＋deploy `baikal-rail`
+2. Daily Travel Update 依 Photos SSOT 繼續
+3. 遵守三原則配圖
+
+---
 # Resume Context — travel-site
 
 **Read `.ai-kos/WORKSPACE.md` first, then this file.**  
@@ -44,6 +61,7 @@ Travel Site 已進入 **Operational Phase**。
 - site feature development、architecture、workflow refactor
 - 舊旅程 bulk rewrite
 - Workspace / 路徑再遷移（Integrity 已完成）
+- **景點點擊播放音樂**（計畫已入庫 `content/bldh-trio/source/MUSIC_CLICK_PLAN.md`；行程＋合法音檔就緒前不實作、不為此改部署）
 
 ### Wake commands
 
@@ -110,7 +128,7 @@ Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTEN
 | Slug | 狀態 | 備註 |
 |------|------|------|
 | `shanxi` | done | legacy style — do not mass-rewrite |
-| `bldh-trio` | **operational** | Baltic; Day 1 complete with 10 photos (旅行札記 v1.0) |
+| `bldh-trio` | **operational** | Baltic；Day 4 已上線；回饋修正（文學街／meta／額外推薦）已 deploy；下一步 Day 5（07/15） |
 | `baikal-rail` | upcoming | 71 images; sync script exists (`scripts/sync_baikal_photos.py`) |
 
 ---
