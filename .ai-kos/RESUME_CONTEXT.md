@@ -1,18 +1,18 @@
 # RESUME_CONTEXT（最新）
 
-**更新：** 2026-07-24 晚 Handoff
+**更新：** 2026-07-25 收工 Handoff
 
 ## 上次停在
 
-- 貝加爾足跡圖國名排版已定（Owner BINGO）
-- 圖檔三原則已入 `CLAUDE.md`／cursor rules
-- Baltic Day5 等先前改動仍可能未全部 commit（見 STATUS）
+- Baltic Day 6（07/16 里加）25 張全量已上線
+- 政策：Drive 當日夾照片 **全部上站**
+- Cloud `CLAUDE`（各日資料夾）＝斌哥當日指令 SSOT
 
 ## 下一步
 
-1. 若需上線足跡圖：rebuild＋deploy `baikal-rail`
-2. Daily Travel Update 依 Photos SSOT 繼續
-3. 遵守三原則配圖
+1. Day 7（07/17）：讀 Drive `0717/`＋Cloud `CLAUDE` → 全量入站
+2. （可選）`git push`
+3. 繼續 Daily Travel Update
 
 ---
 # Resume Context — travel-site

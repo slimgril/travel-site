@@ -1,6 +1,22 @@
 # STATUS — travel-site
 
-最後更新：2026-07-24（晚間 Handoff：足跡圖國名排版＋三原則入規）
+最後更新：2026-07-25（Baltic Day 6｜07/16 里加全量入站）
+
+## 2026-07-25 — Baltic Day 6（07/16）里加 — 東歐巴黎
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic（`bldh-trio`）Day 6 ｜ 07/16 里加全日 |
+| **Drive** | SSOT `0716/` 25 張 JPG＋Cloud `CLAUDE`（巴龍斯／布萊梅註解） |
+| **政策** | 斌哥：資料夾內照片**全部**渲染上站 |
+| **New Photos** | **25** → `photos/bldh-trio/day06/` |
+| **Travel Notes** | `day06.md` 25 卡（含 Cloud CLAUDE 要點） |
+| **Build** | PASS（缺圖 0；refs 25/25） |
+| **Deploy** | PASS（Node 20＋surge@0.23.1 · `dist-surge-upload` 109MB） |
+| **Live** | https://cluttered-breath.surge.sh/trips/bldh-trio.html#d6 |
+| **Commit** | Pending |
+
+報告：`content/bldh-trio/source/review/DAY06_0716_INGEST_REPORT.md`
 
 ## 2026-07-24 晚 — 足跡圖標籤＋圖檔三原則
 
