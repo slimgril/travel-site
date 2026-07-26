@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>立陶宛黑膠 · 15 秒民謠試聽</title>
+<meta name="description" content="點擊黑膠播放立陶宛免版權音樂 15 秒精華（淡入淡出＋唱針）。">
+<style>
+  :root {
+    --lt-yellow:#F9B233;
+    --lt-green:#006A44;
+    --lt-red:#C1272D;
+    --bg:#f6f1e8;
+    --ink:#1b4332;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0;
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    padding:40px 20px;
+    font-family:Georgia,'Songti TC','Noto Serif TC',serif;
+    color:var(--ink);
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(249,178,51,0.22), transparent 45%),
+      radial-gradient(ellipse at 80% 90%, rgba(193,39,45,0.14), transparent 40%),
+      linear-gradient(165deg, #fbf7ef 0%, #eef5ef 55%, #f7efe6 100%);
+  }
+  .stage { text-align:center; max-width:420px; }
+  h1 { margin:0 0 8px; font-size:1.55rem; letter-spacing:0.04em; }
+  .sub {
+    margin:0 0 36px;
+    font-size:0.92rem;
+    line-height:1.7;
+    color:rgba(27,67,50,0.72);
+  }
+  .lt-vinyl {
+    appearance:none; border:0; background:transparent; padding:0;
+    cursor:pointer; display:inline-flex; flex-direction:column;
+    align-items:center; gap:14px;
+  }
+  .lt-vinyl:focus-visible {
+    outline:2px solid var(--lt-green); outline-offset:8px; border-radius:50%;
+  }
+  .lt-vinyl__stage { position:relative; width:220px; height:220px; }
+  .lt-vinyl__disc {
+    position:relative; width:220px; height:220px; border-radius:50%;
+    background:
+      radial-gradient(circle at 50% 50%,
+        #1a1a1a 0 14%, #0c0c0c 15% 16%, #181818 17% 100%);
+    box-shadow:
+      0 22px 48px rgba(0,0,0,0.28),
+      inset 0 0 0 1px rgba(255,255,255,0.06),
+      inset 0 0 36px rgba(0,0,0,0.55);
+    transition:transform 0.25s ease;
+  }
+  .lt-vinyl.is-playing .lt-vinyl__disc {
+    animation:lt-vinyl-spin 3.6s linear infinite;
+  }
+  @keyframes lt-vinyl-spin { to { transform:rotate(360deg); } }
+  .lt-vinyl__grooves {
+    position:absolute; inset:14px; border-radius:50%;
+    background:repeating-radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.05) 0 1px, transparent 1px 5px
+    );
+    pointer-events:none;
+  }
+  .lt-vinyl__label {
+    position:absolute; inset:62px; border-radius:50%; overflow:hidden;
+    display:grid; place-items:center;
+    box-shadow:0 0 0 4px rgba(0,0,0,0.35), 0 6px 16px rgba(0,0,0,0.35);
+  }
+  .lt-vinyl__flag {
+    position:absolute; inset:0;
+    background:linear-gradient(
+      180deg,
+      var(--lt-yellow) 0 33.33%,
+      var(--lt-green) 33.33% 66.66%,
+      var(--lt-red) 66.66% 100%
+    );
+  }
+  .lt-vinyl__mark {
+    position:relative; z-index:1; font-size:1.35rem; font-weight:700;
+    letter-spacing:0.14em; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.45);
+  }
+  .lt-vinyl__spindle {
+    position:absolute; left:50%; top:50%; width:16px; height:16px;
+    margin:-8px 0 0 -8px; border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #f4f0e6, #8a7a60 60%, #3a3228);
+    box-shadow:0 0 0 2px rgba(0,0,0,0.35); z-index:2;
+  }
+  .lt-vinyl__arm {
+    position:absolute; top:-10px; right:6px; width:22px; height:150px;
+    transform-origin:11px 12px; transform:rotate(-48deg);
+    transition:transform 0.65s cubic-bezier(0.4, 0.05, 0.2, 1);
+    z-index:6; pointer-events:none;
+  }
+  .lt-vinyl.is-playing .lt-vinyl__arm { transform:rotate(18deg); }
+  .lt-vinyl__arm-pivot {
+    position:absolute; left:2px; top:2px; width:18px; height:18px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #d8cfc0, #6a5e4e 70%, #2a241c);
+    box-shadow:0 1px 3px rgba(0,0,0,0.35); z-index:2;
+  }
+  .lt-vinyl__arm-shaft {
+    position:absolute; left:8px; top:14px; width:6px; height:100px; border-radius:3px;
+    background:linear-gradient(90deg, #9a9084, #e8e0d4 45%, #6e655a);
+    box-shadow:1px 0 2px rgba(0,0,0,0.25);
+  }
+  .lt-vinyl__arm-head {
+    position:absolute; left:2px; bottom:4px; width:18px; height:24px;
+    border-radius:2px 2px 4px 1px;
+    background:linear-gradient(160deg, #c4b8a8, #5a5248 55%, #2c2822);
+    box-shadow:0 2px 4px rgba(0,0,0,0.3);
+  }
+  .lt-vinyl__arm-head::after {
+    content:''; position:absolute; left:8px; bottom:-6px; width:2px; height:10px;
+    background:linear-gradient(180deg, #888, #222); border-radius:1px;
+  }
+  .lt-vinyl__hint {
+    font-size:0.78rem; letter-spacing:0.16em; text-transform:uppercase;
+    color:rgba(27,67,50,0.55);
+  }
+  .lt-vinyl.is-playing .lt-vinyl__hint { color:var(--lt-green); }
+  .lt-vinyl:hover .lt-vinyl__disc { transform:scale(1.03); }
+  .lt-vinyl.is-playing:hover .lt-vinyl__disc { transform:none; }
+  .credit {
+    margin-top:40px; font-size:0.75rem; line-height:1.65;
+    color:rgba(27,67,50,0.5);
+  }
+  .credit a { color:var(--lt-green); }
+</style>
+</head>
+<body>
+  <main class="stage">
+    <h1>立陶宛黑膠</h1>
+    <p class="sub">點擊播放：唱針落下、唱片旋轉、音樂淡入。<br>播完自動淡出；唱針抬起、唱片停轉。</p>
+
+    <button type="button" class="lt-vinyl" data-src="./audio/lithuania_15s.mp3"
+      aria-label="播放立陶宛民謠十五秒" aria-pressed="false">
+      <span class="lt-vinyl__stage" aria-hidden="true">
+        <span class="lt-vinyl__disc">
+          <span class="lt-vinyl__grooves"></span>
+          <span class="lt-vinyl__label">
+            <span class="lt-vinyl__flag"></span>
+            <span class="lt-vinyl__mark">LT</span>
+          </span>
+          <span class="lt-vinyl__spindle"></span>
+        </span>
+        <span class="lt-vinyl__arm">
+          <span class="lt-vinyl__arm-pivot"></span>
+          <span class="lt-vinyl__arm-shaft"></span>
+          <span class="lt-vinyl__arm-head"></span>
+        </span>
+      </span>
+      <span class="lt-vinyl__hint">點擊播放 · 15s</span>
+    </button>
+
+    <p class="credit">
+      音樂來源：Wikimedia Commons<br>
+      <em>Tautiška giesmė</em>（器樂）· United States Navy Band<br>
+      <a href="https://commons.wikimedia.org/wiki/File:Tauti%C5%A1ka_giesme_instrumental.oga" target="_blank" rel="noopener">來源頁面</a>
+      · 重新生成：<code>python3 scripts/prepare_lithuania_audio.py</code>
+    </p>
+  </main>
+
+<script>
+(function () {
+  function wire(btn) {
+    var src = btn.getAttribute('data-src');
+    if (!src) return;
+    var audio = new Audio(src);
+    audio.preload = 'metadata';
+    var hint = btn.querySelector('.lt-vinyl__hint');
+
+    function idleLabel() {
+      if (hint) hint.textContent = '點擊播放 · 15s';
+      btn.setAttribute('aria-pressed', 'false');
+      btn.classList.remove('is-playing');
+    }
+    function playingLabel() {
+      if (hint) hint.textContent = '播放中 · 再點暫停';
+      btn.setAttribute('aria-pressed', 'true');
+      btn.classList.add('is-playing');
+    }
+    function reset() {
+      audio.pause();
+      try { audio.currentTime = 0; } catch (e) {}
+      idleLabel();
+    }
+
+    btn.addEventListener('click', function () {
+      if (audio.paused) {
+        var p = audio.play();
+        if (p && p.catch) p.catch(function () { idleLabel(); });
+        playingLabel();
+      } else {
+        audio.pause();
+        idleLabel();
+      }
+    });
+    audio.addEventListener('ended', reset);
+    audio.addEventListener('pause', function () {
+      if (!audio.ended && audio.currentTime > 0 && audio.paused) {
+        btn.classList.remove('is-playing');
+        btn.setAttribute('aria-pressed', 'false');
+        if (hint) hint.textContent = '已暫停 · 點擊繼續';
+      }
+    });
+  }
+  document.querySelectorAll('.lt-vinyl').forEach(wire);
+})();
+</script>
+</body>
+</html>

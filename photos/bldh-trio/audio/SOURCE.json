@@ -1,0 +1,13 @@
+{
+  "title": "Tautiška giesmė (instrumental)",
+  "commons": "https://commons.wikimedia.org/wiki/File:Tauti%C5%A1ka_giesme_instrumental.oga",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Tauti%C5%A1ka_giesme_instrumental.oga",
+  "performer": "United States Navy Band",
+  "note": "15s excerpt with 0.9s fade-in + 2.5s fade-out for Day 2 vinyl; not the full anthem.",
+  "clip": {
+    "start_sec": 22.0,
+    "duration_sec": 15.0,
+    "fade_in_sec": 0.9,
+    "fade_out_sec": 2.5
+  }
+}

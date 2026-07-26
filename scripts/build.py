@@ -230,9 +230,18 @@ def extract_image(text):
 
 
 def split_heading_image(heading):
+    """Parse ### heading → (name, img, alt, video).
+
+    Optional suffix after the image markdown: ``{video=day01/foo.mp4}``.
+    """
     img, alt, rest = extract_image(heading)
+    video = None
+    m = re.search(r'\{video=([^}]+)\}', rest)
+    if m:
+        video = m.group(1).strip()
+        rest = (rest[:m.start()] + rest[m.end():]).strip()
     name = re.sub(r'\s+', ' ', rest).strip()
-    return name, img, alt
+    return name, img, alt, video
 
 
 def classify_paras(lines):
@@ -281,7 +290,9 @@ def parse_day_meta(meta_lines):
         m = re.match(r'^:::meta\s+(.*)$', line)
         if not m:
             continue
-        for mm in re.finditer(r'([A-Za-z]+)=(.+?)(?=\s{2,}[A-Za-z]+=|$)', m.group(1)):
+        # Allow single OR double space before next key= (old rule required \s{2,}
+        # and leaked "lodging=…" into flight when keys were separated by one space).
+        for mm in re.finditer(r'([A-Za-z]+)=(.+?)(?=\s+[A-Za-z]+=|$)', m.group(1)):
             meta[mm.group(1)] = mm.group(2).strip()
     return meta
 
@@ -289,30 +300,80 @@ def parse_day_meta(meta_lines):
 # ─────────────────────────────────────────────────────────────────────────
 #  区块渲染器
 # ─────────────────────────────────────────────────────────────────────────
+def render_video_site_img(slug, img, video, name):
+    """Poster + click-to-play video for a sites card (e.g. Istanbul chestnut stall)."""
+    poster = "../photos/%s/%s" % (slug, img)
+    src = "../photos/%s/%s" % (slug, video)
+    # Chestnut stall keeps its branded play cue; other videos use a generic hint.
+    if 'chestnut' in (video or '') or 'chestnut' in (img or ''):
+        play_icon, play_hint = '🌰', '點我看反差 →'
+    else:
+        play_icon, play_hint = '▶', '點擊播放 →'
+    return (
+        '        <div class="site-img video-card" role="button" tabindex="0" '
+        'aria-label="點擊播放：%s">\n'
+        '          <div class="video-card__poster" style="background-image:url(\'%s\')"></div>\n'
+        '          <video class="video-card__media" muted playsinline preload="metadata" '
+        'src="%s"></video>\n'
+        '          <span class="chestnut-play" aria-hidden="true">%s</span>\n'
+        '          <span class="video-hint" aria-hidden="true">%s</span>\n'
+        '          <div class="img-label">%s</div>\n'
+        '        </div>' % (esc(name), poster, src, play_icon, play_hint, esc(name))
+    )
+
+
 def render_sites(block, slug, gi):
     _, cards = split_cards(block['lines'])
     if not cards:
         return ''
-    out = []
+    regular = []
+    featured = []
     for c in cards:
-        name, img, _ = split_heading_image(c['heading'])
+        name, img, _, video = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
+        if img and video:
+            img_div = render_video_site_img(slug, img, video, name)
+            featured.append(
+                '      <div class="site-card site-card--video site-card--featured">\n'
+                '%s\n'
+                '        <div class="site-body">\n'
+                '          <div class="site-name">%s</div>\n'
+                '          <div class="site-desc">%s</div>\n'
+                '        </div>\n'
+                '      </div>' % (img_div, esc(name), inline(desc))
+            )
+            continue
         if img:
-            img_style = ("class=\"site-img photo\" style=\"background-image:url('../photos/%s/%s')\""
-                         % (slug, img))
+            img_div = (
+                '        <div class="site-img photo" '
+                'style="background-image:url(\'../photos/%s/%s\')">'
+                '<div class="img-label">%s</div></div>' % (slug, img, esc(name))
+            )
         else:
-            img_style = 'class="site-img %s"' % GRADIENTS[gi[0] % len(GRADIENTS)]
+            img_div = (
+                '        <div class="site-img %s"><div class="img-label">%s</div></div>'
+                % (GRADIENTS[gi[0] % len(GRADIENTS)], esc(name))
+            )
             gi[0] += 1
-        out.append(
+        regular.append(
             '      <div class="site-card">\n'
-            '        <div %s><div class="img-label">%s</div></div>\n'
+            '%s\n'
             '        <div class="site-body">\n'
             '          <div class="site-name">%s</div>\n'
             '          <div class="site-desc">%s</div>\n'
             '        </div>\n'
-            '      </div>' % (img_style, esc(name), esc(name), inline(desc))
+            '      </div>' % (img_div, esc(name), inline(desc))
         )
-    return '    <div class="sites-grid">\n%s\n    </div>' % '\n'.join(out)
+    parts = []
+    if regular:
+        parts.append('    <div class="sites-grid">\n%s\n    </div>' % '\n'.join(regular))
+    if featured:
+        parts.append(
+            '    <div class="sites-featured" aria-label="本日精選互動">\n'
+            '%s\n'
+            '    </div>' % '\n'.join(featured)
+        )
+    return '\n'.join(parts)
 
 
 def render_history_panel(title, body_lines):
@@ -350,7 +411,7 @@ def render_live(block, slug, day_meta):
         heading = c['heading']
         feature = bool(re.search(r'⭐|\{feature\}', heading))
         clean_heading = re.sub(r'⭐|\{feature\}', '', heading).strip()
-        name, img, _ = split_heading_image(clean_heading)
+        name, img, _, _ = split_heading_image(clean_heading)
         is_note = bool(re.search(r'隨筆|随笔', name))
         time_label = re.sub(r'隨筆|随笔', '', name).strip()
         desc_html = []
@@ -383,12 +444,12 @@ def render_live(block, slug, day_meta):
     )
 
 
-def render_plan(block, landmarks=None, diagonal=False):
+def render_plan(block, landmarks=None, diagonal=False, slug=''):
     _, cards = split_cards(block['lines'])
     out = []
     landmarks = landmarks or {}
     for i, c in enumerate(cards):
-        name, _, _ = split_heading_image(c['heading'])
+        name, _, _, _ = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
         lm = landmarks.get(name)
         if lm is None:
@@ -446,15 +507,35 @@ def render_plan(block, landmarks=None, diagonal=False):
             '<span class="diag-spine-arrow">→</span>'
             '</div>\n'
         )
+        collage_src = '../photos/%s/day02/lithuania-souvenirs-collage.png' % (
+            slug or 'bldh-trio')
+        audio_src = '/photos/%s/audio/lithuania_15s.mp3' % (slug or 'bldh-trio')
         souvenirs = (
-            '      <aside class="diag-souvenirs" aria-label="立陶宛紀念小物">'
-            '<span class="diag-souv diag-souv--a">琥珀吊墜</span>'
-            '<span class="diag-souv diag-souv--b">黑麥麵包</span>'
-            '<span class="diag-souv diag-souv--c">木雕鸛鳥</span>'
-            '<span class="diag-souv diag-souv--d">櫻桃酒磁鐵</span>'
-            '<span class="diag-souv diag-souv--e">亞麻手巾</span>'
-            '<span class="diag-souv diag-souv--f">Cepelinai 胸針</span>'
-            '</aside>\n'
+            '      <aside class="diag-souvenirs" aria-label="立陶宛紀念小物與民謠">'
+            '<img class="diag-souvenirs-collage" src="%s" alt="立陶宛紀念小物集合">'
+            '<div class="lt-vinyl-wrap">'
+            '<button type="button" class="lt-vinyl" data-src="%s" '
+            'aria-label="播放立陶宛民謠十五秒" aria-pressed="false">'
+            '<span class="lt-vinyl__stage" aria-hidden="true">'
+            '<span class="lt-vinyl__disc">'
+            '<span class="lt-vinyl__grooves"></span>'
+            '<span class="lt-vinyl__label">'
+            '<span class="lt-vinyl__flag"></span>'
+            '<span class="lt-vinyl__mark">LT</span>'
+            '</span>'
+            '<span class="lt-vinyl__spindle"></span>'
+            '</span>'
+            '<span class="lt-vinyl__arm">'
+            '<span class="lt-vinyl__arm-pivot"></span>'
+            '<span class="lt-vinyl__arm-shaft"></span>'
+            '<span class="lt-vinyl__arm-head"></span>'
+            '</span>'
+            '</span>'
+            '<span class="lt-vinyl__hint">點擊播放 · 15s</span>'
+            '</button>'
+            '<audio class="lt-vinyl__audio" preload="auto" src="%s" playsinline></audio>'
+            '</div>'
+            '</aside>\n' % (collage_src, audio_src, audio_src)
         )
         return (
             '    <div class="sites-grid sites-grid--diagonal">\n'
@@ -485,7 +566,8 @@ def render_day(day, slug, status, gi, landmarks=None):
         extra.append('餐食：%s' % esc(day_meta['meals']))
     if day_meta.get('leader'):
         extra.append('領隊：%s' % esc(day_meta['leader']))
-    meta_tip = ('    <div class="extra-tip">%s</div>' % '　|　'.join(extra)) if extra else ''
+    # Day meta (flight/meals/leader) is itinerary info — not "額外推薦"
+    meta_tip = ('    <div class="extra-tip extra-tip--meta">%s</div>' % '　|　'.join(extra)) if extra else ''
 
     sections = []
     day_num = head.get('day_num') or ''
@@ -498,7 +580,7 @@ def render_day(day, slug, status, gi, landmarks=None):
         elif b['kind'] == 'live' and status == 'done':
             sections.append(render_live(b, slug, day_meta_live))
         elif b['kind'] == 'plan':
-            sections.append(render_plan(b, landmarks, diagonal=use_diagonal))
+            sections.append(render_plan(b, landmarks, diagonal=use_diagonal, slug=slug))
 
     did = ('d%s' % head['day_num']) if head['day_num'] else ''
     day_extra_class = ' day-section--diagonal' if use_diagonal else ''
@@ -578,7 +660,7 @@ def render_trip_page(trip, shell, prev_trip, next_trip, landmarks=None):
                 '  <div class="section-title">ROUTE MAP</div>\n'
                 '  <h2 class="section-heading">%s・足跡總覽</h2>\n'
                 '  <div class="map-container">%s</div>\n'
-                '</section>' % (esc(data.get('title') or slug), svg)
+                '</section>' % (esc(re.sub(r'[{}]', '', data.get('title') or slug)), svg)
             )
 
     day_html = '\n'.join(render_day(d, slug, data.get('status'), gi, landmarks) for d in days)
@@ -891,6 +973,7 @@ def main(dist_dir=None, overlay=None, label='dist/', landmarks_patch=None):
         # 否則 CSS 背景圖的缺圖會被漏掉（hero image 走的正是這條路徑）。
         refs = re.findall(r'src="\.\./photos/([^"]+)"', html)
         refs += re.findall(r"background-image:url\('\.\./photos/([^']+)'\)", html)
+        refs += re.findall(r'data-src="\.\./photos/([^"]+)"', html)
         for path in refs:
             if not os.path.exists(os.path.join(dist_dir, 'photos', path)):
                 print('  ⚠ 缺图：%s（%s）' % (path, t['slug']))

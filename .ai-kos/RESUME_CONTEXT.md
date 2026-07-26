@@ -1,16 +1,16 @@
 # RESUME_CONTEXT（最新）
 
-**更新：** 2026-07-25 收工 Handoff
+**更新：** 2026-07-26 收工 Handoff
 
 ## 上次停在
 
-- Baltic Day 6（07/16 里加）25 張全量已上線
-- 政策：Drive 當日夾照片 **全部上站**
+- Baltic Day 7（07/17）19 張＋圖雷達塔樓影片已上線
+- 政策：Drive 當日夾媒體 **全部上站**（含影片）
 - Cloud `CLAUDE`（各日資料夾）＝斌哥當日指令 SSOT
 
 ## 下一步
 
-1. Day 7（07/17）：讀 Drive `0717/`＋Cloud `CLAUDE` → 全量入站
+1. Day 8（07/18）：讀 Drive `0718/`＋Cloud `CLAUDE` → 全量入站
 2. （可選）`git push`
 3. 繼續 Daily Travel Update
 

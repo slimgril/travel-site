@@ -8,15 +8,62 @@
 <meta property="og:title" content="{{TITLE}}">
 <meta property="og:description" content="{{DESC}}">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/base.css?v=20260710-mobile">
+<link rel="stylesheet" href="/base.css?v=20260724-backtop3">
 </head>
 <body>
 {{BODY}}
+<a href="#" class="back-top" id="back-top" aria-label="返回頂部" title="返回頂部">
+  <svg class="back-top__mark" viewBox="0 0 56 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="bt-shaft" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#2D6A4F"/>
+        <stop offset="55%" stop-color="#D4A843"/>
+        <stop offset="100%" stop-color="#E85D4C"/>
+      </linearGradient>
+      <linearGradient id="bt-head" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#C84B3A"/>
+        <stop offset="50%" stop-color="#F0C23A"/>
+        <stop offset="100%" stop-color="#7EC8C3"/>
+      </linearGradient>
+      <filter id="bt-glow" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="1" stdDeviation="1.4" flood-color="#1B4332" flood-opacity="0.35"/>
+      </filter>
+    </defs>
+    <!-- 羅盤底環 -->
+    <circle cx="28" cy="46" r="16" fill="#F5F0E8" stroke="#D4A843" stroke-width="2"/>
+    <circle cx="28" cy="46" r="11" fill="none" stroke="#2D6A4F" stroke-width="1.2" stroke-dasharray="2 3" opacity="0.7"/>
+    <!-- 方向指標（藝術化向上箭） -->
+    <g filter="url(#bt-glow)">
+      <path fill="url(#bt-head)"
+            d="M28 4 L44 28 L34 28 L34 58 L22 58 L22 28 L12 28 Z"/>
+      <path fill="url(#bt-shaft)" opacity="0.9"
+            d="M26 30 L30 30 L30 56 L26 56 Z"/>
+      <circle cx="28" cy="46" r="3.2" fill="#F8EDE8" stroke="#C84B3A" stroke-width="1.4"/>
+    </g>
+  </svg>
+</a>
 <div id="lightbox">
   <span class="lightbox-close">&times;</span>
   <img src="" alt="">
   <div class="lightbox-caption"></div>
 </div>
+<script>
+(function () {
+  var btn = document.getElementById('back-top');
+  if (!btn) return;
+  var detail = document.querySelector('.day-section, .map-section, .days-nav');
+  function sync() {
+    var show = !!detail && window.scrollY > 240;
+    btn.classList.toggle('is-visible', show);
+  }
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  window.addEventListener('scroll', sync, { passive: true });
+  sync();
+})();
+</script>
 <script>
 (function () {
   var lb = document.getElementById('lightbox');
@@ -38,7 +85,7 @@
 
   document.addEventListener('click', function (e) {
     var el = e.target.closest('.site-img.photo, .live-img');
-    if (!el) return;
+    if (!el || el.classList.contains('video-card') || e.target.closest('.video-card')) return;
     var src = extractUrl(el);
     if (!src) return;
     lbImg.src = src;
@@ -57,6 +104,180 @@
       lbImg.src = '';
     }
   });
+})();
+</script>
+<script>
+/* Lithuanian vinyl — Day 2 cultural widget */
+(function () {
+  function wire(btn) {
+    if (btn._ltWired) return;
+    btn._ltWired = true;
+    var wrap = btn.closest('.lt-vinyl-wrap') || btn.parentElement;
+    var audio = wrap && wrap.querySelector('audio.lt-vinyl__audio');
+    var src = (audio && audio.getAttribute('src')) || btn.getAttribute('data-src');
+    if (!audio) {
+      if (!src) return;
+      audio = new Audio(src);
+    }
+    audio.preload = 'auto';
+    audio.volume = 1;
+    try { audio.setAttribute('playsinline', ''); } catch (e) {}
+    var hint = btn.querySelector('.lt-vinyl__hint');
+
+    function idleLabel() {
+      if (hint) hint.textContent = '點擊播放 · 15s';
+      btn.setAttribute('aria-pressed', 'false');
+      btn.classList.remove('is-playing');
+    }
+    function playingLabel() {
+      if (hint) hint.textContent = '播放中 · 再點暫停';
+      btn.setAttribute('aria-pressed', 'true');
+      btn.classList.add('is-playing');
+    }
+    function failLabel(msg) {
+      if (hint) hint.textContent = msg || '無法播放音訊';
+      btn.setAttribute('aria-pressed', 'false');
+      btn.classList.remove('is-playing');
+    }
+    function reset() {
+      audio.pause();
+      try { audio.currentTime = 0; } catch (e) {}
+      idleLabel();
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (audio.error) {
+        failLabel('音檔損壞或路徑錯誤');
+        return;
+      }
+      if (audio.paused) {
+        // Ensure we start from beginning if previous play ended
+        if (audio.ended || audio.currentTime > 14.5) {
+          try { audio.currentTime = 0; } catch (err) {}
+        }
+        var p = audio.play();
+        if (p && p.then) {
+          p.then(playingLabel).catch(function (err) {
+            failLabel('瀏覽器阻擋播放' + (err && err.name ? '（' + err.name + '）' : ''));
+          });
+        } else {
+          playingLabel();
+        }
+      } else {
+        audio.pause();
+        idleLabel();
+      }
+    });
+    audio.addEventListener('ended', reset);
+    audio.addEventListener('error', function () {
+      failLabel('音檔載入失敗');
+    });
+    audio.addEventListener('pause', function () {
+      if (!audio.ended && audio.currentTime > 0 && audio.paused) {
+        btn.classList.remove('is-playing');
+        btn.setAttribute('aria-pressed', 'false');
+        if (hint && hint.textContent.indexOf('無法') !== 0 && hint.textContent.indexOf('音檔') !== 0) {
+          hint.textContent = '已暫停 · 點擊繼續';
+        }
+      }
+    });
+  }
+
+  function boot() {
+    document.querySelectorAll('.lt-vinyl').forEach(wire);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+<script>
+/* Click-to-play video cards (flash → poster fade → video) */
+(function () {
+  function resetCard(card) {
+    var video = card.querySelector('video.video-card__media');
+    card.classList.remove('is-playing', 'is-flashing');
+    card._flashing = false;
+    if (card._flashTimer) {
+      clearTimeout(card._flashTimer);
+      card._flashTimer = null;
+    }
+    if (!video) return;
+    video.pause();
+    try { video.currentTime = 0; } catch (e) {}
+  }
+
+  function startPlayback(card) {
+    var video = card.querySelector('video.video-card__media');
+    if (!video) return;
+    card.classList.remove('is-flashing');
+    card.classList.add('is-playing');
+    var p = video.play();
+    if (p && p.catch) {
+      p.catch(function () {
+        card.classList.remove('is-playing');
+      });
+    }
+  }
+
+  function playCard(card) {
+    var video = card.querySelector('video.video-card__media');
+    if (!video || card._flashing) return;
+    var reduce = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      startPlayback(card);
+      return;
+    }
+    card._flashing = true;
+    card.classList.add('is-flashing');
+    card._flashTimer = setTimeout(function () {
+      card._flashTimer = null;
+      card._flashing = false;
+      startPlayback(card);
+    }, 150);
+  }
+
+  function wire(card) {
+    if (card._videoWired) return;
+    card._videoWired = true;
+    var video = card.querySelector('video.video-card__media');
+    if (!video) return;
+
+    function activate(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (card.classList.contains('is-playing') || card._flashing) {
+        resetCard(card);
+        return;
+      }
+      playCard(card);
+    }
+
+    card.addEventListener('click', activate);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        activate(e);
+      }
+    });
+    video.addEventListener('ended', function () {
+      resetCard(card);
+    });
+  }
+
+  function boot() {
+    document.querySelectorAll('.video-card').forEach(wire);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
 })();
 </script>
 </body>

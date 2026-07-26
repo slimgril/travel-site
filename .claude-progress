@@ -1,15 +1,20 @@
-# Progress — 2026-07-25 收工 Handoff
+# .claude-progress — travel-site（最新斷點）
+
+**更新：** 2026-07-26  
+**主題：** Baltic Day 7（07/17）全量入站＋圖雷達塔樓影片；已 deploy；commit handoff。
+
+## 完成
+- Drive `0717/`：19 JPG＋1 MP4 全上站
+- `day07.md` 19 卡；塔樓卡 `{video=day07/turaida-tower-gauja.mp4}` 可點播
+- Cloud CLAUDE 要點已採納（火雞午餐／顛倒屋／湖跳台／塔樓動畫）
+- Build／Deploy PASS → https://cluttered-breath.surge.sh/trips/bldh-trio.html#d7
+- 斌哥短報：`content/bldh-trio/source/review/DAY07_0717_BINGGE_REPORT.md`
 
 ## 中斷點
-Baltic Day 6（07/16 里加）25 張全量已上線；今日收工，明日再補。
+- 工作目錄：`/Users/mac/Documents/Projects/旅遊/travel-site`
+- 線上 Day 7 已含影片
 
-## 線上
-https://cluttered-breath.surge.sh/trips/bldh-trio.html#d6
-
-## 政策（已確認）
-Drive 當日資料夾內照片 → **全部渲染上站**（不另做精選省略）。
-
-## 下一步（明天）
-1. Daily Travel Update → **Day 7（07/17）**（讀 Drive `0717/`＋該夾 Cloud `CLAUDE`）
-2. （可選）`git push`
-3. 依「有圖全上」繼續後續天次
+## 下一步
+1. Daily Travel Update → **Day 8（07/18）**；讀 Drive `0718/`＋Cloud `CLAUDE`
+2. （可選）`git push origin main`
+3. 繼續「有媒體全上」政策

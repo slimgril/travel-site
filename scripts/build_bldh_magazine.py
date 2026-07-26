@@ -88,15 +88,17 @@ def parse_day(path):
         if l.startswith('## '):
             section = l[3:].strip()
             continue
-        m = re.match(r'^###\s+!\[(.*?)\]\((.*?)\)\s+(.*)$', l)
+        m = re.match(r'^###\s+!\[(.*?)\]\((.*?)\)\s*(.*)$', l)
         if m:
-            cur = {'name': m.group(3).strip(), 'img': m.group(2).strip(),
+            name = re.sub(r'\{video=[^}]+\}', '', m.group(3)).strip()
+            cur = {'name': name, 'img': m.group(2).strip(),
                    'alt': m.group(1).strip(), 'section': section, 'raw': []}
             entries.append(cur)
             continue
         m = re.match(r'^###\s+(.*)$', l)
         if m:
-            cur = {'name': m.group(1).strip(), 'img': None, 'alt': '',
+            name = re.sub(r'\{video=[^}]+\}', '', m.group(1)).strip()
+            cur = {'name': name, 'img': None, 'alt': '',
                    'section': section, 'raw': []}
             entries.append(cur)
             continue

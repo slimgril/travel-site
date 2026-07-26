@@ -612,8 +612,10 @@ def package_preview_deploy(config: dict) -> tuple[int, int]:
     refs: set[str] = set()
     for html in list(dst.glob('*.html')) + list((dst / 'trips').glob('*.html')):
         text = html.read_text(encoding='utf-8')
-        refs.update(re.findall(r'src="(?:\.\./)?photos/([^"]+)"', text))
-        refs.update(re.findall(r"background-image:url\('(?:\.\./)?photos/([^']+)'\)", text))
+        # Accept ../photos/... and root-absolute /photos/...
+        refs.update(re.findall(r'src="(?:\.\./|/)?photos/([^"]+)"', text))
+        refs.update(re.findall(r"background-image:url\('(?:\.\./|/)?photos/([^']+)'\)", text))
+        refs.update(re.findall(r'data-src="(?:\.\./|/)?photos/([^"]+)"', text))
 
     for rel in sorted(refs):
         s = src / 'photos' / rel

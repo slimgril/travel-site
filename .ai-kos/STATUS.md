@@ -1,6 +1,24 @@
 # STATUS — travel-site
 
-最後更新：2026-07-25（Baltic Day 6｜07/16 里加全量入站）
+最後更新：2026-07-26（Baltic Day 7｜07/17 全量入站＋塔樓影片）
+
+## 2026-07-26 — Baltic Day 7（07/17）錫古爾達 → 塔圖 → 維爾揚迪
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic（`bldh-trio`）Day 7 ｜ 07/17 |
+| **Drive** | SSOT `0717/` 19 JPG＋1 MP4＋Cloud `CLAUDE` |
+| **政策** | 當日夾媒體**全部**上站（含影片） |
+| **New Photos** | **19** → `photos/bldh-trio/day07/` |
+| **Video** | `turaida-tower-gauja.mp4`（點擊播放；原片存 drive-originals） |
+| **Travel Notes** | `day07.md` 19 卡（含 Cloud CLAUDE） |
+| **Build** | PASS |
+| **Deploy** | PASS（Node 20＋surge@0.23.1 · `dist-surge-upload`） |
+| **Live** | https://cluttered-breath.surge.sh/trips/bldh-trio.html#d7 |
+| **Commit** | 本 Handoff |
+
+報告：`content/bldh-trio/source/review/DAY07_0717_INGEST_REPORT.md`  
+斌哥短報：`content/bldh-trio/source/review/DAY07_0717_BINGGE_REPORT.md`
 
 ## 2026-07-25 — Baltic Day 6（07/16）里加 — 東歐巴黎
 

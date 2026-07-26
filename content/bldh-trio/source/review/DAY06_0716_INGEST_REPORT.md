@@ -127,3 +127,17 @@
 | Build | PASS |
 | Deploy | PASS → https://cluttered-breath.surge.sh/trips/bldh-trio.html#d6 |
 | 線上抽查 | 頁面＋貓屋／布萊梅／巴龍斯／聖彼得夜景 HTTP 200；HTML 含 25 個 day06 ref |
+
+## 8. Cloud CLAUDE 更新（2026-07-26）
+
+依斌哥更新後的 `0716/CLAUDE` 修正命名與敘事：
+
+| 原誤判／舊標 | 修正 |
+|--------------|------|
+| 舊城 1646 街景 | **三兄弟之屋** |
+| 瑞典門旁粉塔 | **火藥塔**（Powder Tower） |
+| Lāči 黑醋栗巧克力 | **黑藥酒巧克力** |
+| 傘與紳士壁畫 | **人類渴望飛翔**（Kads） |
+| 黑苦艾酒專賣店 | **黑藥酒咖啡廳** Bar Riga Black Magic |
+
+已 rebuild＋redeploy。

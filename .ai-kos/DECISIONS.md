@@ -4,6 +4,33 @@
 
 ---
 
+## 2026-07-25 — Day1 栗子攤點擊播放影片（主站 sites 卡）
+
+**性質**：主站互動（網站版）；雜誌 HTML 維持靜態照片。
+
+**決策：**
+- Markdown 可選標記：`![alt](poster.jpg){video=path.mp4}`（由 `split_heading_image` 解析）
+- 首例：伊斯坦堡街頭烤栗子 → `photos/bldh-trio/day01/istanbul-chestnut-stall.mp4`（~10s，muted／playsinline）
+- UI：本日照片網格拉出 → 底端 `.sites-featured` 獨立放大（左圖右文）；poster → hover 微放大＋栗子裂口播放鈕 bounce → 點擊淡出照片淡入影片；結束自動回 poster
+- 不開 lightbox（`.video-card` 排除）；不加 Plyr 等第三方套件
+- 原圖 JPG 不改（僅疊互動層）
+
+**參考**：`templates/base.css`（`.video-card`）· `templates/shell.html` · `scripts/build.py` `render_video_site_img`
+
+---
+
+## 2026-07-20 — 景點點擊播放音樂＝計畫書先入庫、暫不實作／不為此改部署
+
+**性質**：產品互動規格（延後執行）。
+
+**決策：**
+- 計畫 SSOT：`content/bldh-trio/source/MUSIC_CLICK_PLAN.md`（旅客／Agent 依此執行）
+- `CLAUDE.md` 僅掛索引；**現階段不改站上 UI、不為此單獨 deploy**
+- 開工資格：對應景點已入站＋合法 15–30s 音檔＋使用者明示「開始做配樂」
+- 規格要點：點擊角落微圖標（非標準 ▶️）、淡入淡出、同頁單曲
+
+---
+
 ## 2026-07-18 — 排版風格＝Knowledge（Template Library 原則）
 
 **性質**：架構原則（使用者明確陳述，記錄／同步，非我主動 scaffold）。
