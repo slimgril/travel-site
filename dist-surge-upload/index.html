@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>丫斌哥 World Journey — 退休後的世界旅行計畫</title>
+<meta name="description" content="退休不是終點，而是另一段探索世界的開始。丫斌哥的世界旅行計畫。">
+<meta property="og:title" content="丫斌哥 World Journey — 退休後的世界旅行計畫">
+<meta property="og:description" content="退休不是終點，而是另一段探索世界的開始。丫斌哥的世界旅行計畫。">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/base.css?v=20260710-mobile">
+<style>
+  /* 首页专用：编号系列卡片 */
+  .series-grid {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:24px; margin-top:40px;
+  }
+  .series-card {
+    display:block; text-decoration:none; border-radius:16px; padding:28px 26px;
+    background:var(--card-bg); box-shadow:var(--shadow);
+    border:1px solid rgba(27,67,50,0.1); transition:transform 0.2s, box-shadow 0.2s;
+    position:relative; overflow:hidden;
+  }
+  .series-card:hover { transform:translateY(-6px); box-shadow:0 12px 32px rgba(0,0,0,0.16); }
+  .series-card::before {
+    content:''; position:absolute; top:0; left:0; width:100%; height:5px;
+    background:linear-gradient(90deg,var(--green-mid),var(--gold));
+  }
+  .series-future::before { background:linear-gradient(90deg,#999,#ccc); }
+  .series-num {
+    font-size:0.8rem; letter-spacing:3px; color:var(--gold);
+    font-weight:700; margin-bottom:10px;
+  }
+  .series-title { font-size:1.4rem; font-weight:700; color:var(--green-dark); margin-bottom:6px; }
+  .series-sub { font-size:0.85rem; color:var(--text-light); margin-bottom:14px; }
+  .series-summary { font-size:0.9rem; color:#444; line-height:1.7; margin-bottom:18px; min-height:3em; }
+  .series-mark {
+    display:inline-block; font-size:0.78rem; font-weight:700; letter-spacing:1px;
+    padding:5px 14px; border-radius:20px;
+    background:rgba(45,106,79,0.12); color:var(--green-mid);
+  }
+  .series-future .series-mark { background:rgba(120,120,120,0.12); color:#888; }
+  .series-future .series-title { color:#888; }
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-badge">World Journey</div>
+  <h1>旅人：<span>丫斌哥</span></h1>
+  <p class="hero-sub">退休，不是終點——而是另一段探索世界的開始。</p>
+  <div class="hero-stats">
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">個國家／地區</div></div>
+      <div class="stat"><div class="stat-num">38</div><div class="stat-label">座城市</div></div>
+      <div class="stat"><div class="stat-num">26</div><div class="stat-label">天旅程</div></div>
+  </div>
+  <div class="scroll-hint">▼ 所有旅程</div>
+</section>
+
+<section style="background:linear-gradient(135deg,#0D2B1F 0%,#1B4332 60%,#2D4A22 100%); padding:80px 20px; text-align:center; position:relative; overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%, rgba(212,168,67,0.08) 0%, transparent 70%);"></div>
+  <div style="max-width:720px;margin:0 auto;position:relative;">
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:44px;align-items:flex-end;">
+      <div style="position:relative;flex-shrink:0;">
+        <div style="width:200px;height:260px;border-radius:20px;overflow:hidden;border:3px solid rgba(212,168,67,0.5);box-shadow:0 16px 48px rgba(0,0,0,0.5);">
+          <img src="photos/site/yabin-wuxi.jpg" alt="丫斌哥 無錫" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        </div>
+        <div style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.75);color:rgba(255,255,255,0.7);font-size:0.7rem;padding:4px 12px;border-radius:20px;white-space:nowrap;border:1px solid rgba(255,255,255,0.15);">
+          📍 無錫・2026.03
+        </div>
+      </div>
+      <div style="flex:1;min-width:220px;max-width:320px;text-align:center;padding:0 8px;">
+        <div style="font-size:4rem;color:rgba(212,168,67,0.2);line-height:0.8;margin-bottom:12px;font-family:Georgia,serif;">&ldquo;</div>
+        <div style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border:1px solid rgba(212,168,67,0.35);border-radius:40px;padding:8px 22px;margin-bottom:20px;">
+          <span style="color:var(--gold-light);letter-spacing:3px;font-size:0.82rem;font-weight:600;">旅　人</span>
+          <span style="color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:2px;">丫斌哥</span>
+        </div>
+        <p style="color:#fff;font-size:clamp(1.1rem,3vw,1.5rem);font-weight:300;line-height:1.9;letter-spacing:0.05em;">
+          退休，不是句點——<br>是另一段旅程的<br><strong style="color:var(--gold);font-weight:700;">起點</strong>。
+        </p>
+      </div>
+      <div style="position:relative;flex-shrink:0;">
+        <div style="width:200px;height:260px;border-radius:20px;overflow:hidden;border:3px solid rgba(212,168,67,0.5);box-shadow:0 16px 48px rgba(0,0,0,0.5);">
+          <img src="photos/site/yabin-dalat.jpg" alt="丫斌哥 大叻" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        </div>
+        <div style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.75);color:rgba(255,255,255,0.7);font-size:0.7rem;padding:4px 12px;border-radius:20px;white-space:nowrap;border:1px solid rgba(255,255,255,0.15);">
+          📍 越南大叻・2026.05
+        </div>
+      </div>
+    </div>
+    <div style="width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 32px;"></div>
+    <p style="color:rgba(255,255,255,0.78);font-size:1.05rem;line-height:2;letter-spacing:0.03em;margin-bottom:28px;">
+      帥氣、有個性，骨子裡藏著一股不安分的靈魂。<br>
+      在人生最自由的時刻，他立下誓言：<br>
+      <strong style="color:var(--gold-light);">用餘生走遍天下，用雙腳丈量世界，用心去感受每一片土地的呼吸。</strong>
+    </p>
+    <p style="color:rgba(255,255,255,0.6);font-size:0.98rem;line-height:2;letter-spacing:0.03em;margin-bottom:36px;">
+      不是走馬看花，不是打卡留念。<br>
+      他要的是真正的相遇——與古城相遇，與歷史相遇，<br>
+      與陌生的人情風土，面對面地相遇。
+    </p>
+    <p style="color:rgba(255,255,255,0.78);font-size:1.05rem;line-height:2;letter-spacing:0.03em;margin-bottom:0;">
+      這本旅誌，是他送給自己的禮物，<br>
+      也是他向每一位讀者發出的邀請：<br>
+      <strong style="color:#fff;">翻開每一頁，你不只是讀者，你是他的旅伴。</strong>
+    </p>
+  </div>
+</section>
+
+<section style="max-width:1100px;margin:0 auto;padding:60px 20px;">
+  <div class="section-title" style="color:var(--gold);text-align:center;">THE JOURNEYS</div>
+  <h2 class="section-heading" style="color:var(--green-dark);text-align:center;">世界旅行計畫</h2>
+  <div class="series-grid">
+    <a class="series-card series-done" href="trips/shanxi.html">
+      <div class="series-num">World Journey #001</div>
+      <div class="series-title">山西漫遊 15 日</div>
+      <div class="series-sub">2026年6月10日 — 6月24日　深度文化歷史之旅</div>
+      <div class="series-summary">從雲岡石窟、五台山、平遙古城到壺口瀑布與晉祠，用腳步閱讀山西 2700 年文明。</div>
+      <div class="series-mark">✓ 已完成</div>
+    </a>
+    <a class="series-card series-done" href="trips/bldh-trio.html">
+      <div class="series-num">World Journey #002</div>
+      <div class="series-title">波羅的海三小國 11 日</div>
+      <div class="series-sub">立陶宛 · 拉脫維亞 · 愛沙尼亞　2026年7月11日 — 7月21日</div>
+      <div class="series-summary">立陶宛、拉脫維亞、愛沙尼亞 11 日。中世紀古城、水中古堡、十字架山與波羅的海海岸線——丫斌哥的波羅的海三國之旅已圓滿返抵。</div>
+      <div class="series-mark">✓ 已完成</div>
+    </a>
+    <a class="series-card series-future" href="trips/baikal-rail.html">
+      <div class="series-num">World Journey #003</div>
+      <div class="series-title">西伯利亞大鐵路 20 日</div>
+      <div class="series-sub">蒙古 · 貝加爾湖 · 聖彼得堡 · 莫斯科　2026年7月20日 — 8月8日</div>
+      <div class="series-summary">西伯利亞大鐵路 20 日，串連蒙古、貝加爾湖、奧利洪島、葉卡捷琳堡、聖彼得堡與莫斯科。搭火車穿越草原、湖岸、森林與俄羅斯帝國城市。</div>
+      <div class="series-mark">⏳ 即將出發</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>丫斌哥 World Journey</strong></p>
+  <p style="margin-top:8px;font-size:0.78rem;">用餘生走遍天下，用雙腳丈量世界。© 2026</p>
+</footer>
+</body>
+</html>

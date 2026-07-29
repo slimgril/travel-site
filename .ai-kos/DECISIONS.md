@@ -4,13 +4,75 @@
 
 ---
 
+## 2026-07-30 — 景點壓縮四拍（覆寫知性見聞）
+
+**性質**：Owner 文風定稿（BLDH Day 7–10 批次適用，全站新增／改寫沿用）。
+
+**問題：** 07-29「知性見聞優先」讓景觀卡偏向設計理念／建造邏輯長文，讀起來像導遊詞或 Wikipedia，不像旅行書。
+
+**決策：**
+- 景點卡採**壓縮四拍**（當下 → 故事 1–2 句 → 旅遊雜記 → 一句收尾），寫成一小段散文
+- 景點知識約 **30%**，雜記與感受約 **70%**
+- **廢止** 07-29「景觀描述 — 知性見聞優先」
+- 主站不顯示 emoji／區塊標題；愛沙尼亞互動札記與 day07 EE–day10 同步
+
+**適用：**
+- 立即：`bldh-trio` Day 7–10
+- 下一旅程：`baikal-rail`（西伯利亞）— **每天每張照片**依同一原則寫旅行書，不做冷冰冰導覽介紹
+
+**參考**：`.ai-kos/CONTENT_STYLE.md` v1.1 · `CLAUDE.md` · `content/bldh-trio/day07.md`–`day10.md`
+
+---
+
+## 2026-07-29 — 隨身碟／離線：音檔必須相對路徑
+
+**性質**：離線相容修正（Day 2 立陶宛黑膠播放器）。
+
+**問題：** `lithuania_15s.mp3` 曾用絕對路徑 `/photos/...`，線上 surge 可播；**隨身碟／file://** 開 `trips/*.html` 時路徑指到磁碟根目錄 → 播放器無聲／載入失敗。
+
+**決策：**
+- 音檔與照片／影片一律用 `../photos/...`（相對 `trips/`）
+- 打包隨身碟前用本機 `file://` 或相對目錄開啟驗證黑膠＋影片
+
+**參考：** `scripts/build.py`（`audio_src`）· `templates/shell.html`（`.lt-vinyl`）
+
+---
+
+## 2026-07-26 — 影片配樂淡入淡出（800ms）
+
+**性質**：主站聽覺體驗（接續有聲修正）。
+
+**決策：**
+- 點擊播放：音量 **0 → 1** 淡入約 **800ms**
+- 手動停止／接近片尾：音量 **→ 0** 淡出約 **800ms**（片尾依剩餘秒數縮短）
+- `prefers-reduced-motion: reduce` 時改為瞬切（無漸變）
+- 僅影響有音軌之 `.video-card`；無音軌檔行為不變
+
+**參考**：`templates/shell.html`（`FADE_MS`／`fadeVolume`）
+
+---
+
+## 2026-07-26 — 點擊播放影片＝有聲（取消 muted）
+
+**性質**：主站互動修正（Day 7 圖雷達塔樓影片無聲回報）。
+
+**決策：**
+- `<video>` 仍保留初始 `muted playsinline`（行動端相容）
+- **點擊播放時** `video.muted = false`（使用者手勢允許出聲）
+- 無音軌影片（如 Day1 栗子攤）不受影響；有音軌影片（如 Day7 `turaida-tower-gauja.mp4`）放出原片環境音／現場聲
+- 此為原片音軌，**不是** `MUSIC_CLICK_PLAN.md` 的景點配樂功能
+
+**參考**：`templates/shell.html` `startPlayback`
+
+---
+
 ## 2026-07-25 — Day1 栗子攤點擊播放影片（主站 sites 卡）
 
 **性質**：主站互動（網站版）；雜誌 HTML 維持靜態照片。
 
 **決策：**
 - Markdown 可選標記：`![alt](poster.jpg){video=path.mp4}`（由 `split_heading_image` 解析）
-- 首例：伊斯坦堡街頭烤栗子 → `photos/bldh-trio/day01/istanbul-chestnut-stall.mp4`（~10s，muted／playsinline）
+- 首例：伊斯坦堡街頭烤栗子 → `photos/bldh-trio/day01/istanbul-chestnut-stall.mp4`（~10s，初始 muted／playsinline；點擊後 unmute，該檔無音軌）
 - UI：本日照片網格拉出 → 底端 `.sites-featured` 獨立放大（左圖右文）；poster → hover 微放大＋栗子裂口播放鈕 bounce → 點擊淡出照片淡入影片；結束自動回 poster
 - 不開 lightbox（`.video-card` 排除）；不加 Plyr 等第三方套件
 - 原圖 JPG 不改（僅疊互動層）

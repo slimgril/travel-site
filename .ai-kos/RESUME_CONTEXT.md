@@ -1,18 +1,21 @@
 # RESUME_CONTEXT（最新）
 
-**更新：** 2026-07-26 收工 Handoff
+**更新：** 2026-07-30 景點壓縮四拍（Day 7–10）
 
 ## 上次停在
 
-- Baltic Day 7（07/17）19 張＋圖雷達塔樓影片已上線
-- 政策：Drive 當日夾媒體 **全部上站**（含影片）
-- Cloud `CLAUDE`（各日資料夾）＝斌哥當日指令 SSOT
+- Owner 定稿：**壓縮四拍**（當下→故事→雜記→收尾）；廢止 07-29 知性見聞長文
+- Knowledge：`CONTENT_STYLE` v1.1 · `CLAUDE.md` · `DECISIONS` · Daily Update 已標 v1.1
+- 內容：`day07`–`day10` 改寫完成；愛沙尼亞札記 52 卡同步
+- **西伯利亞（`baikal-rail`）**：新日／新圖一律同原則（旅行書，非導覽）
+- Build／Package PASS；**Deploy Pending**（需核准）
 
 ## 下一步
 
-1. Day 8（07/18）：讀 Drive `0718/`＋Cloud `CLAUDE` → 全量入站
-2. （可選）`git push`
-3. 繼續 Daily Travel Update
+1. Owner 核准後部署：`npx surge@0.23.1 dist-surge-upload cluttered-breath.surge.sh`
+2. 本地先看：`dist-preview-deploy/trips/bldh-trio.html#d7`–`#d10`、`estonia-journal.html`
+3. （可選）commit／push
+4. 西伯利亞開寫時：每張照片依壓縮四拍
 
 ---
 # Resume Context — travel-site
@@ -77,25 +80,26 @@ Travel Site 已進入 **Operational Phase**。
 
 ### Content Style
 
-Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTENT_STYLE.md`
+Travel Site adopts **Content Style v1.1 (旅行札記＋景點壓縮四拍)** — see `.ai-kos/CONTENT_STYLE.md`
 
 | 原則 | 說明 |
 |------|------|
 | 第一人稱旅行者視角 | 親眼所見、親身體驗、當下感受為主；可自然省略主詞 |
-| 體驗優先 | 景點歷史/文化/建築僅作背景，篇幅約 **20–30%**，不可喧賓奪主 |
+| 體驗優先 | 景點知識約 **20–30%**，雜記與感受約 **70%** |
+| 壓縮四拍 | 當下 → 故事 1–2 句 → 旅遊雜記 → 一句收尾（一小段散文；無 emoji 標題） |
 | 一圖一故事 | 每張照片有自己的故事，不重複同一段景點介紹 |
 | 照片融入情境 | 斌哥入鏡時自然融入當下，不描述「這是一張合影」 |
-| 保留結構 | 維持既有 Markdown 區塊（`## 歷史`、`## 古蹟`、`###` 卡片、`![...](path)`），不更動 CSS 或 build 模板 |
+| 保留結構 | 維持既有 Markdown 區塊，不更動 CSS 或 build 模板 |
 
 **增量採用政策：**
 
-- 自 v1.0 起，所有**新增或修改**的內容遵循本規範
-- **不全面重寫** — 既有旅程（山西、西伯利亞大鐵路等）維持原狀，除非該檔案被主動編輯
-- **試點** — `content/bldh-trio/day01.md`（Baltic Day 1）已套用；新天次與旅程逐步擴及
-- **編輯觸發** — 僅在觸及某檔案時才改寫該檔
+- 自 v1.0／v1.1 起，所有**新增或修改**的內容遵循本規範
+- **不全面重寫** — 既有旅程維持原狀，除非該檔案被主動編輯
+- **BLDH Day 7–10** — 2026-07-30 已依 v1.1 批次改寫
+- **編輯觸發** — 其餘天次僅在觸及某檔案時才改寫
 
-**避免：** Wikipedia 式條目、旅遊書導覽、百科介紹、年代表堆砌、建築規格羅列。  
-**偏好：** 漫步……、穿過……、抬頭望見……、停下腳步……、忍不住拍下……、留下這張照片……
+**避免：** Wikipedia、導遊詞、流水帳、設計論文、建築規格羅列。  
+**偏好：** 現場感受 × 短故事 × 團走雜記 × 情緒收尾。
 
 **BLDH Trio 排版模板（HARD RULE）：** `bldh-trio` 專案所有排版／生成／合併／渲染，一律套用根目錄 `city-magazine-template.md`「城市雜誌風排版器模板」。排版器 `scripts/build_bldh_magazine.py` → 輸出 `content/bldh-trio/bldh-trio-magazine.html`（standalone，`build.py` 不處理）。詳見 `.ai-kos/DECISIONS.md`（2026-07-18）。
 
@@ -129,7 +133,7 @@ Travel Site adopts **Content Style v1.0 (旅行札記)** — see `.ai-kos/CONTEN
 |------|------|------|
 | `shanxi` | done | legacy style — do not mass-rewrite |
 | `bldh-trio` | **operational** | Baltic；Day 4 已上線；回饋修正（文學街／meta／額外推薦）已 deploy；下一步 Day 5（07/15） |
-| `baikal-rail` | upcoming | 71 images; sync script exists (`scripts/sync_baikal_photos.py`) |
+| `baikal-rail` | upcoming | 西伯利亞；新日／新圖一律 **CONTENT_STYLE v1.1 壓縮四拍**（旅行書，非導覽）；sync：`scripts/sync_baikal_photos.py` |
 
 ---
 

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>愛沙尼亞行紀 — 塔林到塔圖</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+
+  :root{
+    --ink:#1c2b28;
+    --parchment:#f2ede1;
+    --moss:#3f5d4e;
+    --moss-deep:#28392f;
+    --rust:#a8623f;
+    --line:#c9bfa8;
+    --paper-shadow: 0 18px 40px -20px rgba(28,43,40,.45);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background:
+      radial-gradient(ellipse at top left, #3a4f45 0%, #1c2b28 55%),
+      var(--ink);
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:'Noto Sans TC', sans-serif;
+    padding:48px 20px 120px;
+    min-height:100vh;
+  }
+
+  .masthead{
+    max-width:760px;
+    margin:0 auto 56px;
+    text-align:center;
+    color:var(--parchment);
+  }
+  .masthead .eyebrow{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    letter-spacing:.35em;
+    text-transform:uppercase;
+    font-size:12px;
+    opacity:.7;
+    margin-bottom:14px;
+  }
+  .masthead h1{
+    font-family:'Noto Serif TC', serif;
+    font-weight:700;
+    font-size:clamp(32px,6vw,52px);
+    line-height:1.25;
+  }
+  .masthead .route{
+    margin-top:16px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:19px;
+    opacity:.75;
+  }
+  .masthead .route span{ padding:0 10px; }
+
+  .deck{
+    max-width:760px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:36px;
+  }
+
+  .card{
+    background:var(--parchment);
+    border-radius:2px;
+    box-shadow:var(--paper-shadow);
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .card:hover{ transform:translateY(-4px); }
+
+  .card::before{
+    content:"";
+    position:absolute; inset:10px;
+    border:1px solid var(--line);
+    pointer-events:none;
+  }
+
+  .card-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    padding:26px 30px 0;
+  }
+  .stamp{
+    font-family:'Cormorant Garamond', serif;
+    font-size:13px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--moss);
+    border:1px solid var(--moss);
+    border-radius:999px;
+    padding:4px 12px;
+  }
+  .locale{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:15px;
+    color:var(--rust);
+  }
+
+  .card-title{
+    font-family:'Noto Serif TC', serif;
+    font-weight:700;
+    font-size:26px;
+    padding:14px 30px 6px;
+    color:var(--moss-deep);
+  }
+
+  .card-teaser{
+    padding:0 30px 26px;
+    font-size:15px;
+    line-height:1.9;
+    color:#3a3530;
+  }
+
+  .expand-hint{
+    padding:0 30px 24px;
+    font-size:12.5px;
+    color:var(--rust);
+    letter-spacing:.08em;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .expand-hint .arrow{ transition:transform .3s ease; display:inline-block; }
+  .card.open .expand-hint .arrow{ transform:rotate(90deg); }
+
+  .card-body{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .5s ease;
+    border-top:1px dashed var(--line);
+  }
+  .card.open .card-body{ max-height:600px; }
+
+  .card-body-inner{
+    padding:26px 30px 32px;
+    font-size:15.5px;
+    line-height:2;
+    color:#2b2620;
+  }
+  .card-body-inner .fact{
+    margin-top:16px;
+    padding-top:14px;
+    border-top:1px dotted var(--line);
+    font-family:'Cormorant Garamond', serif;
+    font-size:15.5px;
+    font-style:italic;
+    color:var(--moss);
+  }
+
+  footer{
+    max-width:760px;
+    margin:60px auto 0;
+    text-align:center;
+    color:var(--parchment);
+    opacity:.5;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:13px;
+    letter-spacing:.15em;
+  }
+
+  @media(max-width:520px){
+    .card-head, .card-title, .card-teaser, .expand-hint, .card-body-inner{ padding-left:22px; padding-right:22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="eyebrow">Journal · Eesti</div>
+  <h1>石與貓的國度</h1>
+  <div class="route">塔林 <span>·</span> 塔圖 <span>·</span> 維爾揚迪</div>
+</div>
+
+<div class="deck">
+
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head">
+      <span class="stamp">01 · Viljandi</span>
+      <span class="locale">貓之城</span>
+    </div>
+    <div class="card-title">街頭的貓咪們</div>
+    <div class="card-teaser">才踏出車子,第一眼就被路邊那一列水泥貓給逗笑了——原來這些矮胖的貓咪柱子是真正的阻車樁……</div>
+    <div class="expand-hint"><span class="arrow">▸</span>展開全文</div>
+    <div class="card-body"><div class="card-body-inner">
+      才踏出車子,第一眼就被路邊那一列水泥貓給逗笑了——原來這些矮胖的貓咪柱子是真正的阻車樁,擋著車子別開進行人區。城市藝術家 Kristi Kangilaski 設計、雕塑家 Aime Kuulbusch 動手做出來的,現在已經變成維爾揚迪的城市代表,連市徽上都看得到貓的身影。走在街上,幾乎每個轉角都能撞見一隻,忍不住一路拍下去。
+      <div class="fact">設計 — Kristi Kangilaski ／ 雕塑 — Aime Kuulbusch</div>
+    </div></div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head">
+      <span class="stamp">02 · Tartu</span>
+      <span class="locale">棋局一隅</span>
+    </div>
+    <div class="card-title">巨大的棋子</div>
+    <div class="card-teaser">在塔圖市區走著走著,眼前忽然出現幾顆放大版的西洋棋棋子——沒有對弈的人物,只有安靜立在原地的棋子本身……</div>
+    <div class="expand-hint"><span class="arrow">▸</span>展開全文</div>
+    <div class="card-body"><div class="card-body-inner">
+      在塔圖市區走著走著,眼前忽然出現幾顆放大版的西洋棋棋子——沒有對弈的人物,只有安靜立在原地的棋子本身,尺寸大到讓人忍不住走近端詳每一顆的造型。愛沙尼亞是出過國際西洋棋大師的國家,街頭會出現這樣的裝置也不意外。站在棋子中間拍照,像是自己也成了棋盤上的一員。
+      <div class="fact">造型 — 放大版西洋棋棋子裝置 ／ 位置 — 塔圖市區</div>
+    </div></div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head">
+      <span class="stamp">03 · Tartu</span>
+      <span class="locale">傾斜的記憶</span>
+    </div>
+    <div class="card-title">歪一邊的老房子</div>
+    <div class="card-teaser">市政廳廣場邊那棟不起眼的老房子,走近才發現它是「歪」的——比比薩斜塔還誇張……</div>
+    <div class="expand-hint"><span class="arrow">▸</span>展開全文</div>
+    <div class="card-body"><div class="card-body-inner">
+      市政廳廣場邊那棟不起眼的老房子,走近才發現它是「歪」的——建於1793年,因為一半地基蓋在舊城牆的石頭上,另一半卻踩在濕軟的地面,幾百年下來慢慢傾斜了5.8度,比比薩斜塔還誇張。現在裡面是塔圖藝術博物館,踏進去時甚至要稍微適應一下傾斜的地板,很奇妙的體驗。
+      <div class="fact">建於 1793 年 ／ 傾斜角度 5.8° ／ 現為塔圖藝術博物館</div>
+    </div></div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head">
+      <span class="stamp">04 · Viljandi</span>
+      <span class="locale">市長與愛犬</span>
+    </div>
+    <div class="card-title">階梯口的銅像</div>
+    <div class="card-teaser">市政廳旁的階梯口,立著一座生動的銅像:傳奇市長 August Maramaa 牽著他的狗……</div>
+    <div class="expand-hint"><span class="arrow">▸</span>展開全文</div>
+    <div class="card-body"><div class="card-body-inner">
+      市政廳旁的階梯口,立著一座生動的銅像:傳奇市長 August Maramaa 牽著他的狗。雕塑家 Aili Vahtrapuu 在2007年完成這座作品,人與狗的神情都刻畫得極為傳神,彷彿下一秒就要邁步往前走。據說市長當年任內致力把維爾揚迪打造成美麗的度假小城,如今站在雕像前,似乎還能感受到那份對城市的用心。
+      <div class="fact">雕塑家 — Aili Vahtrapuu ／ 揭幕 2007年8月3日 ／ 位置 — Trepimäe 階梯起點</div>
+    </div></div>
+  </div>
+
+</div>
+
+<footer>— Eesti, 2026 —</footer>
+
+</body>
+</html>

@@ -45,7 +45,7 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 | **`CLAUDE.md`（專案根）** | **Photos SSOT 入口** — Drive 分享資料夾 URL／Folder ID（每日必先讀，勿再問路徑） |
 | `.ai-kos/WORKSPACE.md` | 路徑 Integrity SSOT |
 | `.ai-kos/INFRASTRUCTURE.md` | Drive SSOT 細節、本機照片路徑（與 CLAUDE.md 同一 Folder ID） |
-| `.ai-kos/CONTENT_STYLE.md` | 旅行札記 v1.0 — **第一人稱旅行者視角** |
+| `.ai-kos/CONTENT_STYLE.md` | 旅行札記 v1.1 — **第一人稱＋景點壓縮四拍**（旅行書，非導覽） |
 | `content/baikal-rail/source/PHOTO_SYNC.md` | 增量同步、manifest、build/deploy 細節 |
 | `.ai-kos/RESUME_CONTEXT.md` | Operational Phase 優先序、活躍旅程 |
 | `.ai-kos/STATUS.md` | 當前 trip 狀態、待審數量 |
@@ -98,7 +98,7 @@ python3 scripts/sync_baikal_photos.py           # 正式同步
 對本次同步匯入的**每一張新照片**：
 
 1. 找到對應 `content/<trip>/dayXX.md` landmark 區塊
-2. 依 `.ai-kos/CONTENT_STYLE.md` 撰寫或補充**第一人稱旅行者視角**敘事
+2. 依 `.ai-kos/CONTENT_STYLE.md` v1.1 撰寫或補充**壓縮四拍**旅行札記（當下→故事→雜記→收尾；勿寫冷冰冰景點導覽）
 3. 確保 `![alt](photos/...)` 引用正確；一圖一故事
 4. **增量採用** — 僅改動本次觸及的 day 檔；不批次重寫舊旅程
 
@@ -317,7 +317,7 @@ Operational Complete
 - [ ] 確認 Active path：`~/Documents/Projects/旅遊/travel-site/`
 - [ ] 讀 INFRASTRUCTURE（Drive SSOT，不 re-ask）
 - [ ] `--dry-run` 後正式 sync
-- [ ] 每張新圖更新 dayXX.md（CONTENT_STYLE 第一人稱）
+- [ ] 每張新圖更新 dayXX.md（CONTENT_STYLE v1.1 壓縮四拍；西伯利亞同）
 - [ ] build → verify → deploy（sips 在 sandbox 外）
 - [ ] 有變更才 commit/push
 - [ ] 回報結尾輸出固定營運摘要（Daily Travel Update 模板）

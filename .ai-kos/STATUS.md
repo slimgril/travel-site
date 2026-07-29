@@ -1,6 +1,81 @@
 # STATUS — travel-site
 
-最後更新：2026-07-26（Baltic Day 7｜07/17 全量入站＋塔樓影片）
+最後更新：2026-07-30（Day 7–10 壓縮四拍 · CONTENT_STYLE v1.1）
+
+## 2026-07-30 — 景點壓縮四拍（Day 7–10＋西伯利亞原則）
+
+| 項目 | 狀態 |
+|------|------|
+| **原則** | 當下→故事→雜記→收尾；知識約 30%／感受約 70%；廢止 07-29 知性見聞長文 |
+| **Knowledge** | `CONTENT_STYLE` v1.1 · `CLAUDE.md` · `DECISIONS` · `DAILY_TRAVEL_UPDATE` · `RESUME_CONTEXT` |
+| **內容** | `day07.md`–`day10.md` 全卡改寫；拉脫維亞圖雷達段重寫 |
+| **札記** | `build_estonia_journal.py` 同步 · `estonia-journal.html` **52** 卡 |
+| **西伯利亞** | `baikal-rail` 新日／新圖一律同原則（旅行書，非冷冰冰導覽） |
+| **Build** | PASS（`build_prototype.py`；缺圖 0） |
+| **Package** | PASS（HTML 同步至 `dist-preview-deploy`／`dist-surge-upload`） |
+| **Deploy** | PASS（Surge · cluttered-breath.surge.sh） |
+| **Live** | https://cluttered-breath.surge.sh/trips/bldh-trio.html#d7–#d10 · estonia-journal.html |
+| **Commit** | Pending |
+
+## 2026-07-30 — 愛沙尼亞互動札記（Owner 範本四段）
+
+| 項目 | 狀態 |
+|------|------|
+| **原則** | ~~心境＋古蹟融合~~ → **已併入上方壓縮四拍 v1.1** |
+| **範本** | `content/bldh-trio/source/estonia-journal.html`（貓阻車樁／巨棋／斜屋／市長與狗） |
+| **產出** | `estonia-journal.html` **52** 則可展開卡片＋主站 day07（EE）–day10 同步 |
+| **勘誤** | 巨釘→巨大的棋子；人與狗→市長 August Maramaa＋愛犬（Aili Vahtrapuu 2007）；貓＝阻車樁（Kangilaski／Kuulbusch） |
+| **Build** | PASS（缺圖 0；journal 52/52） |
+| **Package** | PASS（`dist-preview-deploy`／`dist-surge-upload` 含 journal） |
+| **Deploy** | 見上方最新條目 |
+| **本地預覽** | `dist-preview-deploy/estonia-journal.html` |
+| **Commit** | Pending |
+
+## 2026-07-29 — Day 7／8 描述文改寫（Owner LINE）
+
+| 項目 | 狀態 |
+|------|------|
+| **原則** | ~~建築＝設計理念＋背景；雕塑＝人物／故事~~ → **已被 2026-07-30 壓縮四拍廢止** |
+| **愛沙尼亞** | ~~高科技 × 國民認同融合~~ → **已被壓縮四拍覆寫** |
+| **CSS** | `.site-body`／`.site-desc` 放大（min-height、字級、行高） |
+| **Files** | `day07.md`、`day08.md`、`CLAUDE.md`、`templates/base.css` |
+| **Build** | PASS |
+| **Deploy** | PASS（Surge · cluttered-breath.surge.sh） |
+| **Live** | https://cluttered-breath.surge.sh/trips/bldh-trio.html#d7 · #d8 |
+| **Commit** | Pending |
+
+## 2026-07-28 — Baltic Day 11（07/21）伊斯坦堡 ✈ 台北
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic（`bldh-trio`）Day 11｜旅程完成 |
+| **Drive** | `0721/` 4 JPG＋Cloud `CLAUDE`（副本） |
+| **政策** | 當日夾媒體**全部**上站 |
+| **New Photos** | **4** → `photos/bldh-trio/day11/` |
+| **Travel Notes** | `day11.md` 4 卡（機上夕陽／新月；土航休息室茶炊／咖啡吧） |
+| **Trip meta** | `status: done`／`hero_badge: 旅程完成` |
+| **Build** | PASS（缺圖 0） |
+| **Deploy** | PASS（Node＋surge@0.23.1 · `dist-surge-upload` ~61MB） |
+| **Live** | https://cluttered-breath.surge.sh/trips/bldh-trio.html#d11 |
+
+報告：`content/bldh-trio/source/review/DAY11_0721_INGEST_REPORT.md`  
+斌哥短報：`content/bldh-trio/source/review/DAY11_0721_BINGGE_REPORT.md`
+
+## 2026-07-27 — Baltic Day 8–10（07/18–07/20）
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | Baltic（`bldh-trio`）Day 8–10 |
+| **Drive** | `0718/` 13＋`0719/` 19＋`0720/` 8 JPG＋Cloud `CLAUDE` |
+| **政策** | 當日夾媒體**全部**上站 |
+| **New Photos** | **40** → day08/09/10 |
+| **Travel Notes** | `day08.md` 13／`day09.md` 19／`day10.md` 8 |
+| **Build** | PASS（缺圖 0；bundle 396/388） |
+| **Deploy** | PASS（Node 20＋surge@0.23.1 · `dist-surge-upload` 108MB） |
+| **Live** | https://cluttered-breath.surge.sh/trips/bldh-trio.html#d8 |
+
+報告：`content/bldh-trio/source/review/DAY08_10_0718_0720_INGEST_REPORT.md`  
+斌哥短報：`content/bldh-trio/source/review/DAY08_10_BINGGE_REPORT.md`
 
 ## 2026-07-26 — Baltic Day 7（07/17）錫古爾達 → 塔圖 → 維爾揚迪
 
