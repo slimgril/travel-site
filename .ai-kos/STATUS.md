@@ -1,6 +1,15 @@
 # STATUS — travel-site
 
-最後更新：2026-07-30（Cutover 跨文件關聯檢查）
+最後更新：2026-07-30（commit+push Cutover · handoff）
+
+## 2026-07-30 — Commit / Push（Cutover）
+
+| 項目 | 狀態 |
+|------|------|
+| **Commit** | `faab4cf` feat(deploy): cut over Production to Cloudflare Pages |
+| **Branch** | `main` |
+| **Push** | PASS → `origin/main` |
+| **Production** | https://travel-site-quarter.pages.dev/ |
 
 ## 2026-07-30 — Cutover 跨文件關聯檢查（Ingest）
 
