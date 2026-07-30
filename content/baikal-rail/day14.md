@@ -1,5 +1,5 @@
-# Day 14 ｜ 08/02（日）｜ 聖彼得堡 → 芬蘭灣 → 科特林島 → 彼得夏宮花園 — 海軍要塞與芬蘭灣
-:::meta lodging=Rizhskaya Hotel 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
+# Day 14 ｜ 08/16（日）｜ 聖彼得堡 → 芬蘭灣 → 科特林島 → 彼得夏宮花園 — 海軍要塞與芬蘭灣
+:::meta lodging=Cosmos Saint Petersburg Pulkovskaya Hotel 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
 
 ## 古蹟
 ### ![芬蘭灣海岸線](day14/gulf-of-finland-coast-downloaded.jpg) 芬蘭灣海岸線

@@ -7,12 +7,12 @@ map_svg: bldh-trio/baltic-route-map.svg
 layout_template: city-magazine-template.md
 layout_renderer: scripts/build_bldh_magazine.py
 traveler: 丫斌哥
-status: upcoming
+status: done
 date_start: 2026-07-11
 date_end: 2026-07-21
-hero_badge: 旅程進行中
+hero_badge: 旅程完成
 hero_quote: 退而不休，行方致遠。維爾紐斯讀史，里加聽風，塔林看海——千年文化，一步一景，盡收行囊。
-summary: 立陶宛、拉脫維亞、愛沙尼亞 11 日。中世紀古城、水中古堡、十字架山與波羅的海海岸線——丫斌哥的下一段旅程。
+summary: 立陶宛、拉脫維亞、愛沙尼亞 11 日。中世紀古城、水中古堡、十字架山與波羅的海海岸線——丫斌哥的波羅的海三國之旅已圓滿返抵。
 tags: [立陶宛, 拉脫維亞, 愛沙尼亞]
 stats:
   - { num: "11", label: 天 }

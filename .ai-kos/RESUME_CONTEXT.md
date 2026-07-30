@@ -1,21 +1,18 @@
 # RESUME_CONTEXT（最新）
 
-**更新：** 2026-07-30 景點壓縮四拍（Day 7–10）
+**更新：** 2026-07-30 Production Cutover → Cloudflare Pages
 
 ## 上次停在
 
-- Owner 定稿：**壓縮四拍**（當下→故事→雜記→收尾）；廢止 07-29 知性見聞長文
-- Knowledge：`CONTENT_STYLE` v1.1 · `CLAUDE.md` · `DECISIONS` · Daily Update 已標 v1.1
-- 內容：`day07`–`day10` 改寫完成；愛沙尼亞札記 52 卡同步
-- **西伯利亞（`baikal-rail`）**：新日／新圖一律同原則（旅行書，非導覽）
-- Build／Package PASS；**Deploy Pending**（需核准）
+- Owner 核准 **換 Production**：https://travel-site-quarter.pages.dev/
+- Surge `cluttered-breath.surge.sh` 改為 fallback（過渡可留）
+- `baikal-rail` 已對齊 **2026/08/03–08/22**：日期、航班、火車、住宿、**餐食** meta
 
 ## 下一步
 
-1. Owner 核准後部署：`npx surge@0.23.1 dist-surge-upload cluttered-breath.surge.sh`
-2. 本地先看：`dist-preview-deploy/trips/bldh-trio.html#d7`–`#d10`、`estonia-journal.html`
-3. （可選）commit／push
-4. 西伯利亞開寫時：每張照片依壓縮四拍
+1. 西伯利亞新圖／新日文案一律 CONTENT_STYLE **v1.2**
+2. 本季 Deploy：`bash scripts/deploy_cloudflare_pages.sh`（或 `npm run deploy:pages`）
+3. 西伯利亞收工後：Owner 指定下季 **Pages project**，再改 Deploy 設定
 
 ---
 # Resume Context — travel-site
@@ -80,16 +77,16 @@ Travel Site 已進入 **Operational Phase**。
 
 ### Content Style
 
-Travel Site adopts **Content Style v1.1 (旅行札記＋景點壓縮四拍)** — see `.ai-kos/CONTENT_STYLE.md`
+Travel Site adopts **Content Style v1.2（資深旅遊作家 · 描述區）** — see `.ai-kos/CONTENT_STYLE.md`
 
 | 原則 | 說明 |
 |------|------|
-| 第一人稱旅行者視角 | 親眼所見、親身體驗、當下感受為主；可自然省略主詞 |
-| 體驗優先 | 景點知識約 **20–30%**，雜記與感受約 **70%** |
-| 壓縮四拍 | 當下 → 故事 1–2 句 → 旅遊雜記 → 一句收尾（一小段散文；無 emoji 標題） |
-| 一圖一故事 | 每張照片有自己的故事，不重複同一段景點介紹 |
-| 照片融入情境 | 斌哥入鏡時自然融入當下，不描述「這是一張合影」 |
-| 保留結構 | 維持既有 Markdown 區塊，不更動 CSS 或 build 模板 |
+| 身在現場 | 從感官細節切入；禁「這是 XXX」開頭 |
+| 資訊嵌入 | 史實順口帶出，不條列 |
+| 禁導覽／流水帳 | 禁「值得一遊」「我們去了然後……」 |
+| 結尾感受 | 畫面或幽默的個人頓悟；禁總結式結論 |
+| 篇幅 | **4–6 句**，精簡有畫面 |
+| 一圖一故事／不拆兩卡 | 同前 |
 
 **增量採用政策：**
 
@@ -109,12 +106,16 @@ Travel Site adopts **Content Style v1.1 (旅行札記＋景點壓縮四拍)** �
 
 | 項目 | 值 |
 |------|-----|
-| **Transitional browse URL** | https://cluttered-breath.surge.sh/ |
+| **Production（本季）** | https://travel-site-quarter.pages.dev/ |
+| **Deploy bundle** | `dist-surge-upload`（sips 壓縮）；禁止 deploy 未壓縮 `dist`／`photos/` 原圖 |
+| **Deploy 指令** | `bash scripts/deploy_cloudflare_pages.sh` · Pages project `travel-site-quarter` |
+| **Quarterly** | 本季＝波羅的海＋西伯利亞共用上列；**下季新旅程必須新 Pages project**（`DECISIONS.md` Cutover） |
+| **Surge fallback** | cluttered-breath.surge.sh — 非預設；見 `DEPLOY_MIGRATION.md` Rollback |
 | **Blocked legacy domain** | cluttered-breath-prototype.surge.sh — **404**；勿再部署至此 |
 | **GitHub** | https://github.com/slimgril/travel-site (`origin` configured) |
 | **Local path check** | `git rev-parse --show-toplevel` → Canonical Root |
 | **Deploy pitfall** | Run `sips` / `package_preview_deploy` **OUTSIDE sandbox** or images go black |
-
+| **Wrangler** | 須 `wrangler login`；OAuth 存在 `~/Library/Preferences/.wrangler/config/` |
 ---
 
 ### Daily Travel Update Workflow

@@ -604,8 +604,9 @@ def package_preview_deploy(config: dict) -> tuple[int, int]:
         shutil.rmtree(dst)
     (dst / 'trips').mkdir(parents=True)
 
-    for rel in ['index.html', 'base.css']:
-        shutil.copy2(src / rel, dst / rel)
+    shutil.copy2(src / 'base.css', dst / 'base.css')
+    for html in sorted(src.glob('*.html')):
+        shutil.copy2(html, dst / html.name)
     for html in sorted((src / 'trips').glob('*.html')):
         shutil.copy2(html, dst / 'trips' / html.name)
 
@@ -617,8 +618,27 @@ def package_preview_deploy(config: dict) -> tuple[int, int]:
         refs.update(re.findall(r"background-image:url\('(?:\.\./|/)?photos/([^']+)'\)", text))
         refs.update(re.findall(r'data-src="(?:\.\./|/)?photos/([^"]+)"', text))
 
+    # Shanxi (and future) static photo players
+    player_src = src / 'player'
+    if player_src.is_dir():
+        player_dst = dst / 'player'
+        if player_dst.exists():
+            shutil.rmtree(player_dst)
+        shutil.copytree(player_src, player_dst)
+        for ref_file in player_dst.rglob('photo-refs.txt'):
+            for line in ref_file.read_text(encoding='utf-8').splitlines():
+                rel = line.strip()
+                if rel:
+                    refs.add(rel)
+        for js in player_dst.rglob('data.js'):
+            text = js.read_text(encoding='utf-8')
+            refs.update(re.findall(r'\.\./\.\./photos/([^"\\]+)', text))
+
     for rel in sorted(refs):
         s = src / 'photos' / rel
+        if not s.exists():
+            # Fallback: source photos tree (prototype may not have every loose file)
+            s = ROOT / 'photos' / rel
         if not s.exists():
             continue
         d = dst / 'photos' / rel
@@ -643,9 +663,37 @@ def package_preview_deploy(config: dict) -> tuple[int, int]:
     return total_files, img_count
 
 
-def deploy_surge(config: dict) -> tuple[bool, str | None]:
-    deploy_dir = config['deploy']['dist_preview_deploy']
-    domain = config['deploy']['surge_domain']
+def deploy_production(config: dict) -> tuple[bool, str | None]:
+    """Deploy compressed static bundle. Production = Cloudflare Pages (Cutover 2026-07-30)."""
+    deploy = config.get('deploy', {})
+    host = deploy.get('host', 'cloudflare_pages')
+    script = ROOT / 'scripts' / 'deploy_cloudflare_pages.sh'
+    pages_project = deploy.get('pages_project', 'travel-site-quarter')
+    production_url = deploy.get(
+        'production_url', 'https://%s.pages.dev/' % pages_project
+    )
+
+    if host == 'cloudflare_pages' and script.is_file():
+        proc = subprocess.run(
+            ['bash', str(script)],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            timeout=900,
+            env={**os.environ, 'CF_PAGES_PROJECT': pages_project},
+        )
+        if proc.returncode != 0:
+            print(proc.stdout)
+            print(proc.stderr, file=sys.stderr)
+            return False, None
+        return True, production_url
+
+    # Surge fallback
+    deploy_dir = deploy.get('dist_preview_deploy', 'dist-preview-deploy')
+    domain = deploy.get('surge_domain_fallback') or deploy.get('surge_domain')
+    if not domain:
+        print('ERROR: no pages deploy script success path and no surge fallback domain', file=sys.stderr)
+        return False, None
     proc = subprocess.run(
         ['surge', deploy_dir, domain],
         cwd=str(ROOT), capture_output=True, text=True, timeout=300,
@@ -656,6 +704,11 @@ def deploy_surge(config: dict) -> tuple[bool, str | None]:
         print(proc.stdout)
         print(proc.stderr, file=sys.stderr)
     return ok, url if ok else None
+
+
+def deploy_surge(config: dict) -> tuple[bool, str | None]:
+    """Deprecated alias — prefer deploy_production."""
+    return deploy_production(config)
 
 
 def print_sync_report(report: SyncReport, state: dict, config: dict) -> None:
@@ -796,8 +849,8 @@ def main() -> int:
                 print('▶ Packaging dist-preview-deploy...')
                 total_files, img_count = package_preview_deploy(config)
                 print('  Packaged %d files (%d images compressed)' % (total_files, img_count))
-                print('▶ Deploying to Surge...')
-                ok, url = deploy_surge(config)
+                print('▶ Deploying to Cloudflare Pages (Production)...')
+                ok, url = deploy_production(config)
                 report.deploy_status = 'PASS' if ok else 'FAIL'
                 report.deploy_url = url
             elif checks_ok:

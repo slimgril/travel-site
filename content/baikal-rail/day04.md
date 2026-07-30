@@ -1,5 +1,5 @@
-# Day 4 ｜ 07/23（四）｜ 哈爾和林 → 烏蘭巴托 — 冬宮與民族樂舞
-:::meta lodging=4* Bayangol Hotel 或同級  meals=早：蒙古包內／午：蒙古料理／晚：蒙古料理
+# Day 4 ｜ 08/06（四）｜ 哈爾和林 → 烏蘭巴托 — 冬宮與民族樂舞
+:::meta lodging=Chinggis Khaan Hotel 或同級  meals=早：飯店內／午：蒙式料理／晚：中式料理
 
 ## 古蹟
 ### ![柏格多汗冬宮](day04/bogd-khan-winter-palace.jpg) 柏格多汗冬宮

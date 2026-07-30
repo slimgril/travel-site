@@ -1,5 +1,5 @@
-# Day 20 ｜ 08/08（六）｜ 北京 ✈ 台北 — 返抵國門
-:::meta flight=PEK/TPE CA189 13:55-17:20  lodging=溫暖的家  meals=早：機上簡餐／午：機上簡餐
+# Day 20 ｜ 08/22（六）｜ 北京 ✈ 台北 — 返抵國門
+:::meta flight=PEK/TPE CA185 08:25-11:40  lodging=溫暖的家  meals=早：機上簡餐／午：※／晚：※
 
 ## 古蹟
 ### ![返抵台北](day20/return-flight.jpg) 返抵台北

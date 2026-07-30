@@ -245,6 +245,7 @@
     cursor:pointer;
     background:#1a1410;
     transition:box-shadow 0.35s ease;
+    overflow:hidden;
   }
   .video-card:focus-visible {
     outline:2px solid var(--gold);
@@ -268,18 +269,19 @@
   .video-card__poster {
     position:absolute; inset:0; z-index:0;
     background-size:cover; background-position:center 28%;
-    transition:transform 0.4s ease, opacity 0.3s ease;
+    transition:transform 0.4s ease, opacity 1.5s ease;
   }
   .video-card::after {
     content:''; position:absolute; inset:0; z-index:2;
     background:linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.12) 60%, transparent 100%);
-    transition:opacity 0.3s ease;
+    transition:opacity 1.2s ease;
     pointer-events:none;
   }
   .video-card .img-label {
     position:absolute; bottom:14px; z-index:4;
     color:rgba(255,255,255,0.9); font-size:0.85rem; letter-spacing:2px;
     background:rgba(0,0,0,0.25); padding:4px 12px; border-radius:20px;
+    transition:opacity 1.2s ease;
   }
   .video-card:hover:not(.is-playing):not(.is-flashing) {
     box-shadow:
@@ -295,15 +297,35 @@
     object-fit:cover;
     object-position:center 28%;
     opacity:0;
-    transition:opacity 0.35s ease;
+    transform:scale(0.5);
+    transform-origin:center 40%;
+    transition:opacity 3.5s ease, transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
     pointer-events:none;
   }
-  .video-card.is-playing .video-card__poster { opacity:0; }
-  .video-card.is-playing .video-card__media { opacity:1; }
-  .video-card.is-playing::after,
-  .video-card.is-playing .img-label,
-  .video-card.is-playing .chestnut-play,
-  .video-card.is-playing .video-hint { opacity:0; pointer-events:none; }
+  /* 播放中預設仍蓋照片（配樂先行／片尾畫面先收）；is-picture-on 才露影片（由 0.5 倍慢慢放大） */
+  .video-card.is-playing .video-card__poster { opacity:1; }
+  .video-card.is-playing .video-card__media {
+    opacity:0;
+    transform:scale(0.5);
+  }
+  .video-card.is-playing.is-picture-on .video-card__poster { opacity:0; }
+  .video-card.is-playing.is-picture-on .video-card__media {
+    opacity:1;
+    transform:scale(1);
+  }
+  .video-card.is-playing.is-picture-on::after,
+  .video-card.is-playing.is-picture-on .img-label,
+  .video-card.is-playing.is-picture-on .chestnut-play,
+  .video-card.is-playing.is-picture-on .video-hint { opacity:0; pointer-events:none; }
+  /* 配樂先行時隱藏播放鈕 */
+  .video-card.is-playing:not(.is-picture-on) .chestnut-play,
+  .video-card.is-playing:not(.is-picture-on) .video-hint { opacity:0; pointer-events:none; }
+  /* 片尾慢慢消失：略放大＋淡出（約 3.2s，配合提早開始收） */
+  .video-card.is-playing.is-picture-out .video-card__poster { opacity:1; }
+  .video-card.is-playing.is-picture-out .video-card__media {
+    opacity:0;
+    transform:scale(1.08);
+  }
 
   /* 栗子 emoji 播放鈕：持續彈跳＋發光 */
   .chestnut-play {
@@ -376,6 +398,13 @@
       animation:none; opacity:1; transform:none;
     }
     .site-card--featured:hover { transform:none; }
+    .video-card__media,
+    .video-card.is-playing .video-card__media,
+    .video-card.is-playing.is-picture-on .video-card__media,
+    .video-card.is-playing.is-picture-out .video-card__media {
+      transition:none;
+      transform:none;
+    }
   }
   .site-meta {
     margin-top:12px; padding-top:10px;

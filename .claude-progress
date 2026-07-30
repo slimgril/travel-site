@@ -1,20 +1,25 @@
 # .claude-progress — travel-site（最新斷點）
 
-**更新：** 2026-07-26  
-**主題：** Baltic Day 7（07/17）全量入站＋圖雷達塔樓影片；已 deploy；commit handoff。
+**更新：** 2026-07-29 22:42（Handoff）
 
-## 完成
-- Drive `0717/`：19 JPG＋1 MP4 全上站
-- `day07.md` 19 卡；塔樓卡 `{video=day07/turaida-tower-gauja.mp4}` 可點播
-- Cloud CLAUDE 要點已採納（火雞午餐／顛倒屋／湖跳台／塔樓動畫）
-- Build／Deploy PASS → https://cluttered-breath.surge.sh/trips/bldh-trio.html#d7
-- 斌哥短報：`content/bldh-trio/source/review/DAY07_0717_BINGGE_REPORT.md`
+## 停在哪
 
-## 中斷點
-- 工作目錄：`/Users/mac/Documents/Projects/旅遊/travel-site`
-- 線上 Day 7 已含影片
+Day 7／8 景觀文已依斌哥原則改寫並 **Surge Deploy PASS**。
+
+## 已完成（本 session）
+
+1. 景觀文原則：設計理念／知性見聞（非賞花心情）
+2. 描述區放大：`templates/base.css` `.site-body`／`.site-desc`
+3. 愛沙尼亞方向：高科技 × 國民認同融合 → `day07.md`（入愛後）＋`day08.md`
+4. 原則入 `CLAUDE.md`；Deploy PASS → cluttered-breath.surge.sh
+
+## 線上
+
+- https://cluttered-breath.surge.sh/trips/bldh-trio.html#d7
+- https://cluttered-breath.surge.sh/trips/bldh-trio.html#d8
 
 ## 下一步
-1. Daily Travel Update → **Day 8（07/18）**；讀 Drive `0718/`＋Cloud `CLAUDE`
-2. （可選）`git push origin main`
-3. 繼續「有媒體全上」政策
+
+1. （可選）`git commit`／`push`（day07／08、base.css、CLAUDE 等尚未全部 commit）
+2. 若斌哥滿意原則 → Day 9／10 塔林段可同原則微調
+3. 其他：Baikal／新旅程依 Photos SSOT

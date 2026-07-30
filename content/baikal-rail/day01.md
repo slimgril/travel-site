@@ -1,5 +1,5 @@
-# Day 1 ｜ 07/20（一）｜ 台北 ✈ 北京 — 啟程・北京轉機前夜
-:::meta flight=TPE/PEK CA186 13:15-16:35  lodging=北京明豪華美達酒店 或同級  meals=早：※／午：機上簡餐／晚：中式餐或發餐費
+# Day 1 ｜ 08/03（一）｜ 台北 ✈ 北京 — 啟程・北京轉機前夜
+:::meta flight=TPE/PEK CA186 13:00-16:15  lodging=北京明豪華美達酒店 或同級  meals=早：※／午：機上簡餐／晚：中式料理
 
 ## 古蹟
 ### ![北京](day01/beijing-airport.jpg) 北京

@@ -13,7 +13,10 @@
   },
   "access_methods": ["gdown", "google_drive_api", "rclone"],
   "deploy": {
-    "surge_domain": "cluttered-breath.surge.sh",
+    "host": "cloudflare_pages",
+    "pages_project": "travel-site-quarter",
+    "production_url": "https://travel-site-quarter.pages.dev/",
+    "surge_domain_fallback": "cluttered-breath.surge.sh",
     "dist_prototype": "dist-prototype",
     "dist_preview_deploy": "dist-preview-deploy",
     "sips_max_dimension": 1200,

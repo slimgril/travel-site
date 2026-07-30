@@ -4,6 +4,128 @@
 
 ---
 
+## 2026-07-30 — Production Cutover → Cloudflare Pages（Owner 核准）
+
+**性質**：Owner 明確指示「換 Production」· Cutover。
+
+**問題：** Surge 上傳長連線反覆 `ECONNRESET`；Pages 試跑已 PASS。
+
+**決策：**
+- **本季 Production** = Cloudflare Pages `travel-site-quarter`  
+  → https://travel-site-quarter.pages.dev/
+- 預設 Deploy：`scripts/deploy_cloudflare_pages.sh`（預設 project＝`travel-site-quarter`，`--branch=main`）
+- 上傳包不變：`dist-surge-upload`（壓縮靜態包；禁止未壓縮 `dist`／`photos/` 原圖）
+- **Surge fallback**：`cluttered-breath.surge.sh` 可保留過渡；日常不再當預設；Rollback 指令見 `DEPLOY_MIGRATION.md`
+- **下季新旅程**：新 **Pages project**＋該季獨立壓縮包（延續每季分站精神；不再預設新 Surge 網域）
+- 自訂網域（CNAME）本階段不強制
+
+**參考**：`.ai-kos/DEPLOY_MIGRATION.md` Phase 2 · `.ai-kos/INFRASTRUCTURE.md`
+
+---
+
+## 2026-07-30 — 影片畫面／配樂淡入淡出加長（先行＋延遲收）
+
+**性質**：Owner／斌哥聽覺體驗（覆寫 2026-07-26 的 800ms 音量淡變）。
+
+**決策：**
+- **配樂先行**：點擊後先播原片音軌並淡入，**約 2.5s** 後才淡入影片畫面（仍蓋海報圖）
+- **畫面入場**：由 **0.5×** 慢慢放大至滿版，約 **3.5s**（足夠看清）
+- **畫面先收／慢慢消失**：片尾約 **4.5s** 前開始淡出，一路收到接近結束；配樂再晚約 2s 淡出
+- **音量淡入淡出**：**約 2s**（明顯長於舊 800ms）
+- 短片（<12s，如栗子攤）自動縮短先行／延遲，避免吃掉全片
+- `prefers-reduced-motion: reduce`：取消先行／縮放／長淡變，瞬切
+- 仍為原片音軌，**不是**獨立景點配樂（`MUSIC_CLICK_PLAN`）
+
+**參考**：`templates/shell.html`（`VISUAL_LEAD_MS`／`VISUAL_TRAIL_MS`／`AUDIO_FADE_MS`）· `templates/base.css`（`.is-picture-on`／`.is-picture-out`）
+
+---
+
+## 2026-07-30 — 斌哥自維護照片播放器（主題＝資料夾）
+
+**性質**：Owner 要求 · UI 設計定稿。
+
+**決策：**
+- 路徑：`player/bingge/`（本機伺服器 `server.py`／`開始播放.command`）
+- **主題名稱＝Library 資料夾名**；匯入 UI（`maintain.html`）建立主題並上傳照片
+- 播放器首頁列出全部主題供選擇播放
+- 斌哥自行維護；Agent／旅行書札記不自動改 Library
+- 雲端靜態站無法收上傳 → 維護在本機；站上僅掛 `how-to.html` 說明
+- 已預置主題「山西漫遊」（239 張：入站＋未入冊＋extras）
+
+**參考**：`player/bingge/README.md`
+
+---
+
+## 2026-07-30 — 山西雲端照片播放器（全部照片）
+
+**性質**：Owner 要求 · 新能力（雲端；掛在山西旅程）。
+
+**決策：**
+- 路徑：`player/shanxi/`（靜態；`scripts/build_shanxi_player.py`）
+- 內容＝**全部照片**：札記入站＋磁碟未入冊＋`photos/shanxi/player-extras/`（斌哥補傳未入選）
+- **不**把未入選圖塞進札記卡；播放器獨立於旅行書敘事
+- 混合打包：入站／未入冊圖走 `photos/shanxi/`；extras 內嵌 `player/shanxi/media/extras/`（控 Surge 體積）
+- 山西頁入口：「照片播放器 · 全部照片 →」
+- 重建：`python3 scripts/build_shanxi_player.py`（sips 須 sandbox 外）
+
+**參考**：`CLAUDE.md` Photos SSOT；Live 待 deploy
+
+---
+
+## 2026-07-30 — Deploy 遷移就緒（Cloudflare Pages 備援；未切換）
+
+> **狀態：已被上方「Production Cutover → Cloudflare Pages」覆寫（2026-07-30）。** 以下保留為遷移前決策軌跡。
+
+**性質**：Owner 指示「先準備」· Knowledge＋腳本就緒 · **當時** Production 不變。
+
+**問題：** Surge 體積／上傳不穩；評估過 Render（付費）與其他靜態主機。
+
+**決策：**
+- **Production 維持** `cluttered-breath.surge.sh`（Surge）直到 Owner 明確核准 Cutover
+- **首選備援**：Cloudflare Pages（非 Render）
+- 就緒產物：`.ai-kos/DEPLOY_MIGRATION.md`、`deploy/cloudflare/wrangler.toml`、`scripts/deploy_cloudflare_pages.sh`（需 `MIGRATE_CONFIRM=1`）
+- 上傳包不變：仍用 `dist-surge-upload`（壓縮靜態包；目錄名歷史遺留）
+- 試跑可與 Surge 並存；**不得**在未核准時改 Daily Update 預設 Deploy
+
+**不採（本階段）：** 付費 Render 作為主路徑；媒體全面 CDN（仍為 Phase 3 後備）
+
+**參考**：`.ai-kos/DEPLOY_MIGRATION.md` · `.ai-kos/INFRASTRUCTURE.md`
+
+---
+
+## 2026-07-30 — 每季旅程分網域部署（Owner 定稿）
+
+> **修正（Cutover）：** 本季 Production 宿主已改為 Cloudflare Pages `travel-site-quarter`；「每季分站」精神保留，但**下季改為新 Pages project**（不再預設新 Surge 網域）。見上方 Cutover 決策。
+
+**性質**：Owner 定稿 · HARD RULE（原 Surge 體積上限對策；宿主已遷移）。
+
+**問題：** 原圖／未壓縮 `dist` 過大；壓縮包 `dist-surge-upload` 亦隨旅程累積（已 ~146MB），單一 Surge Student 站會再撞上限或連線中斷。
+
+**決策：**
+- **本季（波羅的海 `bldh-trio` ＋ 西伯利亞 `baikal-rail`）**：繼續共用 Production `cluttered-breath.surge.sh`；只部署壓縮包（`dist-surge-upload`／`package_preview_deploy`），禁止部署未壓縮 `dist` 或 `photos/` 原圖
+- **西伯利亞結束後的下一季新旅程**：必須使用**新 Surge 網域**＋**該季獨立壓縮包**（只含該季 HTML／縮圖）；不得把舊季媒體再打進新站
+- 可選輕量入口站用連結指向各季網域；不強制本 repo 立刻拆站
+- 新季開站時由 Owner 指定網域名稱，再更新本決策與 `RESUME_CONTEXT`／`DAILY_TRAVEL_UPDATE` Deploy 指令
+- **備援：** 若改走 Cloudflare Pages，每季可對應新 Pages project（見 `DEPLOY_MIGRATION.md`）；不自動切換
+
+**不採（本階段）：** 照片全面改 CDN（保留為體積仍失控時的後備）
+
+**參考**：`.ai-kos/RESUME_CONTEXT.md` Infrastructure · `.ai-kos/DAILY_TRAVEL_UPDATE.md` Step 6 · `.ai-kos/DEPLOY_MIGRATION.md`
+
+---
+
+## 2026-07-30 — 描述區 v1.2「資深旅遊作家」規則
+
+**性質**：Owner 定稿（以後所有描述區；西伯利亞同）。
+
+**決策：** 描述區依 6 條硬規則改寫——身在現場感官切入、資訊嵌入敘事、禁導覽詞、禁流水帳、結尾個人感受（非總結）、4–6 句精簡有畫面。定稿範例：聖靈教堂古鐘。
+
+**承接：** v1.1 壓縮四拍仍為內部節奏；寫法以 v1.2 為準。
+
+**參考**：`.ai-kos/CONTENT_STYLE.md` v1.2 · `CLAUDE.md`
+
+---
+
 ## 2026-07-30 — 景點壓縮四拍（覆寫知性見聞）
 
 **性質**：Owner 文風定稿（BLDH Day 7–10 批次適用，全站新增／改寫沿用）。

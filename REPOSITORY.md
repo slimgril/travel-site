@@ -7,8 +7,10 @@
 | **Workspace Parent** | `/Users/mac/Documents/Projects/旅遊/` |
 | **Default Branch** | `main` |
 | **Remote Name** | `origin` |
-| **Deployment URL** | https://cluttered-breath.surge.sh/ |
+| **Deployment URL** | https://travel-site-quarter.pages.dev/ |
+| **Deployment fallback** | https://cluttered-breath.surge.sh/（Surge；非預設） |
 | **Created** | 2026-07-13 |
+| **Production Cutover** | 2026-07-30 → Cloudflare Pages `travel-site-quarter` |
 
 ## Clone
 

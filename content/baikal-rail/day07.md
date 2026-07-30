@@ -1,5 +1,5 @@
-# Day 7 ｜ 07/26（日）｜ 李斯特維揚卡 → 伊爾庫次克 — 湖畔生態與木造城市
-:::meta lodging=Hotel Irkutsk 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
+# Day 7 ｜ 08/09（日）｜ 李斯特維揚卡 → 伊爾庫次克 — 湖畔生態與木造城市
+:::meta lodging=Baikal View Hotel 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
 
 ## 古蹟
 ### ![貝加爾湖生態博物館](day07/baikal-ecological-museum-downloaded.jpg) 貝加爾湖生態博物館

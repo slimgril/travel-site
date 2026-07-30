@@ -1,5 +1,5 @@
-# Day 8 ｜ 07/27（一）｜ 伊爾庫次克 → 布里亞特村落 → 奧利洪島 — 前進貝加爾湖最大島
-:::meta lodging=Baikal View Hotel 或同級  meals=早：飯店內／午：俄式套餐／晚：俄式套餐
+# Day 8 ｜ 08/10（一）｜ 伊爾庫次克 → 布里亞特村落 → 奧利洪島 — 前進貝加爾湖最大島
+:::meta lodging=Krestovaya Pad’ Hotel 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
 
 ## 古蹟
 ### ![布里亞特村落](day08/buryat-traditional-village-downloaded.jpg) 布里亞特村落

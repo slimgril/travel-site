@@ -14,7 +14,7 @@
 <section class="hero">
   <div class="hero-badge">即將啟程</div>
   <h1>西伯利亞大鐵路 <span>20</span> 日</h1>
-  <p class="hero-sub">蒙古 · 貝加爾湖 · 聖彼得堡 · 莫斯科　2026年7月20日 — 8月8日</p>
+  <p class="hero-sub">蒙古 · 貝加爾湖 · 聖彼得堡 · 莫斯科　2026年8月3日 — 8月22日</p>
   <p style="color:var(--gold-light);font-size:1.05rem;margin-top:14px;letter-spacing:1px;max-width:600px;position:relative;">從蒙古草原駛入西伯利亞，沿著貝加爾湖與無盡鐵軌，抵達俄羅斯雙城——這是一趟橫跨歐亞記憶的長旅。</p>
   <div class="hero-stats">
       <div class="stat"><div class="stat-num">20</div><div class="stat-label">天</div></div>
@@ -35,7 +35,7 @@
     .sr-siberia  { fill:#B7C6BC; stroke:#7E9588; stroke-width:1.2; stroke-linejoin:round; }
     .sr-europe   { fill:#C9D2C8; stroke:#7E9588; stroke-width:1.2; stroke-linejoin:round; }
     .sr-lake     { fill:#6E9E9A; stroke:#4F7A76; stroke-width:1.1; opacity:0.9; }
-    /* 國家名：至少為站名字級 3 倍，寬字距、區域偏上 */
+    /* 國家名：字級略縮（54→46），避免蒙古溢出區塊 */
     .sr-country  { font-family:'PingFang TC','Noto Sans TC','Songti TC',serif; font-size:46px; font-weight:700; letter-spacing:0.55em; opacity:0.92; }
     .sr-country-ru { fill:#1B4332; }
     .sr-country-mn { fill:#2F5D28; letter-spacing:0; }
@@ -46,7 +46,7 @@
     .sr-tag      { font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:13px; letter-spacing:0.16em; fill:#8A5A12; font-weight:700; }
     .sr-paren    { font-family:'PingFang TC','Noto Sans TC',sans-serif; font-size:14px; letter-spacing:0.04em; fill:#2D6A4F; opacity:0.85; }
     .sr-rail     { fill:none; stroke:#2B6CB0; stroke-width:3.4; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:7 9; }
-    /* 返程航線：白色虛線；中段留空給民航機 */
+    /* 返程航線：黃色虛線；中段留空給民航機 */
     .sr-flight   { fill:none; stroke:#E8B423; stroke-width:3.6; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:9 10; opacity:0.95; }
     .sr-hub      { fill:#D4A843; stroke:#F5F0E8; stroke-width:2.2; }
     .sr-hub-ring { fill:none; stroke:#D4A843; stroke-width:2; opacity:0.85; }
@@ -83,7 +83,7 @@
   <!-- Baikal -->
   <ellipse class="sr-lake" cx="620" cy="125" rx="48" ry="18" transform="rotate(-25 620 125)"/>
 
-  <!-- 國家名（非站）：字級 ≥ 站名×3、大字距、偏區域上方 -->
+  <!-- 國家名：中國貼底端＋加大字距；蒙古自西北往中斜向直排（蒙上古下） -->
   <text class="sr-country sr-country-ru" text-anchor="middle" x="430" y="72">俄羅斯</text>
   <g class="sr-country sr-country-mn" transform="translate(628,290) rotate(-28)" aria-label="蒙古">
     <text text-anchor="middle" x="0" y="0">蒙</text>
@@ -209,13 +209,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">1</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/20（一）</div>
+      <div class="date">08/03（一）</div>
       <h2>啟程・北京轉機前夜</h2>
       <div class="route">台北 <span class="route-arrow">✈</span> 北京</div>
     </div>
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">北京明豪華美達酒店 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">航班：TPE/PEK CA186 13:15-16:35　|　餐食：早：※／午：機上簡餐／晚：中式餐或發餐費</div>
+    <div class="extra-tip extra-tip--meta">航班：TPE/PEK CA186 13:00-16:15　|　餐食：早：※／午：機上簡餐／晚：中式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day01/beijing-airport.jpg')"><div class="img-label">北京</div></div>
@@ -231,40 +231,40 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">2</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/21（二）</div>
+      <div class="date">08/04（二）</div>
       <h2>藍天之國・蒙古草原初見</h2>
       <div class="route">北京 <span class="route-arrow">✈</span> 烏蘭巴托 <span class="route-arrow">→</span> 特勒吉國家公園</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">蒙古包渡假村特色套房（2人一包）或酒店</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Glory Resort（蒙古包特色套房・2人一包）或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">航班：PEK/ULN CA901 08:30-10:40　|　餐食：早：飯店內／午：蒙古料理／晚：渡假村料理</div>
+    <div class="extra-tip extra-tip--meta">航班：PEK/ULN CA901 08:45-10:50　|　餐食：早：飯店內或飯店餐盒／午：蒙式料理／晚：蒙式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day02/ulaanbaatar-city-downloaded.jpg')"><div class="img-label">烏蘭巴托</div></div>
         <div class="site-body">
           <div class="site-name">烏蘭巴托</div>
-          <div class="site-desc">蒙古首都，位於圖拉河谷與柏格多山腳下，是全國政治、經濟與文化中心。</div>
+          <div class="site-desc">飛機一落地，乾淨的藍天先壓過眼簾，城市矮矮攤在圖拉河谷與柏格多山之間。首都節奏比想像慢半拍，車流與佛寺尖頂並排。走出航廈那一刻忽然明白：西伯利亞這趟長路，開場白居然是草原的門廊。</div>
         </div>
       </div>
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day02/turtle-rock-downloaded.jpg')"><div class="img-label">特勒吉國家公園</div></div>
         <div class="site-body">
           <div class="site-name">特勒吉國家公園</div>
-          <div class="site-desc">以草原、山峰、森林與奇岩景觀聞名，是體驗蒙古自然風光的重要地點。</div>
+          <div class="site-desc">車一轉進谷地，草原、松林與奇岩同時湧上來，風裡帶著乾草味。烏龜岩蹲在坡上，像被時間捏過的石龜。站在草坡上眯眼看天，覺得「國家公園」這四個字，在這裡其實只是風與光的別名。</div>
         </div>
       </div>
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day02/genghis-khan-statue-downloaded.jpg')"><div class="img-label">成吉思汗塑像</div></div>
         <div class="site-body">
           <div class="site-name">成吉思汗塑像</div>
-          <div class="site-desc">世界最大的成吉思汗騎馬雕像，可登上觀景平台俯瞰周邊草原。</div>
+          <div class="site-desc">銀亮騎馬雕像遠看就先佔滿視線，尺度大到讓人先停步。登上觀景平台，草原往四面攤開，風比腳下快半拍。抬頭對上那張臉時忽然想：原來「帝國」也可以是一座看得見的地平線。</div>
         </div>
       </div>
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day02/mongolia-horseback-riding-downloaded.png')"><div class="img-label">草原騎馬</div></div>
         <div class="site-body">
           <div class="site-name">草原騎馬</div>
-          <div class="site-desc">在蒙古草原安排騎馬體驗，感受遊牧民族生活節奏。</div>
+          <div class="site-desc">馬背一晃，鞍下的草原節奏比腳步誠實，皮具氣味混著陽光。導遊說慢騎就好，身體卻比耳朵先學會放鬆。勒住韁繩停一會兒，風還在跑——原來遊牧的日常，是把速度交回給土地。</div>
         </div>
       </div>
     </div>
@@ -274,13 +274,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">3</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/22（三）</div>
+      <div class="date">08/05（三）</div>
       <h2>鄂爾渾河谷・蒙古帝國古都</h2>
       <div class="route">特勒吉國家公園 <span class="route-arrow">→</span> 哈爾和林</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">蒙古包渡假村特色套房（2人一包）或酒店</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Silk Road 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：蒙古包內／午：蒙古料理／晚：蒙古料理</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：蒙古風味餐／晚：渡假村料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day03/kharkhorin-ancient-city-downloaded.jpg')"><div class="img-label">哈爾和林</div></div>
@@ -310,13 +310,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">4</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/23（四）</div>
+      <div class="date">08/06（四）</div>
       <h2>冬宮與民族樂舞</h2>
       <div class="route">哈爾和林 <span class="route-arrow">→</span> 烏蘭巴托</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">4* Bayangol Hotel 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Chinggis Khaan Hotel 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：蒙古包內／午：蒙古料理／晚：蒙古料理</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：蒙式料理／晚：中式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day04/bogd-khan-winter-palace.jpg')"><div class="img-label">柏格多汗冬宮</div></div>
@@ -339,13 +339,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">5</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/24（五）</div>
+      <div class="date">08/07（五）</div>
       <h2>登上鐵路・前往俄羅斯</h2>
-      <div class="route">烏蘭巴托 +++ 西伯利亞大鐵路</div>
+      <div class="route">烏蘭巴托 +++15:22 西伯利亞大鐵路+++</div>
     </div>
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">火車包廂（2人1室）</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：蒙古料理／晚：火車簡餐 US10</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：蒙式火鍋／晚：特選餐盒</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day05/sukhbaatar-square.jpg')"><div class="img-label">蘇赫巴托廣場</div></div>
@@ -365,7 +365,7 @@
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day05/trans-mongolian-railway-train-downloaded.jpg')"><div class="img-label">西伯利亞大鐵路蒙古段</div></div>
         <div class="site-body">
           <div class="site-name">西伯利亞大鐵路蒙古段</div>
-          <div class="site-desc">下午登上列車，經宗哈拉、達爾汗、蘇赫巴托市，穿越蒙古北部草原與邊境。</div>
+          <div class="site-desc">當地時間 15:22 登上 305 次列車，經宗哈拉、達爾汗、蘇赫巴托市，穿越蒙古北部草原與邊境。</div>
         </div>
       </div>
     </div>
@@ -375,13 +375,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">6</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/25（六）</div>
+      <div class="date">08/08（六）</div>
       <h2>貝加爾湖初見</h2>
-      <div class="route">+++ 貝加爾湖 +++ 伊爾庫次克 <span class="route-arrow">→</span> 李斯特維揚卡</div>
+      <div class="route">+++貝加爾湖+++ +++14:55 伊爾庫次克+++ <span class="route-arrow">→</span> 李斯特維揚卡</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Krestovaya Pad 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Hotel Irkutsk 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：火車簡餐 US10／午：火車簡餐 US10／晚：俄式料理</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：火車簡餐／午：火車簡餐／晚：俄式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day06/lake-baikal-shaman-rock-downloaded.jpg')"><div class="img-label">貝加爾湖</div></div>
@@ -418,11 +418,11 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">7</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/26（日）</div>
+      <div class="date">08/09（日）</div>
       <h2>湖畔生態與木造城市</h2>
       <div class="route">李斯特維揚卡 <span class="route-arrow">→</span> 伊爾庫次克</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Hotel Irkutsk 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Baikal View Hotel 或同級</div></div>
   </div>
     <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式料理／晚：俄式料理</div>
     <div class="sites-grid">
@@ -461,13 +461,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">8</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/27（一）</div>
+      <div class="date">08/10（一）</div>
       <h2>前進貝加爾湖最大島</h2>
       <div class="route">伊爾庫次克 <span class="route-arrow">→</span> 布里亞特村落 <span class="route-arrow">→</span> 奧利洪島</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Baikal View Hotel 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Krestovaya Pad’ Hotel 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式套餐／晚：俄式套餐</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式料理／晚：俄式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day08/buryat-traditional-village-downloaded.jpg')"><div class="img-label">布里亞特村落</div></div>
@@ -504,13 +504,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">9</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/28（二）</div>
+      <div class="date">08/11（二）</div>
       <h2>湖島日出・重返鐵道</h2>
-      <div class="route">奧利洪島 <span class="route-arrow">→</span> 伊爾庫次克 +++ 西伯利亞大鐵路</div>
+      <div class="route">奧利洪島 <span class="route-arrow">→</span> 伊爾庫次克 +++22:40 西伯利亞大鐵路+++</div>
     </div>
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">火車包廂（2人1室）</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：當地料理／晚：當地料理</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式料理／晚：火車簡餐</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day09/olkhon-island-sunrise.jpg')"><div class="img-label">奧利洪島日出</div></div>
@@ -540,13 +540,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">10</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/29（三）</div>
+      <div class="date">08/12（三）</div>
       <h2>西伯利亞腹地鐵路日</h2>
       <div class="route">+++ 濟馬 +++ 伊蘭斯基 +++ 克拉斯諾亞爾斯克 +++ 馬林斯克 +++</div>
     </div>
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">火車包廂（2人1室）</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：列車上 US10／午：列車上 US10／晚：列車上 US10</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：火車簡餐／午：火車簡餐／晚：火車簡餐</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day10/zima-railway-station-downloaded.jpg')"><div class="img-label">濟馬</div></div>
@@ -583,13 +583,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">11</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/30（四）</div>
+      <div class="date">08/13（四）</div>
       <h2>俄羅斯第三大城</h2>
-      <div class="route">+++ 新西伯利亞 +++ 西伯利亞大鐵路</div>
+      <div class="route">+++08:28 新西伯利亞 +++22:42 西伯利亞大鐵路+++</div>
     </div>
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">火車包廂（2人1室）</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式風味料理／晚：俄式風味料理</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：俄式 Café／午：俄式料理／晚：俄式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day11/novosibirsk-railway-station.jpg')"><div class="img-label">新西伯利亞</div></div>
@@ -640,13 +640,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">12</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">07/31（五）</div>
+      <div class="date">08/14（五）</div>
       <h2>跨越歐亞分界</h2>
-      <div class="route">+++ 葉卡捷琳堡</div>
+      <div class="route">+++16:33 葉卡捷琳堡</div>
     </div>
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Four Elements Hotel 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：列車上 US10／午：列車上 US10／晚：當地料理</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：火車簡餐／午：火車簡餐／晚：俄式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day12/barabinsk-station-downloaded.jpg')"><div class="img-label">巴拉賓斯克</div></div>
@@ -690,13 +690,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">13</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">08/01（六）</div>
+      <div class="date">08/15（六）</div>
       <h2>滴血教堂與北方威尼斯</h2>
       <div class="route">葉卡捷琳堡 <span class="route-arrow">✈</span> 聖彼得堡</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Park Inn Pulkovskaya 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Cosmos Saint Petersburg Pulkovskaya Hotel 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">航班：SVX/LED FV6418 17:50-18:55　|　餐食：早：飯店內／午：俄式套餐／晚：機場簡餐</div>
+    <div class="extra-tip extra-tip--meta">航班：SVX/LED SU6418 19:00-19:55　|　餐食：早：飯店內／午：俄式料理／晚：機場簡餐</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day13/church-on-blood-yekaterinburg-downloaded.jpg')"><div class="img-label">滴血教堂（葉卡捷琳堡）</div></div>
@@ -719,11 +719,11 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">14</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">08/02（日）</div>
+      <div class="date">08/16（日）</div>
       <h2>海軍要塞與芬蘭灣</h2>
       <div class="route">聖彼得堡 <span class="route-arrow">→</span> 芬蘭灣 <span class="route-arrow">→</span> 科特林島 <span class="route-arrow">→</span> 彼得夏宮花園</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Rizhskaya Hotel 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Cosmos Saint Petersburg Pulkovskaya Hotel 或同級</div></div>
   </div>
     <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式料理／晚：俄式料理</div>
     <div class="sites-grid">
@@ -762,11 +762,11 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">15</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">08/03（一）</div>
+      <div class="date">08/17（一）</div>
       <h2>沙皇宮殿與涅瓦大街</h2>
       <div class="route">彼得夏宮花園 <span class="route-arrow">→</span> 葉卡捷琳娜宮 <span class="route-arrow">→</span> 聖彼得堡</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Park Inn Pulkovskaya 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Cosmos Saint Petersburg Pulkovskaya Hotel 或同級</div></div>
   </div>
     <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式料理／晚：俄式料理</div>
     <div class="sites-grid">
@@ -819,13 +819,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">16</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">08/04（二）</div>
+      <div class="date">08/18（二）</div>
       <h2>冬宮之後抵達莫斯科</h2>
-      <div class="route">聖彼得堡 +++ 高速鐵路 +++ 莫斯科</div>
+      <div class="route">聖彼得堡 +++15:10 高速鐵路+++ 莫斯科</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Izmailovo Delta Hotel 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Azimut Aerostar 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式套餐／晚：俄式料理</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式料理／晚：俄式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day16/winter-palace-hermitage-downloaded.jpg')"><div class="img-label">冬宮－艾爾米塔奇博物館</div></div>
@@ -876,11 +876,11 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">17</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">08/05（三）</div>
+      <div class="date">08/19（三）</div>
       <h2>紅場與克里姆林宮</h2>
       <div class="route">莫斯科</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Izmailovo Delta Hotel 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Azimut Aerostar 或同級</div></div>
   </div>
     <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式料理／晚：俄式料理</div>
     <div class="sites-grid">
@@ -919,13 +919,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">18</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">08/06（四）</div>
+      <div class="date">08/20（四）</div>
       <h2>沙皇莊園與自然保護區</h2>
       <div class="route">莫斯科</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Izmailovo Delta Hotel 或同級</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">Azimut Aerostar 或同級</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式套餐／晚：俄式料理</div>
+    <div class="extra-tip extra-tip--meta">餐食：早：飯店內／午：俄式料理／晚：俄式料理</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day18/kolomenskoye-estate-downloaded.jpg')"><div class="img-label">卡洛明斯科婭莊園</div></div>
@@ -948,13 +948,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">19</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">08/07（五）</div>
+      <div class="date">08/21（五）</div>
       <h2>莫斯科市集與返程</h2>
       <div class="route">莫斯科 <span class="route-arrow">✈</span> 北京</div>
     </div>
-    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">飛機上</div></div>
+    <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">機上</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">航班：SVO/PEK CA910 18:45-07:00+1　|　餐食：早：飯店內／午：俄式料理／晚：機場自理</div>
+    <div class="extra-tip extra-tip--meta">航班：SVO/PEK CA754 17:30-06:00+1　|　餐食：早：飯店內／午：俄式料理／晚：機上簡餐</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day19/izmailovo-park-downloaded.jpg')"><div class="img-label">伊茲麥洛夫公園</div></div>
@@ -984,13 +984,13 @@
   <div class="day-header">
     <div class="day-badge"><div class="num">20</div><div class="label">DAY</div></div>
     <div class="day-info">
-      <div class="date">08/08（六）</div>
+      <div class="date">08/22（六）</div>
       <h2>返抵國門</h2>
       <div class="route">北京 <span class="route-arrow">✈</span> 台北</div>
     </div>
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">溫暖的家</div></div>
   </div>
-    <div class="extra-tip extra-tip--meta">航班：PEK/TPE CA189 13:55-17:20　|　餐食：早：機上簡餐／午：機上簡餐</div>
+    <div class="extra-tip extra-tip--meta">航班：PEK/TPE CA185 08:25-11:40　|　餐食：早：機上簡餐／午：※／晚：※</div>
     <div class="sites-grid">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/baikal-rail/day20/return-flight.jpg')"><div class="img-label">返抵台北</div></div>
@@ -1084,7 +1084,7 @@
 
   document.addEventListener('click', function (e) {
     var el = e.target.closest('.site-img.photo, .live-img');
-    if (!el) return;
+    if (!el || el.classList.contains('video-card') || e.target.closest('.video-card')) return;
     var src = extractUrl(el);
     if (!src) return;
     lbImg.src = src;
@@ -1185,6 +1185,249 @@
 
   function boot() {
     document.querySelectorAll('.lt-vinyl').forEach(wire);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+<script>
+/* Click-to-play video cards
+   配樂先行／畫面晚出；片尾畫面先收／配樂晚收；音量與畫面淡入淡出加長 */
+(function () {
+  var AUDIO_FADE_MS = 2000;   /* 音量淡入淡出（明顯） */
+  var VISUAL_LEAD_MS = 2500;  /* 點擊後先聽配樂，再淡入畫面 */
+  var VISUAL_TRAIL_MS = 4500; /* 片尾提早約 4.5s 開始慢慢收（可見） */
+  var SHORT_DUR_S = 12;       /* 短片縮短先行／延遲，避免吃掉全片 */
+
+  function prefersReducedMotion() {
+    return window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  function clearFade(card) {
+    if (card._fadeTimer) {
+      clearInterval(card._fadeTimer);
+      card._fadeTimer = null;
+    }
+  }
+
+  function clearLead(card) {
+    if (card._leadTimer) {
+      clearTimeout(card._leadTimer);
+      card._leadTimer = null;
+    }
+  }
+
+  function setVol(video, v) {
+    try { video.volume = Math.max(0, Math.min(1, v)); } catch (e) {}
+  }
+
+  function timingFor(duration) {
+    var durMs = (isFinite(duration) && duration > 0) ? duration * 1000 : 20000;
+    var lead = VISUAL_LEAD_MS;
+    var trail = VISUAL_TRAIL_MS;
+    var fade = AUDIO_FADE_MS;
+    if (duration > 0 && duration < SHORT_DUR_S) {
+      lead = 800;
+      trail = 800;
+      fade = 1200;
+    }
+    /* 先行＋延遲＋兩段淡入淡出不得超過片長的一半 */
+    var budget = Math.max(0, durMs * 0.45);
+    var need = lead + trail + fade;
+    if (need > budget && budget > 0) {
+      var scale = budget / need;
+      lead = Math.round(lead * scale);
+      trail = Math.round(trail * scale);
+      fade = Math.max(400, Math.round(fade * scale));
+    }
+    return { lead: lead, trail: trail, fade: fade };
+  }
+
+  /** Ramp volume from→to over ms; respects reduced-motion (instant). */
+  function fadeVolume(video, card, from, to, ms, done) {
+    clearFade(card);
+    if (prefersReducedMotion() || !ms || ms <= 0) {
+      setVol(video, to);
+      if (done) done();
+      return;
+    }
+    var steps = Math.max(8, Math.round(ms / 50));
+    var stepMs = ms / steps;
+    var i = 0;
+    setVol(video, from);
+    card._fadeTimer = setInterval(function () {
+      i += 1;
+      setVol(video, from + (to - from) * (i / steps));
+      if (i >= steps) {
+        clearFade(card);
+        setVol(video, to);
+        if (done) done();
+      }
+    }, stepMs);
+  }
+
+  function hardReset(card) {
+    var video = card.querySelector('video.video-card__media');
+    clearFade(card);
+    clearLead(card);
+    card.classList.remove('is-playing', 'is-flashing', 'is-picture-on', 'is-picture-out');
+    card._flashing = false;
+    card._fadingOut = false;
+    card._endTrailArmed = false;
+    card._endAudioArmed = false;
+    card._timing = null;
+    if (card._flashTimer) {
+      clearTimeout(card._flashTimer);
+      card._flashTimer = null;
+    }
+    if (!video) return;
+    video.pause();
+    try { video.currentTime = 0; } catch (e) {}
+    setVol(video, 0);
+  }
+
+  function resetCard(card, withFade) {
+    var video = card.querySelector('video.video-card__media');
+    if (!video || !withFade || card._fadingOut) {
+      hardReset(card);
+      return;
+    }
+    card._fadingOut = true;
+    clearLead(card);
+    /* 手動停止：畫面慢慢消失，音量淡出 */
+    card.classList.remove('is-picture-on');
+    card.classList.add('is-picture-out');
+    var fade = (card._timing && card._timing.fade) || AUDIO_FADE_MS;
+    fadeVolume(video, card, video.volume || 0, 0, fade, function () {
+      hardReset(card);
+    });
+  }
+
+  function revealPicture(card) {
+    if (!card.classList.contains('is-playing') || card._fadingOut) return;
+    card.classList.remove('is-picture-out');
+    card.classList.add('is-picture-on');
+  }
+
+  function startPlayback(card) {
+    var video = card.querySelector('video.video-card__media');
+    if (!video) return;
+    card.classList.remove('is-flashing', 'is-picture-on', 'is-picture-out');
+    card.classList.add('is-playing');
+    card._fadingOut = false;
+    card._endTrailArmed = true;
+    card._endAudioArmed = true;
+
+    function begin(t) {
+      card._timing = t;
+      try { video.muted = false; } catch (e) {}
+      setVol(video, 0);
+      var p = video.play();
+      if (p && p.catch) {
+        p.catch(function () {
+          hardReset(card);
+        });
+      }
+      /* 配樂先淡入；畫面仍蓋住照片，晚幾秒再淡入影片 */
+      fadeVolume(video, card, 0, 1, t.fade);
+      if (prefersReducedMotion() || t.lead <= 0) {
+        revealPicture(card);
+      } else {
+        clearLead(card);
+        card._leadTimer = setTimeout(function () {
+          card._leadTimer = null;
+          revealPicture(card);
+        }, t.lead);
+      }
+    }
+
+    var dur = video.duration;
+    if (isFinite(dur) && dur > 0) {
+      begin(timingFor(dur));
+    } else {
+      video.addEventListener('loadedmetadata', function onceMeta() {
+        video.removeEventListener('loadedmetadata', onceMeta);
+        begin(timingFor(video.duration));
+      });
+      begin(timingFor(0));
+    }
+  }
+
+  function playCard(card) {
+    var video = card.querySelector('video.video-card__media');
+    if (!video || card._flashing || card._fadingOut) return;
+    if (prefersReducedMotion()) {
+      startPlayback(card);
+      return;
+    }
+    card._flashing = true;
+    card.classList.add('is-flashing');
+    card._flashTimer = setTimeout(function () {
+      card._flashTimer = null;
+      card._flashing = false;
+      startPlayback(card);
+    }, 150);
+  }
+
+  function wire(card) {
+    if (card._videoWired) return;
+    card._videoWired = true;
+    var video = card.querySelector('video.video-card__media');
+    if (!video) return;
+
+    function activate(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (card._fadingOut) return;
+      if (card.classList.contains('is-playing') || card._flashing) {
+        resetCard(card, true);
+        return;
+      }
+      playCard(card);
+    }
+
+    card.addEventListener('click', activate);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        activate(e);
+      }
+    });
+    video.addEventListener('timeupdate', function () {
+      if (!card.classList.contains('is-playing') || card._fadingOut) return;
+      var dur = video.duration;
+      if (!isFinite(dur) || dur <= 0) return;
+      var t = card._timing || timingFor(dur);
+      card._timing = t;
+      var remain = dur - video.currentTime;
+      var trailS = t.trail / 1000;
+      var fadeS = t.fade / 1000;
+
+      /* 畫面提早慢慢收：約 trail 秒前開始淡出，一路收到接近結束 */
+      if (card._endTrailArmed && remain <= trailS) {
+        card._endTrailArmed = false;
+        card.classList.remove('is-picture-on');
+        card.classList.add('is-picture-out');
+      }
+      /* 配樂晚收：接近片尾才淡出音量 */
+      if (card._endAudioArmed && remain <= fadeS) {
+        card._endAudioArmed = false;
+        card._fadingOut = true;
+        fadeVolume(video, card, video.volume || 0, 0, Math.max(50, remain * 1000));
+      }
+    });
+    video.addEventListener('ended', function () {
+      hardReset(card);
+    });
+  }
+
+  function boot() {
+    document.querySelectorAll('.video-card').forEach(wire);
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);

@@ -99,6 +99,28 @@ Google Drive Shared Folder（永久根，folder_id 固定）
 | 新旅程 | 在 Shared Folder 內新增子資料夾，**不**建立新 Shared Folder |
 | Operational Phase | AI-KOS 服務旅行書；不以擴充本文件為每日目標 |
 
-**決策背景**：`.ai-kos/DECISIONS.md` — Google Drive Shared Folder 永久 SSOT · Daily Travel Photo Sync · Operational Phase（2026-07-16）
+**決策背景**：`.ai-kos/DECISIONS.md` — Google Drive Shared Folder 永久 SSOT · Daily Travel Photo Sync · Operational Phase（2026-07-16）· **每季旅程分網域部署（2026-07-30）**
 
 **Canonical 營運規則**：`.ai-kos/DAILY_TRAVEL_UPDATE.md`
+
+---
+
+## Deploy Domains（Quarterly — HARD）
+
+| 季／範圍 | Production | Bundle |
+|----------|------------|--------|
+| **本季** 波羅的海＋西伯利亞 | **Cloudflare Pages** `travel-site-quarter` → https://travel-site-quarter.pages.dev/ | `dist-surge-upload`（sips 壓縮） |
+| **下季**（西伯利亞結束後） | **新 Pages project**（Owner 屆時指定） | 該季獨立壓縮包；不含舊季媒體 |
+
+禁止：deploy 未壓縮 `dist`、`photos/` 原圖；勿再部署 `cluttered-breath-prototype.surge.sh`。
+
+### Deploy 操作
+
+| 項目 | 值 |
+|------|-----|
+| **Production** | https://travel-site-quarter.pages.dev/ |
+| **預設指令** | `bash scripts/deploy_cloudflare_pages.sh`（或 `npm run deploy:pages`） |
+| **設定** | `deploy/cloudflare/wrangler.toml` |
+| **知識** | `.ai-kos/DEPLOY_MIGRATION.md` |
+| **Surge fallback** | `cluttered-breath.surge.sh` · `npm run deploy:surge:fallback` |
+| **Cutover** | 2026-07-30 Owner 核准 |

@@ -1,5 +1,5 @@
-# Day 3 ｜ 07/22（三）｜ 特勒吉國家公園 → 哈爾和林 — 鄂爾渾河谷・蒙古帝國古都
-:::meta lodging=蒙古包渡假村特色套房（2人一包）或酒店  meals=早：蒙古包內／午：蒙古料理／晚：蒙古料理
+# Day 3 ｜ 08/05（三）｜ 特勒吉國家公園 → 哈爾和林 — 鄂爾渾河谷・蒙古帝國古都
+:::meta lodging=Silk Road 或同級  meals=早：飯店內／午：蒙古風味餐／晚：渡假村料理
 
 ## 古蹟
 ### ![哈爾和林](day03/kharkhorin-ancient-city-downloaded.jpg) 哈爾和林

@@ -67,6 +67,7 @@ Canonical entry point for repository governance.
 - Project status: `.ai-kos/STATUS.md`
 - Repository record: `REPOSITORY.md`
 - Architecture decisions: `.ai-kos/DECISIONS.md`
+- Deploy / migration（Production＝Pages）: `.ai-kos/DEPLOY_MIGRATION.md`
 - Changelog: `HISTORY.md`
 
 ## Phase
@@ -86,7 +87,8 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 ## Daily Travel Update（Operational Phase）
 
 - **Canonical rule:** `.ai-kos/DAILY_TRAVEL_UPDATE.md` — 每日 08:00 主動執行；Drive SSOT → 增量 sync → 旅行札記 → build → verify → deploy → commit/push → **固定營運摘要**
-- **Deploy URL:** https://cluttered-breath.surge.sh/
+- **Deploy URL:** https://travel-site-quarter.pages.dev/
+- **Deploy 知識:** `.ai-kos/DEPLOY_MIGRATION.md`（Cutover 2026-07-30；Surge＝fallback）
 - Active project path: `/Users/mac/Documents/Projects/旅遊/travel-site/`
 - Cross-ref: `.ai-kos/WORKSPACE.md` · `.ai-kos/INFRASTRUCTURE.md` · `.ai-kos/CONTENT_STYLE.md` · `content/baikal-rail/source/PHOTO_SYNC.md`
 

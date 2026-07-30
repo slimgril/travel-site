@@ -1,5 +1,5 @@
-# Day 12 ｜ 07/31（五）｜ +++ 葉卡捷琳堡 — 跨越歐亞分界
-:::meta lodging=Four Elements Hotel 或同級  meals=早：列車上 US10／午：列車上 US10／晚：當地料理
+# Day 12 ｜ 08/14（五）｜ +++16:33 葉卡捷琳堡 — 跨越歐亞分界
+:::meta lodging=Four Elements Hotel 或同級  meals=早：火車簡餐／午：火車簡餐／晚：俄式料理
 
 ## 古蹟
 ### ![巴拉賓斯克](day12/barabinsk-station-downloaded.jpg) 巴拉賓斯克

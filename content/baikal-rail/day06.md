@@ -1,5 +1,5 @@
-# Day 6 ｜ 07/25（六）｜ +++ 貝加爾湖 +++ 伊爾庫次克 → 李斯特維揚卡 — 貝加爾湖初見
-:::meta lodging=Krestovaya Pad 或同級  meals=早：火車簡餐 US10／午：火車簡餐 US10／晚：俄式料理
+# Day 6 ｜ 08/08（六）｜ +++貝加爾湖+++ +++14:55 伊爾庫次克+++ → 李斯特維揚卡 — 貝加爾湖初見
+:::meta lodging=Hotel Irkutsk 或同級  meals=早：火車簡餐／午：火車簡餐／晚：俄式料理
 
 ## 古蹟
 ### ![貝加爾湖](day06/lake-baikal-shaman-rock-downloaded.jpg) 貝加爾湖

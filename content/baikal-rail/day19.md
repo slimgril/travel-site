@@ -1,5 +1,5 @@
-# Day 19 ｜ 08/07（五）｜ 莫斯科 ✈ 北京 — 莫斯科市集與返程
-:::meta flight=SVO/PEK CA910 18:45-07:00+1  lodging=飛機上  meals=早：飯店內／午：俄式料理／晚：機場自理
+# Day 19 ｜ 08/21（五）｜ 莫斯科 ✈ 北京 — 莫斯科市集與返程
+:::meta flight=SVO/PEK CA754 17:30-06:00+1  lodging=機上  meals=早：飯店內／午：俄式料理／晚：機上簡餐
 
 ## 古蹟
 ### ![伊茲麥洛夫公園](day19/izmailovo-park-downloaded.jpg) 伊茲麥洛夫公園

@@ -1,5 +1,5 @@
-# Day 15 ｜ 08/03（一）｜ 彼得夏宮花園 → 葉卡捷琳娜宮 → 聖彼得堡 — 沙皇宮殿與涅瓦大街
-:::meta lodging=Park Inn Pulkovskaya 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
+# Day 15 ｜ 08/17（一）｜ 彼得夏宮花園 → 葉卡捷琳娜宮 → 聖彼得堡 — 沙皇宮殿與涅瓦大街
+:::meta lodging=Cosmos Saint Petersburg Pulkovskaya Hotel 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
 
 ## 古蹟
 ### ![彼得夏宮花園](day15/peterhof-gardens-downloaded.jpg) 彼得夏宮花園

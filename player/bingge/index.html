@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>斌哥照片播放器</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d2b1f;
+    --gold: #d4a843;
+    --gold-soft: #e8c97a;
+    --paper: #f3efe4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: "Noto Sans TC", "PingFang TC", sans-serif;
+    background:
+      radial-gradient(ellipse at 18% 12%, rgba(212,168,67,.2), transparent 42%),
+      radial-gradient(ellipse at 85% 88%, rgba(45,106,79,.4), transparent 45%),
+      linear-gradient(160deg, #081912, var(--ink) 45%, #163528);
+    color: var(--paper);
+    overflow: hidden;
+  }
+  #home, #stage { height: 100vh; position: relative; }
+  .hidden { display: none !important; }
+
+  #home {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 7vh 5vw 6vh; text-align: center; overflow: auto;
+  }
+  .eyebrow { letter-spacing: .28em; font-size: 12px; color: var(--gold-soft); opacity: .85; }
+  h1 {
+    font-family: "Noto Serif TC", serif; font-weight: 700;
+    font-size: clamp(28px, 5vw, 46px); margin: 12px 0 8px; line-height: 1.25;
+  }
+  .sub { opacity: .7; font-size: 15px; margin-bottom: 8px; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 18px 0 28px; }
+  a.btn, button.btn {
+    appearance: none; border: 1px solid rgba(212,168,67,.45);
+    background: rgba(212,168,67,.12); color: var(--paper);
+    text-decoration: none; font: inherit; cursor: pointer;
+    border-radius: 999px; padding: 11px 20px; letter-spacing: .05em;
+  }
+  a.btn.primary, button.btn.primary {
+    background: var(--gold); color: var(--ink); border-color: var(--gold); font-weight: 600;
+  }
+  a.btn:hover, button.btn:hover { border-color: var(--gold); }
+
+  .themes {
+    width: min(920px, 100%);
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px; text-align: left;
+  }
+  .theme-card {
+    border: 1px solid rgba(255,255,255,.16);
+    background: rgba(0,0,0,.22);
+    border-radius: 14px; padding: 16px 16px 14px; cursor: pointer;
+    transition: .2s ease;
+  }
+  .theme-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .theme-card h2 {
+    font-family: "Noto Serif TC", serif; font-size: 18px; font-weight: 700;
+    color: var(--gold-soft); margin-bottom: 6px;
+  }
+  .theme-card p { font-size: 13px; opacity: .7; }
+  .empty {
+    opacity: .65; font-size: 14px; line-height: 1.8; max-width: 420px; margin-top: 12px;
+  }
+  .status { margin-top: 20px; font-size: 12px; opacity: .45; }
+
+  #stage { background: #050b08; }
+  .topbar {
+    position: absolute; inset: 0 0 auto 0;
+    display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+    padding: 14px 16px;
+    background: linear-gradient(rgba(0,0,0,.55), transparent);
+    z-index: 2;
+  }
+  .ghost {
+    border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.28);
+    color: #fff; border-radius: 999px; padding: 8px 14px; font-size: 13px; cursor: pointer;
+  }
+  .frame { position: absolute; inset: 0; display: grid; place-items: center; }
+  #slide {
+    max-width: 100%; max-height: 100%; object-fit: contain;
+    opacity: 0; transition: opacity .4s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
+  }
+  #slide.show { opacity: 1; }
+  .nav-hit {
+    position: absolute; top: 18%; bottom: 22%; width: 20%;
+    border: 0; background: transparent; cursor: pointer; z-index: 1;
+  }
+  .nav-hit.prev { left: 0; } .nav-hit.next { right: 0; }
+  .hud {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 18px 22px 22px;
+    background: linear-gradient(transparent, rgba(0,0,0,.72));
+    z-index: 2;
+  }
+  .bar { height: 3px; background: rgba(255,255,255,.15); border-radius: 2px; overflow: hidden; margin-bottom: 10px; }
+  .bar > i { display: block; height: 100%; width: 0; background: var(--gold); }
+  .caption { font-family: "Noto Serif TC", serif; font-size: clamp(16px, 2.4vw, 22px); }
+  .meta-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; opacity: .8; margin-top: 6px; }
+</style>
+</head>
+<body>
+  <section id="home">
+    <div class="eyebrow">BINGGE PHOTO PLAYER</div>
+    <h1>斌哥照片播放器</h1>
+    <p class="sub">每個主題＝一個資料夾。選主題開始播放。</p>
+    <div class="actions">
+      <a class="btn primary" href="/maintain.html">＋ 匯入照片／管理主題</a>
+      <button class="btn" type="button" id="btnRefresh">重新整理</button>
+    </div>
+    <div class="themes" id="themeList"></div>
+    <p class="empty hidden" id="emptyHint">
+      還沒有主題。<br>請到「匯入照片」建立主題名稱，再把照片丟進去。
+    </p>
+    <p class="status" id="statusLine">連線本機伺服器中…</p>
+  </section>
+
+  <section id="stage" class="hidden">
+    <div class="topbar">
+      <div>
+        <button class="ghost" type="button" id="btnHome">結束</button>
+        <button class="ghost" type="button" id="btnToggle">暫停</button>
+      </div>
+      <div>
+        <button class="ghost" type="button" id="btnPrev">上一張</button>
+        <button class="ghost" type="button" id="btnNext">下一張</button>
+      </div>
+    </div>
+    <div class="frame"><img id="slide" alt=""></div>
+    <button class="nav-hit prev" type="button" id="hitPrev" aria-label="上一張"></button>
+    <button class="nav-hit next" type="button" id="hitNext" aria-label="下一張"></button>
+    <div class="hud">
+      <div class="bar"><i id="progress"></i></div>
+      <div class="caption" id="caption"></div>
+      <div class="meta-row">
+        <span id="themeLabel"></span>
+        <span id="counter"></span>
+      </div>
+    </div>
+  </section>
+
+<script>
+(function () {
+  var listEl = document.getElementById('themeList');
+  var emptyEl = document.getElementById('emptyHint');
+  var statusEl = document.getElementById('statusLine');
+  var home = document.getElementById('home');
+  var stage = document.getElementById('stage');
+  var img = document.getElementById('slide');
+  var caption = document.getElementById('caption');
+  var themeLabel = document.getElementById('themeLabel');
+  var counter = document.getElementById('counter');
+  var progress = document.getElementById('progress');
+  var btnToggle = document.getElementById('btnToggle');
+
+  var queue = [];
+  var themeName = '';
+  var index = 0;
+  var playing = false;
+  var timer = null;
+  var slideMs = 5000;
+
+  function clearTimer() { if (timer) { clearTimeout(timer); timer = null; } }
+
+  async function loadThemes() {
+    statusEl.textContent = '讀取主題中…';
+    try {
+      var res = await fetch('/api/themes');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      var data = await res.json();
+      renderThemes(data.themes || []);
+      statusEl.textContent = '共 ' + (data.themes || []).length + ' 個主題 · Library 即時讀取';
+    } catch (err) {
+      listEl.innerHTML = '';
+      emptyEl.classList.remove('hidden');
+      emptyEl.innerHTML = '無法連線伺服器。<br>請雙擊「開始播放.command」後再重整此頁。';
+      statusEl.textContent = String(err.message || err);
+    }
+  }
+
+  function renderThemes(themes) {
+    listEl.innerHTML = '';
+    if (!themes.length) {
+      emptyEl.classList.remove('hidden');
+      emptyEl.innerHTML = '還沒有主題。<br>請到「匯入照片」建立主題名稱，再把照片丟進去。';
+      return;
+    }
+    emptyEl.classList.add('hidden');
+    themes.forEach(function (t) {
+      var card = document.createElement('button');
+      card.type = 'button';
+      card.className = 'theme-card';
+      card.innerHTML = '<h2></h2><p></p>';
+      card.querySelector('h2').textContent = t.name;
+      card.querySelector('p').textContent = (t.count || 0) + ' 張照片';
+      card.disabled = !t.count;
+      if (!t.count) card.style.opacity = '.45';
+      card.addEventListener('click', function () { startTheme(t.name); });
+      listEl.appendChild(card);
+    });
+  }
+
+  async function startTheme(name) {
+    try {
+      var res = await fetch('/api/themes/' + encodeURIComponent(name) + '/photos');
+      var data = await res.json();
+      if (!data.photos || !data.photos.length) {
+        alert('這個主題還沒有照片');
+        return;
+      }
+      themeName = name;
+      queue = data.photos;
+      index = 0;
+      home.classList.add('hidden');
+      stage.classList.remove('hidden');
+      playing = true;
+      btnToggle.textContent = '暫停';
+      render();
+    } catch (err) {
+      alert('讀取失敗：' + err);
+    }
+  }
+
+  function showHome() {
+    clearTimer();
+    playing = false;
+    stage.classList.add('hidden');
+    home.classList.remove('hidden');
+    img.removeAttribute('src');
+    img.classList.remove('show');
+  }
+
+  function render() {
+    clearTimer();
+    var item = queue[index];
+    if (!item) return;
+    img.classList.remove('show');
+    var done = function () {
+      img.classList.add('show');
+      caption.textContent = item.caption || item.name || '';
+      themeLabel.textContent = themeName;
+      counter.textContent = (index + 1) + ' / ' + queue.length;
+      progress.style.width = ((index + 1) / queue.length * 100).toFixed(1) + '%';
+      if (playing) timer = setTimeout(function () { next(true); }, slideMs);
+    };
+    img.onload = done;
+    img.onerror = done;
+    img.src = item.url;
+    img.alt = item.caption || '';
+  }
+
+  function next(auto) {
+    if (index >= queue.length - 1) {
+      if (auto) showHome();
+      return;
+    }
+    index += 1;
+    render();
+  }
+  function prev() {
+    if (index <= 0) return;
+    index -= 1;
+    render();
+  }
+  function toggle() {
+    playing = !playing;
+    btnToggle.textContent = playing ? '暫停' : '繼續';
+    if (playing) timer = setTimeout(function () { next(true); }, slideMs);
+    else clearTimer();
+  }
+
+  document.getElementById('btnRefresh').addEventListener('click', loadThemes);
+  document.getElementById('btnHome').addEventListener('click', showHome);
+  document.getElementById('btnToggle').addEventListener('click', toggle);
+  document.getElementById('btnPrev').addEventListener('click', prev);
+  document.getElementById('btnNext').addEventListener('click', function () { next(false); });
+  document.getElementById('hitPrev').addEventListener('click', prev);
+  document.getElementById('hitNext').addEventListener('click', function () { next(false); });
+  document.addEventListener('keydown', function (e) {
+    if (stage.classList.contains('hidden')) return;
+    if (e.key === 'Escape') showHome();
+    else if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(false); }
+    else if (e.key === 'ArrowLeft') prev();
+    else if (e.key === 'p' || e.key === 'P') toggle();
+  });
+
+  loadThemes().then(function () {
+    var m = location.hash.match(/^#play=(.+)$/);
+    if (m) {
+      var name = decodeURIComponent(m[1]);
+      history.replaceState(null, '', location.pathname);
+      startTheme(name);
+    }
+  });
+})();
+</script>
+</body>
+</html>

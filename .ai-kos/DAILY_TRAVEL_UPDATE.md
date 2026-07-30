@@ -45,7 +45,7 @@ New projects: create under /Users/mac/Documents/Projects/旅遊/<project-name>/
 | **`CLAUDE.md`（專案根）** | **Photos SSOT 入口** — Drive 分享資料夾 URL／Folder ID（每日必先讀，勿再問路徑） |
 | `.ai-kos/WORKSPACE.md` | 路徑 Integrity SSOT |
 | `.ai-kos/INFRASTRUCTURE.md` | Drive SSOT 細節、本機照片路徑（與 CLAUDE.md 同一 Folder ID） |
-| `.ai-kos/CONTENT_STYLE.md` | 旅行札記 v1.1 — **第一人稱＋景點壓縮四拍**（旅行書，非導覽） |
+| `.ai-kos/CONTENT_STYLE.md` | 旅行札記 **v1.2** — 資深旅遊作家描述區（感官切入／禁導覽與流水帳／4–6 句） |
 | `content/baikal-rail/source/PHOTO_SYNC.md` | 增量同步、manifest、build/deploy 細節 |
 | `.ai-kos/RESUME_CONTEXT.md` | Operational Phase 優先序、活躍旅程 |
 | `.ai-kos/STATUS.md` | 當前 trip 狀態、待審數量 |
@@ -98,7 +98,7 @@ python3 scripts/sync_baikal_photos.py           # 正式同步
 對本次同步匯入的**每一張新照片**：
 
 1. 找到對應 `content/<trip>/dayXX.md` landmark 區塊
-2. 依 `.ai-kos/CONTENT_STYLE.md` v1.1 撰寫或補充**壓縮四拍**旅行札記（當下→故事→雜記→收尾；勿寫冷冰冰景點導覽）
+2. 依 `.ai-kos/CONTENT_STYLE.md` **v1.2** 改寫描述區（身在現場、資訊嵌入、禁導覽／流水帳、4–6 句感受收尾）
 3. 確保 `![alt](photos/...)` 引用正確；一圖一故事
 4. **增量採用** — 僅改動本次觸及的 day 檔；不批次重寫舊旅程
 
@@ -127,11 +127,16 @@ python3 scripts/build_prototype.py
 ```bash
 # sips / package_preview_deploy 須在 sandbox 外執行，否則圖片可能變黑
 # 詳見 PHOTO_SYNC.md § Deploy
-surge dist-preview-deploy cluttered-breath.surge.sh
+# 本季 Production = Cloudflare Pages：
+bash scripts/deploy_cloudflare_pages.sh
+# 等價：npm run deploy:pages
 ```
 
-- 過渡瀏覽 URL：https://cluttered-breath.surge.sh/
-- 生產域名若 BLOCKED — 見 `.ai-kos/RESUME_CONTEXT.md`，勿反覆重試
+- 本季 Production：https://travel-site-quarter.pages.dev/（波羅的海＋西伯利亞）
+- **HARD：** 禁止 deploy 未壓縮 `dist` 或 `photos/` 原圖
+- **HARD：** 西伯利亞結束後的下季新旅程 → **新 Pages project**＋該季獨立壓縮包（見 `.ai-kos/DECISIONS.md` 2026-07-30 Cutover）
+- **Fallback（非預設）：** `npm run deploy:surge:fallback` → `cluttered-breath.surge.sh`（見 `.ai-kos/DEPLOY_MIGRATION.md` Rollback）
+- 須已 `wrangler login`；Pages project 異常 — 見 `.ai-kos/RESUME_CONTEXT.md`，勿反覆無腦重試
 
 ### Step 7 — Commit / Push
 
@@ -189,7 +194,7 @@ Commit
 <hash> | SKIP
 
 Production
-https://cluttered-breath.surge.sh/
+https://travel-site-quarter.pages.dev/
 
 Status
 Operational Complete | Blocked | Partial
@@ -267,7 +272,7 @@ Commit
 ce389e9
 
 Production
-https://cluttered-breath.surge.sh/
+https://travel-site-quarter.pages.dev/
 
 Status
 Operational Complete
@@ -317,7 +322,7 @@ Operational Complete
 - [ ] 確認 Active path：`~/Documents/Projects/旅遊/travel-site/`
 - [ ] 讀 INFRASTRUCTURE（Drive SSOT，不 re-ask）
 - [ ] `--dry-run` 後正式 sync
-- [ ] 每張新圖更新 dayXX.md（CONTENT_STYLE v1.1 壓縮四拍；西伯利亞同）
+- [ ] 每張新圖更新 dayXX.md（CONTENT_STYLE **v1.2**；西伯利亞同）
 - [ ] build → verify → deploy（sips 在 sandbox 外）
 - [ ] 有變更才 commit/push
 - [ ] 回報結尾輸出固定營運摘要（Daily Travel Update 模板）

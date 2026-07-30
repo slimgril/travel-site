@@ -1,0 +1,10 @@
+# Cloudflare Pages — travel-site Production（Cutover 2026-07-30）
+# 知識：.ai-kos/DEPLOY_MIGRATION.md
+
+name = "travel-site-quarter"
+compatibility_date = "2026-07-30"
+pages_build_output_dir = "../../dist-surge-upload"
+
+# 日常部署（專案根目錄）：
+#   bash scripts/deploy_cloudflare_pages.sh
+#   # 或：npm run deploy:pages

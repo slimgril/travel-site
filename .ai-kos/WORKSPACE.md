@@ -18,7 +18,7 @@ FORBIDDEN:              /Users/mac/Desktop/旅遊/
 | **Git toplevel** | 必須等於 Canonical Project Root |
 | **Cursor folderUri** | `file:///Users/mac/Documents/Projects/旅遊/travel-site` |
 | **GitHub** | `https://github.com/slimgril/travel-site` |
-| **Deploy URL（過渡）** | `https://cluttered-breath.surge.sh/` |
+| **Deploy URL** | `https://travel-site-quarter.pages.dev/` |
 
 ---
 
@@ -37,7 +37,7 @@ FORBIDDEN:              /Users/mac/Desktop/旅遊/
 |------|------|
 | **Scripts** | 一律 `ROOT = Path(__file__).resolve().parent.parent`（相對 repo） |
 | **photo-sync-config** | 僅相對路徑（`content/…`、`photos/…`） |
-| **Deploy** | `surge_domain` = `cluttered-breath.surge.sh`（過渡）；勿寫本機絕對路徑 |
+| **Deploy** | Pages project `travel-site-quarter`；Surge fallback＝`cluttered-breath.surge.sh`；勿寫本機絕對路徑 |
 | **Knowledge** | 可寫 Canonical / FORBIDDEN 對照；不得把 Desktop 標成 active |
 
 ---

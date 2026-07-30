@@ -1,6 +1,171 @@
 # STATUS — travel-site
 
-最後更新：2026-07-30（Day 7–10 壓縮四拍 · CONTENT_STYLE v1.1）
+最後更新：2026-07-30（Cutover 跨文件關聯檢查）
+
+## 2026-07-30 — Cutover 跨文件關聯檢查（Ingest）
+
+| 面 | 結果 |
+|------|------|
+| **SSOT 一致** | DECISIONS／DEPLOY_MIGRATION／INFRASTRUCTURE／DAILY／RESUME／INDEX／WORKSPACE／package.json／photo-sync-config／deploy script → Pages Production |
+| **已修正** | `REPOSITORY.md` Deployment URL；`PHOTO_SYNC.md` Daily／Failure；DECISIONS 舊條目標「已覆寫」；STATUS standby 標歷史 |
+| **刻意保留** | STATUS 舊日誌、`content/**/review/*` 當時線上連結（歷史證據，非現行 SSOT） |
+| **現行 Production** | https://travel-site-quarter.pages.dev/ |
+
+## 2026-07-30 — Production Cutover → Cloudflare Pages
+
+| 項目 | 狀態 |
+|------|------|
+| **Owner** | 核准「換 Production」 |
+| **Production** | https://travel-site-quarter.pages.dev/ |
+| **Deploy** | `bash scripts/deploy_cloudflare_pages.sh`／`npm run deploy:pages` |
+| **Fallback** | Surge `cluttered-breath.surge.sh`（`npm run deploy:surge:fallback`） |
+| **Knowledge** | DECISIONS／DEPLOY_MIGRATION／INFRASTRUCTURE／DAILY／RESUME／INDEX／WORKSPACE |
+| **Config** | `photo-sync-config.json` host＝cloudflare_pages |
+| **Live** | 見下方驗收 |
+
+## 2026-07-30 — Cloudflare Pages Phase 1 試跑
+
+| 項目 | 狀態 |
+|------|------|
+| **帳號** | wangjohnsonwt@gmail.com（wrangler OAuth） |
+| **Project** | `travel-site-quarter` |
+| **上傳** | PASS · 473 files（第二次 `--branch=main` 為 0 new） |
+| **試跑／正式別名** | https://travel-site-quarter.pages.dev/ （index／bldh／baikal **200**） |
+| **部署** | https://1581ffed.travel-site-quarter.pages.dev |
+| **Production** | **已 Cutover** → https://travel-site-quarter.pages.dev/（見上方最新條目） |
+| **Cutover** | Done（Owner 2026-07-30） |
+| **指令** | `wrangler pages deploy dist-surge-upload --project-name=travel-site-quarter --branch=main --commit-dirty=true` |
+
+## 2026-07-30 — Surge redeploy（重新登入後）
+
+| 項目 | 狀態 |
+|------|------|
+| **帳號** | `wangjohnsonwt@gmail.com` — whoami PASS（netrc 已恢復） |
+| **指令** | `npx surge@0.23.1 dist-surge-upload cluttered-breath.surge.sh` |
+| **結果** | FAIL · `ECONNRESET`（~5.5 min） |
+| **Next** | Cloudflare Pages 試跑較實際 |
+
+## 2026-07-30 — Surge redeploy（手機熱點）
+
+| 項目 | 狀態 |
+|------|------|
+| **網路** | 手機熱點 |
+| **指令** | `npx surge@0.23.1 dist-surge-upload cluttered-breath.surge.sh` |
+| **結果** | FAIL · `ECONNRESET`（~5.5 min） |
+| **Next** | Cloudflare Pages 試跑；或稍後／其他時段再試 Surge |
+
+## 2026-07-30 — Surge redeploy 重試（正確包）
+
+| 項目 | 狀態 |
+|------|------|
+| **帳號** | `wangjohnsonwt@gmail.com`（Student）— whoami PASS |
+| **指令** | `npx surge@0.23.1 dist-surge-upload cluttered-breath.surge.sh` |
+| **包** | `dist-surge-upload` 165MB（非 repo 根目錄 4.8GB） |
+| **網域** | `cluttered-breath.surge.sh`（list 有擁有權；Live 仍 200） |
+| **結果** | FAIL ×2 · `ECONNRESET`／`Error: aborted`（~5–6 min） |
+| **非因** | 官網宕機、token 失效、網域無權限 |
+| **Next** | 換網路／稍後再試；或 Owner 核准 Pages 試跑 |
+
+## 2026-07-30 — Cloudflare Pages 遷移準備（standby）
+
+> **歷史條目** — 已被同日 **Production Cutover** 覆寫；現行 Production＝Pages。
+
+| 項目 | 狀態（當時） |
+|------|------|
+| **Production** | 仍為 Surge · https://cluttered-breath.surge.sh/ |
+| **備援** | Cloudflare Pages（非 Render） |
+| **Knowledge** | `.ai-kos/DEPLOY_MIGRATION.md` |
+| **設定** | `deploy/cloudflare/wrangler.toml` |
+| **腳本** | `scripts/deploy_cloudflare_pages.sh`（當時閘門：`MIGRATE_CONFIRM=1`） |
+| **npm（當時）** | `deploy:surge:quarter`／`deploy:pages:trial`（已改名，見 package.json） |
+| **Cutover** | 其後已核准（見上方最新條目） |
+| **閘門測試** | PASS（未設 confirm → exit 2） |
+
+## 2026-07-30 — 影片畫面／配樂淡入淡出（斌哥）
+
+| 項目 | 狀態 |
+|------|------|
+| **需求** | 畫面＋配樂淡入淡出更明顯；配樂比畫面早起、晚收；入場由小放大、片尾慢慢消失 |
+| **作法** | 入場 **0.5→1** 約 3.5s；片尾提早 **4.5s** 開始慢慢淡出收到結束；音量晚收約 2s |
+| **Files** | `templates/shell.html` · `templates/base.css` · `DECISIONS.md` |
+| **Build** | PASS（已同步 preview／surge 包） |
+| **Deploy** | 暫緩（Surge 網路） |
+| **本機** | http://127.0.0.1:8766/trips/bldh-trio.html#d7 |
+
+## 2026-07-30 — Day 7 顛倒屋描述勘誤
+
+| 項目 | 狀態 |
+|------|------|
+| **勘誤** | 外觀文誤寫「錫古爾達」→ 改正為 **Smārde（Tukums）**（非錫古爾達） |
+| **內部** | 補回斌哥要點：家具陳設**非常真實** |
+| **影片** | 07/17 兩支已是 poster 圖＋點擊播放（圖雷達塔樓／主教座堂遺址）；無需改機制 |
+| **Files** | `content/bldh-trio/day07.md` |
+| **Build** | PASS（`build_prototype.py`） |
+| **Package** | HTML → `dist-preview-deploy`／`dist-surge-upload` |
+| **Deploy** | 暫緩（Surge 網路不穩／EPIPE；Owner 擇日重試） |
+
+## 2026-07-30 — 斌哥照片播放器（主題＝資料夾）
+
+| 項目 | 狀態 |
+|------|------|
+| **路徑** | `player/bingge/` |
+| **啟動** | 雙擊 `開始播放.command` → http://127.0.0.1:8765/ |
+| **匯入** | `/maintain.html`：主題名稱 → 資料夾 → 匯入照片 |
+| **首頁** | 主題卡片＝Library 資料夾名 |
+| **預置** | `Library/山西漫遊/` **239** 張 |
+| **說明頁** | `player/bingge/how-to.html`（可掛站） |
+
+
+## 2026-07-30 — 山西雲端照片播放器（全部 239 張）
+
+| 項目 | 狀態 |
+|------|------|
+| **來源** | 札記入站＋未入冊＋Desktop `Binge photo` 20 張 → `photos/shanxi/player-extras/` |
+| **Build** | `scripts/build_shanxi_player.py` → `player/shanxi/`（混合：site photos＋extras 內嵌） |
+| **入口** | `trips/shanxi.html` →「照片播放器 · 全部照片」 |
+| **本地** | `dist-surge-upload/player/shanxi/` · `dist-preview-deploy/player/shanxi/` |
+| **張數** | **239**（Day2–14＋未入冊 45＋未入選 20） |
+| **Deploy** | Pending（待 Owner 核准上線） |
+
+## 2026-07-30 — 西伯利亞（baikal-rail）對齊 260803 小冊子
+
+| 項目 | 狀態 |
+|------|------|
+| **SSOT** | `content/baikal-rail/source/260803-西鐵小資20日-小冊子-SU.pdf` |
+| **日期** | 2026-08-03 → 08-22（原 07-20 → 08-08） |
+| **航班** | CA186 13:00–16:15／CA901 08:45–10:50／SU6418 19:00–19:55／CA754 17:30–06:00+1／CA185 08:25–11:40 |
+| **火車** | 305 15:22／057 22:40／009 22:42／高鐵 15:10–19:13 |
+| **住宿** | 聖彼 Cosmos Pulkovskaya；莫斯科 Azimut Aerostar；奧利洪 Krestovaya Pad’ 等 |
+| **餐食** | Day 3／5／8–13／16／18 已對齊小冊子正文（撤 US10；Day5 蒙式火鍋／特選餐盒等） |
+| **勘誤** | P.02「08/20 Day13」誤印 → 站內用 **08/15**（見 `source/itinerary.md`） |
+| **Files** | `trip.md`、`day01`–`day20.md`、`source/itinerary.md` |
+| **Build** | PASS（`build_prototype.py`；缺圖 0） |
+| **Package** | PASS（HTML → `dist-preview-deploy`／`dist-surge-upload`） |
+| **Deploy** | Pending（前次 surge 連線中斷；需重試） |
+| **本地** | `dist-preview-deploy/trips/baikal-rail.html` |
+
+## 2026-07-30 — Day 7 補影片 `VID_20260717_232723`
+
+| 項目 | 狀態 |
+|------|------|
+| **Drive** | `0717/VID_20260717_232723.mp4`（本機先前漏抓） |
+| **內容** | 塔圖主教座堂遺址（浮水印 18:26 Tartu），非 Maiasmokk |
+| **入站** | `photos/.../tartu-cathedral-ruins.mp4`（8.9MB）＋`day07.md` `{video=...}` |
+| **Day 7 影片** | **2** 支：圖雷達塔樓＋主教座堂遺址 |
+| **Build** | PASS |
+| **Deploy** | Pending |
+
+## 2026-07-30 — Day 7–10 描述區升 v1.2（資深旅遊作家）
+
+| 項目 | 狀態 |
+|------|------|
+| **規則** | 感官切入／資訊嵌入／禁導覽與流水帳／4–6 句感受收尾 |
+| **內容** | `day07`–`day10` 全卡改寫；聖靈教堂古鐘＝定稿範例 |
+| **札記** | `estonia-journal.html` 52 卡同步 |
+| **Build** | PASS |
+| **Package** | PASS（`dist-preview-deploy`／`dist-surge-upload` HTML） |
+| **Deploy** | Pending |
+| **本地** | `dist-preview-deploy/trips/bldh-trio.html#d7`–`#d10` |
 
 ## 2026-07-30 — 景點壓縮四拍（Day 7–10＋西伯利亞原則）
 

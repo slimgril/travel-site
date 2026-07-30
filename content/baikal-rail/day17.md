@@ -1,5 +1,5 @@
-# Day 17 ｜ 08/05（三）｜ 莫斯科 — 紅場與克里姆林宮
-:::meta lodging=Izmailovo Delta Hotel 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
+# Day 17 ｜ 08/19（三）｜ 莫斯科 — 紅場與克里姆林宮
+:::meta lodging=Azimut Aerostar 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
 
 ## 古蹟
 ### ![克里姆林宮](day17/kremlin-red-wall-downloaded.jpg) 克里姆林宮

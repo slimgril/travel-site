@@ -195,12 +195,92 @@
 })();
 </script>
 <script>
-/* Click-to-play video cards (flash → poster fade → video) */
+/* Click-to-play video cards
+   配樂先行／畫面晚出；片尾畫面先收／配樂晚收；音量與畫面淡入淡出加長 */
 (function () {
-  function resetCard(card) {
+  var AUDIO_FADE_MS = 2000;   /* 音量淡入淡出（明顯） */
+  var VISUAL_LEAD_MS = 2500;  /* 點擊後先聽配樂，再淡入畫面 */
+  var VISUAL_TRAIL_MS = 4500; /* 片尾提早約 4.5s 開始慢慢收（可見） */
+  var SHORT_DUR_S = 12;       /* 短片縮短先行／延遲，避免吃掉全片 */
+
+  function prefersReducedMotion() {
+    return window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  function clearFade(card) {
+    if (card._fadeTimer) {
+      clearInterval(card._fadeTimer);
+      card._fadeTimer = null;
+    }
+  }
+
+  function clearLead(card) {
+    if (card._leadTimer) {
+      clearTimeout(card._leadTimer);
+      card._leadTimer = null;
+    }
+  }
+
+  function setVol(video, v) {
+    try { video.volume = Math.max(0, Math.min(1, v)); } catch (e) {}
+  }
+
+  function timingFor(duration) {
+    var durMs = (isFinite(duration) && duration > 0) ? duration * 1000 : 20000;
+    var lead = VISUAL_LEAD_MS;
+    var trail = VISUAL_TRAIL_MS;
+    var fade = AUDIO_FADE_MS;
+    if (duration > 0 && duration < SHORT_DUR_S) {
+      lead = 800;
+      trail = 800;
+      fade = 1200;
+    }
+    /* 先行＋延遲＋兩段淡入淡出不得超過片長的一半 */
+    var budget = Math.max(0, durMs * 0.45);
+    var need = lead + trail + fade;
+    if (need > budget && budget > 0) {
+      var scale = budget / need;
+      lead = Math.round(lead * scale);
+      trail = Math.round(trail * scale);
+      fade = Math.max(400, Math.round(fade * scale));
+    }
+    return { lead: lead, trail: trail, fade: fade };
+  }
+
+  /** Ramp volume from→to over ms; respects reduced-motion (instant). */
+  function fadeVolume(video, card, from, to, ms, done) {
+    clearFade(card);
+    if (prefersReducedMotion() || !ms || ms <= 0) {
+      setVol(video, to);
+      if (done) done();
+      return;
+    }
+    var steps = Math.max(8, Math.round(ms / 50));
+    var stepMs = ms / steps;
+    var i = 0;
+    setVol(video, from);
+    card._fadeTimer = setInterval(function () {
+      i += 1;
+      setVol(video, from + (to - from) * (i / steps));
+      if (i >= steps) {
+        clearFade(card);
+        setVol(video, to);
+        if (done) done();
+      }
+    }, stepMs);
+  }
+
+  function hardReset(card) {
     var video = card.querySelector('video.video-card__media');
-    card.classList.remove('is-playing', 'is-flashing');
+    clearFade(card);
+    clearLead(card);
+    card.classList.remove('is-playing', 'is-flashing', 'is-picture-on', 'is-picture-out');
     card._flashing = false;
+    card._fadingOut = false;
+    card._endTrailArmed = false;
+    card._endAudioArmed = false;
+    card._timing = null;
     if (card._flashTimer) {
       clearTimeout(card._flashTimer);
       card._flashTimer = null;
@@ -208,27 +288,80 @@
     if (!video) return;
     video.pause();
     try { video.currentTime = 0; } catch (e) {}
+    setVol(video, 0);
+  }
+
+  function resetCard(card, withFade) {
+    var video = card.querySelector('video.video-card__media');
+    if (!video || !withFade || card._fadingOut) {
+      hardReset(card);
+      return;
+    }
+    card._fadingOut = true;
+    clearLead(card);
+    /* 手動停止：畫面慢慢消失，音量淡出 */
+    card.classList.remove('is-picture-on');
+    card.classList.add('is-picture-out');
+    var fade = (card._timing && card._timing.fade) || AUDIO_FADE_MS;
+    fadeVolume(video, card, video.volume || 0, 0, fade, function () {
+      hardReset(card);
+    });
+  }
+
+  function revealPicture(card) {
+    if (!card.classList.contains('is-playing') || card._fadingOut) return;
+    card.classList.remove('is-picture-out');
+    card.classList.add('is-picture-on');
   }
 
   function startPlayback(card) {
     var video = card.querySelector('video.video-card__media');
     if (!video) return;
-    card.classList.remove('is-flashing');
+    card.classList.remove('is-flashing', 'is-picture-on', 'is-picture-out');
     card.classList.add('is-playing');
-    var p = video.play();
-    if (p && p.catch) {
-      p.catch(function () {
-        card.classList.remove('is-playing');
+    card._fadingOut = false;
+    card._endTrailArmed = true;
+    card._endAudioArmed = true;
+
+    function begin(t) {
+      card._timing = t;
+      try { video.muted = false; } catch (e) {}
+      setVol(video, 0);
+      var p = video.play();
+      if (p && p.catch) {
+        p.catch(function () {
+          hardReset(card);
+        });
+      }
+      /* 配樂先淡入；畫面仍蓋住照片，晚幾秒再淡入影片 */
+      fadeVolume(video, card, 0, 1, t.fade);
+      if (prefersReducedMotion() || t.lead <= 0) {
+        revealPicture(card);
+      } else {
+        clearLead(card);
+        card._leadTimer = setTimeout(function () {
+          card._leadTimer = null;
+          revealPicture(card);
+        }, t.lead);
+      }
+    }
+
+    var dur = video.duration;
+    if (isFinite(dur) && dur > 0) {
+      begin(timingFor(dur));
+    } else {
+      video.addEventListener('loadedmetadata', function onceMeta() {
+        video.removeEventListener('loadedmetadata', onceMeta);
+        begin(timingFor(video.duration));
       });
+      begin(timingFor(0));
     }
   }
 
   function playCard(card) {
     var video = card.querySelector('video.video-card__media');
-    if (!video || card._flashing) return;
-    var reduce = window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) {
+    if (!video || card._flashing || card._fadingOut) return;
+    if (prefersReducedMotion()) {
       startPlayback(card);
       return;
     }
@@ -252,8 +385,9 @@
         e.preventDefault();
         e.stopPropagation();
       }
+      if (card._fadingOut) return;
       if (card.classList.contains('is-playing') || card._flashing) {
-        resetCard(card);
+        resetCard(card, true);
         return;
       }
       playCard(card);
@@ -265,8 +399,31 @@
         activate(e);
       }
     });
+    video.addEventListener('timeupdate', function () {
+      if (!card.classList.contains('is-playing') || card._fadingOut) return;
+      var dur = video.duration;
+      if (!isFinite(dur) || dur <= 0) return;
+      var t = card._timing || timingFor(dur);
+      card._timing = t;
+      var remain = dur - video.currentTime;
+      var trailS = t.trail / 1000;
+      var fadeS = t.fade / 1000;
+
+      /* 畫面提早慢慢收：約 trail 秒前開始淡出，一路收到接近結束 */
+      if (card._endTrailArmed && remain <= trailS) {
+        card._endTrailArmed = false;
+        card.classList.remove('is-picture-on');
+        card.classList.add('is-picture-out');
+      }
+      /* 配樂晚收：接近片尾才淡出音量 */
+      if (card._endAudioArmed && remain <= fadeS) {
+        card._endAudioArmed = false;
+        card._fadingOut = true;
+        fadeVolume(video, card, video.volume || 0, 0, Math.max(50, remain * 1000));
+      }
+    });
     video.addEventListener('ended', function () {
-      resetCard(card);
+      hardReset(card);
     });
   }
 

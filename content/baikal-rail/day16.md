@@ -1,5 +1,5 @@
-# Day 16 ｜ 08/04（二）｜ 聖彼得堡 +++ 高速鐵路 +++ 莫斯科 — 冬宮之後抵達莫斯科
-:::meta lodging=Izmailovo Delta Hotel 或同級  meals=早：飯店內／午：俄式套餐／晚：俄式料理
+# Day 16 ｜ 08/18（二）｜ 聖彼得堡 +++15:10 高速鐵路+++ 莫斯科 — 冬宮之後抵達莫斯科
+:::meta train=聖彼得堡→莫斯科 高鐵 15:10／19:13  lodging=Azimut Aerostar 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
 
 ## 古蹟
 ### ![冬宮－艾爾米塔奇博物館](day16/winter-palace-hermitage-downloaded.jpg) 冬宮－艾爾米塔奇博物館

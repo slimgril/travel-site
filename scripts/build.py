@@ -509,7 +509,9 @@ def render_plan(block, landmarks=None, diagonal=False, slug=''):
         )
         collage_src = '../photos/%s/day02/lithuania-souvenirs-collage.png' % (
             slug or 'bldh-trio')
-        audio_src = '/photos/%s/audio/lithuania_15s.mp3' % (slug or 'bldh-trio')
+        # Relative path (same as photos/video) — works on surge AND USB/file:// offline.
+        # Absolute "/photos/..." broke the Day 2 vinyl player on flash-drive copies.
+        audio_src = '../photos/%s/audio/lithuania_15s.mp3' % (slug or 'bldh-trio')
         souvenirs = (
             '      <aside class="diag-souvenirs" aria-label="立陶宛紀念小物與民謠">'
             '<img class="diag-souvenirs-collage" src="%s" alt="立陶宛紀念小物集合">'
@@ -649,6 +651,30 @@ def render_trip_page(trip, shell, prev_trip, next_trip, landmarks=None):
             nav_items.append('  <a href="#d%s">D%s %s</a>' % (h['day_num'], h['day_num'], esc(label)))
     nav = ('<nav class="days-nav">\n%s\n</nav>' % ''.join(nav_items)) if nav_items else ''
 
+    ee_link = ''
+    if slug == 'bldh-trio' and os.path.exists(os.path.join(D_CONTENT, 'bldh-trio', 'estonia-journal.html')):
+        ee_link = (
+            '<p style="text-align:center;margin:8px 0 28px;font-size:0.95rem;">'
+            '<a href="../estonia-journal.html" style="color:var(--gold-light);letter-spacing:0.06em;">'
+            '愛沙尼亞互動札記 · 點卡片展開 →</a></p>'
+        )
+    # 山西：斌哥可自維護的照片播放器說明（本機 Library／主題資料夾）
+    if slug == 'shanxi' and os.path.exists(os.path.join(ROOT, 'player', 'bingge', 'how-to.html')):
+        ee_link = (
+            (ee_link or '')
+            + '<p style="text-align:center;margin:8px 0 28px;font-size:0.95rem;">'
+            '<a href="../player/bingge/how-to.html" style="color:var(--gold-light);letter-spacing:0.06em;">'
+            '照片播放器 · 主題資料夾自行維護 →</a></p>'
+        )
+    elif slug == 'shanxi' and os.path.exists(os.path.join(ROOT, 'player', 'shanxi', 'index.html')):
+        # 舊版靜態山西播放器（保留備援）
+        ee_link = (
+            (ee_link or '')
+            + '<p style="text-align:center;margin:8px 0 28px;font-size:0.95rem;">'
+            '<a href="../player/shanxi/" style="color:var(--gold-light);letter-spacing:0.06em;">'
+            '照片播放器 · 全部照片 →</a></p>'
+        )
+
     map_html = ''
     if data.get('map_svg'):
         p = os.path.join(D_CONTENT, data['map_svg'])
@@ -683,7 +709,7 @@ def render_trip_page(trip, shell, prev_trip, next_trip, landmarks=None):
         '</footer>' % ('\n    '.join(links), esc(data.get('number', '')), esc(clean_title(data.get('title') or slug)))
     )
 
-    body = '\n\n'.join(x for x in [hero, map_html, nav, day_html, footer] if x)
+    body = '\n\n'.join(x for x in [hero, map_html, nav, ee_link, day_html, footer] if x)
     safe_title = re.sub(r'[{}]', '', data.get('title') or slug)
     return (shell.replace('{{TITLE}}', esc(safe_title))
                  .replace('{{DESC}}', esc(data.get('summary', '')))
@@ -960,6 +986,29 @@ def main(dist_dir=None, overlay=None, label='dist/', landmarks_patch=None):
     shutil.copy2(os.path.join(D_TEMPLATES, 'base.css'), os.path.join(dist_dir, 'base.css'))
     if os.path.exists(D_PHOTOS):
         copy_tree(D_PHOTOS, os.path.join(dist_dir, 'photos'), skip={'originals', 'unassigned', 'source', 'cooked'})
+
+    # 愛沙尼亞互動札記（獨立頁；文案 SSOT 見 scripts/build_estonia_journal.py）
+    ee_journal = os.path.join(D_CONTENT, 'bldh-trio', 'estonia-journal.html')
+    if os.path.exists(ee_journal):
+        shutil.copy2(ee_journal, os.path.join(dist_dir, 'estonia-journal.html'))
+
+    # 山西：斌哥可自維護的照片播放器說明 + 本機 app
+    bingge_player = os.path.join(ROOT, 'player', 'bingge')
+    if os.path.isdir(bingge_player) and os.path.exists(os.path.join(bingge_player, 'how-to.html')):
+        dst_how = os.path.join(dist_dir, 'player', 'bingge')
+        os.makedirs(dst_how, exist_ok=True)
+        for name in ('how-to.html', 'README.md'):
+            src = os.path.join(bingge_player, name)
+            if os.path.exists(src):
+                shutil.copy2(src, os.path.join(dst_how, name))
+
+    # 山西照片播放器（舊靜態包；scripts/build_shanxi_player.py）
+    shanxi_player = os.path.join(ROOT, 'player', 'shanxi')
+    if os.path.isdir(shanxi_player) and os.path.exists(os.path.join(shanxi_player, 'index.html')):
+        dst_player = os.path.join(dist_dir, 'player', 'shanxi')
+        if os.path.isdir(dst_player):
+            shutil.rmtree(dst_player)
+        copy_tree(shanxi_player, dst_player)
 
     if overlay is not None:
         overlay(dist_dir, D_PHOTOS)
