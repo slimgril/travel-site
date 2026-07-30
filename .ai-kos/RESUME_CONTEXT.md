@@ -1,18 +1,19 @@
 # RESUME_CONTEXT（最新）
 
-**更新：** 2026-07-30 Production Cutover → Cloudflare Pages
+**更新：** 2026-07-30 commit+push Cutover（`0103b8c`）
 
 ## 上次停在
 
-- Owner 核准 **換 Production**：https://travel-site-quarter.pages.dev/
-- Surge `cluttered-breath.surge.sh` 改為 fallback（過渡可留）
-- `baikal-rail` 已對齊 **2026/08/03–08/22**：日期、航班、火車、住宿、**餐食** meta
+- Production Cutover → https://travel-site-quarter.pages.dev/（Surge＝fallback）
+- Git：`faab4cf` Cutover + `0103b8c` STATUS · 已 push `origin/main`
+- 跨文件關聯檢查完成（歷史 Surge 連結刻意保留）
 
 ## 下一步
 
 1. 西伯利亞新圖／新日文案一律 CONTENT_STYLE **v1.2**
-2. 本季 Deploy：`bash scripts/deploy_cloudflare_pages.sh`（或 `npm run deploy:pages`）
-3. 西伯利亞收工後：Owner 指定下季 **Pages project**，再改 Deploy 設定
+2. 本季 Deploy：`npm run deploy:pages`（或 `bash scripts/deploy_cloudflare_pages.sh`）
+3. 西伯利亞收工後：Owner 指定下季 **Pages project**
+4. （可選）清理未追蹤：map preview 重複檔、brochure PDF、drive-originals 大檔；考慮 Git LFS（遠端警告 >50MB mp4）
 
 ---
 # Resume Context — travel-site
