@@ -25,7 +25,7 @@
     color: var(--paper);
     overflow: hidden;
   }
-  #home, #stage { height: 100vh; position: relative; }
+  #home, #stage { height: 100vh; height: 100dvh; position: relative; }
   .hidden { display: none !important; }
 
   #home {
@@ -84,9 +84,21 @@
     border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.28);
     color: #fff; border-radius: 999px; padding: 8px 14px; font-size: 13px; cursor: pointer;
   }
-  .frame { position: absolute; inset: 0; display: grid; place-items: center; }
+  /* 留出頂欄／底欄；照片必須整張縮進可視區（勿裁切） */
+  .frame {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    padding: 64px 16px 118px;
+    overflow: hidden;
+  }
   #slide {
-    max-width: 100%; max-height: 100%; object-fit: contain;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
     opacity: 0; transition: opacity .4s ease;
     box-shadow: 0 20px 60px rgba(0,0,0,.45);
   }
@@ -104,8 +116,17 @@
   }
   .bar { height: 3px; background: rgba(255,255,255,.15); border-radius: 2px; overflow: hidden; margin-bottom: 10px; }
   .bar > i { display: block; height: 100%; width: 0; background: var(--gold); }
-  .caption { font-family: "Noto Serif TC", serif; font-size: clamp(16px, 2.4vw, 22px); }
-  .meta-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; opacity: .8; margin-top: 6px; }
+  .caption {
+    font-family: "Noto Serif TC", serif;
+    font-size: clamp(16px, 2.4vw, 22px);
+    text-shadow: 0 1px 8px rgba(0,0,0,.85);
+    word-break: break-all;
+  }
+  .meta-row {
+    display: flex; justify-content: space-between; gap: 12px;
+    font-size: 13px; opacity: .85; margin-top: 6px;
+    text-shadow: 0 1px 6px rgba(0,0,0,.8);
+  }
 </style>
 </head>
 <body>
@@ -182,7 +203,7 @@
     } catch (err) {
       listEl.innerHTML = '';
       emptyEl.classList.remove('hidden');
-      emptyEl.innerHTML = '無法連線伺服器。<br>請雙擊「開始播放.command」後再重整此頁。';
+      emptyEl.innerHTML = '無法連線伺服器。<br>請雙擊「開始播放.bat」（Windows）或「開始播放.command」（Mac）後再重整此頁。';
       statusEl.textContent = String(err.message || err);
     }
   }

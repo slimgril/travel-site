@@ -80,6 +80,15 @@ def safe_filename(name: str) -> str:
     return out[:160]
 
 
+def _is_under(path: Path, root: Path) -> bool:
+    """True if path resolves under root (Python 3.8+ safe)."""
+    try:
+        path.resolve().relative_to(root.resolve())
+        return True
+    except ValueError:
+        return False
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt: str, *args) -> None:
         sys.stderr.write("[%s] %s\n" % (self.log_date_time_string(), fmt % args))
@@ -151,7 +160,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_error(404)
                 return
             fpath = folder / Path(unquote(filename)).name
-            if not fpath.is_file() or not fpath.resolve().is_relative_to(LIBRARY.resolve()):
+            if not fpath.is_file() or not _is_under(fpath, LIBRARY):
                 self.send_error(404)
                 return
             ctype = mimetypes.guess_type(str(fpath))[0] or "application/octet-stream"

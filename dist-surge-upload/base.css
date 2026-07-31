@@ -299,7 +299,7 @@
     opacity:0;
     transform:scale(0.5);
     transform-origin:center 40%;
-    transition:opacity 3.5s ease, transform 3.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:opacity 4.5s ease, transform 4.5s cubic-bezier(0.22, 1, 0.36, 1);
     pointer-events:none;
   }
   /* 播放中預設仍蓋照片（配樂先行／片尾畫面先收）；is-picture-on 才露影片（由 0.5 倍慢慢放大） */
@@ -320,11 +320,12 @@
   /* 配樂先行時隱藏播放鈕 */
   .video-card.is-playing:not(.is-picture-on) .chestnut-play,
   .video-card.is-playing:not(.is-picture-on) .video-hint { opacity:0; pointer-events:none; }
-  /* 片尾慢慢消失：略放大＋淡出（約 3.2s，配合提早開始收） */
+  /* 片尾慢慢消失：略放大＋淡出（約 4.5s，配合提早開始收） */
   .video-card.is-playing.is-picture-out .video-card__poster { opacity:1; }
   .video-card.is-playing.is-picture-out .video-card__media {
     opacity:0;
     transform:scale(1.08);
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
   }
 
   /* 栗子 emoji 播放鈕：持續彈跳＋發光 */

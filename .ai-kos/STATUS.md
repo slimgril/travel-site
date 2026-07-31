@@ -1,6 +1,70 @@
 # STATUS — travel-site
 
-最後更新：2026-07-30（commit+push Cutover · handoff）
+最後更新：2026-07-31（Day5「忍不住」句式替換 · Pages deploy）
+
+## 2026-07-31 — Day 5「忍不住」重複句式（斌哥建議）
+
+| 項目 | 狀態 |
+|------|------|
+| **問題** | 多卡說明重複「忍不住拍／忍不住先」 |
+| **Source** | `day05.md` 已採納建議句（悄悄／順手／定格／見面禮） |
+| **Build** | PASS → `dist-prototype`；HTML sync → `dist-preview-deploy`／`dist-surge-upload` |
+| **Style** | `CONTENT_STYLE.md` 避免表新增「口頭禪重複」 |
+| **Deploy** | PASS — Cloudflare Pages `travel-site-quarter`（2026-07-31） |
+| **Live** | https://travel-site-quarter.pages.dev/trips/bldh-trio.html#d5 |
+
+## 2026-07-30 — Day 8–9 斌哥參考潤飾（非原文直貼）
+
+| 項目 | 狀態 |
+|------|------|
+| **政策** | 斌哥提供＝**參考潤飾**（CONTENT_STYLE）；除非明示「直接貼上」 |
+| **Day8** | → **派爾努窄軌鐵路紀念碑**（IMG_20260726_184652） |
+| **Day9** | → **偷窺者**／Reichmann House（IMG20260719094515） |
+| **Day7** | 塔圖傾斜屋改為潤飾版（保留事實） |
+| **Package** | PASS → `dist-preview-deploy`／`dist-surge-upload` |
+| **Deploy** | PASS → https://travel-site-quarter.pages.dev/trips/bldh-trio.html |
+
+## 2026-07-30 — Day 7 塔圖傾斜屋（IMG20260717181101）
+
+| 項目 | 狀態 |
+|------|------|
+| **勘誤** | 原誤標「市政廳廣場」→ **塔圖傾斜屋**；後改為參考潤飾版 |
+| **檔名** | `tartu-leaning-house.jpg`（同圖不兩處） |
+| **Files** | `day07.md` · `estonia-journal` · `0717/CLAUDE.md` |
+| **Build／Package** | PASS |
+| **Deploy** | Pending |
+
+## 2026-07-30 — Day 8 大逃亡紀念碑勘誤（IMG_20260726_184211）
+
+| 項目 | 狀態 |
+|------|------|
+| **勘誤** | 「派爾努雙手雕塑」→ **1944年大逃亡紀念碑**；正文＝斌哥原文直貼（Elo Liiv／金屬網雙手／帕爾努河左岸） |
+| **Files** | `day08.md` · `estonia-journal` · `0718/CLAUDE.md` |
+| **Build／Package** | PASS |
+| **Deploy** | PASS → https://travel-site-quarter.pages.dev/trips/bldh-trio.html#d8 |
+
+## 2026-07-30 — Day 7 印章雕塑勘誤（IMG20260717182529）
+
+| 項目 | 狀態 |
+|------|------|
+| **勘誤** | 原誤「巨釘／巨大的棋子」→ **愛沙尼亞最高法院前的印章雕塑**，紀念塔圖大學創辦人 |
+| **檔名** | `tartu-supreme-court-seal.jpg`（移除 chess／thumbtack 別名，同圖不兩處） |
+| **Files** | `day07.md` · `estonia-journal` · `0717/CLAUDE.md` |
+| **Build** | PASS |
+| **Package** | HTML＋圖 → `dist-preview-deploy`／`dist-surge-upload` |
+| **Deploy** | PASS — Cloudflare Pages `travel-site-quarter` |
+| **Live** | https://travel-site-quarter.pages.dev/trips/bldh-trio.html#d7 |
+
+## 2026-07-30 — Baltic Day 1／11 黑圖救援（redeploy）
+
+| 項目 | 狀態 |
+|------|------|
+| **問題** | 打包目錄 Day1 **9** 張＋Day11 **4** 張全黑（~19KB）— sandbox 內 `sips` |
+| **原圖** | `photos/bldh-trio/day01/`／`day11/` 正常（非缺圖） |
+| **Fix** | sandbox **外** 自原圖重壓 → `dist-preview-deploy`＋`dist-surge-upload`；清 `* 2.*` 重複 |
+| **驗證** | 本機／線上抽查 luminance 非黑 |
+| **Deploy** | PASS — Cloudflare Pages `travel-site-quarter`（上傳 18 檔） |
+| **Live** | https://travel-site-quarter.pages.dev/trips/bldh-trio.html |
 
 ## 2026-07-30 — Commit / Push（Cutover）
 
@@ -118,11 +182,13 @@
 | 項目 | 狀態 |
 |------|------|
 | **路徑** | `player/bingge/` |
-| **啟動** | 雙擊 `開始播放.command` → http://127.0.0.1:8765/ |
+| **啟動** | Windows：`開始播放.bat` · Mac：`開始播放.command` → http://127.0.0.1:8765/ |
 | **匯入** | `/maintain.html`：主題名稱 → 資料夾 → 匯入照片 |
 | **首頁** | 主題卡片＝Library 資料夾名 |
-| **預置** | `Library/山西漫遊/` **239** 張 |
-| **說明頁** | `player/bingge/how-to.html`（可掛站） |
+| **預置（本機開發）** | `Library/山西漫遊/` **239** 張（不進 PC 發行包） |
+| **PC 發行包** | `player/releases/斌哥照片播放器-PC.zip`（**不含照片**；空 Library） |
+| **說明頁** | `player/bingge/how-to.html`／包內 `使用說明.txt` |
+| **勘誤 07-30** | bat 編碼＋PATH；**v5** 修照片超出螢幕（`object-fit:contain` 整張縮進可視區）；桌面 `BinggePlayer-PC-v5.zip`；黑窗須見 `LAUNCHER_V5` |
 
 
 ## 2026-07-30 — 山西雲端照片播放器（全部 239 張）

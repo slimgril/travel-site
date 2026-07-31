@@ -1,0 +1,13 @@
+請先解壓縮整包，不要只開單一檔案。
+【務必刪除舊資料夾後再解壓】
+
+【Windows】
+1. 安裝 Python 3（勾選 Add python.exe to PATH）
+   ※ 要按 Install Now，等到安裝完成（Finished）
+   ※ 建議安裝後重開機一次
+2. 雙擊 START.bat
+   ※ 黑窗必須出現：BinggePlayer LAUNCHER_V5
+   ※ 沒有這行＝舊檔，刪掉重解壓
+3. 瀏覽器會自動開啟 → 匯入照片／管理主題
+
+本包不含照片。

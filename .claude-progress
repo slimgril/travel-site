@@ -1,25 +1,20 @@
 # .claude-progress — travel-site（最新斷點）
 
-**更新：** 2026-07-29 22:42（Handoff）
+**更新：** 2026-07-31 22:13（Commit／Push／Handoff）
 
 ## 停在哪
 
-Day 7／8 景觀文已依斌哥原則改寫並 **Surge Deploy PASS**。
+Day 5「忍不住」四句已 Pages 上線並入版；其餘 day 口頭禪輪替、Baikal／player／drive-originals 大檔未入 commit。
 
-## 已完成（本 session）
+## 已完成
 
-1. 景觀文原則：設計理念／知性見聞（非賞花心情）
-2. 描述區放大：`templates/base.css` `.site-body`／`.site-desc`
-3. 愛沙尼亞方向：高科技 × 國民認同融合 → `day07.md`（入愛後）＋`day08.md`
-4. 原則入 `CLAUDE.md`；Deploy PASS → cluttered-breath.surge.sh
-
-## 線上
-
-- https://cluttered-breath.surge.sh/trips/bldh-trio.html#d7
-- https://cluttered-breath.surge.sh/trips/bldh-trio.html#d8
+1. Day5 文案替換＋CONTENT_STYLE 口頭禪規則＋STATUS
+2. Day7–9 斌哥勘誤／潤飾（含照片更名）
+3. Cloudflare Pages Deploy PASS → travel-site-quarter.pages.dev
+4. Commit＋push `main`
 
 ## 下一步
 
-1. （可選）`git commit`／`push`（day07／08、base.css、CLAUDE 等尚未全部 commit）
-2. 若斌哥滿意原則 → Day 9／10 塔林段可同原則微調
-3. 其他：Baikal／新旅程依 Photos SSOT
+1. （可選）day01／03／04／06／07 輪替「忍不住」
+2. 勿把 `drive-originals`／`dist-preview-deploy`／`tools/` 整包 commit
+3. Baikal 地圖預覽／brochure、player releases 另案處理

@@ -1108,6 +1108,13 @@
 <script>
 /* Lithuanian vinyl — Day 2 cultural widget */
 (function () {
+  var FADE_OUT_MS = 2800;
+
+  function prefersReducedMotion() {
+    return window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
   function wire(btn) {
     if (btn._ltWired) return;
     btn._ltWired = true;
@@ -1122,6 +1129,19 @@
     audio.volume = 1;
     try { audio.setAttribute('playsinline', ''); } catch (e) {}
     var hint = btn.querySelector('.lt-vinyl__hint');
+    var fadeTimer = null;
+    var fadingOut = false;
+
+    function clearFade() {
+      if (fadeTimer) {
+        clearInterval(fadeTimer);
+        fadeTimer = null;
+      }
+    }
+
+    function setVol(v) {
+      try { audio.volume = Math.max(0, Math.min(1, v)); } catch (e) {}
+    }
 
     function idleLabel() {
       if (hint) hint.textContent = '點擊播放 · 15s';
@@ -1139,9 +1159,35 @@
       btn.classList.remove('is-playing');
     }
     function reset() {
+      clearFade();
+      fadingOut = false;
       audio.pause();
       try { audio.currentTime = 0; } catch (e) {}
+      setVol(1);
       idleLabel();
+    }
+
+    function fadeOutThenReset() {
+      if (fadingOut) return;
+      fadingOut = true;
+      clearFade();
+      if (prefersReducedMotion()) {
+        reset();
+        return;
+      }
+      var from = audio.volume > 0.05 ? audio.volume : 1;
+      var steps = Math.max(12, Math.round(FADE_OUT_MS / 40));
+      var i = 0;
+      fadeTimer = setInterval(function () {
+        i += 1;
+        var t = i / steps;
+        var eased = 1 - Math.pow(1 - t, 2.2);
+        setVol(from * (1 - eased));
+        if (i >= steps) {
+          clearFade();
+          reset();
+        }
+      }, FADE_OUT_MS / steps);
     }
 
     btn.addEventListener('click', function (e) {
@@ -1150,11 +1196,14 @@
         failLabel('音檔損壞或路徑錯誤');
         return;
       }
+      if (fadingOut) return;
       if (audio.paused) {
         // Ensure we start from beginning if previous play ended
         if (audio.ended || audio.currentTime > 14.5) {
           try { audio.currentTime = 0; } catch (err) {}
         }
+        setVol(1);
+        fadingOut = false;
         var p = audio.play();
         if (p && p.then) {
           p.then(playingLabel).catch(function (err) {
@@ -1164,15 +1213,26 @@
           playingLabel();
         }
       } else {
-        audio.pause();
-        idleLabel();
+        fadeOutThenReset();
       }
     });
-    audio.addEventListener('ended', reset);
+    audio.addEventListener('timeupdate', function () {
+      if (audio.paused || fadingOut) return;
+      var dur = audio.duration;
+      if (!isFinite(dur) || dur <= 0) return;
+      var remain = dur - audio.currentTime;
+      if (remain <= FADE_OUT_MS / 1000) {
+        fadeOutThenReset();
+      }
+    });
+    audio.addEventListener('ended', function () {
+      if (!fadingOut) reset();
+    });
     audio.addEventListener('error', function () {
       failLabel('音檔載入失敗');
     });
     audio.addEventListener('pause', function () {
+      if (fadingOut) return;
       if (!audio.ended && audio.currentTime > 0 && audio.paused) {
         btn.classList.remove('is-playing');
         btn.setAttribute('aria-pressed', 'false');
@@ -1197,10 +1257,11 @@
 /* Click-to-play video cards
    配樂先行／畫面晚出；片尾畫面先收／配樂晚收；音量與畫面淡入淡出加長 */
 (function () {
-  var AUDIO_FADE_MS = 2000;   /* 音量淡入淡出（明顯） */
+  var AUDIO_FADE_MS = 4500;   /* 片尾音量淡出（提早開始＋加長，聽得出來） */
   var VISUAL_LEAD_MS = 2500;  /* 點擊後先聽配樂，再淡入畫面 */
-  var VISUAL_TRAIL_MS = 4500; /* 片尾提早約 4.5s 開始慢慢收（可見） */
+  var VISUAL_TRAIL_MS = 5200; /* 畫面略早於配樂開始收 */
   var SHORT_DUR_S = 12;       /* 短片縮短先行／延遲，避免吃掉全片 */
+  var MIN_FADE_MS = 2800;     /* 縮時後仍保留可感知的最短淡出 */
 
   function prefersReducedMotion() {
     return window.matchMedia &&
@@ -1232,17 +1293,25 @@
     var fade = AUDIO_FADE_MS;
     if (duration > 0 && duration < SHORT_DUR_S) {
       lead = 800;
-      trail = 800;
-      fade = 1200;
+      trail = Math.min(2200, Math.round(durMs * 0.35));
+      fade = Math.min(2800, Math.round(durMs * 0.4));
     }
-    /* 先行＋延遲＋兩段淡入淡出不得超過片長的一半 */
-    var budget = Math.max(0, durMs * 0.45);
+    /* 先行＋延遲＋淡出不得超過片長的一半；淡出優先保底 */
+    var budget = Math.max(0, durMs * 0.5);
     var need = lead + trail + fade;
     if (need > budget && budget > 0) {
       var scale = budget / need;
       lead = Math.round(lead * scale);
       trail = Math.round(trail * scale);
-      fade = Math.max(400, Math.round(fade * scale));
+      fade = Math.max(MIN_FADE_MS, Math.round(fade * scale));
+      /* 極短片：淡出最多吃到片長 45% */
+      if (duration > 0) {
+        fade = Math.min(fade, Math.round(durMs * 0.45));
+      }
+    }
+    /* 畫面先收：trail 至少略長於 fade，讓人先看見淡出再聽完音量 */
+    if (trail < fade + 400) {
+      trail = fade + 400;
     }
     return { lead: lead, trail: trail, fade: fade };
   }
@@ -1255,13 +1324,16 @@
       if (done) done();
       return;
     }
-    var steps = Math.max(8, Math.round(ms / 50));
+    var steps = Math.max(12, Math.round(ms / 40));
     var stepMs = ms / steps;
     var i = 0;
     setVol(video, from);
     card._fadeTimer = setInterval(function () {
       i += 1;
-      setVol(video, from + (to - from) * (i / steps));
+      /* ease-out：後半段降得更明顯，聽得出「慢慢消失」 */
+      var t = i / steps;
+      var eased = 1 - Math.pow(1 - t, 2.2);
+      setVol(video, from + (to - from) * eased);
       if (i >= steps) {
         clearFade(card);
         setVol(video, to);
@@ -1414,14 +1486,34 @@
         card.classList.remove('is-picture-on');
         card.classList.add('is-picture-out');
       }
-      /* 配樂晚收：接近片尾才淡出音量 */
+      /* 配樂晚收但加長：在片尾前開始淡出，務必在影片結束前把音量收到接近 0 */
       if (card._endAudioArmed && remain <= fadeS) {
         card._endAudioArmed = false;
         card._fadingOut = true;
-        fadeVolume(video, card, video.volume || 0, 0, Math.max(50, remain * 1000));
+        var from = video.volume > 0.05 ? video.volume : 1;
+        /* 以剩餘時間為上限，避免影片 ended 時音量還很高而驟停 */
+        var ms = Math.min(t.fade, Math.max(remain * 1000, 0));
+        if (ms < MIN_FADE_MS && remain * 1000 >= MIN_FADE_MS * 0.6) {
+          ms = Math.min(MIN_FADE_MS, remain * 1000);
+        }
+        ms = Math.max(700, ms);
+        fadeVolume(video, card, from, 0, ms, function () {
+          hardReset(card);
+        });
       }
     });
     video.addEventListener('ended', function () {
+      /* 若淡出尚未跑完，補一段短淡出再收；否則直接重置 */
+      if (card._fadingOut) return;
+      var vol = 0;
+      try { vol = video.volume; } catch (e) {}
+      if (vol > 0.05 && !prefersReducedMotion()) {
+        card._fadingOut = true;
+        fadeVolume(video, card, vol, 0, Math.min(1200, AUDIO_FADE_MS), function () {
+          hardReset(card);
+        });
+        return;
+      }
       hardReset(card);
     });
   }

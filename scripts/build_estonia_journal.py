@@ -29,15 +29,16 @@ CARDS: list[dict] = [
     },
     {
         "stamp": "02 · Tartu",
-        "locale": "大學城客廳",
-        "title": "市政廳廣場",
-        "teaser": "石板在午後反光，三角旗輕輕晃，咖啡座把廣場圍成一圈呼吸……",
-        "body": "石板在午後反光，三角旗輕輕晃，咖啡座把廣場圍成一圈呼吸。大學城的公共客廳大概就長這樣，鞋底量過的尺度比導覽詞誠實。站一會兒，城的節奏好像從腳踝往上爬。",
-        "fact": "位置 — 塔圖市政廳廣場",
-        "photo": "day07/tartu-town-hall-square.jpg",
+        "locale": "市政廳廣場邊",
+        "title": "塔圖傾斜屋",
+        "teaser": "腳步在市政廳廣場邊忽然踩空似地一晃——低頭才發現，是地板在傾斜，不是自己站不穩。這棟老房子建於 1793 年……",
+        "body": "腳步在市政廳廣場邊忽然踩空似地一晃——低頭才發現，是地板在傾斜，不是自己站不穩。這棟老房子建於 1793 年，一半地基疊在舊城牆石塊上，另一半卻陷進鬆軟地面，兩百多年慢慢歪出約 5.8 度，比比薩斜塔還誇張。如今裡頭是塔圖藝術博物館，踏進展廳得先讓身體重新學會平衡。站在傾斜的地板上看畫，忽然覺得連藝術也可以是歪的，才顯得真實。",
+        "fact": "建於 1793 ／ 斜角約 5.8° ／ 現為塔圖藝術博物館",
+        "photo": "day07/tartu-leaning-house.jpg",
         "day": "day07",
-        "slug": "tartu-town-hall-square.jpg",
-        "md_title": "塔圖市政廳廣場",
+        "slug": "tartu-leaning-house.jpg",
+        "md_title": "塔圖傾斜屋",
+        "replace_old_slug": "tartu-town-hall-square.jpg",
     },
     {
         "stamp": "03 · Tartu",
@@ -65,16 +66,16 @@ CARDS: list[dict] = [
     },
     {
         "stamp": "05 · Tartu",
-        "locale": "棋局一隅",
-        "title": "巨大的棋子",
-        "teaser": "街角忽然立著放大版西洋棋，安靜得像忘了收場。愛沙尼亞出過國際象棋大師，街頭出現這種裝置也不突兀。站到棋子旁比身高，才發現自己也成了棋盤上一員……",
-        "body": "街角忽然立著放大版西洋棋，安靜得像忘了收場。愛沙尼亞出過國際象棋大師，街頭出現這種裝置也不突兀。站到棋子旁比身高，才發現自己也成了棋盤上一員——塔圖連散步都像在對弈。",
-        "fact": "造型 — 放大版西洋棋棋子裝置 ／ 位置 — 塔圖市區",
-        "photo": "day07/tartu-chess-pieces.jpg",
+        "locale": "最高法院前",
+        "title": "最高法院前的印章雕塑",
+        "teaser": "兩棵樹先把畫面夾住，金屬印章斜躺在石鋪圓心，午後光在柄上跳一下。這座雕塑就在愛沙尼亞最高法院前，紀念的是塔圖大學創辦人……",
+        "body": "兩棵樹先把畫面夾住，金屬印章斜躺在石鋪圓心，午後光在柄上跳一下。這座雕塑就在愛沙尼亞最高法院前，紀念的是塔圖大學創辦人——把「印記」放大成廣場上的句點。繞到正面才看清把手與圓印面，忍不住蹲低拍。原來知識也可以被鑄成一枚看得見的戳記。",
+        "fact": "位置 — 愛沙尼亞最高法院前 ／ 紀念塔圖大學創辦人",
+        "photo": "day07/tartu-supreme-court-seal.jpg",
         "day": "day07",
-        "slug": "tartu-chess-pieces.jpg",
-        "md_title": "巨大的棋子",
-        "replace_old_slug": "tartu-thumbtack-sculpture.jpg",
+        "slug": "tartu-supreme-court-seal.jpg",
+        "md_title": "最高法院前的印章雕塑",
+        "replace_old_slug": "tartu-chess-pieces.jpg",
     },
     {
         "stamp": "06 · Tartu",
@@ -164,15 +165,15 @@ CARDS: list[dict] = [
     # —— Day 8 ——
     {
         "stamp": "13 · Pärnu",
-        "locale": "鐵道記憶",
-        "title": "派爾努蒸汽火車頭",
-        "teaser": "清晨街角先亮起一塊紅——窄軌蒸汽火車頭 №5 的保險槓，綠黑車身安靜停在短軌上，腳邊還蹲著白色小象……",
-        "body": "清晨街角先亮起一塊紅——窄軌蒸汽火車頭 №5 的保險槓，綠黑車身安靜停在短軌上，腳邊還蹲著白色小象。海灣小鎮把一段鐵路記憶留在路邊。跟它對望一眼，覺得一天從「不會再開動的火車」開始，節奏反而剛剛好。",
-        "fact": "窄軌蒸汽火車頭 №5",
+        "locale": "舊火車站原址",
+        "title": "派爾努窄軌鐵路紀念碑",
+        "teaser": "清晨街角先亮起一塊紅——窄軌蒸汽火車頭的保險槓，綠黑車身安靜停在短軌上，腳邊還蹲著白色小象……",
+        "body": "清晨街角先亮起一塊紅——窄軌蒸汽火車頭的保險槓，綠黑車身安靜停在短軌上，腳邊還蹲著白色小象。這是為紀念愛沙尼亞第一條窄軌鐵路「派爾努－瓦爾加」開通 110 週年，於 2006 年立在昔日市中心客運火車站原址；現場陳列德國 O. & Koppel 工廠 1911 年製造的老式蒸汽機車，後方還有聖彼得堡 Arthur Koppel 公司 1913 年的平台貨車廂。跟小象並肩拍照的遊客與孩子一波波過來，海灣小鎮把一段鐵路記憶留在路邊——一天從「不會再開動的火車」開始，節奏反而剛剛好。",
+        "fact": "2006 設立 ／ O. & Koppel 1911 蒸汽機車 ／ Arthur Koppel 1913 平台貨車廂",
         "photo": "day08/parnu-locomotive-no5.jpg",
         "day": "day08",
         "slug": "parnu-locomotive-no5.jpg",
-        "md_title": "派爾努蒸汽火車頭",
+        "md_title": "派爾努窄軌鐵路紀念碑",
     },
     {
         "stamp": "14 · Pärnu",
@@ -236,15 +237,15 @@ CARDS: list[dict] = [
     },
     {
         "stamp": "19 · Pärnu",
-        "locale": "河岸雙手",
-        "title": "派爾努雙手雕塑",
-        "teaser": "河岸金屬手掌從岩石升起，指尖幾乎相觸，對岸綠屋頂民宅沿著水面排開……",
-        "body": "河岸金屬手掌從岩石升起，指尖幾乎相觸，對岸綠屋頂民宅沿著水面排開。伸手比個距離，海風從指縫穿過。原來「相遇」這種詞，放在灣區也可以很輕、很溫柔。",
-        "fact": "公共藝術 ／ 相遇與守護",
+        "locale": "帕爾努河左岸",
+        "title": "1944年大逃亡紀念碑",
+        "teaser": "1944年大逃亡紀念碑（Monument to the Great Flight of 1944），由藝術家 Elo Liiv 創作，紀念 1944 年為逃離蘇聯佔領而被迫離開家園的數萬名愛沙尼亞人……",
+        "body": "1944年大逃亡紀念碑（Monument to the Great Flight of 1944），由藝術家 Elo Liiv 創作，紀念 1944 年為逃離蘇聯佔領而被迫離開家園的數萬名愛沙尼亞人。雕塑由金屬網狀結構製成，描繪了兩隻手最後的觸碰，象徵著分離與告別。它位於帕爾努河（Pärnu River）左岸，靠近城市中心橋，是當年人們向西逃離的具體地點。",
+        "fact": "藝術家 — Elo Liiv ／ Monument to the Great Flight of 1944 ／ 帕爾努河左岸・市中心橋附近",
         "photo": "day08/parnu-hands-sculpture-bingge.jpg",
         "day": "day08",
         "slug": "parnu-hands-sculpture-bingge.jpg",
-        "md_title": "派爾努雙手雕塑",
+        "md_title": "1944年大逃亡紀念碑",
     },
     {
         "stamp": "20 · Pärnu",
@@ -334,10 +335,10 @@ DAY9 = [
      "抬頭的瞬間，金色羅馬數字先攫住視線——十七世紀的日輪鐘鑲在白牆紅瓦之間，藍白放射紋像被時間反覆擦亮過……",
      "抬頭的瞬間，金色羅馬數字先攫住視線——十七世紀的日輪鐘鑲在白牆紅瓦之間，藍白放射紋像被時間反覆擦亮過。導遊說這是老城裡「會講故事的鐘」，我半信半疑，直到晨光斜斜切過鐘面，金屬的光澤忽然活了起來。按下快門的那一刻突然明白：在塔林，連時間都捨得慢下來讓人看清楚。",
      "十七世紀日輪時鐘"),
-    ("tallinn-art-nouveau-gable.jpg", "29 · Tallinn", "曲線立面", "新藝術風山牆",
-     "再往上，灰綠飾帶托起圓窗與天使浮雕，鬍鬚面具嵌在窗下，曲線像故意跟石牆唱反調。新藝術風與中世紀並排，誰也不讓誰。抬頭才不會錯過……",
-     "再往上，灰綠飾帶托起圓窗與天使浮雕，鬍鬚面具嵌在窗下，曲線像故意跟石牆唱反調。新藝術風與中世紀並排，誰也不讓誰。抬頭才不會錯過——塔林的第二層故事，寫在天上。",
-     "新藝術風立面"),
+    ("tallinn-art-nouveau-gable.jpg", "29 · Tallinn", "夾鼻眼鏡", "偷窺者",
+     "抬頭先撞上灰綠飾帶與圓窗，曲線像故意跟舊城石牆唱反調。這是舊城區的 Reichmann House，Jacques Rosenbaum 於 1908 年設計……",
+     "抬頭先撞上灰綠飾帶與圓窗，曲線像故意跟舊城石牆唱反調。這是舊城區的 Reichmann House（Reichmanni maja），波羅的海德國建築師 Jacques Rosenbaum 於 1908 年設計，把新藝術運動與新文藝復興、新風格主義揉在同一面牆上。正面雕塑最出名的是那位戴夾鼻眼鏡的老人——當地人叫他「偷窺者」。盯著那副鏡片看一會兒，忽然覺得這座城也會偷看路人：華麗歸華麗，幽默卻藏在牆縫裡。",
+     "Reichmann House ／ Jacques Rosenbaum 1908 ／ 新藝術運動"),
     ("tallinn-blackheads-door.jpg", "30 · Tallinn", "漢薩門面", "黑人頭兄弟會大門",
      "雙獅扶盾，門楣摩爾人頭像沉著臉；綠門配紅斜紋與金花釘，漢薩商人的氣派一整面推來……",
      "雙獅扶盾，門楣摩爾人頭像沉著臉；綠門配紅斜紋與金花釘，漢薩商人的氣派一整面推來。黑人頭兄弟會的會所門面，華麗得毫不客氣。排隊拍照時想笑：原來做生意，也可以這麼隆重地敲門。",
@@ -457,9 +458,26 @@ def render_html(cards: list[dict]) -> str:
         photo = c["photo"]
         abs_photo = PHOTOS / photo
         if not abs_photo.exists():
-            # fallback for chess alias
-            if photo.endswith("tartu-chess-pieces.jpg"):
-                photo = "day07/tartu-thumbtack-sculpture.jpg"
+            # fallback for renamed seal / leaning-house aliases
+            if photo.endswith("tartu-supreme-court-seal.jpg"):
+                for alt in (
+                    "day07/tartu-chess-pieces.jpg",
+                    "day07/tartu-thumbtack-sculpture.jpg",
+                ):
+                    if (PHOTOS / alt).exists():
+                        photo = alt
+                        break
+            elif photo.endswith("tartu-leaning-house.jpg"):
+                if (PHOTOS / "day07/tartu-town-hall-square.jpg").exists():
+                    photo = "day07/tartu-town-hall-square.jpg"
+            elif photo.endswith("tartu-chess-pieces.jpg") or photo.endswith(
+                "tartu-thumbtack-sculpture.jpg"
+            ):
+                if (PHOTOS / "day07/tartu-supreme-court-seal.jpg").exists():
+                    photo = "day07/tartu-supreme-court-seal.jpg"
+            elif photo.endswith("tartu-town-hall-square.jpg"):
+                if (PHOTOS / "day07/tartu-leaning-house.jpg").exists():
+                    photo = "day07/tartu-leaning-house.jpg"
         img = f'../photos/bldh-trio/{photo}'
         # for deploy at site root use /photos/...
         img_web = f'photos/bldh-trio/{photo}'
@@ -620,11 +638,29 @@ def sync_markdown(cards: list[dict]) -> None:
         return f"### ![{c['md_title']}]({day}/{photo}){suffix} {c['md_title']}"
 
     for c in by_day.get("day07", []):
-        slug = c.get("replace_old_slug") and c["slug"] or c["slug"]
-        # use chess slug in md
         photo = c["slug"]
-        if photo == "tartu-chess-pieces.jpg" and not (PHOTOS / "day07" / photo).exists():
-            photo = "tartu-thumbtack-sculpture.jpg"
+        # renamed seal sculpture aliases
+        if photo in (
+            "tartu-chess-pieces.jpg",
+            "tartu-thumbtack-sculpture.jpg",
+        ) and not (PHOTOS / "day07" / photo).exists():
+            photo = "tartu-supreme-court-seal.jpg"
+        elif photo == "tartu-supreme-court-seal.jpg" and not (
+            PHOTOS / "day07" / photo
+        ).exists():
+            for alt in ("tartu-chess-pieces.jpg", "tartu-thumbtack-sculpture.jpg"):
+                if (PHOTOS / "day07" / alt).exists():
+                    photo = alt
+                    break
+        elif photo == "tartu-town-hall-square.jpg" and not (
+            PHOTOS / "day07" / photo
+        ).exists():
+            photo = "tartu-leaning-house.jpg"
+        elif photo == "tartu-leaning-house.jpg" and not (
+            PHOTOS / "day07" / photo
+        ).exists():
+            if (PHOTOS / "day07" / "tartu-town-hall-square.jpg").exists():
+                photo = "tartu-town-hall-square.jpg"
         lines.append(card_heading("day07", c, photo))
         lines.append(c["body"])
         lines.append("")
@@ -652,8 +688,14 @@ def main() -> None:
     missing = []
     for c in CARDS:
         p = PHOTOS / c["photo"]
-        if not p.exists() and c["photo"].endswith("tartu-chess-pieces.jpg"):
-            p = PHOTOS / "day07/tartu-thumbtack-sculpture.jpg"
+        if not p.exists() and c["photo"].endswith("tartu-supreme-court-seal.jpg"):
+            for alt in (
+                "day07/tartu-chess-pieces.jpg",
+                "day07/tartu-thumbtack-sculpture.jpg",
+            ):
+                if (PHOTOS / alt).exists():
+                    p = PHOTOS / alt
+                    break
         if not p.exists():
             missing.append(c["photo"])
     if missing:
