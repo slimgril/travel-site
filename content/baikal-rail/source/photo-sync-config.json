@@ -2,8 +2,8 @@
   "version": 1,
   "trip_slug": "baikal-rail",
   "drive": {
-    "folder_url": "https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD",
-    "folder_id": "1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD"
+    "folder_url": "https://drive.google.com/drive/folders/1VnHEb_UrT7-MMOrTKfh80B6IBFzE6Ty",
+    "folder_id": "1VnHEb_UrT7-MMOrTKfh80B6IBFzE6Ty"
   },
   "paths": {
     "sync_state": "content/baikal-rail/source/photo-sync.json",

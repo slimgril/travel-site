@@ -16,17 +16,30 @@ FORBIDDEN:              /Users/mac/Desktop/旅遊/ — do not read, write, commi
 > Daily Travel Update／開工同步照片時 **必須先讀本節**，直接用此資料夾增量同步。  
 > **禁止**再問使用者「分享資料夾在哪」；**禁止**從 Desktop 或其他本機路徑 fallback 匯入。
 
+### 波羅的海三國（2026年7月）
+
 | 項目 | 值 |
 |------|-----|
 | **名稱** | 20260711波羅的海（根目錄；內含 `0711/`、`0712/`、`0713/`… 子資料夾） |
 | **URL** | https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD |
 | **Folder ID** | `1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD` |
+| **狀態** | 已完成 |
+
+### 貝加爾鐵路／西伯利亞大鐵路（2026年8月3-22日）
+
+| 項目 | 值 |
+|------|-----|
+| **名稱** | 西伯利亞大鐵路 20 日（斌哥每日更新至對應 Day XX folder） |
+| **URL** | https://drive.google.com/drive/folders/1VnHEb_UrT7-MMOrTKfh80B6IBFzE6Ty |
+| **Folder ID** | `1VnHEb_UrT7-MMOrTKfh80B6IBFzE6Ty` |
+| **狀態** | 進行中（Day 02 製作中）|
 
 **政策：**
 
-- Shared Folder **永久固定** — 新旅程只在此根目錄下加子資料夾，不換根 Folder ID
-- 每次 Resume／Daily Update **直接使用上方 URL／ID**，不要求使用者重貼連結
-- 完整路徑／Baikal 本機鏡像等細節見 `.ai-kos/INFRASTRUCTURE.md`（Folder ID 與此處一致，以此為入口提醒）
+- 每個行程有獨立的 Shared Folder
+- 每次 Resume／Daily Update **直接使用上方對應行程的 URL／ID**，不要求使用者重貼連結
+- 斌哥會將每日照片和 CLAUDE 檔案（備註/要求）存入對應的 Day XX folder
+- 完整路徑／本機鏡像等細節見 `.ai-kos/INFRASTRUCTURE.md`
 
 ## 冰哥／斌哥圖檔與足跡圖三原則（2026-07-24 · HARD RULE）
 

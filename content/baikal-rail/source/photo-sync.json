@@ -5,13 +5,13 @@
     "drive_url": "https://drive.google.com/drive/folders/1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD",
     "folder_id": "1qLKyqo2HAjA_Z_-ucwCUYoTKGgEVqkrD"
   },
-  "last_sync": "2026-07-13T11:31:48.695545+00:00",
+  "last_sync": "2026-08-04T20:43:09.786663+00:00",
   "summary": {
     "synced_count": 82,
-    "drive_listed": 15,
+    "drive_listed": 169,
     "drive_baikal_candidates": 0,
     "drive_new_imported": 0,
-    "review_required_count": 15,
+    "review_required_count": 162,
     "drive_access_method": "gdown"
   },
   "synced": [
@@ -2232,6 +2232,888 @@
     {
       "drive_path": "0712/IMG_20260713_041640.jpg",
       "drive_file_id": "1KJER1PJNNMdFOnRMGwSvw3vz2ySAoYpX",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/1783974450245.jpg",
+      "drive_file_id": "1H90N306kVyDu3oGsz0Fjdo8KPmGYu9tz",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/1783974470201意外好喝的櫻桃酒.jpg",
+      "drive_file_id": "1fozSwgxmPN3FNJfxbBAkbmf5ZRfCx7oA",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713134243.jpg",
+      "drive_file_id": "1ZqbAoSa0eDdRRLRK8T4Qr_x2GaUgfrja",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713140136.jpg",
+      "drive_file_id": "1OOTpWYFt3l29PSRcV0uesccGJd5RCCtU",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713141000.jpg",
+      "drive_file_id": "1vKRwiR_K7kcJiGT2v6QPxGUZqoIxzfnw",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713142001.jpg",
+      "drive_file_id": "1vHhTHczf9dI1w_d9VDQRJ7_9VXoco-e0",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713142740.jpg",
+      "drive_file_id": "1Z9xBH4UwdWW2uYe1_3gRqWojGoQ6H532",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713142930.jpg",
+      "drive_file_id": "1XCaIGNbqUVh3Mh2nxUB0_UOATishLN7C",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713144727.jpg",
+      "drive_file_id": "11dYIlq8RUhzFZQvUw9NEd5qGNPhOD6Re",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713150502.jpg",
+      "drive_file_id": "1NfyHbq2Hjt7ZRJm-62x5RQ7FyWhqSzIJ",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713150609.jpg",
+      "drive_file_id": "1bIXKk5q69tNy5pU-L6yJzw3jkg6rdvrB",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713151803.jpg",
+      "drive_file_id": "16ToBqGqad04RKu5LSttDihNl_2D3969O",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713161510.jpg",
+      "drive_file_id": "1NGBI_ei17tucnHNGwoS2D01J8YGQdMa-",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713173215.jpg",
+      "drive_file_id": "1vCPS52jNa2umE93JPM7HU40uzoYUSyJw",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713181753.jpg",
+      "drive_file_id": "1tCGvwOXYjfOUihn4i6TN_kARUcsvAXxq",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG20260713211020.jpg",
+      "drive_file_id": "10KG9NUWU6FfNE2RIZzu9oU0lBA2A7EIN",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260713_150443.jpg",
+      "drive_file_id": "1KBH5M1EEHzzy-Am01UfOu7b3mT9GGuCY",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260713_155408.jpg",
+      "drive_file_id": "1KQtxRiS-leDZSrnvaLklMo-7uXvbYXN_",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260717_161734.jpg",
+      "drive_file_id": "1dGiqdSxVkBxkOW8TbpbjmkY4WY5_Y7aE",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260717_161811.jpg",
+      "drive_file_id": "1gnxUeQly3p_JFSzjve6VLjClmi1nApGM",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260717_161856.jpg",
+      "drive_file_id": "13hWO-AYWl1CVDsnr23ZuoZduY1FDfUJ-",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260717_162050.jpg",
+      "drive_file_id": "1IJlUoC0wJzQ703X4D2-wW4BYEXJZLgoG",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260717_162314.jpg",
+      "drive_file_id": "1qa_Eb4C_G4OC8glYdihfF4ImoOpb-bT8",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260717_162430櫻桃酒專賣店.jpg",
+      "drive_file_id": "1XeWkYvnibCFgX_Wlt-40D-q1MpaSY_j9",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/IMG_20260717_162701櫻桃酒100ml 4歐元.jpg",
+      "drive_file_id": "1FyL7Gc2-DzIer4FqoM5NHucjmCBbi6zG",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/午餐立陶宛餃子.jpg",
+      "drive_file_id": "1xKLQlHU7Lm0vnDUskAbOYd7aTS72MobQ",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0713/晚餐烤鴨.jpg",
+      "drive_file_id": "1NZ-xoh3bdmYmMtDNPO0bckrXvCSWZQ0c",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/0714午餐Kybyn立陶宛卡拉伊姆族肉餡餅.jpg",
+      "drive_file_id": "11GRZ9J9KmyOJszFFa4sdeVDVMROwZ51J",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/0714晚餐 魚排與樹蛋糕.jpg",
+      "drive_file_id": "1_GsFDPbnrO2zHHwiGkNOFlydn5W3B5Pm",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG20260714100229.jpg",
+      "drive_file_id": "1WQLN2QklzPyk8xe4lzYIc5t3y9Pp6wL4",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG20260714102754.jpg",
+      "drive_file_id": "1Z6Cssb7LS5ldtqjWTWAHOCCcP9dbR1Cj",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG20260714104244.jpg",
+      "drive_file_id": "160aolCDgCL7aiytTvdPe3Xm-h0VukiiR",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG20260714153206.jpg",
+      "drive_file_id": "1io8f8jQLCokUbaTu1ie3eymEQkvDvfI2",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG20260714160926.jpg",
+      "drive_file_id": "1Ww_RYYNqrYaoF2CZGadhiJbcAx8ffTo6",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260714_140937.jpg",
+      "drive_file_id": "1aJ1Fr-R1TJuAT4TqHMElsHiOGgfmVxvw",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260715_093946.jpg",
+      "drive_file_id": "1_Y2msEgGk57psPH3TSF9XinHLAqSHabP",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260715_094757.jpg",
+      "drive_file_id": "18G_IQWN4bQrx_ve_ui-F9VwubM9jzfdp",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260715_095509.jpg",
+      "drive_file_id": "13QSIJB-HVVkeqfdqN6tvz78Kas0a5sFh",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260715_101329.jpg",
+      "drive_file_id": "1GoAtm1hxGm5-Yzcs7ibfJExOZd8Oz_Vc",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260715_102517.jpg",
+      "drive_file_id": "1ng0qfRWPbGFsG59wvUALMIoS9tohpAfD",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260715_102929.jpg",
+      "drive_file_id": "1AVoh0f_MZ-Bo4lcZNGPTNakKlusRqrJ_",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260715_104319.jpg",
+      "drive_file_id": "1FfJA6CXu7NlkBXTErY5d-VaKNWsa6mEY",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260722_180849.jpg",
+      "drive_file_id": "1XmmTfnkcvBRgZbi0PQD7VRbebApYcB4g",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/IMG_20260722_181631.jpg",
+      "drive_file_id": "1fSfQq-ce4OZhYWtvok2Su5sOP_-RERv0",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0714/立陶宛考納斯市政廳（Kaunas City Hall）.jpg",
+      "drive_file_id": "1CNv5qBosFKdqGv0PNTISibEUUlvDXnhs",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/0715午餐 豬排.jpg",
+      "drive_file_id": "1j2d2u0DX44ktx41rzUDRpfurkvX8C3-H",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/1784129999710.jpg",
+      "drive_file_id": "1S8KAeumdOpfv9IbJwansHu9s7WawYKn-",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/1784130210079.jpg",
+      "drive_file_id": "1dPozupZmUuJ4DP09aWXeBggU8CiW27lb",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG20260715120654.jpg",
+      "drive_file_id": "11HzAxa3IrTDDpVqop66_LT1uEl48s9cG",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG20260715121646.jpg",
+      "drive_file_id": "1WgVCFpC4kL2C5tUz5L5reegY0VfwilzG",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG20260715122954.jpg",
+      "drive_file_id": "1pi0cnWeVuN6kVPb0RvW6ATtvL0ro-cwe",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG20260715135722.jpg",
+      "drive_file_id": "1xq8bxmN3O4rfYxkaR8f0i9VK3jVdxqDg",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG20260715171831.jpg",
+      "drive_file_id": "1IFu2Dn_Lfxc74NRvgcYiJAcxdjRDvTom",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG20260715211856.jpg",
+      "drive_file_id": "1CK66YfT_BarD3Ph8CK7PfKJTiKyDk6BE",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG20260715224239.jpg",
+      "drive_file_id": "1LSg9qRn34doaGtM_Px8taU2OjWkrKgFA",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG_20260715_124706.jpg",
+      "drive_file_id": "1R_e40wRxW5B22HMuB_m8l8Y3Aipk-UsZ",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG_20260715_220302.jpg",
+      "drive_file_id": "1xs-3mntqLR5DM8efdIc0eGKX1dY5nFBa",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG_20260724_120956.jpg",
+      "drive_file_id": "1N5QR_6zj7b-Z1O9GODYPZZ1fxA2pYBLb",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0715/IMG_20260724_121941.jpg",
+      "drive_file_id": "1HTkFjz1iatfraTF2z8VnIH4xtBjUVJuo",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716095332.jpg",
+      "drive_file_id": "1_TgtYfILcIYx7J80W71jWklhPi0vwrhV",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716100354.jpg",
+      "drive_file_id": "1-gHprKxMFHyneYhw5qVWC4XvAGL5eRjH",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716113525.jpg",
+      "drive_file_id": "1EVebFLH-a-1_J8KUBRbRjYeyhMDgwaIR",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716123618.jpg",
+      "drive_file_id": "1x6ciL8tttdjPRRQ4yo2aUEYGmB-AMIII",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716142757.jpg",
+      "drive_file_id": "1zuU8u9dJjBYoSLrbnFjcjr_Bp8PVJtAt",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716144906.jpg",
+      "drive_file_id": "1jnYLOhIgcBiE4DUZ5HANKXVJ8d3eTelI",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716155651.jpg",
+      "drive_file_id": "16Bcz8wgnfNRFTmgvUjBIN74HH-4Ieeq2",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716213643.jpg",
+      "drive_file_id": "1VTiUKSNPH-s3YUM--1dK2qjdnG2RQVwh",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716215018.jpg",
+      "drive_file_id": "1Z4RDkmY-8_cZckGPAOOMt0IlBWeU8Ynf",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716225309.jpg",
+      "drive_file_id": "1d__MATuZqjt3jcoVU4pc5H30ybdQZVe9",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG20260716232044.jpg",
+      "drive_file_id": "1Y4bH-9b0HEqBnGNicPNyVAQGgZgYbkFT",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_113205.jpg",
+      "drive_file_id": "1qZBOwRuVtf6aEx8gPpfje1w_kGXwopuM",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_123219.jpg",
+      "drive_file_id": "15NKj1r7Q-y1DFocFjhlET8ti2jMRSTZm",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_123452.jpg",
+      "drive_file_id": "182LXX4vyUfomGEq5-geis_61zFdp45eh",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_123724.jpg",
+      "drive_file_id": "1P645qM8VVj6wVz1ER37SP05iAu2K-MVv",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_131734.jpg",
+      "drive_file_id": "1cqcKlPTY7fuVgBg-6xkwJehWwW2IUcbl",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_131841.jpg",
+      "drive_file_id": "1VeGjO5v5bddvOtiIKtVCD1AOyCAa0Uv7",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_131946.jpg",
+      "drive_file_id": "14Nw4_r2JPUV-ja4rr2-kBqIWRykX3NJi",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_132043.jpg",
+      "drive_file_id": "1G9muTUnhECvdjndL_ZkRzj1Jw3TZtJqz",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_132121.jpg",
+      "drive_file_id": "11Ky4gSZgxLxr0dFeOhwIGRd9U8b25rzN",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_133956.jpg",
+      "drive_file_id": "1A42SV8hQqP3VdYON8kFSFoaBQZJ2O53n",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/IMG_20260725_150900.jpg",
+      "drive_file_id": "1oGWoWgELSOWFEdWfuvflbTR7jHX9YwaU",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/午餐：拉脫維亞式風味餐（高麗菜捲）.jpg",
+      "drive_file_id": "1m20AqdzilIhBIx9xbOOf7xZlq_YUuMDT",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/巴龍斯紀念碑.jpg",
+      "drive_file_id": "1PleEbdp6FhlieSqNkFIklm-4oe6nYNPJ",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0716/布萊梅音樂家雕像.jpg",
+      "drive_file_id": "1cXjvXUunUQKJV0gS0ROsxzRT2n-O92Kl",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717101827.jpg",
+      "drive_file_id": "1taMqgOA0frEDTTElm6KDqqmgzcwUepwe",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717170546.jpg",
+      "drive_file_id": "1Q0EljJZZ1QibZ9hB6NL5mu2p0fno2ZHc",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717181101.jpg",
+      "drive_file_id": "1xrXKPhHIvDmMUCPeFgFDTTw8XaQ0MBev",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717181436.jpg",
+      "drive_file_id": "1zRNMSvp9o8BGrG6eSniCVdnB8Jchhl-4",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717181736.jpg",
+      "drive_file_id": "1bwyGQJR7nD7etx2N-T62_-lPZAGNP82H",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717182529.jpg",
+      "drive_file_id": "1h1maTFxtFr71DU_c73tVUGPUb6DXLMKJ",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717183034.jpg",
+      "drive_file_id": "1CIDe6hHBg_7rXl2gICwBptelCQX0oPMY",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717183529.jpg",
+      "drive_file_id": "19I4JjINoQmdQMb1x2Gfy92myqLA_a3w9",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717184720.jpg",
+      "drive_file_id": "1ylS9b11NkQJqpfYoF8rQGhjmSXeunMXP",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717220426.jpg",
+      "drive_file_id": "1kelY1lYKAWWDf9UoeLJTgAWy5-zvlbI9",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717222637.jpg",
+      "drive_file_id": "1345cr0RUwkr1a4vTfDlBykodB1ZmimfI",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717222731.jpg",
+      "drive_file_id": "1JhBWX-BYpZ5o5zIUHoG6bfje1RSut3wV",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG20260717225436.jpg",
+      "drive_file_id": "1bCombH51WO6ZKCr61l2ciwyAa_ZJyqTi",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG_20260726_112851.jpg",
+      "drive_file_id": "1D1Stfzw0QCLXtMsUPZD9GrsLGtTJesj0",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG_20260726_114014.jpg",
+      "drive_file_id": "1jarYfcn1A8QtB6-uVROmQ9dA61CssLHv",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG_20260726_114915.jpg",
+      "drive_file_id": "122h18ZB9zVOFY61FLYBT-YCjAro1nnA4",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG_20260726_115206.jpg",
+      "drive_file_id": "1hna-5-CjXtrUxhmZEpeuRdkVBnQKmXnY",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG_20260726_115300.jpg",
+      "drive_file_id": "1KkDPGT3Uzo1t_JjvgV5YvjwkC3dp4gMS",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0717/IMG_20260726_120351.jpg",
+      "drive_file_id": "1FhEt9L0WJXhIPLq0vII0hBM4qdgrRdr5",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/1785061729403.jpg",
+      "drive_file_id": "18PMqW0wnb3j0nUSwesgISy3kVz8N9pKm",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG20260718111134.jpg",
+      "drive_file_id": "1qbSs_y8t1pq30EnY8LwhFgn0PqK_rlX0",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG20260718112238.jpg",
+      "drive_file_id": "11srxRk0n-eXWssyMjfo-0R-6OAwyZ4T-",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG20260718133804.jpg",
+      "drive_file_id": "1XyT-bAEiJdPg-a0BshttNBtsTTL8t2Xg",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG20260718145833.jpg",
+      "drive_file_id": "1KN3RDQBp-xhe4QdJPUKBJMdEepxZQU1i",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG20260718180924.jpg",
+      "drive_file_id": "11KA7LSOWrziZtZWpqZrSeIRthBTSsB2X",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG_20260718_180120.jpg",
+      "drive_file_id": "14bGFskC0o0S5etCuDnilAXrsCyAXvjmm",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG_20260726_173102.jpg",
+      "drive_file_id": "16wSkmf71k2n_dafDQ88BF_kQHu2hp3_d",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG_20260726_173357.jpg",
+      "drive_file_id": "1r_z9FdJz83XeEQAbOY9fhqWbMvcurHDW",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG_20260726_183837.jpg",
+      "drive_file_id": "1aZWLQAWslsLaJwx0BEbHn2oddiyL3LUu",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG_20260726_184211.jpg",
+      "drive_file_id": "1LXUpJVl5XItbl9fB3y39H3hWX21YtITY",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG_20260726_184242.jpg",
+      "drive_file_id": "1T_CiJzwzLNHDH21FubofrvWk3KSYUg2u",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0718/IMG_20260726_184652.jpg",
+      "drive_file_id": "1PDZe0sr4xZcsto4FU1OCjl90YK4LSigo",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719094125.jpg",
+      "drive_file_id": "1gwhy2aOrd6MiA2NF9AM4LwbBJFYe7ruT",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719094515.jpg",
+      "drive_file_id": "1qDQQVWy9q1rNwp_X54NSoAumLScK4Elq",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719094641.jpg",
+      "drive_file_id": "1YQ20ya1ALfwdEYzFQo92fhoUbXvjUFQF",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719105547.jpg",
+      "drive_file_id": "1s98Ckq59fdDWfKYeslvU3uoIm4uZviJv",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719114411.jpg",
+      "drive_file_id": "19V1vnhJq5EqH49wQW2nWEKZmaRoSlSYM",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719120233.jpg",
+      "drive_file_id": "1UNrp_-zAWhYD8NA_o41hyCNw-BoSXXEY",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719163150.jpg",
+      "drive_file_id": "11cKKKWrYGCltIf6oxtMIIWQpHZzAuFzZ",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719171727.jpg",
+      "drive_file_id": "1Lk33GxiMwBUgF8TQ7qr9XzKlMge2WQfp",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG20260719174648.jpg",
+      "drive_file_id": "1ww9-o2GHUZpuGGyux-0EnfC2rdqxUQVz",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_192713.jpg",
+      "drive_file_id": "11w8arqpPAhR_dKpCca-DNsK8Q8fqiVOo",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_192907.jpg",
+      "drive_file_id": "1ITgzkkw1nC7WXBSJFsy-MrdDE3s4Pc8-",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_193044.jpg",
+      "drive_file_id": "1DRhsqZA8IOd2N1XLZv0J7_c3L8CvZSNT",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_193224.jpg",
+      "drive_file_id": "16Iu3eGsF483LDgXV9pRDDFMuoe3ZCfoj",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_193410.jpg",
+      "drive_file_id": "1mjN4ezddr2FzxDVPqPsxXjJjLuhi8EL0",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_193514.jpg",
+      "drive_file_id": "1DMnzsKBEGA8spJCVCD_ixM7aiJ6EspKB",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_193537.jpg",
+      "drive_file_id": "102LU9ICDE-o-1SHe2Y0_W1s4LimMzY7J",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_193628.jpg",
+      "drive_file_id": "1uUk5A_Gn3UoRAt4HeQ4sJmZxDSq620PD",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_193714.jpg",
+      "drive_file_id": "1ViOFwwuLsaseB2bddBNDENEQ4BXTxV6w",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0719/IMG_20260727_194404.jpg",
+      "drive_file_id": "1KijU-4_2g_FxY19DM2nlQQa0plvlcHRt",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0720/IMG20260720104729.jpg",
+      "drive_file_id": "17MAySUoTK6NajpLdqEWfwZpY5gkafWi4",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0720/IMG20260720105104.jpg",
+      "drive_file_id": "1Dl4rjLlaGofBDIKfgaB-xAJcAMjZgmok",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0720/IMG20260720132838.jpg",
+      "drive_file_id": "1B5ucKPi9esDaoJF8qPAsalTe_0biamut",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0720/IMG20260720143141.jpg",
+      "drive_file_id": "1mr1We-7HSFfs9lIzR4b7N9QeVAMnwSXn",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0720/IMG_20260727_202912.jpg",
+      "drive_file_id": "1SMj4NkUj_ebjmvJ7TltGmtpzkninlob1",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0720/IMG_20260727_203029.jpg",
+      "drive_file_id": "1PkFUyTNiz1CaqEkgUG4AYSYBixHMNAHO",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0720/IMG_20260727_203058.jpg",
+      "drive_file_id": "1SuDHyb3i-Cmg8oUJg5cDas973rmvoIIJ",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0720/IMG_20260727_203150.jpg",
+      "drive_file_id": "173J-p7fci8IOZG-btxqLdSQLnI9gsBYo",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0721/IMG20260720213003.jpg",
+      "drive_file_id": "18dRNZc8tCLIi9ciZGsKW5v3WqEY9h9ei",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0721/IMG20260720213041.jpg",
+      "drive_file_id": "1icDIuyijdPWkB-nqyHHEiv28hA5XmUtc",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0721/IMG20260720233057.jpg",
+      "drive_file_id": "1GUY2kuKfiYlqW6UYISXgKzCIf-E4R4Vq",
+      "reason": "no_day_folder_match",
+      "note": "Drive path lacks \"Day XX - landmark\" folder structure"
+    },
+    {
+      "drive_path": "0721/IMG20260720233104.jpg",
+      "drive_file_id": "11-t7pYj6By--qmTrv3ZwETci5A1MZ2mh",
       "reason": "no_day_folder_match",
       "note": "Drive path lacks \"Day XX - landmark\" folder structure"
     }
