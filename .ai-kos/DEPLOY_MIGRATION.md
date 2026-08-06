@@ -77,6 +77,47 @@ Rollback 後須同步改回 Knowledge Production URL（DECISIONS／INFRASTRUCTUR
 
 ---
 
+## Video Deployment Policy（2026-08-05 實證）
+
+**限制：** Cloudflare Pages 單檔上限 25 MiB。
+
+**政策：**
+
+| 項目 | 做法 |
+|------|------|
+| **原始影片** | 永久保留在 `photos/<trip>/dayNN/` 原始檔案；**不覆蓋** |
+| **檢查** | 部署前檢查 `dist-surge-upload/photos/` 中所有 `.mp4` / `.MP4` 檔案大小 |
+| **壓縮** | 若超過 25 MiB，產生 Web 版（目標 18–22 MiB，保持品質） |
+| **Web 版** | 覆蓋 `dist-surge-upload/` 中的對應檔案，原始檔案保持不動 |
+
+**參考實證：**
+
+- **BLDH**（波羅的海）：原始影片已在 10 MiB 以下，直接部署
+- **Baikal Day 03**（2026-08-05）：74 MiB 原始 → 19 MiB Web 版（44s/1080p/3.6Mbps）
+
+**壓縮指令範例：**
+
+```bash
+# 檢查影片時長和解析度
+ffprobe -v error -show_entries format=duration -show_entries stream=width,height \
+  -of default=noprint_wrappers=1 video.mp4
+
+# 壓縮至約 20 MiB（根據時長調整 bitrate）
+ffmpeg -i original.mp4 \
+  -c:v libx264 -b:v 3600k -maxrate 3800k -bufsize 7200k \
+  -c:a aac -b:a 128k \
+  -movflags +faststart \
+  output.mp4 -y
+```
+
+**Why 18–22 MiB：**
+
+- Cloudflare 限制 < 25 MiB
+- 留 3–7 MiB 餘裕（metadata／封裝開銷）
+- 優先保持品質，不追求極致壓縮
+
+---
+
 ## Phase 3 — 媒體 CDN（僅體積仍失控）
 
 R2／Bunny／S3 外置大圖與 mp4；另開 ADR 後再改 build。

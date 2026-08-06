@@ -182,7 +182,8 @@ def parse_day_heading(h):
 
 def classify_block(label):
     l = label.lower()
-    if re.search(r'古蹟|古迹|sites?', l):
+    # Sites: ancient sites, meals, accommodation, experiences, landscapes, activities
+    if re.search(r'古蹟|古迹|sites?|餐食|meals?|住宿|accommodation|lodging|體驗|体验|experience|草原|grassland|天空|sky|景觀|景观|landscape|活動|活动|activit', l):
         return 'sites'
     if re.search(r'歷史|历史|history|後記|后记|epilogue', l):
         return 'history'
