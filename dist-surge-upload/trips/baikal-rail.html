@@ -1242,7 +1242,11 @@
     </g>
   </svg>
 </a>
-
+<div id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="">
+  <div class="lightbox-caption"></div>
+</div>
 <script>
 (function () {
   var btn = document.getElementById('back-top');
@@ -1258,6 +1262,48 @@
   });
   window.addEventListener('scroll', sync, { passive: true });
   sync();
+})();
+</script>
+<script>
+(function () {
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbCaption = lb.querySelector('.lightbox-caption');
+
+  function extractUrl(el) {
+    if (el.tagName === 'IMG') return el.src;
+    var bg = el.style.backgroundImage || getComputedStyle(el).backgroundImage;
+    var m = bg && bg.match(/url\((['"]?)(.*?)\1\)/);
+    return m ? m[2] : null;
+  }
+
+  function caption(el) {
+    var label = el.querySelector && el.querySelector('.img-label');
+    if (label) return label.textContent;
+    return el.getAttribute('alt') || '';
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('.site-img.photo, .live-img');
+    if (!el || el.classList.contains('video-card') || e.target.closest('.video-card')) return;
+    var src = extractUrl(el);
+    if (!src) return;
+    lbImg.src = src;
+    lbCaption.textContent = caption(el);
+    lb.classList.add('open');
+  });
+
+  lb.addEventListener('click', function () {
+    lb.classList.remove('open');
+    lbImg.src = '';
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      lb.classList.remove('open');
+      lbImg.src = '';
+    }
+  });
 })();
 </script>
 
