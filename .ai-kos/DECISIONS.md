@@ -4,6 +4,27 @@
 
 ---
 
+## 2026-08-08 — Landmark Layer Rule（Owner 定稿 · HARD）
+
+**性質**：Owner 明確指示 · 內容架構規則。  
+**背景**：baikal-rail Day 2 rebuild 時，4 張 Landmark 參考圖被斌哥照片取代而消失；斌哥指出此為錯誤，提出正確分層概念。
+
+**決策：**
+
+| # | 規則 | 含義 |
+|---|------|------|
+| **1** | **Landmark 參考圖為永久資產** | `*-downloaded.*` 等骨架期參考圖代表「景點本身」，不因旅程進行而消失 |
+| **2** | **Landmark 圖不得被旅行照片取代** | 斌哥照片＝「現場體驗」；Landmark 圖＝「景點身份」；兩者性質不同，各自獨立存在 |
+| **3** | **斌哥照片僅能附加於 Landmark 之下** | 新照片在對應 Landmark 卡後方另開新卡，用不同卡名（體驗視角）區分 |
+| **4** | **Daily Travel Update 不得刪除既有 Landmark** | 日常同步只能新增，不能移除 `day##.md` 中的 Landmark 卡 |
+| **5** | **新照片一律採增量加入模式** | 禁止以「合併」為由刪減既有卡數；不論是否已有同地點描述，新照片都另開新卡附加 |
+
+**修復**：`content/baikal-rail/day02.md` 已還原 4 張 Landmark 參考圖（`ulaanbaatar-city-downloaded.jpg`、`turtle-rock-downloaded.jpg`、`genghis-khan-statue-downloaded.jpg`、`mongolia-horseback-riding-downloaded.png`），斌哥 11 張照片改為附加於下方。`day03.md` Landmark 卡同步還原。
+
+**參考**：`.ai-kos/CONTENT_STYLE.md` § Landmark Layer Rule · `.ai-kos/DAILY_TRAVEL_UPDATE.md` Step 3
+
+---
+
 ## 2026-07-30 — Production Cutover → Cloudflare Pages（Owner 核准）
 
 **性質**：Owner 明確指示「換 Production」· Cutover。

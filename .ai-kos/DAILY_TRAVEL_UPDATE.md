@@ -97,10 +97,15 @@ python3 scripts/sync_baikal_photos.py           # 正式同步
 
 對本次同步匯入的**每一張新照片**：
 
-1. 找到對應 `content/<trip>/dayXX.md` landmark 區塊
-2. 依 `.ai-kos/CONTENT_STYLE.md` **v1.2** 改寫描述區（身在現場、資訊嵌入、禁導覽／流水帳、4–6 句感受收尾）
-3. 確保 `![alt](photos/...)` 引用正確；一圖一故事
-4. **增量採用** — 僅改動本次觸及的 day 檔；不批次重寫舊旅程
+1. 找到對應 `content/<trip>/dayXX.md`
+2. **Landmark Layer Rule（HARD）**：
+   - **不得刪除**已存在的 Landmark 參考圖卡（`*-downloaded.*`）
+   - 斌哥新照片一律以**增量加入**模式，寫在對應 Landmark 卡**下方**
+   - 使用不同卡名區分 Landmark 卡（景點名）與斌哥照片卡（現場經歷名）
+   - 詳見 `.ai-kos/CONTENT_STYLE.md` § Landmark Layer Rule
+3. 依 `.ai-kos/CONTENT_STYLE.md` **v1.2** 改寫描述區（身在現場、資訊嵌入、禁導覽／流水帳、4–6 句感受收尾）
+4. 確保 `![alt](photos/...)` 引用正確；一圖一故事
+5. **增量採用** — 僅改動本次觸及的 day 檔；不批次重寫舊旅程
 
 **活躍旅程**（以 `.ai-kos/STATUS.md` 為準，常見：`bldh-trio`、`baikal-rail`）
 
@@ -322,6 +327,7 @@ Operational Complete
 - [ ] 確認 Active path：`~/Documents/Projects/旅遊/travel-site/`
 - [ ] 讀 INFRASTRUCTURE（Drive SSOT，不 re-ask）
 - [ ] `--dry-run` 後正式 sync
+- [ ] **Landmark Layer Rule**：新照片寫在 Landmark 卡下方，**不刪不替換**既有 Landmark 卡
 - [ ] 每張新圖更新 dayXX.md（CONTENT_STYLE **v1.2**；西伯利亞同）
 - [ ] build → verify → deploy（sips 在 sandbox 外）
 - [ ] 有變更才 commit/push
