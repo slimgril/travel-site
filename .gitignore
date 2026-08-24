@@ -9,3 +9,5 @@ photos/*/originals/
 
 # Cloudflare Wrangler local auth/cache
 .wrangler/
+.aider*
+.env
