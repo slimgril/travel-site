@@ -102,6 +102,7 @@ python3 scripts/sync_baikal_photos.py           # 正式同步
    - **不得刪除**已存在的 Landmark 參考圖卡（`*-downloaded.*`）
    - 斌哥新照片一律以**增量加入**模式，寫在對應 Landmark 卡**下方**
    - 使用不同卡名區分 Landmark 卡（景點名）與斌哥照片卡（現場經歷名）
+   - **前三張固定為 Landmark 卡，順序不得更動、不得與斌哥照片交錯**（2026-08-26 Owner 追加；Day 2 現況不回溯，08/05 起適用）
    - 詳見 `.ai-kos/CONTENT_STYLE.md` § Landmark Layer Rule
 3. 依 `.ai-kos/CONTENT_STYLE.md` **v1.2** 改寫描述區（身在現場、資訊嵌入、禁導覽／流水帳、4–6 句感受收尾）
 4. 確保 `![alt](photos/...)` 引用正確；一圖一故事
@@ -328,6 +329,7 @@ Operational Complete
 - [ ] 讀 INFRASTRUCTURE（Drive SSOT，不 re-ask）
 - [ ] `--dry-run` 後正式 sync
 - [ ] **Landmark Layer Rule**：新照片寫在 Landmark 卡下方，**不刪不替換**既有 Landmark 卡
+- [ ] **Landmark 置頂**：`## 古蹟` 前三張仍是 Landmark 卡且順序未動（08/05 起 HARD）
 - [ ] 每張新圖更新 dayXX.md（CONTENT_STYLE **v1.2**；西伯利亞同）
 - [ ] build → verify → deploy（sips 在 sandbox 外）
 - [ ] 有變更才 commit/push

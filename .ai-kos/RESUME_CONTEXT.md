@@ -11,7 +11,7 @@
 ## 下一步
 
 1. 西伯利亞新圖／新日文案一律 CONTENT_STYLE **v1.2**
-2. **Landmark Layer Rule**：斌哥照片只能附加於 Landmark 卡下方，**禁止替換或刪除** Landmark（見 `DECISIONS.md` 2026-08-08 · `CONTENT_STYLE.md` § Landmark Layer Rule）
+2. **Landmark Layer Rule**：斌哥照片只能附加於 Landmark 卡下方，**禁止替換或刪除** Landmark；**且前三張 Landmark 固定置頂、順序不得更動**（2026-08-26 Owner 追加，08/05 起適用）（見 `DECISIONS.md` 2026-08-08 · `CONTENT_STYLE.md` § Landmark Layer Rule）
 3. 本季 Deploy：`npm run deploy:pages`（或 `bash scripts/deploy_cloudflare_pages.sh`）
 4. 西伯利亞收工後：Owner 指定下季 **Pages project**
 5. （可選）清理未追蹤：map preview 重複檔、brochure PDF、drive-originals 大檔；考慮 Git LFS（遠端警告 >50MB mp4）
