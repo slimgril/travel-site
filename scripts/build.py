@@ -301,8 +301,14 @@ def parse_day_meta(meta_lines):
 # ─────────────────────────────────────────────────────────────────────────
 #  区块渲染器
 # ─────────────────────────────────────────────────────────────────────────
-def render_video_site_img(slug, img, video, name):
-    """Poster + click-to-play video for a sites card (e.g. Istanbul chestnut stall)."""
+def render_video_block(slug, img, video, name, desc):
+    """影片是獨立內容區塊，不是卡片內容。
+
+    影片區塊（.video-section）與文章區塊（.article-section）是平行的兄弟節點，
+    不再是「story card 裡包著一支影片」。影片舞台永遠是內文欄寬，直式影片在
+    舞台中央，兩側以自身預覽圖的模糊版當背景，讓留白是刻意的構圖。
+    播放一律走 Lightbox，預覽框只負責預覽。
+    """
     poster = "../photos/%s/%s" % (slug, img)
     src = "../photos/%s/%s" % (slug, video)
     # Chestnut stall keeps its branded play cue; other videos use a generic hint.
@@ -311,15 +317,26 @@ def render_video_site_img(slug, img, video, name):
     else:
         play_icon, play_hint = '▶', '點擊播放 →'
     return (
-        '        <div class="site-img video-card" role="button" tabindex="0" '
+        '      <section class="video-section" aria-label="影片：%s">\n'
+        '        <div class="video-stage" style="--stage-poster:url(\'%s\')">\n'
+        '          <div class="video-card" role="button" tabindex="0" '
         'aria-label="點擊播放：%s">\n'
-        '          <div class="video-card__poster" style="background-image:url(\'%s\')"></div>\n'
-        '          <video class="video-card__media" muted playsinline preload="metadata" '
-        'src="%s"></video>\n'
-        '          <span class="chestnut-play" aria-hidden="true">%s</span>\n'
-        '          <span class="video-hint" aria-hidden="true">%s</span>\n'
-        '          <div class="img-label">%s</div>\n'
-        '        </div>' % (esc(name), poster, src, play_icon, play_hint, esc(name))
+        '            <div class="video-card__poster" '
+        'style="background-image:url(\'%s\')"></div>\n'
+        '            <video class="video-card__media" muted playsinline '
+        'preload="metadata" src="%s"></video>\n'
+        '            <span class="video-badge" aria-hidden="true">影片</span>\n'
+        '            <span class="chestnut-play" aria-hidden="true">%s</span>\n'
+        '            <span class="video-hint" aria-hidden="true">%s</span>\n'
+        '          </div>\n'
+        '        </div>\n'
+        '      </section>\n'
+        '      <section class="article-section">\n'
+        '        <h3 class="article-title">%s</h3>\n'
+        '        <div class="site-desc">%s</div>\n'
+        '      </section>'
+        % (esc(name), poster, esc(name), poster, src,
+           play_icon, play_hint, esc(name), inline(desc))
     )
 
 
@@ -333,16 +350,7 @@ def render_sites(block, slug, gi):
         name, img, _, video = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
         if img and video:
-            img_div = render_video_site_img(slug, img, video, name)
-            featured.append(
-                '      <div class="site-card site-card--video site-card--featured">\n'
-                '%s\n'
-                '        <div class="site-body">\n'
-                '          <div class="site-name">%s</div>\n'
-                '          <div class="site-desc">%s</div>\n'
-                '        </div>\n'
-                '      </div>' % (img_div, esc(name), inline(desc))
-            )
+            featured.append(render_video_block(slug, img, video, name, desc))
             continue
         if img:
             img_div = (
@@ -370,7 +378,7 @@ def render_sites(block, slug, gi):
         parts.append('    <div class="sites-grid">\n%s\n    </div>' % '\n'.join(regular))
     if featured:
         parts.append(
-            '    <div class="sites-featured" aria-label="本日精選互動">\n'
+            '    <div class="video-flow" aria-label="本日影片">\n'
             '%s\n'
             '    </div>' % '\n'.join(featured)
         )
