@@ -191,7 +191,7 @@ def classify_block(label):
         return 'live'
     if re.search(r'預告|预告|plan|行程', l):
         return 'plan'
-    return 'prose'
+    return 'sites'  # 未識別的區塊預設為 sites；render_sites 遇到空卡片會回傳 ''
 
 
 def split_blocks(lines):
