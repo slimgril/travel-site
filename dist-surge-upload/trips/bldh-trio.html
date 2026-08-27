@@ -8,7 +8,7 @@
 <meta property="og:title" content="波羅的海三小國 11 日">
 <meta property="og:description" content="立陶宛、拉脫維亞、愛沙尼亞 11 日。中世紀古城、水中古堡、十字架山與波羅的海海岸線——丫斌哥的波羅的海三國之旅已圓滿返抵。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/base.css?v=20260724-backtop3">
+<link rel="stylesheet" href="/base.css?v=20260827-video">
 </head>
 <body>
 <section class="hero">
@@ -1585,278 +1585,286 @@
   }
 })();
 </script>
-<script>
-/* Click-to-play video cards
-   配樂先行／畫面晚出；片尾畫面先收／配樂晚收；音量與畫面淡入淡出加長 */
-(function () {
-  var AUDIO_FADE_MS = 4500;   /* 片尾音量淡出（提早開始＋加長，聽得出來） */
-  var VISUAL_LEAD_MS = 2500;  /* 點擊後先聽配樂，再淡入畫面 */
-  var VISUAL_TRAIL_MS = 5200; /* 畫面略早於配樂開始收 */
-  var SHORT_DUR_S = 12;       /* 短片縮短先行／延遲，避免吃掉全片 */
-  var MIN_FADE_MS = 2800;     /* 縮時後仍保留可感知的最短淡出 */
+<!-- 影片改由 Video Renderer 以 Lightbox 播放，原本的卡內播放邏輯已移除（見 git 歷史） -->
 
-  function prefersReducedMotion() {
+<!-- ── Video Renderer ── -->
+<script>
+/* ─────────────────────────────────────────────────────────────────────
+   Video Renderer · 影片獨立呈現邏輯（第二階段：影片為主角）
+   ─────────────────────────────────────────────────────────────────────
+   影片與照片的媒體特性不同，不共用同一套排版與互動規則。
+
+   1. 保留原始比例
+      讀取影片自身的 videoWidth / videoHeight 寫入 --video-ar，外框比例
+      與影片完全一致。16:9 / 9:16 / 4:3 / 1:1 皆完整呈現，不裁切也不留白。
+
+   2. 卡片寬度由比例反推
+      直式影片自動變窄避免過高，橫式維持大尺寸；並有寬度下限，視窗變矮
+      時也不會被壓成竹竿。桌機與手機同一套邏輯，只是可用高度不同。
+
+   3. 卡片只負責預覽，播放一律走 Lightbox
+      點擊卡片開啟全螢幕播放器（背景變暗、影片置中、保持原始比例、
+      約 90% viewport）。ESC／點背景／右上角 × 皆可關閉。
+
+   4. 長文摺疊
+      描述超過三行自動收合。影片先被看見，故事再被閱讀。
+
+   相依：base.css 的 .video-card / .site-card--video / .video-lightbox
+   ───────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+
+  var CAP_PX = 640;        /* 預覽框高度上限（桌機） */
+  var CAP_VH = 0.62;       /* 預覽框高度上限（相對視窗） */
+  var CONTENT_MAX = 720;   /* 影片區塊（舞台）寬度＝內文欄寬 */
+  var FRAME_MIN = 300;     /* 影片框寬度下限，避免直式影片變成竹竿 */
+  var FOLD_LIMIT = 80;     /* 約三行字 */
+
+  function reduceMotion() {
     return window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
-  function clearFade(card) {
-    if (card._fadeTimer) {
-      clearInterval(card._fadeTimer);
-      card._fadeTimer = null;
-    }
+  /* ── 1 & 2：比例與卡片寬度 ───────────────────────────────────── */
+
+  function heightCap() {
+    var vh = window.innerHeight || 800;
+    return Math.min(CAP_PX, Math.round(vh * CAP_VH));
   }
 
-  function clearLead(card) {
-    if (card._leadTimer) {
-      clearTimeout(card._leadTimer);
-      card._leadTimer = null;
-    }
+  /* 視窗很矮時（手機橫置、視窗被拉扁），若只照高度上限反推，直式影片會被
+     壓成一條竹竿，下方文字也擠成一行兩三個字。寧可略微超過高度上限，也要
+     守住可讀的最小寬度；極窄螢幕退讓到 92vw，確保不橫向溢出。 */
+  function widthFloor() {
+    var vw = window.innerWidth || 360;
+    return Math.min(FRAME_MIN, Math.round(vw * 0.92));
   }
 
-  function setVol(video, v) {
-    try { video.volume = Math.max(0, Math.min(1, v)); } catch (e) {}
+  /* 影片框自己的寬度：由比例反推、夾在下限與內文欄寬之間。
+     舞台（.video-stage）永遠是內文欄寬，直式影片就在舞台正中央，
+     不會變成貼在左邊的一條窄縮圖。 */
+  function frameWidthFor(ratio) {
+    return Math.max(widthFloor(), Math.min(CONTENT_MAX, Math.round(heightCap() * ratio)));
   }
 
-  function timingFor(duration) {
-    var durMs = (isFinite(duration) && duration > 0) ? duration * 1000 : 20000;
-    var lead = VISUAL_LEAD_MS;
-    var trail = VISUAL_TRAIL_MS;
-    var fade = AUDIO_FADE_MS;
-    if (duration > 0 && duration < SHORT_DUR_S) {
-      lead = 800;
-      trail = Math.min(2200, Math.round(durMs * 0.35));
-      fade = Math.min(2800, Math.round(durMs * 0.4));
-    }
-    /* 先行＋延遲＋淡出不得超過片長的一半；淡出優先保底 */
-    var budget = Math.max(0, durMs * 0.5);
-    var need = lead + trail + fade;
-    if (need > budget && budget > 0) {
-      var scale = budget / need;
-      lead = Math.round(lead * scale);
-      trail = Math.round(trail * scale);
-      fade = Math.max(MIN_FADE_MS, Math.round(fade * scale));
-      /* 極短片：淡出最多吃到片長 45% */
-      if (duration > 0) {
-        fade = Math.min(fade, Math.round(durMs * 0.45));
-      }
-    }
-    /* 畫面先收：trail 至少略長於 fade，讓人先看見淡出再聽完音量 */
-    if (trail < fade + 400) {
-      trail = fade + 400;
-    }
-    return { lead: lead, trail: trail, fade: fade };
+  function applyRatio(card, w, h) {
+    if (!w || !h) return;
+    var frame = card.querySelector('.video-card');
+    if (!frame) return;
+    frame.style.setProperty('--video-ar', w + ' / ' + h);
+
+    var ratio = w / h;
+    var fw = frameWidthFor(ratio);
+    frame.style.setProperty('--video-frame-max', fw + 'px');
+    card.dataset.videoRatio = ratio.toFixed(4);
+
+    /* 影片框窄於舞台時，兩側補上模糊預覽圖當背景，讓留白看起來是刻意的 */
+    var st = card.querySelector('.video-stage');
+    if (st) st.classList.toggle('is-pillarboxed', fw < CONTENT_MAX - 2);
   }
 
-  /** Ramp volume from→to over ms; respects reduced-motion (instant). */
-  function fadeVolume(video, card, from, to, ms, done) {
-    clearFade(card);
-    if (prefersReducedMotion() || !ms || ms <= 0) {
-      setVol(video, to);
-      if (done) done();
-      return;
-    }
-    var steps = Math.max(12, Math.round(ms / 40));
-    var stepMs = ms / steps;
-    var i = 0;
-    setVol(video, from);
-    card._fadeTimer = setInterval(function () {
-      i += 1;
-      /* ease-out：後半段降得更明顯，聽得出「慢慢消失」 */
-      var t = i / steps;
-      var eased = 1 - Math.pow(1 - t, 2.2);
-      setVol(video, from + (to - from) * eased);
-      if (i >= steps) {
-        clearFade(card);
-        setVol(video, to);
-        if (done) done();
-      }
-    }, stepMs);
+  /* 把影片框包進舞台容器：舞台吃滿內文欄寬，影片框置中其中 */
+  function stage(card) {
+    var frame = card.querySelector('.video-card');
+    if (!frame || frame.parentNode.classList.contains('video-stage')) return;
+    var st = document.createElement('div');
+    st.className = 'video-stage';
+    var poster = frame.querySelector('.video-card__poster');
+    var bg = poster && poster.style.backgroundImage;
+    if (bg) st.style.setProperty('--stage-poster', bg);
+    frame.parentNode.insertBefore(st, frame);
+    st.appendChild(frame);
   }
 
-  function hardReset(card) {
-    var video = card.querySelector('video.video-card__media');
-    clearFade(card);
-    clearLead(card);
-    card.classList.remove('is-playing', 'is-flashing', 'is-picture-on', 'is-picture-out');
-    card._flashing = false;
-    card._fadingOut = false;
-    card._endTrailArmed = false;
-    card._endAudioArmed = false;
-    card._timing = null;
-    if (card._flashTimer) {
-      clearTimeout(card._flashTimer);
-      card._flashTimer = null;
-    }
-    if (!video) return;
-    video.pause();
-    try { video.currentTime = 0; } catch (e) {}
-    setVol(video, 0);
-  }
-
-  function resetCard(card, withFade) {
-    var video = card.querySelector('video.video-card__media');
-    if (!video || !withFade || card._fadingOut) {
-      hardReset(card);
-      return;
-    }
-    card._fadingOut = true;
-    clearLead(card);
-    /* 手動停止：畫面慢慢消失，音量淡出 */
-    card.classList.remove('is-picture-on');
-    card.classList.add('is-picture-out');
-    var fade = (card._timing && card._timing.fade) || AUDIO_FADE_MS;
-    fadeVolume(video, card, video.volume || 0, 0, fade, function () {
-      hardReset(card);
-    });
-  }
-
-  function revealPicture(card) {
-    if (!card.classList.contains('is-playing') || card._fadingOut) return;
-    card.classList.remove('is-picture-out');
-    card.classList.add('is-picture-on');
-  }
-
-  function startPlayback(card) {
+  function measure(card) {
     var video = card.querySelector('video.video-card__media');
     if (!video) return;
-    card.classList.remove('is-flashing', 'is-picture-on', 'is-picture-out');
-    card.classList.add('is-playing');
-    card._fadingOut = false;
-    card._endTrailArmed = true;
-    card._endAudioArmed = true;
 
-    function begin(t) {
-      card._timing = t;
-      try { video.muted = false; } catch (e) {}
-      setVol(video, 0);
-      var p = video.play();
-      if (p && p.catch) {
-        p.catch(function () {
-          hardReset(card);
-        });
-      }
-      /* 配樂先淡入；畫面仍蓋住照片，晚幾秒再淡入影片 */
-      fadeVolume(video, card, 0, 1, t.fade);
-      if (prefersReducedMotion() || t.lead <= 0) {
-        revealPicture(card);
-      } else {
-        clearLead(card);
-        card._leadTimer = setTimeout(function () {
-          card._leadTimer = null;
-          revealPicture(card);
-        }, t.lead);
-      }
-    }
-
-    var dur = video.duration;
-    if (isFinite(dur) && dur > 0) {
-      begin(timingFor(dur));
+    function fromVideo() { applyRatio(card, video.videoWidth, video.videoHeight); }
+    if (video.readyState >= 1 && video.videoWidth) {
+      fromVideo();
     } else {
-      video.addEventListener('loadedmetadata', function onceMeta() {
-        video.removeEventListener('loadedmetadata', onceMeta);
-        begin(timingFor(video.duration));
-      });
-      begin(timingFor(0));
+      video.addEventListener('loadedmetadata', fromVideo);
+      /* metadata 抵達前先用 poster 比例卡位，避免版面跳動 */
+      var poster = card.querySelector('.video-card__poster');
+      var bg = poster && poster.style.backgroundImage;
+      var m = bg && bg.match(/url\(['"]?(.*?)['"]?\)/);
+      if (m && m[1]) {
+        var probe = new Image();
+        probe.onload = function () {
+          if (!card.dataset.videoRatio) applyRatio(card, probe.naturalWidth, probe.naturalHeight);
+        };
+        probe.src = m[1];
+      }
     }
   }
 
-  function playCard(card) {
-    var video = card.querySelector('video.video-card__media');
-    if (!video || card._flashing || card._fadingOut) return;
-    if (prefersReducedMotion()) {
-      startPlayback(card);
+  function recalcWidths() {
+    var cards = document.querySelectorAll('.site-card--video');
+    for (var i = 0; i < cards.length; i++) {
+      var r = parseFloat(cards[i].dataset.videoRatio);
+      if (!r) continue;
+      var frame = cards[i].querySelector('.video-card');
+      if (!frame) continue;
+      var fw = frameWidthFor(r);
+      frame.style.setProperty('--video-frame-max', fw + 'px');
+      var st = cards[i].querySelector('.video-stage');
+      if (st) st.classList.toggle('is-pillarboxed', fw < CONTENT_MAX - 2);
+    }
+  }
+
+  /* ── 3：Lightbox 播放器 ──────────────────────────────────────── */
+
+  var lb = null, lbVideo = null, lastFocus = null;
+
+  function buildLightbox() {
+    if (lb) return lb;
+    lb = document.createElement('div');
+    lb.className = 'video-lightbox';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.setAttribute('aria-label', '影片播放');
+    lb.innerHTML =
+      '<button type="button" class="video-lightbox__close" aria-label="關閉影片">&times;</button>' +
+      '<div class="video-lightbox__stage">' +
+        '<video class="video-lightbox__video" controls playsinline preload="auto"></video>' +
+        '<div class="video-lightbox__caption"></div>' +
+      '</div>';
+    document.body.appendChild(lb);
+    lbVideo = lb.querySelector('.video-lightbox__video');
+
+    lb.querySelector('.video-lightbox__close').addEventListener('click', close);
+    /* 點背景關閉；點影片或控制列不關 */
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('video-lightbox__stage')) close();
+    });
+    return lb;
+  }
+
+  function open(card) {
+    var src = card.querySelector('video.video-card__media');
+    if (!src || !src.getAttribute('src')) return;
+    buildLightbox();
+
+    lastFocus = document.activeElement;
+    var label = card.querySelector('.site-name') || card.querySelector('.img-label');
+    lb.querySelector('.video-lightbox__caption').textContent = label ? label.textContent : '';
+
+    lbVideo.src = src.getAttribute('src');
+    lbVideo.currentTime = 0;
+    lb.classList.add('is-open');
+    document.body.classList.add('has-video-lightbox');
+
+    var play = lbVideo.play();
+    if (play && play.catch) play.catch(function () { /* 自動播放被擋，使用者按控制列即可 */ });
+    lb.querySelector('.video-lightbox__close').focus();
+  }
+
+  function close() {
+    if (!lb || !lb.classList.contains('is-open')) return;
+    lb.classList.remove('is-open');
+    document.body.classList.remove('has-video-lightbox');
+    try { lbVideo.pause(); } catch (e) {}
+    /* 清掉 src 讓瀏覽器停止下載 */
+    lbVideo.removeAttribute('src');
+    try { lbVideo.load(); } catch (e) {}
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+
+  /* ── 影片徽章：第一眼就分辨得出這是影片 ───────────────────────── */
+
+  function badge(card) {
+    var frame = card.querySelector('.video-card');
+    if (!frame || frame.querySelector('.video-badge')) return;
+    var b = document.createElement('span');
+    b.className = 'video-badge';
+    b.setAttribute('aria-hidden', 'true');
+    b.textContent = '影片';
+    frame.appendChild(b);
+  }
+
+  /* ── 4：長文摺疊 ─────────────────────────────────────────────── */
+
+  function fold(desc) {
+    if (desc.dataset.foldReady === '1') return;
+    desc.classList.add('site-desc--foldable');
+    desc.classList.remove('is-collapsed', 'is-expanded');
+    if (desc.scrollHeight <= FOLD_LIMIT) {
+      desc.classList.remove('site-desc--foldable');
       return;
     }
-    card._flashing = true;
-    card.classList.add('is-flashing');
-    card._flashTimer = setTimeout(function () {
-      card._flashTimer = null;
-      card._flashing = false;
-      startPlayback(card);
-    }, 150);
+    desc.dataset.foldReady = '1';
+
+    var fade = document.createElement('div');
+    fade.className = 'site-desc__fade';
+    desc.appendChild(fade);
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'site-desc__more';
+    btn.textContent = '展開更多 ▾';
+    btn.setAttribute('aria-expanded', 'false');
+    desc.parentNode.insertBefore(btn, desc.nextSibling);
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var opening = desc.classList.contains('is-collapsed');
+      desc.classList.toggle('is-collapsed', !opening);
+      desc.classList.toggle('is-expanded', opening);
+      btn.textContent = opening ? '收合 ▴' : '展開更多 ▾';
+      btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+      if (!opening && !reduceMotion()) desc.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    desc.classList.add('is-collapsed');
   }
+
+  /* ── 啟動 ─────────────────────────────────────────────────────── */
 
   function wire(card) {
-    if (card._videoWired) return;
-    card._videoWired = true;
-    var video = card.querySelector('video.video-card__media');
-    if (!video) return;
-
-    function activate(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      if (card._fadingOut) return;
-      if (card.classList.contains('is-playing') || card._flashing) {
-        resetCard(card, true);
-        return;
-      }
-      playCard(card);
-    }
-
-    card.addEventListener('click', activate);
-    card.addEventListener('keydown', function (e) {
+    var frame = card.querySelector('.video-card');
+    if (!frame || frame._lbWired) return;
+    frame._lbWired = true;
+    frame.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      open(card);
+    });
+    frame.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
-        activate(e);
+        e.preventDefault();
+        open(card);
       }
-    });
-    video.addEventListener('timeupdate', function () {
-      if (!card.classList.contains('is-playing') || card._fadingOut) return;
-      var dur = video.duration;
-      if (!isFinite(dur) || dur <= 0) return;
-      var t = card._timing || timingFor(dur);
-      card._timing = t;
-      var remain = dur - video.currentTime;
-      var trailS = t.trail / 1000;
-      var fadeS = t.fade / 1000;
-
-      /* 畫面提早慢慢收：約 trail 秒前開始淡出，一路收到接近結束 */
-      if (card._endTrailArmed && remain <= trailS) {
-        card._endTrailArmed = false;
-        card.classList.remove('is-picture-on');
-        card.classList.add('is-picture-out');
-      }
-      /* 配樂晚收但加長：在片尾前開始淡出，務必在影片結束前把音量收到接近 0 */
-      if (card._endAudioArmed && remain <= fadeS) {
-        card._endAudioArmed = false;
-        card._fadingOut = true;
-        var from = video.volume > 0.05 ? video.volume : 1;
-        /* 以剩餘時間為上限，避免影片 ended 時音量還很高而驟停 */
-        var ms = Math.min(t.fade, Math.max(remain * 1000, 0));
-        if (ms < MIN_FADE_MS && remain * 1000 >= MIN_FADE_MS * 0.6) {
-          ms = Math.min(MIN_FADE_MS, remain * 1000);
-        }
-        ms = Math.max(700, ms);
-        fadeVolume(video, card, from, 0, ms, function () {
-          hardReset(card);
-        });
-      }
-    });
-    video.addEventListener('ended', function () {
-      /* 若淡出尚未跑完，補一段短淡出再收；否則直接重置 */
-      if (card._fadingOut) return;
-      var vol = 0;
-      try { vol = video.volume; } catch (e) {}
-      if (vol > 0.05 && !prefersReducedMotion()) {
-        card._fadingOut = true;
-        fadeVolume(video, card, vol, 0, Math.min(1200, AUDIO_FADE_MS), function () {
-          hardReset(card);
-        });
-        return;
-      }
-      hardReset(card);
     });
   }
 
-  function boot() {
-    document.querySelectorAll('.video-card').forEach(wire);
+  function init() {
+    var cards = document.querySelectorAll('.site-card--video');
+    for (var i = 0; i < cards.length; i++) {
+      stage(cards[i]);
+      measure(cards[i]);
+      badge(cards[i]);
+      wire(cards[i]);
+    }
+    /* 長文摺疊套用到全站所有描述（照片卡也適用）；
+       未超過三行者不掛載，不會多出任何按鈕。 */
+    var descs = document.querySelectorAll('.site-desc');
+    for (var j = 0; j < descs.length; j++) fold(descs[j]);
+    var t;
+    window.addEventListener('resize', function () {
+      clearTimeout(t);
+      t = setTimeout(recalcWidths, 200);
+    });
   }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    boot();
+    init();
   }
 })();
 </script>

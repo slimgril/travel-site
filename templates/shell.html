@@ -284,8 +284,8 @@
 (function () {
   'use strict';
 
-  var CAP_PX = 640;        /* 預覽框高度上限（桌機） */
-  var CAP_VH = 0.62;       /* 預覽框高度上限（相對視窗） */
+  var CAP_PX = 400;        /* 預覽框高度上限（桌機） */
+  var CAP_VH = 0.50;       /* 預覽框高度上限（相對視窗） */
   var CONTENT_MAX = 720;   /* 影片區塊（舞台）寬度＝內文欄寬 */
   var FRAME_MIN = 300;     /* 影片框寬度下限，避免直式影片變成竹竿 */
   var FOLD_LIMIT = 80;     /* 約三行字 */
@@ -321,12 +321,16 @@
     if (!w || !h) return;
     var frame = card.querySelector('.video-card');
     if (!frame) return;
-    frame.style.setProperty('--video-ar', w + ' / ' + h);
 
     var ratio = w / h;
+    card.dataset.videoRatio = ratio.toFixed(4);
+
+    /* grid 卡片(.site-card--video)：不寫 aspect-ratio，高度由 CSS .site-img 統一決定 */
+    if (card.classList.contains('site-card--video')) return;
+
+    frame.style.setProperty('--video-ar', w + ' / ' + h);
     var fw = frameWidthFor(ratio);
     frame.style.setProperty('--video-frame-max', fw + 'px');
-    card.dataset.videoRatio = ratio.toFixed(4);
 
     /* 影片框窄於舞台時，兩側補上模糊預覽圖當背景，讓留白看起來是刻意的 */
     var st = card.querySelector('.video-stage');
