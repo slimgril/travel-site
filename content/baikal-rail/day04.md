@@ -12,7 +12,7 @@
 ### ![蒙古國民族舞蹈及馬頭琴表演](day04/folk-dance-morin-khuur.jpg){video=day04/folk-dance-morin-khuur-1.mp4} 蒙古國民族舞蹈及馬頭琴表演
 塞車讓行程嚴重延誤，抵達烏蘭巴托已是晚上八點，原定劇院演出的場次早過了。導遊打了幾通電話，把表演團隊拉到隔壁小劇場，專為這團臨場加演。燈光暗下來的那一刻，覺得這個導遊有點厲害。馬頭琴弓一落，聲音從腔底湧上來，舞者的袍子在燈下像翻動的火焰，深夜的疲累忽然消了一大半。
 
-### ![民族舞蹈表演第二段](day04/folk-dance-morin-khuur.jpg){video=day04/folk-dance-morin-khuur-2.mp4} 民族舞蹈表演第二段
+### ![民族舞蹈表演第二段](day04/mongolia-folk-dance-morin-khuur-downloaded.jpg){video=day04/folk-dance-morin-khuur-2.mp4} 民族舞蹈表演第二段
 第二段表演換上另一套服裝，動作更繁複，腰肢和手指的細節不輸台上任何正式表演。小劇場的距離反而讓人看得更清楚，前排的人甚至能看見舞者臉上的表情。結束的掌聲比預想的更熱烈——或許是因為這場不在計畫裡，才顯得格外值得。
 
 ## 住宿
