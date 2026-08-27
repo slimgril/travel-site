@@ -363,7 +363,9 @@ def render_sites(block, slug, gi):
         )
     if not regular:
         return ''
-    return '    <div class="sites-grid">\n%s\n    </div>' % '\n'.join(regular)
+    n = len(regular)
+    extra = ' sites-grid--pair' if n == 2 else ' sites-grid--solo' if n == 1 else ''
+    return '    <div class="sites-grid%s">\n%s\n    </div>' % (extra, '\n'.join(regular))
 
 
 def render_history_panel(title, body_lines):

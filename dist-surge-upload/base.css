@@ -125,6 +125,8 @@
     display:grid; grid-template-columns:repeat(3, 1fr);
     gap:22px; margin-bottom:36px;
   }
+  .sites-grid--pair { grid-template-columns:repeat(2, 1fr); }
+  .sites-grid--solo { grid-template-columns:1fr; }
   @media (max-width:720px) {
     .sites-grid { grid-template-columns:repeat(2, 1fr); }
   }

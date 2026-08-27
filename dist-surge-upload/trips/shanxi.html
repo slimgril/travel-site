@@ -189,7 +189,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--pair">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/img-hengshan-single.jpg')"><div class="img-label">北嶽恒山（纜車上下）</div></div>
         <div class="site-body">
@@ -317,7 +317,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--pair">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/img-yungang.jpg')"><div class="img-label">雲岡石窟</div></div>
         <div class="site-body">
@@ -437,7 +437,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">太原希爾頓花園酒店</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--pair">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/38_雁門關城樓匾額.jpg')"><div class="img-label">雁門關（中華第一關）</div></div>
         <div class="site-body">
@@ -785,7 +785,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--pair">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/img-xiaoxitian.jpg')"><div class="img-label">隰縣小西天（鳳凰山）</div></div>
         <div class="site-body">
@@ -920,7 +920,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--pair">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/img-linfen.jpg')"><div class="img-label">汾城古建築群</div></div>
         <div class="site-body">
@@ -1033,7 +1033,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--solo">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/img-baquanxia.jpg')"><div class="img-label">八泉峽景區（含電瓶車+遊船+空中巴士+纜車+懸崖電梯）</div></div>
         <div class="site-body">
@@ -1194,7 +1194,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--solo">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/img-hongdouxia.jpg')"><div class="img-label">紅豆峽景區</div></div>
         <div class="site-body">
@@ -1294,7 +1294,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--solo">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/img-qinglongxia.jpg')"><div class="img-label">青龍峽景區</div></div>
         <div class="site-body">
@@ -1658,7 +1658,7 @@
     <div class="accommodation"><div class="acc-label">住宿</div><div class="acc-name">當地精選住宿</div></div>
   </div>
 
-    <div class="sites-grid">
+    <div class="sites-grid sites-grid--pair">
       <div class="site-card">
         <div class="site-img photo" style="background-image:url('../photos/shanxi/img-museum.jpg')"><div class="img-label">山西省博物院（週一閉館）</div></div>
         <div class="site-body">
@@ -1991,8 +1991,8 @@
 (function () {
   'use strict';
 
-  var CAP_PX = 640;        /* 預覽框高度上限（桌機） */
-  var CAP_VH = 0.62;       /* 預覽框高度上限（相對視窗） */
+  var CAP_PX = 400;        /* 預覽框高度上限（桌機） */
+  var CAP_VH = 0.50;       /* 預覽框高度上限（相對視窗） */
   var CONTENT_MAX = 720;   /* 影片區塊（舞台）寬度＝內文欄寬 */
   var FRAME_MIN = 300;     /* 影片框寬度下限，避免直式影片變成竹竿 */
   var FOLD_LIMIT = 80;     /* 約三行字 */
@@ -2028,12 +2028,16 @@
     if (!w || !h) return;
     var frame = card.querySelector('.video-card');
     if (!frame) return;
-    frame.style.setProperty('--video-ar', w + ' / ' + h);
 
     var ratio = w / h;
+    card.dataset.videoRatio = ratio.toFixed(4);
+
+    /* grid 卡片(.site-card--video)：不寫 aspect-ratio，高度由 CSS .site-img 統一決定 */
+    if (card.classList.contains('site-card--video')) return;
+
+    frame.style.setProperty('--video-ar', w + ' / ' + h);
     var fw = frameWidthFor(ratio);
     frame.style.setProperty('--video-frame-max', fw + 'px');
-    card.dataset.videoRatio = ratio.toFixed(4);
 
     /* 影片框窄於舞台時，兩側補上模糊預覽圖當背景，讓留白看起來是刻意的 */
     var st = card.querySelector('.video-stage');
