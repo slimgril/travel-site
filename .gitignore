@@ -6,6 +6,7 @@ __pycache__/
 photos/*/source/
 photos/*/cooked/
 photos/*/originals/
+photos/*/_temp_download/
 
 # Cloudflare Wrangler local auth/cache
 .wrangler/

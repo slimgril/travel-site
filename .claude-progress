@@ -1,20 +1,36 @@
-# .claude-progress — travel-site（最新斷點）
+# .claude-progress — baikal-rail（最新斷點）
 
-**更新：** 2026-07-31 22:13（Commit／Push／Handoff）
-
-## 停在哪
-
-Day 5「忍不住」四句已 Pages 上線並入版；其餘 day 口頭禪輪替、Baikal／player／drive-originals 大檔未入 commit。
+**更新：** 2026-08-29
 
 ## 已完成
 
-1. Day5 文案替換＋CONTENT_STYLE 口頭禪規則＋STATUS
-2. Day7–9 斌哥勘誤／潤飾（含照片更名）
-3. Cloudflare Pages Deploy PASS → travel-site-quarter.pages.dev
-4. Commit＋push `main`
+- Day 5：✅ 完整修正 — 全部照片重新對應 README 順序，共 20 張卡（含影片 2 支）
+  - 古蹟 4 張 / 鐵路 2 張 / 旅人區（早/下午/晚）14 張
+  - 已部署 Cloudflare Pages ✓
+- Day 6：✅ 完整重寫 — 10 張 source 照片全部上牆
+  - 古蹟 3 張（貝加爾湖/安加拉河/伊爾庫次克下載）
+  - 旅人區（上午/下午/晚）8 張 + 1 影片
+  - 標題修正（移除誤植的「李斯特維揚卡」）
+- Day 7：待處理（0809 資料夾）
+- Day 8：待處理（0810 資料夾）
+
+## Day 6 缺少照片（需向斌哥索取）
+
+1. 俄羅斯鄉間景色（火車窗外，蕭條感）
+2. 安加拉河岸 Babur 創作陣列（多座雕塑沿河排列）
+3. 有趣的路燈（伊爾庫次克特色路燈）
 
 ## 下一步
 
-1. （可選）day01／03／04／06／07 輪替「忍不住」
-2. 勿把 `drive-originals`／`dist-preview-deploy`／`tools/` 整包 commit
-3. Baikal 地圖預覽／brochure、player releases 另案處理
+1. **Day 6**：build + deploy（含新的 day06 照片）
+2. **Day 7**：讀 0809/README.pdf → 按順序做
+3. **Day 8**：讀 0810/README.pdf → 按順序做
+4. **Day 6 day06 資料夾清理**：lake-baikal-cruise.jpg, shaman-rock, listvyanka 等下載照片屬於 Day 7，待確認後移過去
+
+## 重要規則
+
+- README 是排列順序參考，資料夾有的照片全部上牆
+- 資料夾沒有的照片列清單，之後向斌哥補
+- 旅人區按早/下午/晚三個時段分區
+- 超過 25MB 的 mp4 不能上 Cloudflare Pages
+- Build → sips 壓縮 → deploy_cloudflare_pages.sh
