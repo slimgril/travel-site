@@ -5,7 +5,7 @@ title: 西伯利亞大鐵路 {20} 日
 subtitle: 蒙古 · 貝加爾湖 · 聖彼得堡 · 莫斯科　2026年8月3日 — 8月22日
 map_svg: baikal-rail/baikal-route-map.svg
 traveler: 丫斌哥
-status: upcoming
+status: done
 date_start: 2026-08-03
 date_end: 2026-08-22
 hero_badge: 即將啟程
