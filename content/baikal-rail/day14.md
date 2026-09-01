@@ -1,21 +1,15 @@
-# Day 16 ｜ 08/18（二）｜ 聖彼得堡 +++15:10 高速鐵路+++ 莫斯科 — 冬宮之後抵達莫斯科
-:::meta train=聖彼得堡→莫斯科 高鐵 15:10／19:13  lodging=Azimut Aerostar 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
+# Day 14 ｜ 08/16（日）｜ 聖彼得堡 → 芬蘭灣 → 科特林島 → 彼得夏宮花園 — 海軍要塞與芬蘭灣
+:::meta lodging=Cosmos Saint Petersburg Pulkovskaya Hotel 或同級  meals=早：飯店內／午：俄式料理／晚：俄式料理
 
 ## 古蹟
-### ![冬宮－艾爾米塔奇博物館](day16/winter-palace-hermitage-downloaded.jpg) 冬宮－艾爾米塔奇博物館
-原沙皇皇宮，現為世界級藝術博物館。
+### ![芬蘭灣海岸線](day14/gulf-of-finland-coast-downloaded.jpg) 芬蘭灣海岸線
+沿芬蘭灣與森林、河湖景觀前往科特林島。
 
-### ![宮殿廣場](day16/palace-square-downloaded.jpg) 宮殿廣場
-聖彼得堡城市核心廣場，亞歷山大圓柱矗立中央。
+### ![科特林島](day14/kotlin-island-kronstadt-downloaded.jpg) 科特林島
+波羅的海戰略島嶼，與聖彼得堡防衛歷史密切相關。
 
-### ![彼得保羅要塞](day16/peter-and-paul-fortress-downloaded.jpg) 彼得保羅要塞
-涅瓦河中防禦要塞，安置彼得大帝至末代沙皇陵寢。
+### ![喀琅施塔得要塞](day14/kronstadt-fortress.jpg) 喀琅施塔得要塞
+俄羅斯海軍要塞城市，展示海上防禦與海軍文化。
 
-### ![莫斯科](day16/moscow-skyline-downloaded.jpg) 莫斯科
-俄羅斯首都，沿莫斯科河發展，是政治與歷史中心。
-
-### ![莫斯科紅場聖瓦西里大教堂](day16/st-basil-red-square-downloaded.jpg) 莫斯科紅場聖瓦西里大教堂
-紅場旁最具辨識度的洋蔥頭教堂，是莫斯科城市意象的代表地標。
-
-### ![克里姆林宮](day16/kremlin-panorama-downloaded.jpg) 克里姆林宮
-莫斯科河畔的城堡建築群，見證俄羅斯政治與歷史核心。
+### ![彼得夏宮花園](day14/peterhof-grand-cascade-downloaded.jpg) 彼得夏宮花園
+面向芬蘭灣的皇家花園與噴泉群。
