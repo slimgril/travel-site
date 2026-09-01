@@ -63,50 +63,13 @@
     text-transform:uppercase;
   }
   .section-heading {
-    font-size: clamp(1.4rem, 5vw, 1.8rem); font-weight:700; margin-bottom:40px;
+    font-size:1.8rem; font-weight:700; margin-bottom:40px;
   }
   .map-section .section-heading { color:#fff; }
   .map-container {
     max-width:700px; margin:0 auto; position:relative;
   }
   .route-svg { width:100%; height:auto; }
-
-  /* 手機：viewBox 等比縮放會讓站名／國名字級縮到不可讀（375px 下約剩 0.35 倍），
-     改為保底寬度＋橫向捲動，維持原圖比例與字級可讀性，邊緣淡出暗示可滑動。 */
-  @media (max-width:760px) {
-    .map-section { padding-left:0; padding-right:0; }
-
-    .map-container {
-      max-width:100%;
-      overflow-x:auto;
-      -webkit-overflow-scrolling:touch;
-      scrollbar-width:none;
-      position:relative;
-      padding:0 20px;
-      scroll-snap-type:x proximity;
-    }
-    .map-container::-webkit-scrollbar { display:none; }
-
-    .route-svg {
-      width:720px;
-      max-width:none;
-      flex-shrink:0;
-      display:block;
-      scroll-snap-align:center;
-    }
-
-    .map-container::before,
-    .map-container::after {
-      content:'';
-      position:absolute;
-      top:0; bottom:0;
-      width:28px;
-      pointer-events:none;
-      z-index:2;
-    }
-    .map-container::before { left:0;  background:linear-gradient(to right, var(--green-dark), transparent); }
-    .map-container::after  { right:0; background:linear-gradient(to left,  var(--green-dark), transparent); }
-  }
 
   /* ── DAYS NAV ── */
   .days-nav {
@@ -125,41 +88,8 @@
     border-color:rgba(212,168,67,0.4);
   }
 
-  /* 手機：原本 flex-wrap 與 overflow-x 互斥，20 天份 pill 會擠成多行方塊，
-     改為單行慣性捲動的時間軸，邊緣淡出手法與地圖卷軸一致。 */
-  @media (max-width:760px) {
-    .days-nav {
-      flex-wrap:nowrap;
-      justify-content:flex-start;
-      overflow-x:auto;
-      scroll-snap-type:x proximity;
-      -webkit-overflow-scrolling:touch;
-      scrollbar-width:none;
-      position:relative;
-    }
-    .days-nav::-webkit-scrollbar { display:none; }
-    .days-nav a { scroll-snap-align:start; }
-
-    .days-nav::before,
-    .days-nav::after {
-      content:'';
-      position:absolute;
-      top:0; bottom:0;
-      width:24px;
-      pointer-events:none;
-      z-index:2;
-    }
-    .days-nav::before { left:0;  background:linear-gradient(to right, var(--green-dark), transparent); }
-    .days-nav::after  { right:0; background:linear-gradient(to left,  var(--green-dark), transparent); }
-  }
-
   /* ── DAY SECTION ── */
-  /* clamp 取代 480px 死斷點：≥750px 視窗算出值與原本 60px/20px 相同，
-     窄螢幕連續收斂到下限，避免留白比例斷崖式跳動 */
-  .day-section {
-    padding: clamp(34px, 8vw, 60px) clamp(16px, 5vw, 20px);
-    max-width:1100px; margin:0 auto;
-  }
+  .day-section { padding:60px 20px; max-width:1100px; margin:0 auto; }
   .day-section:nth-child(even) { }
 
   .day-header {
@@ -175,7 +105,7 @@
   }
   .day-badge .num { font-size:2rem; font-weight:700; line-height:1; }
   .day-badge .label { font-size:0.7rem; letter-spacing:2px; color:var(--gold-light); }
-  .day-info h2 { font-size: clamp(1.25rem, 4.5vw, 1.5rem); font-weight:700; color:var(--green-dark); }
+  .day-info h2 { font-size:1.5rem; font-weight:700; color:var(--green-dark); }
   .day-info .date { color:var(--text-light); font-size:0.9rem; margin-bottom:6px; }
   .day-info .route {
     display:inline-flex; align-items:center; gap:8px;
@@ -201,7 +131,7 @@
     .sites-grid { grid-template-columns:repeat(2, 1fr); }
   }
   @media (max-width:480px) {
-    .sites-grid { grid-template-columns:1fr; gap: clamp(22px, 6vw, 28px); }
+    .sites-grid { grid-template-columns:1fr; }
   }
   .site-card {
     border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
@@ -227,9 +157,8 @@
   }
   .site-img .icon { font-size:3rem; margin-bottom:8px; }
   .site-img .img-label {
-    color:rgba(245,240,232,0.82); font-size:0.85rem; font-weight:400; letter-spacing:0.14em;
-    background:none; padding:0; border-radius:0;
-    text-shadow:0 1px 6px rgba(0,0,0,0.55), 0 1px 2px rgba(0,0,0,0.4);
+    color:rgba(255,255,255,0.9); font-size:0.85rem; letter-spacing:2px;
+    background:rgba(0,0,0,0.25); padding:4px 12px; border-radius:20px;
   }
   .site-img.photo {
     background-size:cover; background-position:center;
@@ -245,12 +174,12 @@
     padding:22px 24px 26px;
     min-height:9.5rem;
   }
-  .site-name { font-size:1.12rem; font-weight:700; color:var(--green-dark); margin-bottom:10px; letter-spacing:0.02em; }
+  .site-name { font-size:1.12rem; font-weight:700; color:var(--green-dark); margin-bottom:10px; }
   .site-desc {
     font-size:0.95rem;
     color:var(--text);
-    line-height:1.82;
-    letter-spacing:0.035em;
+    line-height:1.78;
+    letter-spacing:0.01em;
   }
 
   /* ── VIDEO CARD（點擊照片播放 · Day1 栗子攤等）── */
@@ -1020,8 +949,7 @@
     background:linear-gradient(135deg,rgba(27,67,50,0.05) 0%,rgba(212,168,67,0.05) 100%);
     border:1px solid rgba(27,67,50,0.12);
     border-left:4px solid var(--gold);
-    border-radius:12px; margin-bottom:20px;
-    padding: clamp(20px, 6vw, 28px) clamp(18px, 6vw, 32px);
+    border-radius:12px; padding:28px 32px; margin-bottom:20px;
   }
   .history-panel h3 {
     color:var(--green-dark); font-size:1rem; font-weight:700;
@@ -1036,8 +964,7 @@
 
   .extra-tip {
     background:rgba(212,168,67,0.1); border:1px dashed rgba(212,168,67,0.5);
-    border-radius:10px; margin-top:16px;
-    padding: clamp(12px, 4vw, 16px) clamp(14px, 5vw, 20px);
+    border-radius:10px; padding:16px 20px; margin-top:16px;
     font-size:0.88rem; color:#5a4a00;
   }
   .extra-tip::before { content:'✦ 額外推薦 '; font-weight:700; color:var(--gold); }
@@ -1217,8 +1144,39 @@
     .back-top { display: none; }
   }
 
-  /* 長文摺疊（Read More）樣式定義於下方「全站描述適用」區塊（原本此處
-     與該區塊重複宣告完全相同的規則，已合併移除重複，數值零變動）。 */
+  /* ── 長文摺疊（Read More）· 影片卡描述 ──────────────────────────
+     由 shell.html 的 Video Renderer 自動量測，內容超過三行才掛載按鈕。
+     漸層沒入卡片底色 var(--card-bg)；按鈕用 var(--green-mid)，
+     --gold 在白底上對比僅約 2.1:1，不作為文字色。 */
+  .site-desc--foldable {
+    position:relative;
+    overflow:hidden;
+    transition:max-height 0.4s ease-in-out;
+  }
+  .site-desc--foldable.is-collapsed { max-height:80px; }
+  .site-desc--foldable.is-expanded  { max-height:1600px; }
+  .site-desc__fade {
+    position:absolute; left:0; bottom:0;
+    width:100%; height:38px;
+    pointer-events:none; z-index:2;
+    background:linear-gradient(transparent, var(--card-bg));
+    transition:opacity 0.3s ease;
+  }
+  .site-desc--foldable.is-expanded .site-desc__fade { opacity:0; }
+  .site-desc__more {
+    display:block; width:100%;
+    margin-top:6px; padding:8px 0;
+    background:transparent; border:none;
+    font-family:inherit; font-size:0.88rem; font-weight:500;
+    letter-spacing:0.05em;
+    color:var(--green-mid);
+    cursor:pointer; text-align:center;
+  }
+  .site-desc__more:hover { color:var(--green-dark); text-decoration:underline; }
+  .site-desc__more:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+  @media (prefers-reduced-motion: reduce) {
+    .site-desc--foldable { transition:none; }
+  }
 
   /* ═══════════════════════════════════════════════════════════════
      影片 = 獨立內容區塊（不是卡片內容）
