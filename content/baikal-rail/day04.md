@@ -2,7 +2,7 @@
 :::meta lodging=Chinggis Khaan Hotel 或同級  meals=早：飯店內／午：蒙式料理／晚：中式料理
 
 ## 古蹟
-### ![哈爾和林河谷](day04/harhorin-gas-queue.jpg) 哈爾和林河谷
+### ![哈爾和林河谷](day04/harhorin-valley.jpg) 哈爾和林河谷
 鄂爾渾河在谷底劃出幾個大灣，兩岸草地被水浸得鮮綠，馬群散在沙洲上低頭吃草，對岸還有一頂白色蒙古包。成吉思汗選這裡建帝國首都，這片河谷本身就有一種讓人不想離開的穩。帝國早就散了，河還在流。
 
 ### ![柏格多汗冬宮](day04/bogd-khan-winter-palace.jpg) 柏格多汗冬宮
