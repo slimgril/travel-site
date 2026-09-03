@@ -164,6 +164,7 @@ def split_days(body):
 def parse_day_heading(h):
     parts = [s.strip() for s in re.split(r'｜|\|', h)]
     day_num, dt, rest = '', '', ''
+    kicker = parts[0] if parts else ''  # 無 day_num 時（跨日主題特輯）拿來當徽章文字
     if len(parts) >= 3:
         mnum = re.search(r'\d+', parts[0])
         day_num = mnum.group(0) if mnum else ''
@@ -177,7 +178,7 @@ def parse_day_heading(h):
         i = rest.find(dash.group(0))
         route = rest[:i].strip()
         title = rest[i + len(dash.group(0)):].strip()
-    return {'day_num': day_num, 'date': dt, 'route': route, 'title': title}
+    return {'day_num': day_num, 'date': dt, 'route': route, 'title': title, 'kicker': kicker}
 
 
 def classify_block(label):
@@ -579,11 +580,17 @@ def render_day(day, slug, status, gi, landmarks=None):
     did = ('d%s' % head['day_num']) if head['day_num'] else ''
     day_extra_class = ' day-section--diagonal' if use_diagonal else ''
     route_div = ('<div class="route">%s</div>' % route_html(head['route'])) if head['route'] else ''
+    # 無 day_num 的頁面（例如跨日主題特輯：美食/鐵路）不套用 DAY N 徽章，
+    # 改用 route 前兩字當作徽章文字、label 固定「特輯」。
+    if head['day_num']:
+        badge_num, badge_label = head['day_num'], 'DAY'
+    else:
+        badge_num, badge_label = (head.get('kicker') or head['route'] or '')[:2], '特輯'
     return (
         '<div class="day-divider"></div>\n'
         '<section class="day-section%s" id="%s">\n'
         '  <div class="day-header">\n'
-        '    <div class="day-badge"><div class="num">%s</div><div class="label">DAY</div></div>\n'
+        '    <div class="day-badge"><div class="num">%s</div><div class="label">%s</div></div>\n'
         '    <div class="day-info">\n'
         '      <div class="date">%s</div>\n'
         '      <h2>%s</h2>\n'
@@ -594,7 +601,7 @@ def render_day(day, slug, status, gi, landmarks=None):
         '%s\n'
         '%s\n'
         '</section>' % (
-            day_extra_class, did, esc(head['day_num']), esc(head['date']),
+            day_extra_class, did, esc(badge_num), badge_label, esc(head['date']),
             esc(head['title'] or head['route']), route_div, acc, meta_tip,
             '\n'.join(s for s in sections if s)
         )
