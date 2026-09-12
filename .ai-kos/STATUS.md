@@ -1,6 +1,16 @@
 # STATUS — travel-site
 
-最後更新：2026-09-12（jiuzhaigou 新旅程開站 · Day1-2 上線）
+最後更新：2026-09-12（jiuzhaigou Day1-3 全部上線）
+
+## 2026-09-12 — jiuzhaigou（九寨溝）Day 3 補齊（斌哥已確認景點）
+
+| 項目 | 狀態 |
+|------|------|
+| **Day3（09/10）** | 斌哥已確認景點名稱＋描述文，五花海／珍珠灘／五彩池／鏡海／犀牛海／樹正溝（瀑布・群海・白塔・轉經筒）／蘆葦海，12 圖＋2 影片，已寫入 `day03.md` |
+| **順序還原** | 當天照片同樣無 GPS；用 EXIF `DateTimeOriginal`（此相機檔名與 EXIF 剛好完全反序，已驗證是單調反轉關係）＋影片畫面內嵌地名浮水印還原實際遊覽順序 |
+| **Build** | PASS（0 缺圖） |
+| **Deploy** | PASS — https://travel-site-quarter.pages.dev/trips/jiuzhaigou |
+| **Commit** | `cf996bd`（push 曾因網路逾時失敗一次，已背景重試） |
 
 ## 2026-09-12 — jiuzhaigou（九寨溝）新旅程開站
 
@@ -10,7 +20,7 @@
 | **Source** | Google Drive `20260907 九寨溝`（day08/day09/day10 子資料夾＋斌哥 output 描述文） |
 | **Day1（09/08）** | 都江堰水利工程＋仰天窩廣場＋茂縣中國古羌城，11 圖＋3 影片，已寫入 `day01.md` |
 | **Day2（09/09）** | 汶川封路改道疊溪海子／松潘古城，5 圖，已寫入 `day02.md` |
-| **Day3（09/10）** | **暫緩** — 約 7 張照片缺 GPS，景點名稱待斌哥回覆確認，不猜測 |
+| **Day3（09/10）** | 已補齊，見上方 |
 | **影片壓縮** | 3 支原始 mp4（139MB／35MB／138MB）已 ffmpeg 壓至 <25MB 供 repo／部署共用；原始高畫質檔僅保留於 Google Drive（此 repo 無 Git LFS，無法比照政策保留 >100MB 原始檔於 `photos/`，屬本次已知例外） |
 | **Build** | PASS（`build_prototype.py`／`build.py` 均 0 缺圖） |
 | **Deploy** | PASS — Cloudflare Pages `travel-site-quarter`（沿用本季既有 project，未另開新季站；待西伯利亞正式收官後再由 Owner 決定是否需要新 Pages project） |
