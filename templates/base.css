@@ -133,6 +133,16 @@
   @media (max-width:480px) {
     .sites-grid { grid-template-columns:1fr; }
   }
+  /* jiuzhaigou（2026-09-12 Owner 要求）：沿用 lvhun/vol1/baikal.html 驗證過的
+     彈性 5 欄相簿網格（commit c54728a）——手機/平板 auto-fit 依寬度彈性決定欄數，
+     桌機（≥900px）鎖定 5 欄，感受上下載更快；僅 jiuzhaigou 套用，不影響其他旅程。 */
+  .sites-grid--fast {
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap:12px;
+  }
+  @media (min-width:900px) {
+    .sites-grid--fast { grid-template-columns:repeat(5, 1fr); }
+  }
   .site-card {
     border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
     background:var(--card-bg); transition:transform 0.2s;

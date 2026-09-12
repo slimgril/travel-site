@@ -310,13 +310,16 @@ def render_video_block(slug, img, video, name, desc):
         play_icon, play_hint = '🌰', '點我看反差 →'
     else:
         play_icon, play_hint = '▶', '點擊播放 →'
+    # jiuzhaigou（2026-09-12 Owner 要求）：preload="none"，比照其他旅程的
+    # "metadata" 更積極延後載入，加強「下載感覺飛快」的效果；其他旅程不變。
+    preload = 'none' if slug == 'jiuzhaigou' else 'metadata'
     return (
         '      <div class="site-card site-card--video">\n'
         '        <div class="site-img video-card" role="button" tabindex="0" '
         'aria-label="點擊播放：%s" '
         'style="background-image:url(\'%s\')">\n'
         '          <video class="video-card__media" muted playsinline '
-        'preload="metadata" src="%s"></video>\n'
+        'preload="%s" src="%s"></video>\n'
         '          <span class="video-badge" aria-hidden="true">影片</span>\n'
         '          <span class="chestnut-play" aria-hidden="true">%s</span>\n'
         '          <span class="video-hint" aria-hidden="true">%s</span>\n'
@@ -326,7 +329,7 @@ def render_video_block(slug, img, video, name, desc):
         '          <div class="site-desc">%s</div>\n'
         '        </div>\n'
         '      </div>'
-        % (esc(name), poster, src, play_icon, play_hint, esc(name), inline(desc))
+        % (esc(name), poster, preload, src, play_icon, play_hint, esc(name), inline(desc))
     )
 
 
@@ -342,11 +345,22 @@ def render_sites(block, slug, gi):
             regular.append(render_video_block(slug, img, video, name, desc))
             continue
         if img:
-            img_div = (
-                '        <div class="site-img photo" '
-                'style="background-image:url(\'../photos/%s/%s\')">'
-                '<div class="img-label">%s</div></div>' % (slug, img, esc(name))
-            )
+            # jiuzhaigou（2026-09-12 Owner 要求）：改用 <img loading="lazy"> 取代
+            # background-image，讓瀏覽器原生懶載入視窗外的照片，感受上下載更快；
+            # 其他旅程沿用原本 background-image 寫法，不動既有頁面。
+            if slug == 'jiuzhaigou':
+                img_div = (
+                    '        <div class="site-img photo">'
+                    '<img src="../photos/%s/%s" alt="%s" loading="lazy" decoding="async" '
+                    'style="position:absolute;inset:0;width:100%%;height:100%%;object-fit:cover;">'
+                    '<div class="img-label">%s</div></div>' % (slug, img, esc(name), esc(name))
+                )
+            else:
+                img_div = (
+                    '        <div class="site-img photo" '
+                    'style="background-image:url(\'../photos/%s/%s\')">'
+                    '<div class="img-label">%s</div></div>' % (slug, img, esc(name))
+                )
         else:
             img_div = (
                 '        <div class="site-img %s"><div class="img-label">%s</div></div>'
@@ -366,6 +380,11 @@ def render_sites(block, slug, gi):
         return ''
     n = len(regular)
     extra = ' sites-grid--pair' if n == 2 else ' sites-grid--solo' if n == 1 else ''
+    # jiuzhaigou（2026-09-12 Owner 要求）：沿用 lvhun/vol1/baikal.html 驗證過的
+    # 「彈性 5 欄相簿網格」（commit c54728a），桌機 ≥900px 固定 5 欄、行動裝置彈性欄數；
+    # 僅套用在非 pair/solo 的一般網格，且僅限 jiuzhaigou，其他旅程網格不變。
+    if slug == 'jiuzhaigou' and not extra:
+        extra = ' sites-grid--fast'
     return '    <div class="sites-grid%s">\n%s\n    </div>' % (extra, '\n'.join(regular))
 
 
