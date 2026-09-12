@@ -1,6 +1,22 @@
 # STATUS — travel-site
 
-最後更新：2026-07-31（Day5「忍不住」句式替換 · Pages deploy）
+最後更新：2026-09-12（jiuzhaigou 新旅程開站 · Day1-2 上線）
+
+## 2026-09-12 — jiuzhaigou（九寨溝）新旅程開站
+
+| 項目 | 狀態 |
+|------|------|
+| **Trip** | 新增 `jiuzhaigou`（World Journey #004），status=ongoing |
+| **Source** | Google Drive `20260907 九寨溝`（day08/day09/day10 子資料夾＋斌哥 output 描述文） |
+| **Day1（09/08）** | 都江堰水利工程＋仰天窩廣場＋茂縣中國古羌城，11 圖＋3 影片，已寫入 `day01.md` |
+| **Day2（09/09）** | 汶川封路改道疊溪海子／松潘古城，5 圖，已寫入 `day02.md` |
+| **Day3（09/10）** | **暫緩** — 約 7 張照片缺 GPS，景點名稱待斌哥回覆確認，不猜測 |
+| **影片壓縮** | 3 支原始 mp4（139MB／35MB／138MB）已 ffmpeg 壓至 <25MB 供 repo／部署共用；原始高畫質檔僅保留於 Google Drive（此 repo 無 Git LFS，無法比照政策保留 >100MB 原始檔於 `photos/`，屬本次已知例外） |
+| **Build** | PASS（`build_prototype.py`／`build.py` 均 0 缺圖） |
+| **Deploy** | PASS — Cloudflare Pages `travel-site-quarter`（沿用本季既有 project，未另開新季站；待西伯利亞正式收官後再由 Owner 決定是否需要新 Pages project） |
+| **Live** | https://travel-site-quarter.pages.dev/trips/jiuzhaigou |
+| **Commit** | `978b537` |
+| **待確認** | trip.md 的 `date_end`（暫填 2026-09-10 佔位）與完整行程天數／終點，待斌哥告知後補正 |
 
 ## 2026-07-31 — Day 5「忍不住」重複句式（斌哥建議）
 
