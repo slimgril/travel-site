@@ -658,6 +658,33 @@
             eggCard._eggVideo = null;
           }
         }
+
+        /* 彩蛋骨架（2026-09-13 追加）：data-fold-video——跟 data-egg-type
+           完全獨立的第二組驚喜。展開的瞬間把「太座本人現場實拍的活動影片」
+           （不是合成特效）用放大＋淡入的方式「噴」出來蓋住原本的靜態縮圖，
+           有聲音；收合時 pause()+remove() 乾淨移除。 */
+        if (opening && eggCard.dataset.foldVideo && !eggCard._foldVideo) {
+          var foldStage = eggCard.querySelector('.site-img.photo, .site-img.video-card');
+          if (foldStage) {
+            var fv = document.createElement('video');
+            fv.className = 'egg-fold-video';
+            fv.src = eggCard.dataset.foldVideo;
+            fv.loop = true;
+            fv.muted = false;
+            fv.volume = 0.5;
+            fv.playsInline = true;
+            fv.setAttribute('aria-hidden', 'true');
+            foldStage.appendChild(fv);
+            eggCard._foldVideo = fv;
+            requestAnimationFrame(function () { if (eggCard._foldVideo) eggCard._foldVideo.classList.add('egg-fold-video--in'); });
+            var fvPlay = fv.play();
+            if (fvPlay && fvPlay.catch) fvPlay.catch(function () {});
+          }
+        } else if (!opening && eggCard._foldVideo) {
+          eggCard._foldVideo.pause();
+          eggCard._foldVideo.remove();
+          eggCard._foldVideo = null;
+        }
       }
     });
 

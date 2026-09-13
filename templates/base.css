@@ -1253,9 +1253,22 @@
     pointer-events:none;
   }
   .egg-video--in { opacity:1; }
+  /* data-fold-video（2026-09-13 追加）：太座本人現場實拍的活動影片，
+     展開瞬間用「放大彈跳＋淡入」蓋住靜態縮圖，有聲音（非 egg-video 的
+     靜音合成特效）；cubic-bezier 的輕微 overshoot 做出「噴出來」的手感。 */
+  .egg-fold-video {
+    position:absolute; inset:0; z-index:2;
+    width:100%; height:100%;
+    object-fit:cover; object-position:center;
+    opacity:0; transform:scale(0.82);
+    transition:opacity 0.6s ease, transform 0.6s cubic-bezier(0.34,1.56,0.64,1);
+    pointer-events:none;
+  }
+  .egg-fold-video--in { opacity:1; transform:scale(1); }
   @media (prefers-reduced-motion: reduce) {
     .site-card.has-surprise { animation:none; }
     .egg-video { transition:none; }
+    .egg-fold-video { transition:opacity 0.3s ease; transform:none; }
   }
 
   /* ═══════════════════════════════════════════════════════════════

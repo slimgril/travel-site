@@ -347,10 +347,13 @@ def render_sites(block, slug, gi):
         # 彩蛋骨架（2026-09-13 四次校正）：type 改為 ripple——太座本人維持原圖
         # 清晰不變，只有背景瀑布區域用遮罩＋SVG 水波濾鏡造成流動錯覺，
         # 聲音則借同一支急流影片的錄音（見 shell.html type=ripple 分支）。
-        egg_type, egg_source = 'none', ''
+        egg_type, egg_source, fold_video = 'none', '', ''
         if slug == 'jiuzhaigou' and img == 'day03/jiuzhaigou-pearl-shoal-falls.jpg':
             egg_type = 'ripple'
             egg_source = '../photos/%s/day03/jiuzhaigou-pearl-shoal-rapids.mp4' % slug
+            # 2026-09-13 追加：太座本人現場實拍的活動影片（非合成特效），
+            # 「展開更多」時噴出來播放，跟 Lightbox 的 ripple 效果各自獨立。
+            fold_video = '../photos/%s/day03/jiuzhaigou-pearl-shoal-falls-live.mp4' % slug
         if img and video:
             regular.append(render_video_block(slug, img, video, name, desc))
             continue
@@ -378,13 +381,13 @@ def render_sites(block, slug, gi):
             )
             gi[0] += 1
         regular.append(
-            '      <div class="site-card" data-egg-type="%s" data-egg-source="%s">\n'
+            '      <div class="site-card" data-egg-type="%s" data-egg-source="%s" data-fold-video="%s">\n'
             '%s\n'
             '        <div class="site-body">\n'
             '          <div class="site-name">%s</div>\n'
             '          <div class="site-desc">%s</div>\n'
             '        </div>\n'
-            '      </div>' % (egg_type, esc(egg_source), img_div, esc(name), inline(desc))
+            '      </div>' % (egg_type, esc(egg_source), esc(fold_video), img_div, esc(name), inline(desc))
         )
     if not regular:
         return ''
