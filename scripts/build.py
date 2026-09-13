@@ -344,15 +344,13 @@ def render_sites(block, slug, gi):
     for c in cards:
         name, img, _, video = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
-        # 彩蛋骨架（2026-09-13 四次校正）：type 改為 ripple——太座本人維持原圖
-        # 清晰不變，只有背景瀑布區域用遮罩＋SVG 水波濾鏡造成流動錯覺，
-        # 聲音則借同一支急流影片的錄音（見 shell.html type=ripple 分支）。
+        # 彩蛋骨架（2026-09-13 簡化定案）：合成特效（animation/ripple 兩種
+        # 嘗試）效果不理想已移除，改為點照片或按「展開更多」都直接借用既有
+        # 影片 Lightbox 播放太座本人現場實拍的真實影片，見 shell.html
+        # data-fold-video 分支。data-egg-type/data-egg-source 保留原樣
+        # （預設 none）當作未來其他彩蛋類型的骨架，此卡不使用。
         egg_type, egg_source, fold_video = 'none', '', ''
         if slug == 'jiuzhaigou' and img == 'day03/jiuzhaigou-pearl-shoal-falls.jpg':
-            egg_type = 'ripple'
-            egg_source = '../photos/%s/day03/jiuzhaigou-pearl-shoal-rapids.mp4' % slug
-            # 2026-09-13 追加：太座本人現場實拍的活動影片（非合成特效），
-            # 「展開更多」時噴出來播放，跟 Lightbox 的 ripple 效果各自獨立。
             fold_video = '../photos/%s/day03/jiuzhaigou-pearl-shoal-falls-live.mp4' % slug
         if img and video:
             regular.append(render_video_block(slug, img, video, name, desc))

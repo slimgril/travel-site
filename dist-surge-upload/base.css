@@ -1175,49 +1175,6 @@
     color: #fff; font-size: 2rem; line-height: 1; opacity: 0.7;
   }
   #lightbox .lightbox-close:hover { opacity: 1; }
-  /* 彩蛋骨架（2026-09-13）：Lightbox 放大時疊加的驚喜影片，用 JS 算出的
-     實際像素座標對齊放大後的圖片（position:fixed，見 shell.html
-     positionEggVideo），不用 CSS 百分比推算——圖片是等比縮放，尺寸不固定。 */
-  .egg-lightbox-video {
-    position: fixed;
-    z-index: 1;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    opacity: 0;
-    transition: opacity 1s ease;
-    pointer-events: none;
-  }
-  .egg-lightbox-video--in { opacity: 1; }
-  @media (prefers-reduced-motion: reduce) {
-    .egg-lightbox-video { transition: none; }
-  }
-  /* type="ripple"：疊在原圖正上方的複製圖層，套用 #egg-still-mask（人像
-     區域黑=保護）與 #egg-water-ripple（水波位移濾鏡），只有沒被遮罩保護
-     的背景瀑布區域會看起來在流動；人像本身透過遮罩「挖空」，直接透出
-     底下 #lightbox img 的原圖，維持清晰不變。 */
-  .egg-ripple-layer {
-    position: fixed;
-    z-index: 1;
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 1.2s ease;
-    -webkit-mask-image: url(#egg-still-mask);
-    mask-image: url(#egg-still-mask);
-    filter: url(#egg-water-ripple);
-    pointer-events: none;
-  }
-  .egg-ripple-layer--in { opacity: 1; }
-  /* 純音效用的隱藏 video：借瀑布現場錄音當水聲，畫面本身完全不顯示 */
-  .egg-audio-only {
-    position: fixed; top: 0; left: 0;
-    width: 1px; height: 1px;
-    opacity: 0;
-    pointer-events: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .egg-ripple-layer { transition: none; filter: none; }
-  }
 
   /* ── BACK TO TOP（彩色藝術方向指標）── */
   .back-top {
@@ -1511,44 +1468,13 @@
   .site-desc__more:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
 
   /* ── 彩蛋骨架（Easter Egg Scaffold · 2026-09-13）──────────────────
-     .site-card 都帶 data-egg-type="none|animation|surprise-photo" 與
-     data-egg-source（見 scripts/build.py render_sites）。「展開更多」
-     完全展開時，非 none 的卡片會被 JS 掛上 .has-surprise 觸發下面這個
-     通用微動畫；type=animation 時 JS 另外會把 <video class="egg-video">
-     疊在 .site-img 正上方——.egg-video 用 inset:0 + object-fit:cover
-     完全貼合原本相框尺寸（跟卡片圖片同一顯示規則），RWD／全螢幕都不會
-     出現黑邊或裁切；opacity 由 .egg-video--in 觸發 1s 淡入。 */
-  .site-card.has-surprise { animation: egg-pop-in 0.6s ease-out; }
-  @keyframes egg-pop-in {
-    0%   { transform:scale(1);    box-shadow:0 0 0 rgba(212,168,67,0); }
-    35%  { transform:scale(1.03); box-shadow:0 0 24px rgba(212,168,67,0.45); }
-    100% { transform:scale(1);    box-shadow:0 0 0 rgba(212,168,67,0); }
-  }
-  .egg-video {
-    position:absolute; inset:0; z-index:1;
-    width:100%; height:100%;
-    object-fit:cover; object-position:center;
-    opacity:0; transition:opacity 1s ease;
-    pointer-events:none;
-  }
-  .egg-video--in { opacity:1; }
-  /* data-fold-video（2026-09-13 追加）：太座本人現場實拍的活動影片，
-     展開瞬間用「放大彈跳＋淡入」蓋住靜態縮圖，有聲音（非 egg-video 的
-     靜音合成特效）；cubic-bezier 的輕微 overshoot 做出「噴出來」的手感。 */
-  .egg-fold-video {
-    position:absolute; inset:0; z-index:2;
-    width:100%; height:100%;
-    object-fit:cover; object-position:center;
-    opacity:0; transform:scale(0.82);
-    transition:opacity 0.6s ease, transform 0.6s cubic-bezier(0.34,1.56,0.64,1);
-    pointer-events:none;
-  }
-  .egg-fold-video--in { opacity:1; transform:scale(1); }
-  @media (prefers-reduced-motion: reduce) {
-    .site-card.has-surprise { animation:none; }
-    .egg-video { transition:none; }
-    .egg-fold-video { transition:opacity 0.3s ease; transform:none; }
-  }
+     .site-card 都帶 data-egg-type="none"／data-egg-source=""／
+     data-fold-video=""（見 scripts/build.py render_sites）當作未來彩蛋
+     的擴充點；目前唯一啟用的效果（珍珠灘瀑布）不需要額外 CSS——
+     點照片或按「展開更多」都直接借用既有的影片 Lightbox（見上方
+     .video-lightbox 相關樣式）播放真實影片，沒有合成疊圖／濾鏡。
+     曾經試過的「疊加影片」「人像保護＋水波濾鏡」兩種合成效果，
+     因觀感不理想（人像沒有動、有變形感、只聽到背景音）已移除。 */
 
   @media (max-width:720px) {
     .video-stage.is-pillarboxed { padding:18px 0; border-radius:16px; }
