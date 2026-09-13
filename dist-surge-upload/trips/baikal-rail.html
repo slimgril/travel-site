@@ -3849,6 +3849,34 @@
     </g>
   </svg>
 </a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 彩蛋骨架（2026-09-13）：珍珠灘瀑布「活照片」——只讓太座身影以外的
+         背景瀑布區域產生水波扭曲，人像本身維持原圖清晰不變。
+         egg-still-mask：白=套用水波效果／黑=保護區（依人像輪廓手繪估算，
+         邊緣加了模糊讓交界柔和）。egg-water-ripple：animate 讓噪點持續
+         緩慢飄移，displacement 造成水波流動錯覺。 -->
+    <filter id="egg-mask-blur"><feGaussianBlur stdDeviation="0.014"/></filter>
+    <mask id="egg-still-mask" maskContentUnits="objectBoundingBox">
+      <rect x="0" y="0" width="1" height="1" fill="white"/>
+      <path fill="black" filter="url(#egg-mask-blur)" d="
+        M0.52,0.34
+        C0.56,0.28 0.62,0.27 0.68,0.29
+        C0.76,0.31 0.83,0.35 0.87,0.42
+        C0.91,0.50 0.90,0.60 0.89,0.70
+        C0.90,0.82 0.93,0.92 0.97,1.05
+        L0.49,1.05
+        C0.485,0.85 0.485,0.65 0.50,0.50
+        C0.505,0.42 0.51,0.38 0.52,0.34 Z" />
+    </mask>
+    <filter id="egg-water-ripple" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="7" result="egg-noise">
+        <animate attributeName="baseFrequency" dur="9s" values="0.010 0.018;0.015 0.024;0.010 0.018" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="egg-noise" scale="11" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
 <div id="lightbox">
   <span class="lightbox-close">&times;</span>
   <img src="" alt="">
@@ -3878,6 +3906,8 @@
   var lbCaption = lb.querySelector('.lightbox-caption');
   var eggVideo = null;
   var eggResizeHandler = null;
+  var eggRipple = null;   /* type="ripple"：疊在人像以外區域的水波扭曲圖層 */
+  var eggAudio = null;    /* type="ripple"：隱藏的純音效 video（只借它的聲音） */
 
   function extractUrl(el) {
     if (el.tagName === 'IMG') return el.src;
@@ -3900,12 +3930,19 @@
   /* 彩蛋骨架：Lightbox 燈箱放大照片時，讓疊加影片精準貼合放大後圖片的實際
      顯示尺寸（圖片以原比例縮放，不能用死板的 CSS 百分比推算）。 */
   function positionEggVideo() {
-    if (!eggVideo) return;
     var r = lbImg.getBoundingClientRect();
-    eggVideo.style.top = r.top + 'px';
-    eggVideo.style.left = r.left + 'px';
-    eggVideo.style.width = r.width + 'px';
-    eggVideo.style.height = r.height + 'px';
+    if (eggVideo) {
+      eggVideo.style.top = r.top + 'px';
+      eggVideo.style.left = r.left + 'px';
+      eggVideo.style.width = r.width + 'px';
+      eggVideo.style.height = r.height + 'px';
+    }
+    if (eggRipple) {
+      eggRipple.style.top = r.top + 'px';
+      eggRipple.style.left = r.left + 'px';
+      eggRipple.style.width = r.width + 'px';
+      eggRipple.style.height = r.height + 'px';
+    }
   }
   lbImg.addEventListener('load', positionEggVideo);
 
@@ -3916,6 +3953,15 @@
       eggVideo.pause();
       eggVideo.remove();
       eggVideo = null;
+    }
+    if (eggRipple) {
+      eggRipple.remove();
+      eggRipple = null;
+    }
+    if (eggAudio) {
+      eggAudio.pause();
+      eggAudio.remove();
+      eggAudio = null;
     }
     if (eggResizeHandler) {
       window.removeEventListener('resize', eggResizeHandler);
@@ -3932,10 +3978,14 @@
     lbCaption.textContent = caption(el);
     lb.classList.add('open');
 
-    /* 彩蛋骨架（2026-09-13）：照片放大瞬間，若卡片 data-egg-type="animation"，
-       把對應影片疊在放大圖上、播放並附聲音；關閉燈箱時立刻 pause()+remove()。 */
+    /* 彩蛋骨架（2026-09-13）：照片放大瞬間依 data-egg-type 觸發不同驚喜；
+       關閉燈箱時（closeLightbox）一律 pause()+remove()，不殘留聲音與節點。 */
     var card = el.closest('.site-card');
-    if (card && card.dataset.eggType === 'animation' && card.dataset.eggSource) {
+    var eggType = card && card.dataset.eggType;
+
+    if (eggType === 'animation' && card.dataset.eggSource) {
+      /* type=animation：整段影片無縫疊在放大圖正上方（適合場景本身就是
+         影片素材、不需要保留照片裡特定人物的情況）。 */
       var v = document.createElement('video');
       v.className = 'egg-lightbox-video';
       v.src = card.dataset.eggSource;
@@ -3950,6 +4000,36 @@
       requestAnimationFrame(function () { if (eggVideo) eggVideo.classList.add('egg-lightbox-video--in'); });
       var p = v.play();
       if (p && p.catch) p.catch(function () {});
+      eggResizeHandler = positionEggVideo;
+      window.addEventListener('resize', eggResizeHandler);
+
+    } else if (eggType === 'ripple' && card.dataset.eggSource) {
+      /* type=ripple：「活照片」——人像本身維持原圖靜止清晰，只有背景瀑布
+         區域（見 #egg-still-mask 的人像保護區）套用 SVG 水波扭曲濾鏡
+         （#egg-water-ripple）持續緩慢流動；聲音則借用同一支影片的音軌，
+         但影片本身不顯示，純粹當隱藏音源。 */
+      var ripple = lbImg.cloneNode(true);
+      ripple.className = 'egg-ripple-layer';
+      ripple.removeAttribute('alt');
+      ripple.setAttribute('aria-hidden', 'true');
+      lb.appendChild(ripple);
+      eggRipple = ripple;
+      positionEggVideo();
+      requestAnimationFrame(function () { if (eggRipple) eggRipple.classList.add('egg-ripple-layer--in'); });
+
+      var a = document.createElement('video');
+      a.className = 'egg-audio-only';
+      a.src = card.dataset.eggSource;
+      a.loop = true;
+      a.muted = false;
+      a.volume = 0.5;
+      a.playsInline = true;
+      a.setAttribute('aria-hidden', 'true');
+      lb.appendChild(a);
+      eggAudio = a;
+      var ap = a.play();
+      if (ap && ap.catch) ap.catch(function () {});
+
       eggResizeHandler = positionEggVideo;
       window.addEventListener('resize', eggResizeHandler);
     }

@@ -1192,6 +1192,32 @@
   @media (prefers-reduced-motion: reduce) {
     .egg-lightbox-video { transition: none; }
   }
+  /* type="ripple"：疊在原圖正上方的複製圖層，套用 #egg-still-mask（人像
+     區域黑=保護）與 #egg-water-ripple（水波位移濾鏡），只有沒被遮罩保護
+     的背景瀑布區域會看起來在流動；人像本身透過遮罩「挖空」，直接透出
+     底下 #lightbox img 的原圖，維持清晰不變。 */
+  .egg-ripple-layer {
+    position: fixed;
+    z-index: 1;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+    -webkit-mask-image: url(#egg-still-mask);
+    mask-image: url(#egg-still-mask);
+    filter: url(#egg-water-ripple);
+    pointer-events: none;
+  }
+  .egg-ripple-layer--in { opacity: 1; }
+  /* 純音效用的隱藏 video：借瀑布現場錄音當水聲，畫面本身完全不顯示 */
+  .egg-audio-only {
+    position: fixed; top: 0; left: 0;
+    width: 1px; height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .egg-ripple-layer { transition: none; filter: none; }
+  }
 
   /* ── BACK TO TOP（彩色藝術方向指標）── */
   .back-top {

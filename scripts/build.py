@@ -344,11 +344,12 @@ def render_sites(block, slug, gi):
     for c in cards:
         name, img, _, video = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
-        # 彩蛋骨架（2026-09-13 三次校正）：最終定案回到珍珠灘瀑布（太座合照照片卡），
-        # 但這次觸發點是 Lightbox 燈箱放大（見 shell.html），不是「展開更多」。
+        # 彩蛋骨架（2026-09-13 四次校正）：type 改為 ripple——太座本人維持原圖
+        # 清晰不變，只有背景瀑布區域用遮罩＋SVG 水波濾鏡造成流動錯覺，
+        # 聲音則借同一支急流影片的錄音（見 shell.html type=ripple 分支）。
         egg_type, egg_source = 'none', ''
         if slug == 'jiuzhaigou' and img == 'day03/jiuzhaigou-pearl-shoal-falls.jpg':
-            egg_type = 'animation'
+            egg_type = 'ripple'
             egg_source = '../photos/%s/day03/jiuzhaigou-pearl-shoal-rapids.mp4' % slug
         if img and video:
             regular.append(render_video_block(slug, img, video, name, desc))
