@@ -792,8 +792,90 @@
     if (play && play.catch) play.catch(function () { /* 自動播放被擋，使用者按控制列即可 */ });
     lb.querySelector('.video-lightbox__close').focus();
   }
-  /* 讓其他 <script> 區塊（照片 Lightbox、展開更多）也能呼叫這個播放器 */
-  window.__eggOpenVideoLightbox = open;
+  /* ── 彩蛋影片預載（2026-09-13）──────────────────────────────────
+     使用者提供的影片是完成品，只播放、不加工——這裡只做「提前把
+     bytes 抓回來」的效能優化，不碰畫面/聲音內容本身。
+     DOMContentLoaded 就把 data-fold-video 的來源建立成隱藏、
+     preload="auto" 的 <video>，讓瀏覽器在背景先下載好；使用者點擊時
+     直接把這個「早就在下載」的同一個 video 節點搬進燈箱播放——
+     不是重新建立節點、不是重新發一次請求，才能真的做到瞬間播放。 */
+  function parkHidden(v) {
+    v.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;';
+    v.controls = false;
+    document.body.appendChild(v);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.site-card[data-fold-video]').forEach(function (card) {
+      var src = card.dataset.foldVideo;
+      if (!src) return;
+      var v = document.createElement('video');
+      v.preload = 'auto';
+      v.playsInline = true;
+      v.muted = false;
+      v.setAttribute('aria-hidden', 'true');
+      v.src = src;
+      parkHidden(v);
+      card._eggPreloadVideo = v;
+    });
+  });
+
+  var eggOverlay = null;
+  function buildEggOverlay() {
+    if (eggOverlay) return eggOverlay;
+    eggOverlay = document.createElement('div');
+    eggOverlay.className = 'video-lightbox';
+    eggOverlay.setAttribute('role', 'dialog');
+    eggOverlay.setAttribute('aria-modal', 'true');
+    eggOverlay.setAttribute('aria-label', '影片播放');
+    eggOverlay.innerHTML =
+      '<button type="button" class="video-lightbox__close" aria-label="關閉影片">&times;</button>' +
+      '<div class="video-lightbox__stage"></div>';
+    document.body.appendChild(eggOverlay);
+    eggOverlay.querySelector('.video-lightbox__close').addEventListener('click', closeEggOverlay);
+    eggOverlay.addEventListener('click', function (e) {
+      if (e.target === eggOverlay || e.target.classList.contains('video-lightbox__stage')) closeEggOverlay();
+    });
+    return eggOverlay;
+  }
+
+  function openPreloaded(card) {
+    var v = card._eggPreloadVideo;
+    buildEggOverlay();
+    v.style.cssText = '';
+    v.className = 'video-lightbox__video';
+    v.controls = true;
+    eggOverlay.querySelector('.video-lightbox__stage').appendChild(v);
+    eggOverlay.classList.add('is-open');
+    document.body.classList.add('has-video-lightbox');
+    v.currentTime = 0;
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+    eggOverlay.querySelector('.video-lightbox__close').focus();
+  }
+
+  function closeEggOverlay() {
+    if (!eggOverlay || !eggOverlay.classList.contains('is-open')) return;
+    eggOverlay.classList.remove('is-open');
+    document.body.classList.remove('has-video-lightbox');
+    var v = eggOverlay.querySelector('video');
+    if (v) { v.pause(); parkHidden(v); }
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeEggOverlay();
+  });
+
+  /* 讓其他 <script> 區塊（照片 Lightbox、展開更多）呼叫這個進入點：
+     已預載好就走零延遲路徑，萬一還沒預載完（極端情況）才退回原本的
+     通用播放器，維持功能不中斷。 */
+  window.__eggOpenVideoLightbox = function (card, overrideSrc) {
+    if (card._eggPreloadVideo) {
+      openPreloaded(card);
+    } else {
+      open(card, overrideSrc);
+    }
+  };
 
   function close() {
     if (!lb || !lb.classList.contains('is-open')) return;
