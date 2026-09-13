@@ -313,11 +313,9 @@ def render_video_block(slug, img, video, name, desc):
     # jiuzhaigou（2026-09-12 Owner 要求）：preload="none"，比照其他旅程的
     # "metadata" 更積極延後載入，加強「下載感覺飛快」的效果；其他旅程不變。
     preload = 'none' if slug == 'jiuzhaigou' else 'metadata'
-    # 彩蛋骨架（2026-09-13 校正）：首發彩蛋正確位置是珍珠灘灘石（本來就帶播放按鈕的影片卡），
-    # 不是珍珠灘瀑布；data-egg-source 沿用同一支已存在的珍珠灘急流影片。
+    # 彩蛋骨架（2026-09-13 二次校正）：改回 none——大嬸最終定案是珍珠灘瀑布
+    # （帶太座合照的照片卡），透過 Lightbox 燈箱放大觸發，見 render_sites()。
     egg_type, egg_source = 'none', ''
-    if slug == 'jiuzhaigou' and img == 'day03/jiuzhaigou-pearl-shoal-rapids.jpg':
-        egg_type, egg_source = 'animation', src
     return (
         '      <div class="site-card site-card--video" data-egg-type="%s" data-egg-source="%s">\n'
         '        <div class="site-img video-card" role="button" tabindex="0" '
@@ -346,9 +344,12 @@ def render_sites(block, slug, gi):
     for c in cards:
         name, img, _, video = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
-        # 彩蛋骨架（2026-09-13 校正）：珍珠灘瀑布改回 none——首發彩蛋正確位置是
-        # 珍珠灘灘石（影片卡），override 邏輯移到 render_video_block()。
+        # 彩蛋骨架（2026-09-13 三次校正）：最終定案回到珍珠灘瀑布（太座合照照片卡），
+        # 但這次觸發點是 Lightbox 燈箱放大（見 shell.html），不是「展開更多」。
         egg_type, egg_source = 'none', ''
+        if slug == 'jiuzhaigou' and img == 'day03/jiuzhaigou-pearl-shoal-falls.jpg':
+            egg_type = 'animation'
+            egg_source = '../photos/%s/day03/jiuzhaigou-pearl-shoal-rapids.mp4' % slug
         if img and video:
             regular.append(render_video_block(slug, img, video, name, desc))
             continue

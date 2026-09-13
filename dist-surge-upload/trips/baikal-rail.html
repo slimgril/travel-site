@@ -3876,9 +3876,16 @@
   var lb = document.getElementById('lightbox');
   var lbImg = lb.querySelector('img');
   var lbCaption = lb.querySelector('.lightbox-caption');
+  var eggVideo = null;
+  var eggResizeHandler = null;
 
   function extractUrl(el) {
     if (el.tagName === 'IMG') return el.src;
+    /* jiuzhaigou（2026-09-12 起）改用 <img loading="lazy"> 取代 background-image，
+       被點擊的 el 是外層 .site-img.photo，不是 img 本身——這裡補上子層 <img> 的
+       讀取，修正九寨溝照片全部點不開 Lightbox 的迴歸問題。 */
+    var img = el.querySelector && el.querySelector('img');
+    if (img) return img.src;
     var bg = el.style.backgroundImage || getComputedStyle(el).backgroundImage;
     var m = bg && bg.match(/url\((['"]?)(.*?)\1\)/);
     return m ? m[2] : null;
@@ -3890,6 +3897,32 @@
     return el.getAttribute('alt') || '';
   }
 
+  /* 彩蛋骨架：Lightbox 燈箱放大照片時，讓疊加影片精準貼合放大後圖片的實際
+     顯示尺寸（圖片以原比例縮放，不能用死板的 CSS 百分比推算）。 */
+  function positionEggVideo() {
+    if (!eggVideo) return;
+    var r = lbImg.getBoundingClientRect();
+    eggVideo.style.top = r.top + 'px';
+    eggVideo.style.left = r.left + 'px';
+    eggVideo.style.width = r.width + 'px';
+    eggVideo.style.height = r.height + 'px';
+  }
+  lbImg.addEventListener('load', positionEggVideo);
+
+  function closeLightbox() {
+    lb.classList.remove('open');
+    lbImg.src = '';
+    if (eggVideo) {
+      eggVideo.pause();
+      eggVideo.remove();
+      eggVideo = null;
+    }
+    if (eggResizeHandler) {
+      window.removeEventListener('resize', eggResizeHandler);
+      eggResizeHandler = null;
+    }
+  }
+
   document.addEventListener('click', function (e) {
     var el = e.target.closest('.site-img.photo, .live-img');
     if (!el || el.classList.contains('video-card') || e.target.closest('.video-card')) return;
@@ -3898,18 +3931,34 @@
     lbImg.src = src;
     lbCaption.textContent = caption(el);
     lb.classList.add('open');
+
+    /* 彩蛋骨架（2026-09-13）：照片放大瞬間，若卡片 data-egg-type="animation"，
+       把對應影片疊在放大圖上、播放並附聲音；關閉燈箱時立刻 pause()+remove()。 */
+    var card = el.closest('.site-card');
+    if (card && card.dataset.eggType === 'animation' && card.dataset.eggSource) {
+      var v = document.createElement('video');
+      v.className = 'egg-lightbox-video';
+      v.src = card.dataset.eggSource;
+      v.loop = true;
+      v.muted = false;
+      v.volume = 0.5;
+      v.playsInline = true;
+      v.setAttribute('aria-hidden', 'true');
+      lb.appendChild(v);
+      eggVideo = v;
+      positionEggVideo();
+      requestAnimationFrame(function () { if (eggVideo) eggVideo.classList.add('egg-lightbox-video--in'); });
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+      eggResizeHandler = positionEggVideo;
+      window.addEventListener('resize', eggResizeHandler);
+    }
   });
 
-  lb.addEventListener('click', function () {
-    lb.classList.remove('open');
-    lbImg.src = '';
-  });
+  lb.addEventListener('click', closeLightbox);
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      lb.classList.remove('open');
-      lbImg.src = '';
-    }
+    if (e.key === 'Escape') closeLightbox();
   });
 })();
 </script>
