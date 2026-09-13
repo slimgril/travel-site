@@ -2222,6 +2222,11 @@
               stage.appendChild(v);
               eggCard._eggVideo = v;
               requestAnimationFrame(function () { v.classList.add('egg-video--in'); });
+              /* 動態建立的 <video> 光靠 autoplay 屬性不保證會播（部分瀏覽器
+                 對「JS 建立後才插入 DOM」的影片不會自動套用 autoplay 行為），
+                 這裡在使用者剛點擊的手勢情境下明確呼叫 play() 才確保真的會動起來。 */
+              var eggPlayPromise = v.play();
+              if (eggPlayPromise && eggPlayPromise.catch) eggPlayPromise.catch(function () {});
             }
           }
         } else if (!opening) {

@@ -243,7 +243,7 @@
           <div class="site-desc">背靠著欄杆擺了個姿勢，五花海的水色就在身後鋪展開來，深淺不一的藍綠像打翻的顏料盤。撐傘的遊客沿著棧道排成一長串，倒也不覺得心急，反而想多留一會兒，把這片顏色多記住一點。</div>
         </div>
       </div>
-      <div class="site-card site-card--video" data-egg-type="none" data-egg-source="">
+      <div class="site-card site-card--video" data-egg-type="animation" data-egg-source="../photos/jiuzhaigou/day03/jiuzhaigou-pearl-shoal-rapids.mp4">
         <div class="site-img video-card" role="button" tabindex="0" aria-label="點擊播放：珍珠灘灘石" style="background-image:url('../photos/jiuzhaigou/day03/jiuzhaigou-pearl-shoal-rapids.jpg')">
           <video class="video-card__media" muted playsinline preload="none" src="../photos/jiuzhaigou/day03/jiuzhaigou-pearl-shoal-rapids.mp4"></video>
           <span class="video-badge" aria-hidden="true">影片</span>
@@ -255,7 +255,7 @@
           <div class="site-desc">雨絲飄著，眼前這片淺灘讓水流四散成一條條白色細線，在滿是青苔的岩盤上竄來竄去。棧道邊幾株新綠的松樹被雨水洗得發亮，撐傘的遊客沿著棧道慢慢移動。還沒看到真正的瀑布，光是這片碎浪翻湧的灘石，就讓人猜到再往前走會有多壯觀——這裡已經是珍珠灘的範圍了。</div>
         </div>
       </div>
-      <div class="site-card" data-egg-type="animation" data-egg-source="../photos/jiuzhaigou/day03/jiuzhaigou-pearl-shoal-rapids.mp4">
+      <div class="site-card" data-egg-type="none" data-egg-source="">
         <div class="site-img photo"><img src="../photos/jiuzhaigou/day03/jiuzhaigou-pearl-shoal-falls.jpg" alt="珍珠灘瀑布" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"><div class="img-label">珍珠灘瀑布</div></div>
         <div class="site-body">
           <div class="site-name">珍珠灘瀑布</div>
@@ -856,6 +856,11 @@
               stage.appendChild(v);
               eggCard._eggVideo = v;
               requestAnimationFrame(function () { v.classList.add('egg-video--in'); });
+              /* 動態建立的 <video> 光靠 autoplay 屬性不保證會播（部分瀏覽器
+                 對「JS 建立後才插入 DOM」的影片不會自動套用 autoplay 行為），
+                 這裡在使用者剛點擊的手勢情境下明確呼叫 play() 才確保真的會動起來。 */
+              var eggPlayPromise = v.play();
+              if (eggPlayPromise && eggPlayPromise.catch) eggPlayPromise.catch(function () {});
             }
           }
         } else if (!opening) {

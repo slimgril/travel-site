@@ -313,8 +313,13 @@ def render_video_block(slug, img, video, name, desc):
     # jiuzhaigou（2026-09-12 Owner 要求）：preload="none"，比照其他旅程的
     # "metadata" 更積極延後載入，加強「下載感覺飛快」的效果；其他旅程不變。
     preload = 'none' if slug == 'jiuzhaigou' else 'metadata'
+    # 彩蛋骨架（2026-09-13 校正）：首發彩蛋正確位置是珍珠灘灘石（本來就帶播放按鈕的影片卡），
+    # 不是珍珠灘瀑布；data-egg-source 沿用同一支已存在的珍珠灘急流影片。
+    egg_type, egg_source = 'none', ''
+    if slug == 'jiuzhaigou' and img == 'day03/jiuzhaigou-pearl-shoal-rapids.jpg':
+        egg_type, egg_source = 'animation', src
     return (
-        '      <div class="site-card site-card--video" data-egg-type="none" data-egg-source="">\n'
+        '      <div class="site-card site-card--video" data-egg-type="%s" data-egg-source="%s">\n'
         '        <div class="site-img video-card" role="button" tabindex="0" '
         'aria-label="點擊播放：%s" '
         'style="background-image:url(\'%s\')">\n'
@@ -329,7 +334,7 @@ def render_video_block(slug, img, video, name, desc):
         '          <div class="site-desc">%s</div>\n'
         '        </div>\n'
         '      </div>'
-        % (esc(name), poster, preload, src, play_icon, play_hint, esc(name), inline(desc))
+        % (egg_type, esc(egg_source), esc(name), poster, preload, src, play_icon, play_hint, esc(name), inline(desc))
     )
 
 
@@ -341,12 +346,9 @@ def render_sites(block, slug, gi):
     for c in cards:
         name, img, _, video = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
-        # 彩蛋骨架（2026-09-13 Owner 要求）：預設 none，僅九寨溝珍珠灘瀑布首發啟用；
-        # data-egg-source 沿用同一天已存在的珍珠灘急流影片，非憑空路徑。
+        # 彩蛋骨架（2026-09-13 校正）：珍珠灘瀑布改回 none——首發彩蛋正確位置是
+        # 珍珠灘灘石（影片卡），override 邏輯移到 render_video_block()。
         egg_type, egg_source = 'none', ''
-        if slug == 'jiuzhaigou' and img == 'day03/jiuzhaigou-pearl-shoal-falls.jpg':
-            egg_type = 'animation'
-            egg_source = '../photos/%s/day03/jiuzhaigou-pearl-shoal-rapids.mp4' % slug
         if img and video:
             regular.append(render_video_block(slug, img, video, name, desc))
             continue
