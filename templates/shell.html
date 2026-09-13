@@ -492,6 +492,39 @@
       btn.textContent = opening ? '收合 ▴' : '展開更多 ▾';
       btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
       if (!opening && !reduceMotion()) desc.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      /* 彩蛋骨架（2026-09-13）：完全展開瞬間，若卡片 data-egg-type 不是 none
+         就掛上 .has-surprise；type=animation 時另外把一段影片無縫疊在原本
+         靜態圖片正上方，自動播放/循環/靜音；收合時整段移除釋放資源。 */
+      var eggCard = desc.closest('.site-card');
+      if (eggCard) {
+        var eggType = eggCard.dataset.eggType;
+        if (opening && eggType && eggType !== 'none') {
+          eggCard.classList.add('has-surprise');
+          if (eggType === 'animation' && eggCard.dataset.eggSource && !eggCard._eggVideo) {
+            var stage = eggCard.querySelector('.site-img.photo, .site-img.video-card');
+            if (stage) {
+              var v = document.createElement('video');
+              v.className = 'egg-video';
+              v.src = eggCard.dataset.eggSource;
+              v.autoplay = true;
+              v.loop = true;
+              v.muted = true;
+              v.playsInline = true;
+              v.setAttribute('aria-hidden', 'true');
+              stage.appendChild(v);
+              eggCard._eggVideo = v;
+              requestAnimationFrame(function () { v.classList.add('egg-video--in'); });
+            }
+          }
+        } else if (!opening) {
+          eggCard.classList.remove('has-surprise');
+          if (eggCard._eggVideo) {
+            eggCard._eggVideo.remove();
+            eggCard._eggVideo = null;
+          }
+        }
+      }
     });
 
     desc.classList.add('is-collapsed');

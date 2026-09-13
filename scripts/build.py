@@ -314,7 +314,7 @@ def render_video_block(slug, img, video, name, desc):
     # "metadata" 更積極延後載入，加強「下載感覺飛快」的效果；其他旅程不變。
     preload = 'none' if slug == 'jiuzhaigou' else 'metadata'
     return (
-        '      <div class="site-card site-card--video">\n'
+        '      <div class="site-card site-card--video" data-egg-type="none" data-egg-source="">\n'
         '        <div class="site-img video-card" role="button" tabindex="0" '
         'aria-label="點擊播放：%s" '
         'style="background-image:url(\'%s\')">\n'
@@ -341,6 +341,12 @@ def render_sites(block, slug, gi):
     for c in cards:
         name, img, _, video = split_heading_image(c['heading'])
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
+        # 彩蛋骨架（2026-09-13 Owner 要求）：預設 none，僅九寨溝珍珠灘瀑布首發啟用；
+        # data-egg-source 沿用同一天已存在的珍珠灘急流影片，非憑空路徑。
+        egg_type, egg_source = 'none', ''
+        if slug == 'jiuzhaigou' and img == 'day03/jiuzhaigou-pearl-shoal-falls.jpg':
+            egg_type = 'animation'
+            egg_source = '../photos/%s/day03/jiuzhaigou-pearl-shoal-rapids.mp4' % slug
         if img and video:
             regular.append(render_video_block(slug, img, video, name, desc))
             continue
@@ -368,13 +374,13 @@ def render_sites(block, slug, gi):
             )
             gi[0] += 1
         regular.append(
-            '      <div class="site-card">\n'
+            '      <div class="site-card" data-egg-type="%s" data-egg-source="%s">\n'
             '%s\n'
             '        <div class="site-body">\n'
             '          <div class="site-name">%s</div>\n'
             '          <div class="site-desc">%s</div>\n'
             '        </div>\n'
-            '      </div>' % (img_div, esc(name), inline(desc))
+            '      </div>' % (egg_type, esc(egg_source), img_div, esc(name), inline(desc))
         )
     if not regular:
         return ''

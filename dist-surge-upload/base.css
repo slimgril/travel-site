@@ -1467,6 +1467,33 @@
   .site-desc__more:hover { color:var(--green-dark); text-decoration:underline; }
   .site-desc__more:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
 
+  /* ── 彩蛋骨架（Easter Egg Scaffold · 2026-09-13）──────────────────
+     .site-card 都帶 data-egg-type="none|animation|surprise-photo" 與
+     data-egg-source（見 scripts/build.py render_sites）。「展開更多」
+     完全展開時，非 none 的卡片會被 JS 掛上 .has-surprise 觸發下面這個
+     通用微動畫；type=animation 時 JS 另外會把 <video class="egg-video">
+     疊在 .site-img 正上方——.egg-video 用 inset:0 + object-fit:cover
+     完全貼合原本相框尺寸（跟卡片圖片同一顯示規則），RWD／全螢幕都不會
+     出現黑邊或裁切；opacity 由 .egg-video--in 觸發 1s 淡入。 */
+  .site-card.has-surprise { animation: egg-pop-in 0.6s ease-out; }
+  @keyframes egg-pop-in {
+    0%   { transform:scale(1);    box-shadow:0 0 0 rgba(212,168,67,0); }
+    35%  { transform:scale(1.03); box-shadow:0 0 24px rgba(212,168,67,0.45); }
+    100% { transform:scale(1);    box-shadow:0 0 0 rgba(212,168,67,0); }
+  }
+  .egg-video {
+    position:absolute; inset:0; z-index:1;
+    width:100%; height:100%;
+    object-fit:cover; object-position:center;
+    opacity:0; transition:opacity 1s ease;
+    pointer-events:none;
+  }
+  .egg-video--in { opacity:1; }
+  @media (prefers-reduced-motion: reduce) {
+    .site-card.has-surprise { animation:none; }
+    .egg-video { transition:none; }
+  }
+
   @media (max-width:720px) {
     .video-stage.is-pillarboxed { padding:18px 0; border-radius:16px; }
     .chestnut-play { width:70px; height:70px; font-size:1.55rem; }
