@@ -4402,7 +4402,10 @@
          播放這支真實影片。 */
       var eggCard = desc.closest('.site-card');
       if (eggCard && eggCard.dataset.foldVideo && window.__eggOpenVideoLightbox) {
-        window.__eggOpenVideoLightbox(eggCard, eggCard.dataset.foldVideo);
+        /* 展開更多 → 停滯 1 秒醞釀 → 才播放影片（2026-09-14 使用者指定的節奏） */
+        setTimeout(function () {
+          window.__eggOpenVideoLightbox(eggCard, eggCard.dataset.foldVideo);
+        }, 1000);
         return;
       }
 
