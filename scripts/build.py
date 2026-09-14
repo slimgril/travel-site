@@ -181,6 +181,17 @@ def parse_day_heading(h):
     return {'day_num': day_num, 'date': dt, 'route': route, 'title': title, 'kicker': kicker}
 
 
+def day_anchor_id(head):
+    """錨點 id：有 day_num 用 d<N>（既有慣例）；無 day_num（跨日主題特輯，例如
+    美食/火車）改用 kicker 清成安全字元後的 feature-<kicker>，讓這類頁面也能被
+    深連結／排進導覽列，不會因為沒有 day_num 就沒有錨點（2026-09-15 修正：
+    這個缺口導致美食/火車特輯雖然內容都在，卻進不了 #d 導覽、也點不到）。"""
+    if head['day_num']:
+        return 'd%s' % head['day_num']
+    safe = re.sub(r'[^\w一-鿿]+', '', head.get('kicker') or head.get('route') or 'x')
+    return 'feature-%s' % (safe or 'x')
+
+
 def classify_block(label):
     l = label.lower()
     # Sites: ancient sites, meals, accommodation, experiences, landscapes, activities
@@ -607,7 +618,7 @@ def render_day(day, slug, status, gi, landmarks=None):
         elif b['kind'] == 'plan':
             sections.append(render_plan(b, landmarks, diagonal=use_diagonal, slug=slug))
 
-    did = ('d%s' % head['day_num']) if head['day_num'] else ''
+    did = day_anchor_id(head)
     day_extra_class = ' day-section--diagonal' if use_diagonal else ''
     route_div = ('<div class="route">%s</div>' % route_html(head['route'])) if head['route'] else ''
     # 無 day_num 的頁面（例如跨日主題特輯：美食/鐵路）不套用 DAY N 徽章，
@@ -675,9 +686,15 @@ def render_trip_page(trip, shell, prev_trip, next_trip, landmarks=None):
     nav_items = []
     for d in days:
         h = parse_day_heading(d['heading'])
+        aid = day_anchor_id(h)
         if h['day_num']:
             label = (h['title'] or h['route'])[:4]
-            nav_items.append('  <a href="#d%s">D%s %s</a>' % (h['day_num'], h['day_num'], esc(label)))
+            nav_items.append('  <a href="#%s">D%s %s</a>' % (aid, h['day_num'], esc(label)))
+        else:
+            # 跨日主題特輯（無 day_num，例如美食/火車）：用 kicker 當導覽列文字，
+            # 額外掛 class 供日後想跟一般 DAY N 做視覺區分時使用。
+            label = h.get('kicker') or h['route'] or h['title']
+            nav_items.append('  <a href="#%s" class="days-nav__feature">%s</a>' % (aid, esc(label)))
     nav = ('<nav class="days-nav">\n%s\n</nav>' % ''.join(nav_items)) if nav_items else ''
 
     ee_link = ''

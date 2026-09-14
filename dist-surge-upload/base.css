@@ -124,6 +124,15 @@
     background:rgba(212,168,67,0.2); color:var(--gold);
     border-color:rgba(212,168,67,0.4);
   }
+  /* 跨日主題特輯（美食／火車，無 DAY N）：底色跟一般 DAY 徽章區分，
+     讓使用者一眼看出這兩個不是照時序排的日子，而是額外的主題輯 */
+  .days-nav a.days-nav__feature {
+    background:rgba(212,168,67,0.14); border-color:rgba(212,168,67,0.3);
+    color:var(--gold);
+  }
+  .days-nav a.days-nav__feature:hover {
+    background:rgba(212,168,67,0.28);
+  }
 
   /* 手機：原本 flex-wrap 與 overflow-x 互斥，20 天份 pill 會擠成多行方塊，
      改為單行慣性捲動的時間軸，邊緣淡出手法與地圖卷軸一致。 */
