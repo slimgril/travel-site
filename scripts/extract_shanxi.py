@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # ============================================================================
-#  一次性提取脚本：把 reference/shanxi-golden.html 的内容
+#  一次性提取脚本：把 archive/shanxi-golden.html 的内容
 #  确定性地抽取成 content/shanxi/ 下的 markdown 原稿。
 #
 #  目的：避免手工转写造成改字。机器提取 = 文字 100% 一致。
@@ -14,7 +14,7 @@ import re
 import html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-GOLDEN = os.path.join(ROOT, 'reference', 'shanxi-golden.html')
+GOLDEN = os.path.join(ROOT, 'archive', 'shanxi-golden.html')
 OUT = os.path.join(ROOT, 'content', 'shanxi')
 
 
