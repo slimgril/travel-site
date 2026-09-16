@@ -1,7 +1,9 @@
 # Day 6 ｜ 09/13（日）｜ 成都 → 大熊貓基地 → 寬窄巷子 → IFS → 晚餐變臉秀
 
-## 熊貓基地・景點導覽
+## 景點導覽
 ### ![成都大熊貓繁育研究基地](destination-preview/day06/panda-base-downloaded.jpg) 成都大熊貓繁育研究基地
+
+### ![寬窄巷子](destination-preview/day06/kuanzhai-alley-downloaded.jpg) 寬窄巷子
 
 ## 成都大熊貓繁育研究基地
 ### ![熊貓基地 慵懶午睡](day06/panda-base-sleeping.jpg) 慵懶午睡
@@ -12,9 +14,6 @@
 
 ### ![熊貓基地 入口拱門](day06/panda-base-entrance-arch.jpg) 入口拱門
 熊貓造型的拱門在園區入口處特別醒目，「成都大熊貓繁育研究基地」幾個字大大地嵌在黑色底牌上。兩人並肩站在拱門前留了個影，這趟旅程走到這裡，才算真正踏進了熊貓的家。
-
-## 寬窄巷子・景點導覽
-### ![寬窄巷子](destination-preview/day06/kuanzhai-alley-downloaded.jpg) 寬窄巷子
 
 ## 寬窄巷子
 ### ![寬窄巷子 長嘴壺茶藝](day06/kuanzhai-long-spout-teapot.jpg) 長嘴壺茶藝

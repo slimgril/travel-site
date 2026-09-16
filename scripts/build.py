@@ -352,8 +352,11 @@ def render_sites(block, slug, gi):
     if not cards:
         return ''
     regular = []
+    preview_flags = []
     for c in cards:
         name, img, _, video = split_heading_image(c['heading'])
+        is_preview = bool(img) and img.startswith('destination-preview/')
+        preview_flags.append(is_preview)
         desc = ' '.join(p['text'] for p in classify_paras(c['lines']) if p['type'] == 'p')
         # 彩蛋骨架（2026-09-13 簡化定案）：合成特效（animation/ripple 兩種
         # 嘗試）效果不理想已移除，改為點照片或按「展開更多」都直接借用既有
@@ -389,6 +392,16 @@ def render_sites(block, slug, gi):
                 % (GRADIENTS[gi[0] % len(GRADIENTS)], esc(name))
             )
             gi[0] += 1
+        # 景點導覽卡（destination_preview）：只有一張圖＋景點名稱，不附描述文、
+        # 也不留 site-body 空白區塊——名稱直接用既有的 img-label 疊加在圖片上
+        # （2026-09-17 Owner 定案：骨架固定三區塊，景點導覽區永遠全尺寸展示）。
+        if is_preview:
+            regular.append(
+                '      <div class="site-card site-card--preview" data-egg-type="none" data-egg-source="">\n'
+                '%s\n'
+                '      </div>' % img_div
+            )
+            continue
         regular.append(
             '      <div class="site-card" data-egg-type="%s" data-egg-source="%s" data-fold-video="%s">\n'
             '%s\n'
@@ -401,12 +414,17 @@ def render_sites(block, slug, gi):
     if not regular:
         return ''
     n = len(regular)
+    all_preview = bool(preview_flags) and all(preview_flags)
     extra = ' sites-grid--pair' if n == 2 else ' sites-grid--solo' if n == 1 else ''
     # jiuzhaigou（2026-09-12 Owner 要求）：沿用 lvhun/vol1/baikal.html 驗證過的
     # 「彈性 5 欄相簿網格」（commit c54728a），桌機 ≥900px 固定 5 欄、行動裝置彈性欄數；
     # 僅套用在非 pair/solo 的一般網格，且僅限 jiuzhaigou，其他旅程網格不變。
-    if slug == 'jiuzhaigou' and not extra:
+    # 景點導覽區塊（全部卡片皆為 destination-preview）永遠排除在外，維持大圖
+    # 展示（2026-09-17 Owner 定案：景點導覽「頂多兩三張、全尺寸展示」）。
+    if slug == 'jiuzhaigou' and not extra and not all_preview:
         extra = ' sites-grid--fast'
+    if all_preview:
+        extra += ' sites-grid--preview'
     return '    <div class="sites-grid%s">\n%s\n    </div>' % (extra, '\n'.join(regular))
 
 

@@ -4,8 +4,10 @@
 ### 汶川封路，臨時改道
 原本今天該直奔黃龍，車子卻在汶川被攔了下來——山路封閉，一等就是四個多小時。黃龍改到後天再去，行程就地翻篇，臨時加了疊溪海子和松潘古城兩站，意外拼出這天的路線。
 
-## 疊溪海子・景點導覽
+## 景點導覽
 ### ![疊溪海子](destination-preview/day02/diexi-lake-downloaded.jpg) 疊溪海子
+
+### ![松潘古城](destination-preview/day02/songpan-old-city-downloaded.png) 松潘古城
 
 ## 疊溪海子
 ### ![疊溪海子 犛牛合影](day02/diexi-yak-selfie.jpg) 犛牛合影
@@ -16,9 +18,6 @@
 
 ### ![疊溪海子 雲霧湖景](day02/diexi-lake-mist.jpg) 雲霧湖景
 坐在車上悶了老半天，一下車卻被這片雲霧繚繞的碧色湖水看得出神，滿肚子的煩悶不知不覺被拋到腦後。山谷安靜得幾乎聽不見任何雜音，那種豁然開朗的舒坦，比原訂的行程更讓人捨不得移開視線。
-
-## 松潘古城・景點導覽
-### ![松潘古城](destination-preview/day02/songpan-old-city-downloaded.png) 松潘古城
 
 ## 松潘古城
 ### ![松潘古城門 石雕合影](day02/songpan-gate-statue-couple.jpg) 古城門合影

@@ -1,9 +1,13 @@
 # Day 5 ｜ 09/12（六）｜ 樂山 → 報國寺 → 樂山大佛 → 蘇稽古鎮
 
-## 報國寺・景點導覽
+## 景點導覽
 ### ![報國寺](destination-preview/day05/baoguo-temple-downloaded.jpg) 報國寺
 
 ### ![伏虎寺](destination-preview/day05/fuhu-temple-downloaded.jpg) 伏虎寺
+
+### ![樂山大佛](destination-preview/day05/leshan-buddha-downloaded.jpg) 樂山大佛
+
+### ![蘇稽古鎮](destination-preview/day05/suji-ancient-town-downloaded.jpg) 蘇稽古鎮
 
 ## 報國寺
 ### ![報國寺 華嚴寶塔](day05/baoguo-temple-pagoda-morning.jpg) 華嚴寶塔
@@ -18,9 +22,6 @@
 ### ![報國寺 山門銅獅](day05/baoguo-temple-lion-gate.jpg) 山門銅獅
 山門口那尊銅獅威風凜凜，鬃毛一圈圈捲得細緻，腳下還踩著一隻小獅子，「報國寺」三個燙金大字高高掛在上方。站在獅子旁邊比了比，才發現這尊獅子的氣勢，比想像中還要驚人不少。
 
-## 樂山大佛・景點導覽
-### ![樂山大佛](destination-preview/day05/leshan-buddha-downloaded.jpg) 樂山大佛
-
 ## 樂山江畔・大佛
 ### ![江邊咖啡時光](day05/leshan-riverside-coffee.jpg) 江邊咖啡時光
 站在江邊欄杆旁，手裡捧著一杯溫熱的咖啡，對岸的碼頭停著幾艘遊船，山色被水氣暈染得有點朦朧。去看大佛之前，先偷得這麼一小段悠閒時光，倒也是旅途裡難得的享受。
@@ -33,9 +34,6 @@
 
 ### ![船近樂山大佛](day05/leshan-giant-buddha-boat.jpg) 船近樂山大佛
 船慢慢靠近崖壁，一尊巨大的佛像從石壁裡浮現出來，先是看到頭頂的螺髻，接著是眉眼、雙手，整座山彷彿都成了佛的身軀。雙手合十的那一刻，忽然想起這尊大佛是唐代高僧海通耗費畢生心力開鑿，為了鎮住江水的凶險而發願造像，望著眼前這尊歷經千年風霜依然穩坐的巨佛，那種被歲月與信念同時震懾住的感覺，久久沒有散去。
-
-## 蘇稽古鎮・景點導覽
-### ![蘇稽古鎮](destination-preview/day05/suji-ancient-town-downloaded.jpg) 蘇稽古鎮
 
 ## 蘇稽古鎮
 ### ![鞠婆婆沾料](day05/suji-jupo-dipping-sauce.jpg) 鞠婆婆沾料

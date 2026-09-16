@@ -1,7 +1,11 @@
 # Day 3 ｜ 09/10（四）｜ 九寨溝 — 五花海、五彩池與樹正溝
 
-## 五花海・景點導覽
+## 景點導覽
 ### ![五花海](destination-preview/day03/wuhua-lake-downloaded.jpg) 五花海
+
+### ![長海](destination-preview/day03/changhai-lake-downloaded.jpg) 長海
+
+### ![諾日朗瀑布](destination-preview/day03/nuorilang-falls-downloaded.jpg) 諾日朗瀑布
 
 ## 上午・五花海與珍珠灘
 ### ![九寨溝 五花海初見](day03/jiuzhaigou-wuhua-lake-arrival.jpg) 五花海初見
@@ -47,8 +51,3 @@
 
 ### ![九寨溝 蘆葦海](day03/jiuzhaigou-reed-lake.jpg) 蘆葦海
 一大片蘆葦黃澄澄的隨風搖，後面襯著一小段藍綠色的水，還蠻好看的，忍不住停下來多拍幾張。走了一整天腳有點痠了，但看到這片蘆葦海，還是想多待一下再走。
-
-## 日則溝・長海與諾日朗瀑布
-### ![長海](destination-preview/day03/changhai-lake-downloaded.jpg) 長海
-
-### ![諾日朗瀑布](destination-preview/day03/nuorilang-falls-downloaded.jpg) 諾日朗瀑布

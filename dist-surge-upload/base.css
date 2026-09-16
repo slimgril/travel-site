@@ -222,6 +222,18 @@
   @media (min-width:900px) {
     .sites-grid--fast { grid-template-columns:repeat(5, 1fr); }
   }
+  /* 景點導覽（destination_preview）骨架區塊：固定只有圖＋名稱，永遠全尺寸
+     展示，不套用旅人照片用的 5 欄壓縮網格（2026-09-17 Owner 定案）。 */
+  .sites-grid--preview { grid-template-columns:repeat(3, 1fr); }
+  .sites-grid--preview.sites-grid--pair { grid-template-columns:repeat(2, 1fr); }
+  .sites-grid--preview.sites-grid--solo { grid-template-columns:1fr; }
+  @media (max-width:720px) {
+    .sites-grid--preview { grid-template-columns:repeat(2, 1fr); }
+  }
+  @media (max-width:480px) {
+    .sites-grid--preview { grid-template-columns:1fr; }
+  }
+  .site-card--preview .site-img { height:280px; }
   .site-card {
     border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
     background:var(--card-bg); transition:transform 0.2s;

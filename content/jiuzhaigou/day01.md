@@ -1,13 +1,14 @@
 # Day 1 ｜ 09/08（二）｜ 成都 → 都江堰 → 茂縣 — 千年水利與羌寨夜色
 :::meta lodging=夜宿茂縣
 
-## 成都印象
+## 景點導覽
 ### ![成都夜景](destination-preview/day01/chengdu-skyline-downloaded.jpg) 天府之國・成都
 
-## 都江堰・景點導覽
 ### ![都江堰水利工程](destination-preview/day01/dujiangyan-waterworks-downloaded.jpg) 都江堰水利工程
 
 ### ![灌縣古城](destination-preview/day01/guanxian-old-city-downloaded.webp) 灌縣古城
+
+### ![中國古羌城](destination-preview/day01/qiangcheng-overview-downloaded.jpg) 中國古羌城
 
 ## 都江堰水利工程
 ### ![都江堰 安瀾索橋遠眺](day01/dujiangyan-anlan-bridge-distant.jpg) 安瀾索橋遠眺
@@ -34,9 +35,6 @@
 
 ### ![都江堰 三字碑牆](day01/dujiangyan-name-wall.jpg) 都江堰字碑
 牆上「都江堰」三個大紅字寫得挺霸氣，旁邊還刻著魚嘴、飛沙堰、寶瓶口這些字。站在這面牆前面，忽然有種踏進歷史課本的感覺——兩千多年前的治水智慧，到現在還真真切切地在眼前運作著，光用想的就覺得不可思議。
-
-## 中國古羌城・景點導覽
-### ![中國古羌城](destination-preview/day01/qiangcheng-overview-downloaded.jpg) 中國古羌城
 
 ## 茂縣・中國古羌城
 ### ![茂縣 夜晚羌族歌舞](day01/maoxian-night-qiang-dance.jpg){video=day01/maoxian-night-qiang-dance.mp4} 茂縣夜色

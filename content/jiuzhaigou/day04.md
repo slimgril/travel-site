@@ -1,6 +1,6 @@
 # Day 4 ｜ 09/11（五）｜ 黃龍風景名勝區 — 人間瑤池
 
-## 黃龍・景點導覽
+## 景點導覽
 ### ![黃龍風景名勝區](destination-preview/day04/huanglong-downloaded.jpg) 黃龍風景名勝區
 
 ## 黃龍古寺
