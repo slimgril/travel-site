@@ -4,11 +4,12 @@
 ## 成都印象
 ### ![成都夜景](destination-preview/day01/chengdu-skyline-downloaded.jpg) 天府之國・成都
 
-## 都江堰水利工程
+## 都江堰・景點導覽
 ### ![都江堰水利工程](destination-preview/day01/dujiangyan-waterworks-downloaded.jpg) 都江堰水利工程
 
 ### ![灌縣古城](destination-preview/day01/guanxian-old-city-downloaded.webp) 灌縣古城
 
+## 都江堰水利工程
 ### ![都江堰 安瀾索橋遠眺](day01/dujiangyan-anlan-bridge-distant.jpg) 安瀾索橋遠眺
 薄霧還沒散盡，對岸山頭忽然冒出一角飛簷樓閣，紅欄杆、安瀾索橋橫跨在碧綠江水上，像是從山林深處長出來的。定睛一看，才知道那是供奉李冰父子的二王廟。人還沒走近，光是遠遠望著這片依山傍水的景致，心裡已經有點迫不及待，想快點走到跟前去看個仔細。
 
@@ -34,9 +35,10 @@
 ### ![都江堰 三字碑牆](day01/dujiangyan-name-wall.jpg) 都江堰字碑
 牆上「都江堰」三個大紅字寫得挺霸氣，旁邊還刻著魚嘴、飛沙堰、寶瓶口這些字。站在這面牆前面，忽然有種踏進歷史課本的感覺——兩千多年前的治水智慧，到現在還真真切切地在眼前運作著，光用想的就覺得不可思議。
 
-## 茂縣・中國古羌城
+## 中國古羌城・景點導覽
 ### ![中國古羌城](destination-preview/day01/qiangcheng-overview-downloaded.jpg) 中國古羌城
 
+## 茂縣・中國古羌城
 ### ![茂縣 夜晚羌族歌舞](day01/maoxian-night-qiang-dance.jpg){video=day01/maoxian-night-qiang-dance.mp4} 茂縣夜色
 夜色已經整個罩下來，廣場上突然被一片鮮豔的藍紫色晃花了眼——一群羌族阿姨穿著繡花長袍，牽著手繞圈跳著鍋庄。霓虹招牌把整條街照得又亮又熱鬧，路過的遊客忍不住停下腳步，也跟著節奏晃了晃肩膀。聽說這是茂縣人晚飯後的日常，不是特意表演給誰看的。看著看著，才驚覺這一天從都江堰的江水聲，走到了茂縣的鼓點聲，中間隔了整整一個下午的山路。
 
