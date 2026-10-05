@@ -1,6 +1,18 @@
 # STATUS — travel-site
 
-最後更新：2026-09-12（jiuzhaigou Day1-3 全部上線）
+最後更新：2026-10-06（補入 kansai 關西自由行現況）
+
+## 2026-10-06 — kansai（日本關西自由行，旅魂 lvhun vol2）
+
+| 項目 | 狀態 |
+|------|------|
+| **專案位置** | `lvhun/vol2/kansai.html`（屬旅魂 lvhun 專案，不在 travel-site；lvhun 為獨立 Git 專案，部署到 Render，見 `lvhun/CLAUDE.md`） |
+| **進度** | 連載中：Day 1（10/02）、Day 2（10/03）、Day 3（10/04）已寫入頁面；首頁卡片 `vol2/index.html` 已改為「連載中（Day 3）」 |
+| **Drive 來源** | `20261001關西自由行` |
+| **最近 commit** | lvhun `9ac1c61`（Day 3）；REVIEW_DISPATCH 第二階段修正尚未 commit |
+| **景點導覽區** | HTML 骨架已建（Day1–3 皆有 `✦ 景點導覽` 區塊＋`photos/destination-preview/kansai/day01`–`day03` 目錄），圖片待 Owner 提供後上架並鎖定 |
+| **住宿** | 阿倍野天王寺潮流飯店（10/1–10/3）、賢島公園飯店－滿潮（10/3–10/5），已依 day-header／Drive 行程大綱核實 |
+| **待辦（第二階段已完成項目）** | Day 2 已補上 17:24 影片卡（`kashikojima-ago-bay-dusk-video.mp4`）；Day 1 已補「✦ 晚」空分區；Day 1–3 描述文字數、代名詞與用詞修正已完成（依 `旅遊/REVIEW_DISPATCH.md`），待總監察複核後 commit |
 
 ## 2026-09-12 — jiuzhaigou（九寨溝）Day 3 補齊（斌哥已確認景點）
 
