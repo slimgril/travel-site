@@ -103,6 +103,152 @@ FORBIDDEN:              /Users/mac/Desktop/旅遊/ — do not read, write, commi
 | **呈現** | `estonia-journal.html`（點卡片展開）；主站 day07 EE–day10 同步同文案 |
 | **重建** | `python3 scripts/build_estonia_journal.py` |
 | **文風** | 同上 v1.2；`fact` 列最多一句知識 |
+
+## Travel Notes Writing Rules（2026-10-02 · 斌哥提醒 · HARD）
+
+> 任何人（含 AI agent）要寫旅遊描述文之前，**必須先看這一節**。與上面「描述區寫法 CONTENT_STYLE v1.2」並行適用；v1.2 管句式／字數等寫作規範，本節管**內容該寫什麼、不該寫什麼**。
+
+### Purpose
+
+The goal of a travel note is NOT to introduce attractions.
+
+The goal of a travel note is to preserve the traveler's actual experience, observations, discoveries, and memories from that day.
+
+Photos already tell readers:
+
+> What was seen.
+
+The writing should tell readers:
+
+> Why this moment was remembered.
+
+### Core Principle
+
+Do not ask:
+
+> What is in this photo?
+
+Ask:
+
+> Why did the traveler stop and take this photo?
+
+The answer to that question is usually the most important part of the note.
+
+### Rule 1: Facts First
+
+Only describe information that can be verified from:
+
+- Photos
+- Videos
+- Notes
+- Metadata
+- Confirmed location information
+
+Do NOT invent:
+
+- Smells
+- Tastes
+- Sounds not confirmed in source material
+- Emotions of strangers
+- Historical facts not provided
+- Personal thoughts not supported by notes
+
+Good:
+
+> The shelf label shows Olive Bagel ¥430.
+
+Bad:
+
+> The olive aroma filled the shop.
+
+Unless explicitly recorded, it cannot be assumed.
+
+### Rule 2: Traveler Perspective Over Attraction Description
+
+Focus on what the traveler noticed.
+
+Avoid describing architecture, history, or tourism facts for their own sake.
+
+Prefer: what caught attention first, what was unexpected, why the traveler stopped, why the photo was taken.
+
+Good:
+
+> The first thing noticed was not the shop, but a row of oversized welcoming dolls.
+
+Bad:
+
+> This attraction was built during a historical period and is famous for...
+
+### Rule 3: Route Before Attractions
+
+A travel note should feel like a journey. Readers should feel movement (Location A → B → C → D), not a list of attractions (Attraction A, B, C).
+
+Always capture transitions: leaving, arriving, changes in atmosphere, pace, environment.
+
+Example:
+
+> Leaving the busy arcade, the shouting disappeared and was replaced by stone paths and blue sky.
+
+### Rule 4: Observation Is More Valuable Than Information
+
+Prefer observations (first impressions, unexpected discoveries, memorable details, small observations) over facts (statistics, rankings, historical summaries, Wikipedia-style explanations).
+
+Good:
+
+> The stone ox looked more like a mascot than a sacred figure.
+
+Weak:
+
+> The ox is the sacred messenger of Tenmangu Shrine.
+
+If background information is necessary, keep it brief.
+
+### Rule 5: Photos Are Evidence, Not The Main Character
+
+Do not narrate photos one by one (photo shows a building → describe the building; photo shows food → describe the food).
+
+Instead ask: why was this photo worth taking? The note should explain the reason.
+
+### Rule 6: Not Everything Is Equally Important
+
+Every travel day has main moments and supporting moments. Do not distribute writing equally. Important memories deserve more space; minor stops deserve less. A short snack stop should not receive the same weight as the most memorable location of the day.
+
+### Rule 7: Do Not Become A Tour Guide
+
+Avoid attraction introductions, travel guide content, historical essays, promotional descriptions. The document is a travel note — it is not Wikipedia, a tourism brochure, or a guidebook.
+
+### Rule 8: Preserve The Traveler's Voice
+
+Target tone: natural, casual, observational, human — imagine a traveler reviewing photos at night and writing down what they remember.
+
+Avoid: excessive literary writing, overly poetic language, marketing language, AI-generated sounding prose.
+
+### Rule 9: End With What Remained
+
+Every travel note should leave the reader with one lingering memory. It does NOT have to be the biggest attraction or the most famous landmark — it can be a stone ox, a bagel, a cloud, a small shop, a brief moment. The final memory is often more important than the main attraction.
+
+### Rule 10: Final Quality Check
+
+Before finishing, verify:
+
+1. **If all photos disappeared, would the travel story still make sense?** If not, the note relies too much on photo descriptions.
+2. **If all attraction names disappeared, would the reader still understand the day's journey?** If not, the note is too dependent on attraction information.
+3. **After reading, does a clear memory remain?** If yes, the document is a travel note. If only attraction information remains, the document is still an attraction description.
+
+### Writing Formula
+
+A strong travel note usually follows:
+
+> Observation → Discovery → Reflection → Next Destination
+
+instead of:
+
+> Photo → Description → Photo → Description
+
+### One Sentence Summary
+
+Photos show what was seen. Travel notes explain why it was remembered.
+
 ## 札記配圖原則 — 一圖不拆兩卡（2026-07-19 紀錄 · HARD）
 
 > 詳見 `.ai-kos/CONTENT_STYLE.md` § 寫作原則第 6 條。此處為開工速記。
