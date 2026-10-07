@@ -1,18 +1,18 @@
 # STATUS — travel-site
 
-最後更新：2026-10-06（補入 kansai 關西自由行現況）
+最後更新：2026-10-07（補入 kansai Day 4 現況）
 
-## 2026-10-06 — kansai（日本關西自由行，旅魂 lvhun vol2）
+## 2026-10-07 — kansai（日本關西自由行，旅魂 lvhun vol2）
 
 | 項目 | 狀態 |
 |------|------|
 | **專案位置** | `lvhun/vol2/kansai.html`（屬旅魂 lvhun 專案，不在 travel-site；lvhun 為獨立 Git 專案，部署到 Render，見 `lvhun/CLAUDE.md`） |
-| **進度** | 連載中：Day 1（10/02）、Day 2（10/03）、Day 3（10/04）已寫入頁面；首頁卡片 `vol2/index.html` 已改為「連載中（Day 3）」 |
+| **進度** | 連載中：Day 1（10/02）、Day 2（10/03）、Day 3（10/04）、Day 4（10/05）已寫入頁面；首頁卡片 `vol2/index.html` 已改為「連載中（Day 4）」 |
 | **Drive 來源** | `20261001關西自由行` |
-| **最近 commit** | lvhun `9ac1c61`（Day 3）；REVIEW_DISPATCH 第二階段修正尚未 commit |
+| **最近 commit** | lvhun `7c1c1fa`（Day 1–3 複核通過）；Day 4 新增內容待 REVIEW_DISPATCH 本輪複核通過後 commit |
 | **景點導覽區** | 自由行，不設（Owner 2026-10-06 裁決；見 `lvhun/CLAUDE.md` R5） |
-| **住宿** | 阿倍野天王寺潮流飯店（10/1–10/3）、賢島公園飯店－滿潮（10/3–10/5），已依 day-header／Drive 行程大綱核實 |
-| **待辦（第二階段已完成項目）** | Day 2 已補上 17:24 影片卡（`kashikojima-ago-bay-dusk-video.mp4`）；Day 1 已補「✦ 晚」空分區；Day 1–3 描述文字數、代名詞與用詞修正已完成（依 `旅遊/REVIEW_DISPATCH.md`），待總監察複核後 commit |
+| **住宿** | 阿倍野天王寺潮流飯店（10/1–10/3）、賢島公園飯店－滿潮（10/3–10/5），已依 day-header／Drive 行程大綱核實；**Day 4（10/5 起）大阪飯店名稱尚未核實**，day-header 暫寫「大阪（飯店名稱待 Owner 確認）」，待 Owner 補充後更新 |
+| **待辦** | Day 4（伊勢神宮內宮，12 張照片＋2 段影片，EXIF 核實排序）內容已依總監察第 2 輪指令完成 7 處事實修正，REVIEW_DISPATCH 狀態已改回待監察，待複核通過後 commit；HANDOFF 文件數量與實際資料夾不符（已沿用 10/4 舊字句），本輪已改以實際資料夾為準；大阪飯店名稱待 Owner 確認 |
 
 ## 2026-09-12 — jiuzhaigou（九寨溝）Day 3 補齊（斌哥已確認景點）
 
