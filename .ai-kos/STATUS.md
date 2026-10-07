@@ -9,10 +9,10 @@
 | **專案位置** | `lvhun/vol2/kansai.html`（屬旅魂 lvhun 專案，不在 travel-site；lvhun 為獨立 Git 專案，部署到 Render，見 `lvhun/CLAUDE.md`） |
 | **進度** | 連載中：Day 1（10/02）、Day 2（10/03）、Day 3（10/04）、Day 4（10/05）已寫入頁面；首頁卡片 `vol2/index.html` 已改為「連載中（Day 4）」 |
 | **Drive 來源** | `20261001關西自由行` |
-| **最近 commit** | lvhun `7c1c1fa`（Day 1–3 複核通過）；Day 4 新增內容待 REVIEW_DISPATCH 本輪複核通過後 commit |
+| **最近 commit** | lvhun `e283ba6`（Day 4 住宿小修）；Day 1–4 已上線 |
 | **景點導覽區** | 自由行，不設（Owner 2026-10-06 裁決；見 `lvhun/CLAUDE.md` R5） |
 | **住宿** | 阿倍野天王寺潮流飯店（10/1–10/3）、賢島公園飯店－滿潮（10/3–10/5），已依 day-header／Drive 行程大綱核實；Day 4（10/5 起）大阪（Owner 2026-10-07 裁決先寫地名，飯店名稱日後補） |
-| **待辦** | Day 4（伊勢神宮內宮，12 張照片＋2 段影片）主要內容已通過總監察複核，commit `44d12c9` 上線；本輪（第 4 輪）為住宿欄小修——Day 4 大阪飯店名稱依 Owner 2026-10-07 裁決改寫為地名，待總監察本輪複核通過後 commit |
+| **待辦** | Day 1–4 已上線，待辦只剩「大阪飯店名稱待 Owner 提供」「Day 5（10/06）待照片」 |
 
 ## 2026-09-12 — jiuzhaigou（九寨溝）Day 3 補齊（斌哥已確認景點）
 
