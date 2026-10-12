@@ -137,7 +137,7 @@ Travel Site adopts **Content Style v1.2（資深旅遊作家 · 描述區）** �
 | `shanxi` | done | legacy style — do not mass-rewrite |
 | `bldh-trio` | **operational** | Baltic；Day 4 已上線；回饋修正（文學街／meta／額外推薦）已 deploy；下一步 Day 5（07/15） |
 | `baikal-rail` | upcoming | 西伯利亞；新日／新圖一律 **CONTENT_STYLE v1.1 壓縮四拍**（旅行書，非導覽）；sync：`scripts/sync_baikal_photos.py` |
-| `kansai`（`lvhun/vol2/kansai.html`） | **連載中** | 日本關西自由行；Day 1–3 已寫入頁面；Drive `20261001關西自由行`。旅魂為獨立 Git 專案、部署在 Render（`lvhun.onrender.com`），**不是**本季 Cloudflare Pages；規則以 `lvhun/CLAUDE.md` 為準 |
+| `kansai`（`lvhun/vol2/kansai.html`） | **連載中** | 日本關西自由行；Day 1–6 已寫入頁面；Drive `20261001關西自由行`。旅魂為獨立 Git 專案、部署在 Render（`lvhun.onrender.com`），**不是**本季 Cloudflare Pages；規則以 `lvhun/CLAUDE.md` 為準（2026-10-12 起描述文風放寬，見該檔「描述文文風放寬規則」） |
 
 ---
 
